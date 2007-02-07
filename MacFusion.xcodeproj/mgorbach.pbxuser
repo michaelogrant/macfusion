@@ -1,0 +1,2009 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {885, 844}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {885, 844}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = D4498C860B5A2BD4003B9DFF /* MacFusion */;
+		activeTarget = 8D1107260486CEB800E47090 /* MacFusion */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* MacFusion */,
+		);
+		breakpoints = (
+			D42AF26B0B60180C008C6F84 /* MacFusionController.m:574 */,
+			D42AF3AE0B60257B008C6F84 /* MacFusionController.m:223 */,
+			D44C0C960B6119D900C778DC /* -[NSException raise] */,
+			D407D3DA0B6B1B6B00D0CB23 /* MacFusionController.m:242 */,
+			D4A220560B76BB9C00BE8E8E /* SSHFS.m:123 */,
+			D4A2208C0B76C0A900BE8E8E /* SSHFS.m:176 */,
+			D4A2220B0B76DAAC00BE8E8E /* MacFusionController.m:118 */,
+			D44202710B793EC200E96F7C /* MacFusionController.m:374 */,
+		);
+		breakpointsGroup = D4C6E2F50B5A4E2A00CF3EC7 /* XCBreakpointsBucket */;
+		codeSenseManager = D4498C930B5A2BF2003B9DFF /* Code sense */;
+		executables = (
+			D45D9BBB0B756329002E6C08 /* askpass */,
+			D4498C860B5A2BD4003B9DFF /* MacFusion */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					210,
+					20,
+					110,
+					109,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					300,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					200,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					400,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					945,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					200,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					592,
+					20,
+					48.1626,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					540,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 192494896;
+			PBXWorkspaceStateSaveDate = 192494896;
+		};
+		perUserProjectItems = {
+			D4043C340B5AFC55000CF7B9 /* PBXTextBookmark */ = D4043C340B5AFC55000CF7B9 /* PBXTextBookmark */;
+			D4108BF90B7825F0001A4BCA /* PBXTextBookmark */ = D4108BF90B7825F0001A4BCA /* PBXTextBookmark */;
+			D4108BFA0B7825F0001A4BCA /* PBXTextBookmark */ = D4108BFA0B7825F0001A4BCA /* PBXTextBookmark */;
+			D422F73D0B617DBA009EE999 /* PBXTextBookmark */ = D422F73D0B617DBA009EE999 /* PBXTextBookmark */;
+			D422F8420B61BD21009EE999 /* PBXTextBookmark */ = D422F8420B61BD21009EE999 /* PBXTextBookmark */;
+			D42AECCA0B5EBAA3008C6F84 /* PBXTextBookmark */ = D42AECCA0B5EBAA3008C6F84 /* PBXTextBookmark */;
+			D42AECF40B5EBF11008C6F84 /* PBXTextBookmark */ = D42AECF40B5EBF11008C6F84 /* PBXTextBookmark */;
+			D42AECFA0B5EBF11008C6F84 /* PBXTextBookmark */ = D42AECFA0B5EBF11008C6F84 /* PBXTextBookmark */;
+			D42AECFC0B5EBF11008C6F84 /* PBXTextBookmark */ = D42AECFC0B5EBF11008C6F84 /* PBXTextBookmark */;
+			D42AED340B5F1B2B008C6F84 /* PBXTextBookmark */ = D42AED340B5F1B2B008C6F84 /* PBXTextBookmark */;
+			D42AEF9A0B5FD782008C6F84 /* PBXTextBookmark */ = D42AEF9A0B5FD782008C6F84 /* PBXTextBookmark */;
+			D42AEF9B0B5FD782008C6F84 /* PBXTextBookmark */ = D42AEF9B0B5FD782008C6F84 /* PBXTextBookmark */;
+			D42AF4CD0B6099BA008C6F84 /* PBXTextBookmark */ = D42AF4CD0B6099BA008C6F84 /* PBXTextBookmark */;
+			D42AF4D20B6099BA008C6F84 /* PBXTextBookmark */ = D42AF4D20B6099BA008C6F84 /* PBXTextBookmark */;
+			D42AF6100B610998008C6F84 /* PBXBookmark */ = D42AF6100B610998008C6F84 /* PBXBookmark */;
+			D42AF6320B610B50008C6F84 /* PBXTextBookmark */ = D42AF6320B610B50008C6F84 /* PBXTextBookmark */;
+			D442024C0B793E2500E96F7C /* PBXTextBookmark */ = D442024C0B793E2500E96F7C /* PBXTextBookmark */;
+			D442024D0B793E2500E96F7C /* PBXTextBookmark */ = D442024D0B793E2500E96F7C /* PBXTextBookmark */;
+			D442024E0B793E2500E96F7C /* PBXTextBookmark */ = D442024E0B793E2500E96F7C /* PBXTextBookmark */;
+			D442025B0B793E4200E96F7C /* PBXTextBookmark */ = D442025B0B793E4200E96F7C /* PBXTextBookmark */;
+			D442025C0B793E4200E96F7C /* PBXTextBookmark */ = D442025C0B793E4200E96F7C /* PBXTextBookmark */;
+			D442029C0B7941ED00E96F7C /* PBXTextBookmark */ = D442029C0B7941ED00E96F7C /* PBXTextBookmark */;
+			D44202A50B79424400E96F7C /* PBXTextBookmark */ = D44202A50B79424400E96F7C /* PBXTextBookmark */;
+			D44202CE0B79439B00E96F7C /* PBXTextBookmark */ = D44202CE0B79439B00E96F7C /* PBXTextBookmark */;
+			D44202CF0B79439B00E96F7C /* PBXTextBookmark */ = D44202CF0B79439B00E96F7C /* PBXTextBookmark */;
+			D44202D00B79439B00E96F7C /* PBXTextBookmark */ = D44202D00B79439B00E96F7C /* PBXTextBookmark */;
+			D44202D10B79439B00E96F7C /* PBXTextBookmark */ = D44202D10B79439B00E96F7C /* PBXTextBookmark */;
+			D44202D20B79439B00E96F7C /* PBXTextBookmark */ = D44202D20B79439B00E96F7C /* PBXTextBookmark */;
+			D44202D30B79439B00E96F7C /* PBXTextBookmark */ = D44202D30B79439B00E96F7C /* PBXTextBookmark */;
+			D44202D40B79439B00E96F7C /* PBXTextBookmark */ = D44202D40B79439B00E96F7C /* PBXTextBookmark */;
+			D44202D50B79439B00E96F7C /* PBXTextBookmark */ = D44202D50B79439B00E96F7C /* PBXTextBookmark */;
+			D44202D60B79439B00E96F7C /* PBXTextBookmark */ = D44202D60B79439B00E96F7C /* PBXTextBookmark */;
+			D44202EB0B79441C00E96F7C /* PBXTextBookmark */ = D44202EB0B79441C00E96F7C /* PBXTextBookmark */;
+			D44202EC0B79441C00E96F7C /* PBXTextBookmark */ = D44202EC0B79441C00E96F7C /* PBXTextBookmark */;
+			D44203040B7944A800E96F7C /* PBXTextBookmark */ = D44203040B7944A800E96F7C /* PBXTextBookmark */;
+			D44203050B7944A800E96F7C /* PBXTextBookmark */ = D44203050B7944A800E96F7C /* PBXTextBookmark */;
+			D44203220B79451800E96F7C /* PBXTextBookmark */ = D44203220B79451800E96F7C /* PBXTextBookmark */;
+			D44203350B79471A00E96F7C /* PBXTextBookmark */ = D44203350B79471A00E96F7C /* PBXTextBookmark */;
+			D44203360B79471A00E96F7C /* PBXTextBookmark */ = D44203360B79471A00E96F7C /* PBXTextBookmark */;
+			D44203370B79471A00E96F7C /* PBXTextBookmark */ = D44203370B79471A00E96F7C /* PBXTextBookmark */;
+			D44203380B79471A00E96F7C /* PBXTextBookmark */ = D44203380B79471A00E96F7C /* PBXTextBookmark */;
+			D442033F0B79474100E96F7C /* PBXTextBookmark */ = D442033F0B79474100E96F7C /* PBXTextBookmark */;
+			D442034F0B79480200E96F7C /* PBXTextBookmark */ = D442034F0B79480200E96F7C /* PBXTextBookmark */;
+			D44203530B79480200E96F7C /* PBXTextBookmark */ = D44203530B79480200E96F7C /* PBXTextBookmark */;
+			D44203540B79480200E96F7C /* PBXTextBookmark */ = D44203540B79480200E96F7C /* PBXTextBookmark */;
+			D44203550B79480200E96F7C /* PBXTextBookmark */ = D44203550B79480200E96F7C /* PBXTextBookmark */;
+			D44203560B79480200E96F7C /* PBXTextBookmark */ = D44203560B79480200E96F7C /* PBXTextBookmark */;
+			D44203570B79480200E96F7C /* PBXTextBookmark */ = D44203570B79480200E96F7C /* PBXTextBookmark */;
+			D44203580B79480200E96F7C /* PBXTextBookmark */ = D44203580B79480200E96F7C /* PBXTextBookmark */;
+			D44203590B79480200E96F7C /* PBXTextBookmark */ = D44203590B79480200E96F7C /* PBXTextBookmark */;
+			D442035A0B79480200E96F7C /* PBXTextBookmark */ = D442035A0B79480200E96F7C /* PBXTextBookmark */;
+			D44203650B79481F00E96F7C /* PBXTextBookmark */ = D44203650B79481F00E96F7C /* PBXTextBookmark */;
+			D44203660B79481F00E96F7C /* PBXTextBookmark */ = D44203660B79481F00E96F7C /* PBXTextBookmark */;
+			D44203670B79481F00E96F7C /* PBXTextBookmark */ = D44203670B79481F00E96F7C /* PBXTextBookmark */;
+			D44203680B79481F00E96F7C /* PBXTextBookmark */ = D44203680B79481F00E96F7C /* PBXTextBookmark */;
+			D44203750B79487800E96F7C /* PBXTextBookmark */ = D44203750B79487800E96F7C /* PBXTextBookmark */;
+			D44203760B79487800E96F7C /* PBXTextBookmark */ = D44203760B79487800E96F7C /* PBXTextBookmark */;
+			D44203770B79487800E96F7C /* PBXTextBookmark */ = D44203770B79487800E96F7C /* PBXTextBookmark */;
+			D44203820B7948AB00E96F7C /* PBXTextBookmark */ = D44203820B7948AB00E96F7C /* PBXTextBookmark */;
+			D44203880B79495E00E96F7C /* PBXTextBookmark */ = D44203880B79495E00E96F7C /* PBXTextBookmark */;
+			D442038A0B79495E00E96F7C /* PBXTextBookmark */ = D442038A0B79495E00E96F7C /* PBXTextBookmark */;
+			D44203B70B794A4200E96F7C /* PBXTextBookmark */ = D44203B70B794A4200E96F7C /* PBXTextBookmark */;
+			D44203BF0B794A7C00E96F7C /* PBXTextBookmark */ = D44203BF0B794A7C00E96F7C /* PBXTextBookmark */;
+			D44203C00B794A7C00E96F7C /* PBXTextBookmark */ = D44203C00B794A7C00E96F7C /* PBXTextBookmark */;
+			D44203C10B794A7C00E96F7C /* PBXTextBookmark */ = D44203C10B794A7C00E96F7C /* PBXTextBookmark */;
+			D44203C20B794A7C00E96F7C /* PBXTextBookmark */ = D44203C20B794A7C00E96F7C /* PBXTextBookmark */;
+			D44203C30B794A7C00E96F7C /* PBXTextBookmark */ = D44203C30B794A7C00E96F7C /* PBXTextBookmark */;
+			D44203CE0B794A8B00E96F7C /* PBXTextBookmark */ = D44203CE0B794A8B00E96F7C /* PBXTextBookmark */;
+			D44203CF0B794A8B00E96F7C /* PBXTextBookmark */ = D44203CF0B794A8B00E96F7C /* PBXTextBookmark */;
+			D44203D00B794A8B00E96F7C /* PBXTextBookmark */ = D44203D00B794A8B00E96F7C /* PBXTextBookmark */;
+			D44203D10B794A8B00E96F7C /* PBXTextBookmark */ = D44203D10B794A8B00E96F7C /* PBXTextBookmark */;
+			D44203DA0B794AA300E96F7C /* PBXTextBookmark */ = D44203DA0B794AA300E96F7C /* PBXTextBookmark */;
+			D44203DB0B794AA300E96F7C /* PBXTextBookmark */ = D44203DB0B794AA300E96F7C /* PBXTextBookmark */;
+			D44203DC0B794AA300E96F7C /* PBXTextBookmark */ = D44203DC0B794AA300E96F7C /* PBXTextBookmark */;
+			D44203DD0B794AA300E96F7C /* PBXTextBookmark */ = D44203DD0B794AA300E96F7C /* PBXTextBookmark */;
+			D44203DE0B794AA300E96F7C /* PBXTextBookmark */ = D44203DE0B794AA300E96F7C /* PBXTextBookmark */;
+			D44203DF0B794AA300E96F7C /* PBXTextBookmark */ = D44203DF0B794AA300E96F7C /* PBXTextBookmark */;
+			D44203E00B794AA300E96F7C /* PBXTextBookmark */ = D44203E00B794AA300E96F7C /* PBXTextBookmark */;
+			D44203EC0B794B1400E96F7C /* PBXTextBookmark */ = D44203EC0B794B1400E96F7C /* PBXTextBookmark */;
+			D44203ED0B794B1400E96F7C /* PBXTextBookmark */ = D44203ED0B794B1400E96F7C /* PBXTextBookmark */;
+			D44203F40B794BCF00E96F7C /* PBXTextBookmark */ = D44203F40B794BCF00E96F7C /* PBXTextBookmark */;
+			D442040D0B7968D800E96F7C /* PBXTextBookmark */ = D442040D0B7968D800E96F7C /* PBXTextBookmark */;
+			D442040E0B7968D800E96F7C /* PBXTextBookmark */ = D442040E0B7968D800E96F7C /* PBXTextBookmark */;
+			D442041C0B7969A300E96F7C /* PBXTextBookmark */ = D442041C0B7969A300E96F7C /* PBXTextBookmark */;
+			D442041D0B7969A300E96F7C /* PBXTextBookmark */ = D442041D0B7969A300E96F7C /* PBXTextBookmark */;
+			D442041E0B7969A300E96F7C /* PBXTextBookmark */ = D442041E0B7969A300E96F7C /* PBXTextBookmark */;
+			D44204480B796C9100E96F7C /* PBXTextBookmark */ = D44204480B796C9100E96F7C /* PBXTextBookmark */;
+			D44204490B796C9100E96F7C /* PBXTextBookmark */ = D44204490B796C9100E96F7C /* PBXTextBookmark */;
+			D442044A0B796C9100E96F7C /* PBXTextBookmark */ = D442044A0B796C9100E96F7C /* PBXTextBookmark */;
+			D44204720B796D8B00E96F7C /* PBXTextBookmark */ = D44204720B796D8B00E96F7C /* PBXTextBookmark */;
+			D44204760B796D8B00E96F7C /* PBXTextBookmark */ = D44204760B796D8B00E96F7C /* PBXTextBookmark */;
+			D44204770B796D8B00E96F7C /* PBXTextBookmark */ = D44204770B796D8B00E96F7C /* PBXTextBookmark */;
+			D44204780B796D8B00E96F7C /* PBXTextBookmark */ = D44204780B796D8B00E96F7C /* PBXTextBookmark */;
+			D44204790B796D8B00E96F7C /* PBXTextBookmark */ = D44204790B796D8B00E96F7C /* PBXTextBookmark */;
+			D44204950B796EB600E96F7C /* PBXTextBookmark */ = D44204950B796EB600E96F7C /* PBXTextBookmark */;
+			D44204960B796EB600E96F7C /* PBXTextBookmark */ = D44204960B796EB600E96F7C /* PBXTextBookmark */;
+			D44204970B796EB600E96F7C /* PBXTextBookmark */ = D44204970B796EB600E96F7C /* PBXTextBookmark */;
+			D44204980B796EB600E96F7C /* PBXTextBookmark */ = D44204980B796EB600E96F7C /* PBXTextBookmark */;
+			D442049E0B7971D700E96F7C /* PBXTextBookmark */ = D442049E0B7971D700E96F7C /* PBXTextBookmark */;
+			D442049F0B7971D700E96F7C /* PBXTextBookmark */ = D442049F0B7971D700E96F7C /* PBXTextBookmark */;
+			D44204A00B7971D700E96F7C /* PBXTextBookmark */ = D44204A00B7971D700E96F7C /* PBXTextBookmark */;
+			D44204A10B7971D700E96F7C /* PBXTextBookmark */ = D44204A10B7971D700E96F7C /* PBXTextBookmark */;
+			D44204A20B7971D700E96F7C /* PBXTextBookmark */ = D44204A20B7971D700E96F7C /* PBXTextBookmark */;
+			D44204A30B7971D700E96F7C /* PBXTextBookmark */ = D44204A30B7971D700E96F7C /* PBXTextBookmark */;
+			D4498D150B5A3792003B9DFF /* PBXTextBookmark */ = D4498D150B5A3792003B9DFF /* PBXTextBookmark */;
+			D45D6C4C0B5DF9300057DD68 /* PBXTextBookmark */ = D45D6C4C0B5DF9300057DD68 /* PBXTextBookmark */;
+			D45D6CC10B5DFE2C0057DD68 /* PBXTextBookmark */ = D45D6CC10B5DFE2C0057DD68 /* PBXTextBookmark */;
+			D45D6D4C0B5EB0CE0057DD68 /* PBXTextBookmark */ = D45D6D4C0B5EB0CE0057DD68 /* PBXTextBookmark */;
+			D45D9ADC0B75604E002E6C08 /* PBXTextBookmark */ = D45D9ADC0B75604E002E6C08 /* PBXTextBookmark */;
+			D45D9ADF0B75604E002E6C08 /* PBXTextBookmark */ = D45D9ADF0B75604E002E6C08 /* PBXTextBookmark */;
+			D45D9AE00B75604E002E6C08 /* PBXTextBookmark */ = D45D9AE00B75604E002E6C08 /* PBXTextBookmark */;
+			D45D9BA90B7562C5002E6C08 /* PBXTextBookmark */ = D45D9BA90B7562C5002E6C08 /* PBXTextBookmark */;
+			D45D9BAD0B7562C5002E6C08 /* PBXTextBookmark */ = D45D9BAD0B7562C5002E6C08 /* PBXTextBookmark */;
+			D45D9BB10B7562EB002E6C08 /* PBXTextBookmark */ = D45D9BB10B7562EB002E6C08 /* PBXTextBookmark */;
+			D45D9BB40B7562EB002E6C08 /* PBXTextBookmark */ = D45D9BB40B7562EB002E6C08 /* PBXTextBookmark */;
+			D45D9CBF0B756A27002E6C08 /* PBXTextBookmark */ = D45D9CBF0B756A27002E6C08 /* PBXTextBookmark */;
+			D4A220220B76BA1F00BE8E8E /* PBXTextBookmark */ = D4A220220B76BA1F00BE8E8E /* PBXTextBookmark */;
+			D4A220260B76BA1F00BE8E8E /* PBXBookmark */ = D4A220260B76BA1F00BE8E8E /* PBXBookmark */;
+			D4C6E2E10B5A4E2A00CF3EC7 /* PBXTextBookmark */ = D4C6E2E10B5A4E2A00CF3EC7 /* PBXTextBookmark */;
+			D4C6E2E20B5A4E2A00CF3EC7 /* PBXTextBookmark */ = D4C6E2E20B5A4E2A00CF3EC7 /* PBXTextBookmark */;
+			D4F124A10B5C6293002BAA40 /* PBXTextBookmark */ = D4F124A10B5C6293002BAA40 /* PBXTextBookmark */;
+			D4F124A20B5C6293002BAA40 /* PBXTextBookmark */ = D4F124A20B5C6293002BAA40 /* PBXTextBookmark */;
+			D4F124FE0B5C767A002BAA40 /* PBXTextBookmark */ = D4F124FE0B5C767A002BAA40 /* PBXTextBookmark */;
+			D4F125000B5C767A002BAA40 /* PBXTextBookmark */ = D4F125000B5C767A002BAA40 /* PBXTextBookmark */;
+			D4F125010B5C767A002BAA40 /* PBXTextBookmark */ = D4F125010B5C767A002BAA40 /* PBXTextBookmark */;
+			D4F82A230B5BEA900061B029 /* PBXTextBookmark */ = D4F82A230B5BEA900061B029 /* PBXTextBookmark */;
+			D4F82A240B5BEA900061B029 /* PBXTextBookmark */ = D4F82A240B5BEA900061B029 /* PBXTextBookmark */;
+			D4F82A5D0B5BEB8A0061B029 /* PBXTextBookmark */ = D4F82A5D0B5BEB8A0061B029 /* PBXTextBookmark */;
+			D4F82A5E0B5BEB8A0061B029 /* PBXTextBookmark */ = D4F82A5E0B5BEB8A0061B029 /* PBXTextBookmark */;
+		};
+		sourceControlManager = D4498C920B5A2BF2003B9DFF /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {885, 844}}";
+			sepNavSelRange = "{233, 0}";
+			sepNavVisRect = "{{0, 0}, {885, 844}}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* MacFusion_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {912, 891}}";
+			sepNavSelRange = "{149, 0}";
+			sepNavVisRect = "{{0, 0}, {912, 891}}";
+		};
+	};
+	8D1107260486CEB800E47090 /* MacFusion */ = {
+		activeExec = 0;
+		executables = (
+			D4498C860B5A2BD4003B9DFF /* MacFusion */,
+		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 848}}";
+			sepNavSelRange = "{503, 0}";
+			sepNavVisRect = "{{0, 0}, {1137, 848}}";
+			sepNavWindowFrame = "{{15, 172}, {1333, 1001}}";
+		};
+	};
+	D4043C340B5AFC55000CF7B9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 256;
+		vrLoc = 0;
+	};
+	D407D3DA0B6B1B6B00D0CB23 /* MacFusionController.m:242 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		functionName = "-handleFSClicked:";
+		hitCount = 1;
+		lineNumber = 242;
+		location = MacFusionController.ob;
+		modificationTime = 192507083.94661;
+		state = 1;
+	};
+	D4108BF90B7825F0001A4BCA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */;
+		name = "MacFusionConstants.h: FuseFSStatusMountFailed";
+		rLen = 0;
+		rLoc = 1023;
+		rType = 0;
+		vrLen = 1180;
+		vrLoc = 0;
+	};
+	D4108BFA0B7825F0001A4BCA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */;
+		name = "MacFusionConstants.m: FuseFSStatusMountFailedString";
+		rLen = 0;
+		rLoc = 1172;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 0;
+	};
+	D422F3860B616FA0009EE999 /* FavoritesController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 697}}";
+			sepNavSelRange = "{553, 0}";
+			sepNavVisRect = "{{0, 0}, {1137, 697}}";
+		};
+	};
+	D422F3870B616FA0009EE999 /* FavoritesController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {977, 1845}}";
+			sepNavSelRange = "{1390, 0}";
+			sepNavVisRect = "{{0, 643}, {977, 529}}";
+		};
+	};
+	D422F73D0B617DBA009EE999 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3860B616FA0009EE999 /* FavoritesController.h */;
+		name = "FavoritesController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 239;
+		vrLoc = 0;
+	};
+	D422F8420B61BD21009EE999 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 32";
+		rLen = 0;
+		rLoc = 453;
+		rType = 0;
+		vrLen = 692;
+		vrLoc = 0;
+	};
+	D42AECCA0B5EBAA3008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D6CE20B5EAC790057DD68 /* DADisk.h */;
+		name = "extern const CFStringRef kDADiskDescriptionVolumeKindKey;      /* ( CFString     ) */";
+		rLen = 86;
+		rLoc = 1226;
+		rType = 0;
+		vrLen = 3396;
+		vrLoc = 326;
+	};
+	D42AECF40B5EBF11008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D6CE00B5EAC790057DD68 /* DiskArbitration.h */;
+		name = "DiskArbitration.h: DARegisterDiskDescriptionChangedCallback";
+		rLen = 0;
+		rLoc = 7247;
+		rType = 0;
+		vrLen = 1694;
+		vrLoc = 0;
+	};
+	D42AECFA0B5EBF11008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D6CE20B5EAC790057DD68 /* DADisk.h */;
+		name = "DADisk.h: kDADiskDescriptionVolumeMountableKey";
+		rLen = 0;
+		rLoc = 1358;
+		rType = 0;
+		vrLen = 3259;
+		vrLoc = 839;
+	};
+	D42AECFC0B5EBF11008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D6CE00B5EAC790057DD68 /* DiskArbitration.h */;
+		name = "DiskArbitration.h: DARegisterDiskDescriptionChangedCallback";
+		rLen = 0;
+		rLoc = 7247;
+		rType = 0;
+		vrLen = 1694;
+		vrLoc = 0;
+	};
+	D42AED340B5F1B2B008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: diskUnMounted";
+		rLen = 0;
+		rLoc = 15756;
+		rType = 0;
+		vrLen = 1824;
+		vrLoc = 2605;
+	};
+	D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 735}}";
+			sepNavSelRange = "{1023, 0}";
+			sepNavVisRect = "{{0, 0}, {1137, 697}}";
+		};
+	};
+	D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 697}}";
+			sepNavSelRange = "{1172, 0}";
+			sepNavVisRect = "{{0, 0}, {1137, 697}}";
+		};
+	};
+	D42AEF9A0B5FD782008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */;
+		name = "MacFusionConstants.h: 10";
+		rLen = 0;
+		rLoc = 186;
+		rType = 0;
+		vrLen = 180;
+		vrLoc = 0;
+	};
+	D42AEF9B0B5FD782008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */;
+		name = "MacFusionConstants.m: 11";
+		rLen = 0;
+		rLoc = 181;
+		rType = 0;
+		vrLen = 182;
+		vrLoc = 0;
+	};
+	D42AF26B0B60180C008C6F84 /* MacFusionController.m:574 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		functionName = "-dealloc";
+		hitCount = 1;
+		lineNumber = 574;
+		location = MacFusionController.ob;
+		modificationTime = 192507083.922974;
+		state = 1;
+	};
+	D42AF3AE0B60257B008C6F84 /* MacFusionController.m:223 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		functionName = "-menuNeedsUpdate:";
+		hitCount = 1;
+		lineNumber = 223;
+		location = MacFusionController.ob;
+		modificationTime = 192507083.933545;
+		state = 1;
+	};
+	D42AF4CD0B6099BA008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D42AF4CE0B6099BA008C6F84 /* Icons.h */;
+		name = "(null): 1256";
+		rLen = 0;
+		rLoc = 40934;
+		rType = 0;
+		vrLen = 1759;
+		vrLoc = 40315;
+	};
+	D42AF4CE0B6099BA008C6F84 /* Icons.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Icons.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/Headers/Icons.h;
+		sourceTree = "<absolute>";
+	};
+	D42AF4D20B6099BA008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D42AF4D30B6099BA008C6F84 /* Icons.h */;
+		name = "(null): 1256";
+		rLen = 0;
+		rLoc = 40934;
+		rType = 0;
+		vrLen = 1759;
+		vrLoc = 40315;
+	};
+	D42AF4D30B6099BA008C6F84 /* Icons.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Icons.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/Headers/Icons.h;
+		sourceTree = "<absolute>";
+	};
+	D42AF6100B610998008C6F84 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D4C6E2230B5A38C000CF3EC7 /* menuicon.icns */;
+	};
+	D42AF6320B610B50008C6F84 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* MacFusion_Prefix.pch */;
+		name = "MacFusion_Prefix.pch: 8";
+		rLen = 0;
+		rLoc = 149;
+		rType = 0;
+		vrLen = 149;
+		vrLoc = 0;
+	};
+	D442024C0B793E2500E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 73";
+		rLen = 0;
+		rLoc = 2515;
+		rType = 0;
+		vrLen = 1485;
+		vrLoc = 753;
+	};
+	D442024D0B793E2500E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 331";
+		rLen = 0;
+		rLoc = 10284;
+		rType = 0;
+		vrLen = 1293;
+		vrLoc = 9441;
+	};
+	D442024E0B793E2500E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: unmountFilesystem:";
+		rLen = 0;
+		rLoc = 1233;
+		rType = 0;
+		vrLen = 1283;
+		vrLoc = 29;
+	};
+	D442025B0B793E4200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 372";
+		rLen = 0;
+		rLoc = 11611;
+		rType = 0;
+		vrLen = 1253;
+		vrLoc = 10646;
+	};
+	D442025C0B793E4200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 66";
+		rLen = 0;
+		rLoc = 1535;
+		rType = 0;
+		vrLen = 1314;
+		vrLoc = 2187;
+	};
+	D44202710B793EC200E96F7C /* MacFusionController.m:374 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		functionName = "-unmountFilesystem:";
+		hitCount = 1;
+		lineNumber = 374;
+		location = MacFusionController.ob;
+		modificationTime = 192507084.030613;
+		state = 1;
+	};
+	D442029C0B7941ED00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 45";
+		rLen = 0;
+		rLoc = 934;
+		rType = 0;
+		vrLen = 1326;
+		vrLoc = 219;
+	};
+	D44202A50B79424400E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3860B616FA0009EE999 /* FavoritesController.h */;
+		name = "FavoritesController.h: editButton";
+		rLen = 0;
+		rLoc = 553;
+		rType = 0;
+		vrLen = 746;
+		vrLoc = 0;
+	};
+	D44202CE0B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 36";
+		rLen = 0;
+		rLoc = 934;
+		rType = 0;
+		vrLen = 1259;
+		vrLoc = 489;
+	};
+	D44202CF0B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 364";
+		rLen = 0;
+		rLoc = 10238;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 10061;
+	};
+	D44202D00B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */;
+		name = "FuseFSProtocol.h: setMountOnStartup";
+		rLen = 0;
+		rLoc = 760;
+		rType = 0;
+		vrLen = 1343;
+		vrLoc = 0;
+	};
+	D44202D10B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */;
+		name = "SSHFS.h: mountPath";
+		rLen = 0;
+		rLoc = 690;
+		rType = 0;
+		vrLen = 904;
+		vrLoc = 0;
+	};
+	D44202D20B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 247";
+		rLen = 0;
+		rLoc = 8068;
+		rType = 0;
+		vrLen = 1232;
+		vrLoc = 7636;
+	};
+	D44202D30B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */;
+		name = "FuseUIProtocol.h: initWithFS:";
+		rLen = 0;
+		rLoc = 612;
+		rType = 0;
+		vrLen = 596;
+		vrLoc = 0;
+	};
+	D44202D40B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */;
+		name = "- (void)setMountOnStartup;";
+		rLen = 35;
+		rLoc = 725;
+		rType = 0;
+		vrLen = 1343;
+		vrLoc = 0;
+	};
+	D44202D50B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 318";
+		rLen = 0;
+		rLoc = 9534;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 8888;
+	};
+	D44202D60B79439B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */;
+		name = "FuseFSProtocol.h: setMountOnStartup:";
+		rLen = 0;
+		rLoc = 759;
+		rType = 0;
+		vrLen = 1352;
+		vrLoc = 0;
+	};
+	D44202EB0B79441C00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "return mountOnStartup;";
+		rLen = 24;
+		rLoc = 9508;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 9062;
+	};
+	D44202EC0B79441C00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */;
+		name = "SSHFS.h: mountPath";
+		rLen = 0;
+		rLoc = 690;
+		rType = 0;
+		vrLen = 900;
+		vrLoc = 32;
+	};
+	D44203040B7944A800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 268";
+		rLen = 0;
+		rLoc = 8863;
+		rType = 0;
+		vrLen = 1239;
+		vrLoc = 7748;
+	};
+	D44203050B7944A800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: unmountFilesystem:";
+		rLen = 0;
+		rLoc = 1233;
+		rType = 0;
+		vrLen = 1271;
+		vrLoc = 46;
+	};
+	D44203220B79451800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 147";
+		rLen = 0;
+		rLoc = 4801;
+		rType = 0;
+		vrLen = 1575;
+		vrLoc = 3498;
+	};
+	D44203350B79471A00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 64";
+		rLen = 0;
+		rLoc = 1639;
+		rType = 0;
+		vrLen = 1162;
+		vrLoc = 1291;
+	};
+	D44203360B79471A00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 147";
+		rLen = 0;
+		rLoc = 4801;
+		rType = 0;
+		vrLen = 1575;
+		vrLoc = 3498;
+	};
+	D44203370B79471A00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */;
+		name = "MountController.h: clear";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 936;
+		vrLoc = 215;
+	};
+	D44203380B79471A00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: unmountFilesystem:";
+		rLen = 0;
+		rLoc = 1233;
+		rType = 0;
+		vrLen = 1271;
+		vrLoc = 46;
+	};
+	D442033F0B79474100E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 368";
+		rLen = 0;
+		rLoc = 11073;
+		rType = 0;
+		vrLen = 1349;
+		vrLoc = 10164;
+	};
+	D442034F0B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */;
+		name = "SSHFS.h: mountPath";
+		rLen = 0;
+		rLoc = 690;
+		rType = 0;
+		vrLen = 903;
+		vrLoc = 29;
+	};
+	D44203530B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 28";
+		rLen = 0;
+		rLoc = 716;
+		rType = 0;
+		vrLen = 1228;
+		vrLoc = 219;
+	};
+	D44203540B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: 21";
+		rLen = 0;
+		rLoc = 390;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203550B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 56";
+		rLen = 0;
+		rLoc = 1259;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 597;
+	};
+	D44203560B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 268";
+		rLen = 0;
+		rLoc = 8863;
+		rType = 0;
+		vrLen = 1239;
+		vrLoc = 7748;
+	};
+	D44203570B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: 21";
+		rLen = 0;
+		rLoc = 390;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203580B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */;
+		name = "SSHFS.h: mountPath";
+		rLen = 0;
+		rLoc = 690;
+		rType = 0;
+		vrLen = 903;
+		vrLoc = 29;
+	};
+	D44203590B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 268";
+		rLen = 0;
+		rLoc = 8863;
+		rType = 0;
+		vrLen = 1239;
+		vrLoc = 7748;
+	};
+	D442035A0B79480200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: 21";
+		rLen = 0;
+		rLoc = 390;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203650B79481F00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 51";
+		rLen = 0;
+		rLoc = 1139;
+		rType = 0;
+		vrLen = 718;
+		vrLoc = 763;
+	};
+	D44203660B79481F00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: unmountFilesystem:";
+		rLen = 0;
+		rLoc = 1233;
+		rType = 0;
+		vrLen = 1235;
+		vrLoc = 0;
+	};
+	D44203670B79481F00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 368";
+		rLen = 0;
+		rLoc = 11073;
+		rType = 0;
+		vrLen = 1325;
+		vrLoc = 0;
+	};
+	D44203680B79481F00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: unmountFilesystem:";
+		rLen = 0;
+		rLoc = 1233;
+		rType = 0;
+		vrLen = 1271;
+		vrLoc = 46;
+	};
+	D44203750B79487800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 39";
+		rLen = 0;
+		rLoc = 919;
+		rType = 0;
+		vrLen = 1470;
+		vrLoc = 625;
+	};
+	D44203760B79487800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: 21";
+		rLen = 0;
+		rLoc = 390;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203770B79487800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 51";
+		rLen = 0;
+		rLoc = 1139;
+		rType = 0;
+		vrLen = 718;
+		vrLoc = 763;
+	};
+	D44203820B7948AB00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 93";
+		rLen = 0;
+		rLoc = 2962;
+		rType = 0;
+		vrLen = 1697;
+		vrLoc = 2852;
+	};
+	D44203880B79495E00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D99D80B755062002E6C08 /* askpass.c */;
+		name = "askpass.c: 158";
+		rLen = 0;
+		rLoc = 6158;
+		rType = 0;
+		vrLen = 2045;
+		vrLoc = 5062;
+	};
+	D442038A0B79495E00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D99D80B755062002E6C08 /* askpass.c */;
+		name = "askpass.c: 158";
+		rLen = 0;
+		rLoc = 6158;
+		rType = 0;
+		vrLen = 2045;
+		vrLoc = 5062;
+	};
+	D44203B70B794A4200E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: fsController";
+		rLen = 0;
+		rLoc = 381;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203BF0B794A7C00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 79";
+		rLen = 0;
+		rLoc = 1530;
+		rType = 0;
+		vrLen = 689;
+		vrLoc = 945;
+	};
+	D44203C00B794A7C00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 197";
+		rLen = 0;
+		rLoc = 5036;
+		rType = 0;
+		vrLen = 941;
+		vrLoc = 4798;
+	};
+	D44203C10B794A7C00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */;
+		name = "MountController.h: clear";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 175;
+	};
+	D44203C20B794A7C00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 198";
+		rLen = 0;
+		rLoc = 5036;
+		rType = 0;
+		vrLen = 1020;
+		vrLoc = 4532;
+	};
+	D44203C30B794A7C00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */;
+		name = "MountController.h: clear";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 175;
+	};
+	D44203CE0B794A8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 198";
+		rLen = 0;
+		rLoc = 5036;
+		rType = 0;
+		vrLen = 1020;
+		vrLoc = 4532;
+	};
+	D44203CF0B794A8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 79";
+		rLen = 0;
+		rLoc = 1530;
+		rType = 0;
+		vrLen = 735;
+		vrLoc = 899;
+	};
+	D44203D00B794A8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: fsController";
+		rLen = 0;
+		rLoc = 381;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203D10B794A8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 79";
+		rLen = 0;
+		rLoc = 1530;
+		rType = 0;
+		vrLen = 735;
+		vrLoc = 899;
+	};
+	D44203DA0B794AA300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */;
+		name = "FuseFSProtocol.h: setMountOnStartup:";
+		rLen = 0;
+		rLoc = 759;
+		rType = 0;
+		vrLen = 1352;
+		vrLoc = 0;
+	};
+	D44203DB0B794AA300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */;
+		name = "FuseUIProtocol.h: commitEdits";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 618;
+		vrLoc = 0;
+	};
+	D44203DC0B794AA300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: fsController";
+		rLen = 0;
+		rLoc = 381;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203DD0B794AA300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 198";
+		rLen = 0;
+		rLoc = 5034;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 4532;
+	};
+	D44203DE0B794AA300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */;
+		name = "FuseFSProtocol.h: setMountOnStartup:";
+		rLen = 0;
+		rLoc = 759;
+		rType = 0;
+		vrLen = 1352;
+		vrLoc = 0;
+	};
+	D44203DF0B794AA300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */;
+		name = "FuseUIProtocol.h: commitEdits";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 618;
+		vrLoc = 0;
+	};
+	D44203E00B794AA300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: fsController";
+		rLen = 0;
+		rLoc = 381;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 0;
+	};
+	D44203EC0B794B1400E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 79";
+		rLen = 0;
+		rLoc = 1530;
+		rType = 0;
+		vrLen = 973;
+		vrLoc = 347;
+	};
+	D44203ED0B794B1400E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 198";
+		rLen = 0;
+		rLoc = 5034;
+		rType = 0;
+		vrLen = 1108;
+		vrLoc = 3767;
+	};
+	D44203F40B794BCF00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 39";
+		rLen = 0;
+		rLoc = 919;
+		rType = 0;
+		vrLen = 1318;
+		vrLoc = 4284;
+	};
+	D442040D0B7968D800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 182";
+		rLen = 0;
+		rLoc = 4724;
+		rType = 0;
+		vrLen = 969;
+		vrLoc = 4796;
+	};
+	D442040E0B7968D800E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: quickMountFilesystem:addToFavorites:";
+		rLen = 0;
+		rLoc = 10109;
+		rType = 0;
+		vrLen = 1330;
+		vrLoc = 9559;
+	};
+	D442041C0B7969A300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: unmountFilesystem:";
+		rLen = 0;
+		rLoc = 1233;
+		rType = 0;
+		vrLen = 1271;
+		vrLoc = 46;
+	};
+	D442041D0B7969A300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: mountFilesystem";
+		rLen = 0;
+		rLoc = 5344;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 4796;
+	};
+	D442041E0B7969A300E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: unmountFilesystem:";
+		rLen = 0;
+		rLoc = 1233;
+		rType = 0;
+		vrLen = 1271;
+		vrLoc = 46;
+	};
+	D44204480B796C9100E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3860B616FA0009EE999 /* FavoritesController.h */;
+		name = "FavoritesController.h: editButton";
+		rLen = 0;
+		rLoc = 553;
+		rType = 0;
+		vrLen = 746;
+		vrLoc = 0;
+	};
+	D44204490B796C9100E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 380";
+		rLen = 0;
+		rLoc = 11607;
+		rType = 0;
+		vrLen = 1299;
+		vrLoc = 9367;
+	};
+	D442044A0B796C9100E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3860B616FA0009EE999 /* FavoritesController.h */;
+		name = "FavoritesController.h: editButton";
+		rLen = 0;
+		rLoc = 553;
+		rType = 0;
+		vrLen = 746;
+		vrLoc = 0;
+	};
+	D44204720B796D8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 42";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1104;
+		vrLoc = 900;
+	};
+	D44204760B796D8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D422F3870B616FA0009EE999 /* FavoritesController.m */;
+		name = "FavoritesController.m: 42";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1104;
+		vrLoc = 900;
+	};
+	D44204770B796D8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 380";
+		rLen = 0;
+		rLoc = 11607;
+		rType = 0;
+		vrLen = 1299;
+		vrLoc = 9367;
+	};
+	D44204780B796D8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 75";
+		rLen = 0;
+		rLoc = 1868;
+		rType = 0;
+		vrLen = 1247;
+		vrLoc = 1176;
+	};
+	D44204790B796D8B00E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */;
+		name = "MountController.h: clear";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 175;
+	};
+	D44204950B796EB600E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 228";
+		rLen = 0;
+		rLoc = 5704;
+		rType = 0;
+		vrLen = 1005;
+		vrLoc = 4764;
+	};
+	D44204960B796EB600E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */;
+		name = "MountController.h: clear";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 175;
+	};
+	D44204970B796EB600E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "MountController.m: 228";
+		rLen = 0;
+		rLoc = 5704;
+		rType = 0;
+		vrLen = 1005;
+		vrLoc = 4764;
+	};
+	D44204980B796EB600E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */;
+		name = "MountController.h: clear";
+		rLen = 0;
+		rLoc = 1108;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 175;
+	};
+	D442049E0B7971D700E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 378";
+		rLen = 0;
+		rLoc = 11380;
+		rType = 0;
+		vrLen = 1301;
+		vrLoc = 10783;
+	};
+	D442049F0B7971D700E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 59";
+		rLen = 0;
+		rLoc = 1290;
+		rType = 0;
+		vrLen = 689;
+		vrLoc = 945;
+	};
+	D44204A00B7971D700E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 93";
+		rLen = 0;
+		rLoc = 2962;
+		rType = 0;
+		vrLen = 1661;
+		vrLoc = 2852;
+	};
+	D44204A10B7971D700E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		name = "MacFusionController.m: 378";
+		rLen = 0;
+		rLoc = 11380;
+		rType = 0;
+		vrLen = 1301;
+		vrLoc = 10783;
+	};
+	D44204A20B7971D700E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 59";
+		rLen = 0;
+		rLoc = 1290;
+		rType = 0;
+		vrLen = 689;
+		vrLoc = 945;
+	};
+	D44204A30B7971D700E96F7C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 138";
+		rLen = 0;
+		rLoc = 4484;
+		rType = 0;
+		vrLen = 1606;
+		vrLoc = 7317;
+	};
+	D4498C860B5A2BD4003B9DFF /* MacFusion */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MacFusion;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	D4498C920B5A2BF2003B9DFF /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	D4498C930B5A2BF2003B9DFF /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D4498D040B5A371D003B9DFF /* MacFusionController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 765}}";
+			sepNavSelRange = "{1233, 0}";
+			sepNavVisRect = "{{0, 68}, {1137, 697}}";
+		};
+	};
+	D4498D050B5A371D003B9DFF /* MacFusionController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 8820}}";
+			sepNavSelRange = "{11380, 0}";
+			sepNavVisRect = "{{0, 5267}, {1137, 697}}";
+			sepNavWindowFrame = "{{548, 164}, {1333, 1001}}";
+		};
+	};
+	D4498D150B5A3792003B9DFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */;
+		name = "MacFusionController.h: statusMenuItem";
+		rLen = 0;
+		rLoc = 886;
+		rType = 0;
+		vrLen = 260;
+		vrLoc = 0;
+	};
+	D44C0C960B6119D900C778DC /* -[NSException raise] */ = {
+		isa = PBXSymbolicBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 1;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		hitCount = 1;
+		location = Foundation;
+		modificationTime = 192507084.049849;
+		state = 1;
+		symbolName = "-[NSException raise]";
+	};
+	D45D6C4C0B5DF9300057DD68 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "English: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 98;
+		vrLoc = 0;
+	};
+	D45D6CC10B5DFE2C0057DD68 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* MacFusion_Prefix.pch */;
+		name = "MacFusion_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 149;
+		vrLoc = 0;
+	};
+	D45D6CE00B5EAC790057DD68 /* DiskArbitration.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DiskArbitration.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/DiskArbitration.framework/Versions/A/Headers/DiskArbitration.h;
+		sourceTree = "<absolute>";
+	};
+	D45D6CE20B5EAC790057DD68 /* DADisk.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = DADisk.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/DiskArbitration.framework/Versions/A/Headers/DADisk.h;
+		sourceTree = "<absolute>";
+	};
+	D45D6D4C0B5EB0CE0057DD68 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 14";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 292;
+		vrLoc = 0;
+	};
+	D45D99D80B755062002E6C08 /* askpass.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 3345}}";
+			sepNavSelRange = "{6158, 0}";
+			sepNavVisRect = "{{0, 1984}, {1137, 697}}";
+		};
+	};
+	D45D9AB10B755F96002E6C08 /* NSObjCRuntime.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSObjCRuntime.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h;
+		sourceTree = "<absolute>";
+	};
+	D45D9ADC0B75604E002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D9ADD0B75604E002E6C08 /* NSScrollView.h */;
+		name = "NSRulerView *_horizontalRuler;";
+		rLen = 35;
+		rLoc = 2155;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 1684;
+	};
+	D45D9ADD0B75604E002E6C08 /* NSScrollView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSScrollView.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSScrollView.h;
+		sourceTree = "<absolute>";
+	};
+	D45D9ADF0B75604E002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D99D80B755062002E6C08 /* askpass.c */;
+		name = "askpass.c: SSHFS_SERVER";
+		rLen = 0;
+		rLoc = 718;
+		rType = 0;
+		vrLen = 1555;
+		vrLoc = 0;
+	};
+	D45D9AE00B75604E002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D9AE10B75604E002E6C08 /* NSScrollView.h */;
+		name = "NSRulerView *_horizontalRuler;";
+		rLen = 35;
+		rLoc = 2155;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 1684;
+	};
+	D45D9AE10B75604E002E6C08 /* NSScrollView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSScrollView.h;
+		path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSScrollView.h;
+		sourceTree = "<absolute>";
+	};
+	D45D9BA90B7562C5002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D9BAA0B7562C5002E6C08 /* CoreFoundation.h */;
+		name = "(null): 7";
+		rLen = 0;
+		rLoc = 203;
+		rType = 0;
+		vrLen = 775;
+		vrLoc = 0;
+	};
+	D45D9BAA0B7562C5002E6C08 /* CoreFoundation.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CoreFoundation.h;
+		path = /System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h;
+		sourceTree = "<absolute>";
+	};
+	D45D9BAD0B7562C5002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D9BAE0B7562C5002E6C08 /* CoreFoundation.h */;
+		name = "(null): 7";
+		rLen = 0;
+		rLoc = 203;
+		rType = 0;
+		vrLen = 775;
+		vrLoc = 0;
+	};
+	D45D9BAE0B7562C5002E6C08 /* CoreFoundation.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CoreFoundation.h;
+		path = /System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h;
+		sourceTree = "<absolute>";
+	};
+	D45D9BB10B7562EB002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D9AB10B755F96002E6C08 /* NSObjCRuntime.h */;
+		name = "@class NSString;";
+		rLen = 17;
+		rLoc = 1535;
+		rType = 0;
+		vrLen = 1247;
+		vrLoc = 1017;
+	};
+	D45D9BB40B7562EB002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D45D9AB10B755F96002E6C08 /* NSObjCRuntime.h */;
+		name = "@class NSString;";
+		rLen = 17;
+		rLoc = 1535;
+		rType = 0;
+		vrLen = 1247;
+		vrLoc = 1017;
+	};
+	D45D9BB90B756329002E6C08 /* askpass */ = {
+		activeExec = 0;
+		executables = (
+			D45D9BBB0B756329002E6C08 /* askpass */,
+		);
+	};
+	D45D9BBB0B756329002E6C08 /* askpass */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = askpass;
+		sourceDirectories = (
+		);
+	};
+	D45D9CBF0B756A27002E6C08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */;
+		name = "SSHFS-Info.plist: 23";
+		rLen = 0;
+		rLoc = 714;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 0;
+	};
+	D4A220220B76BA1F00BE8E8E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 14";
+		rLen = 0;
+		rLoc = 503;
+		rType = 0;
+		vrLen = 896;
+		vrLoc = 0;
+	};
+	D4A220260B76BA1F00BE8E8E /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = D4C6E2230B5A38C000CF3EC7 /* menuicon.icns */;
+	};
+	D4A220560B76BB9C00BE8E8E /* SSHFS.m:123 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		functionName = "-setupTaskForMount";
+		hitCount = 1;
+		lineNumber = 123;
+		location = SSHFS;
+		modificationTime = 192507083.980408;
+		state = 1;
+	};
+	D4A2208C0B76C0A900BE8E8E /* SSHFS.m:176 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		functionName = "-handleDataOnPipe:";
+		hitCount = 1;
+		lineNumber = 176;
+		location = SSHFS;
+		modificationTime = 192507083.996384;
+		state = 1;
+	};
+	D4A2220B0B76DAAC00BE8E8E /* MacFusionController.m:118 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = D4498D050B5A371D003B9DFF /* MacFusionController.m */;
+		functionName = "-writeFavoritesToDefaults";
+		hitCount = 1;
+		lineNumber = 118;
+		location = MacFusionController.ob;
+		modificationTime = 192507084.016995;
+		state = 1;
+	};
+	D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 855}}";
+			sepNavSelRange = "{1108, 0}";
+			sepNavVisRect = "{{0, 143}, {1137, 697}}";
+			sepNavWindowFrame = "{{15, 172}, {1333, 1001}}";
+		};
+	};
+	D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {912, 3525}}";
+			sepNavSelRange = "{5552, 0}";
+			sepNavVisRect = "{{0, 2811}, {912, 279}}";
+			sepNavWindowFrame = "{{15, 172}, {1333, 1001}}";
+		};
+	};
+	D4C6E2E10B5A4E2A00CF3EC7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */;
+		name = "QuickMountController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 241;
+		vrLoc = 0;
+	};
+	D4C6E2E20B5A4E2A00CF3EC7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */;
+		name = "QuickMountController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 229;
+		vrLoc = 0;
+	};
+	D4C6E2F50B5A4E2A00CF3EC7 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+			D42AF26B0B60180C008C6F84 /* MacFusionController.m:574 */,
+			D42AF3AE0B60257B008C6F84 /* MacFusionController.m:223 */,
+			D44C0C960B6119D900C778DC /* -[NSException raise] */,
+			D407D3DA0B6B1B6B00D0CB23 /* MacFusionController.m:242 */,
+			D4A220560B76BB9C00BE8E8E /* SSHFS.m:123 */,
+			D4A2208C0B76C0A900BE8E8E /* SSHFS.m:176 */,
+			D4A2220B0B76DAAC00BE8E8E /* MacFusionController.m:118 */,
+		);
+	};
+	D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 697}}";
+			sepNavSelRange = "{568, 0}";
+			sepNavVisRect = "{{0, 0}, {1137, 697}}";
+		};
+	};
+	D4F124A10B5C6293002BAA40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */;
+		name = "FuseFSProtocol.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 0;
+	};
+	D4F124A20B5C6293002BAA40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */;
+		name = "FuseUIProtocol.h: 9";
+		rLen = 0;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 194;
+		vrLoc = 0;
+	};
+	D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 697}}";
+			sepNavSelRange = "{381, 0}";
+			sepNavVisRect = "{{0, 0}, {1137, 697}}";
+		};
+	};
+	D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 1350}}";
+			sepNavSelRange = "{1290, 0}";
+			sepNavVisRect = "{{0, 653}, {1137, 697}}";
+		};
+	};
+	D4F124FE0B5C767A002BAA40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 844;
+		vrLoc = 0;
+	};
+	D4F125000B5C767A002BAA40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */;
+		name = "SSHFSUIController.h: 14";
+		rLen = 0;
+		rLoc = 291;
+		rType = 0;
+		vrLen = 269;
+		vrLoc = 0;
+	};
+	D4F125010B5C767A002BAA40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */;
+		name = "SSHFSUIController.m: 13";
+		rLen = 0;
+		rLoc = 1628;
+		rType = 0;
+		vrLen = 220;
+		vrLoc = 0;
+	};
+	D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {885, 581}}";
+			sepNavSelRange = "{648, 42}";
+			sepNavVisRect = "{{0, 0}, {885, 581}}";
+			sepNavWindowFrame = "{{15, 172}, {1333, 1001}}";
+		};
+	};
+	D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {977, 765}}";
+			sepNavSelRange = "{479, 0}";
+			sepNavVisRect = "{{0, 168}, {977, 529}}";
+		};
+	};
+	D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 6435}}";
+			sepNavSelRange = "{4484, 0}";
+			sepNavVisRect = "{{0, 3349}, {1137, 697}}";
+			sepNavWindowFrame = "{{15, 172}, {1333, 1001}}";
+		};
+	};
+	D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1137, 705}}";
+			sepNavSelRange = "{759, 0}";
+			sepNavVisRect = "{{0, 0}, {1137, 697}}";
+		};
+	};
+	D4F82A230B5BEA900061B029 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "English: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 98;
+		vrLoc = 0;
+	};
+	D4F82A240B5BEA900061B029 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */;
+		name = "SSHFS.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D4F82A3A0B5BEB480061B029 /* SSHFS */ = {
+		activeExec = 0;
+	};
+	D4F82A5D0B5BEB8A0061B029 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */;
+		name = "SSHFS-Info.plist: 6";
+		rLen = 0;
+		rLoc = 239;
+		rType = 0;
+		vrLen = 665;
+		vrLoc = 0;
+	};
+	D4F82A5E0B5BEB8A0061B029 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */;
+		name = "SSHFS.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 416;
+		vrLoc = 0;
+	};
+}

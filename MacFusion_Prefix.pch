@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MacFusion' target in the 'MacFusion' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
