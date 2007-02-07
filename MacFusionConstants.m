@@ -21,6 +21,7 @@ NSString* FuseFSUnmountedNotification = @"FuseFSUnmounted";
 
 NSString* growlFSMountFailedNotification = @"Mount Faliure";
 NSString* growlFSMountSuccessNotification = @"Mount Success";
+NSString* growlFSUnmountFailedNotification = @"Unmount Faliure";
 
 NSString* FuseFSMountFaliureTimeout = @"Timeout";
 NSString* FuseFSMountFaliureTaskEnded = @"Task Ended";

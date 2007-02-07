@@ -23,6 +23,7 @@ extern NSString* FuseFSUnmountedNotification;
 // growl notification names
 extern NSString* growlFSMountFailedNotification;
 extern NSString* growlFSMountSuccessNotification;
+extern NSString* growlFSUnmountFailedNotification;
 
 // status
 extern NSString* FuseFSStatusUnmountedString;
