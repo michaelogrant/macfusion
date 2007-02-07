@@ -7,6 +7,9 @@
 //
 
 #import "FavoritesController.h"
+@interface FavoritesController (PrivateAPI)
+- (void) adjustUIForSelectedFS;
+@end
 
 @implementation FavoritesController
 

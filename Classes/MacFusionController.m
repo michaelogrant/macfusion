@@ -136,8 +136,8 @@
 }
 
 // Checks for favorites that were mounted when MacFusion started. Adds these
-// to the mounted filesystems. This is fired form a timer, because
-// it seems to take a bit for the volumeAppeared callbacks to fire
+// to the mounted filesystems. Also automounts those favorites that are set to do so
+// This is fired form a timer, because it seems to take a bit for the volumeAppeared callbacks to fire
 - (void) checkAndMountFavorites:(NSTimer*)timer
 {
 	NSEnumerator* favoritesEnum = [favorites objectEnumerator];
@@ -324,15 +324,6 @@
 }
 
 #pragma mark Methods for Controllers
-- (void)quickMountFilesystem:(id <FuseFSProtocol>)fs 
-			  addToFavorites:(BOOL)favorite
-{
-	[self mountFilesystem: fs];
-	if (favorite)
-	{
-		[favorites addObject: fs];
-	}
-}
 
 - (void)addFilesystemToFavorites:(id <FuseFSProtocol>)fs
 {
