@@ -39,8 +39,6 @@ NSString *appSupportSubpath = @"Application Support/MacFusion/PlugIns";
 - (NSMutableArray*)favorites;
 - (NSMutableDictionary*)plugins;
 
-- (void)quickMountFilesystem:(id <FuseFSProtocol>)fs 
-			  addToFavorites:(BOOL)favorite;
 - (void)addFilesystemToFavorites:(id <FuseFSProtocol>)fs;
 - (void)mountFilesystem:(id <FuseFSProtocol>)fs;
 - (void)unmountFilesystem:(id <FuseFSProtocol>)fs;

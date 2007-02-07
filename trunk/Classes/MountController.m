@@ -213,8 +213,9 @@
 		}
 		if (mode == QuickMountMode)
 		{
-			[mainController quickMountFilesystem: fileSystem
-								  addToFavorites: [switchButton state]];
+			[mainController mountFilesystem: fileSystem ];
+			if ([switchButton state] == YES)
+				[mainController addFilesystemToFavorites: fileSystem];
 			[[self window] close];
 		}
 	}
