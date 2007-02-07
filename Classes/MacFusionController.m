@@ -50,6 +50,12 @@
 		[[NSNotificationCenter defaultCenter] addObserver: self
 												 selector:@selector(handleUnmountNotification:)
 													 name:FuseFSUnmountedNotification object:nil];
+		
+		NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: 
+			NSFileTypeForHFSTypeCode(kGenericRemovableMediaIcon)];
+		[myIcon setSize: NSMakeSize(128,128)];
+		
+			[[NSApplication sharedApplication] setApplicationIconImage: myIcon];
 		[self initializeGrowl];
 			
 		[[NSApplication sharedApplication] setDelegate: self];
@@ -308,8 +314,21 @@
 - (void) quickMount:(id)sender
 {
 	if (mountController == nil)
+	{
 		mountController = [[MountController alloc] init];
-	[mountController setForQuickMount];
+		[mountController setForQuickMount];
+	}
+	else if ([[mountController window] isVisible])
+	{
+		[mountController showWindow: self];
+		[[mountController window] makeKeyAndOrderFront: self];
+	}
+	else
+	{
+		[mountController release];
+		mountController = [[MountController alloc] init];
+		[mountController setForQuickMount];
+	}
 }
 
 - (void) showFavorites:(id)sender

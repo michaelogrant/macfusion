@@ -18,6 +18,7 @@ NSString* SSHFSPortError = @"Port can not be 0";
 @implementation SSHFSUIController
 - (id) init 
 {
+	NSLog(@"SSHFSUI init");
 	self = [super init];
 	if (self != nil) 
 	{
@@ -34,9 +35,8 @@ NSString* SSHFSPortError = @"Port can not be 0";
 - (id) initWithFS:(id <FuseFSProtocol>) fs
 {
 	self = [super init];
-	fileSystem = fs;
+	fileSystem = [fs retain];
 	[NSBundle loadNibNamed:@"SSHFS.nib" owner:self];
-	
 	return self;
 }
 

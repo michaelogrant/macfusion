@@ -23,6 +23,7 @@
 #pragma mark Initialization
 - (id) init {
 	self = [super init];
+	NSLog(@"SSHFS Init");
 	if (self != nil) 
 	{
 		[self setPingDiskarb:YES];
