@@ -29,7 +29,7 @@
 		D4F124BF0B5C6D1D002BAA40 /* SSHFSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */; };
 		D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A260B5BEAA30061B029 /* SSHFS.nib */; };
 		D4F82A460B5BEB6D0061B029 /* SSHFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */; };
-		D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */; };
+		D4F82A670B5BEBA50061B029 /* SSHFS.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */; };
 		D4F82A6F0B5BEBEE0061B029 /* SSHFS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */; };
 		D4F96CA30B5B47CD009553F6 /* Mount.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F96CA10B5B47CD009553F6 /* Mount.nib */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */,
+				D4F82A670B5BEBA50061B029 /* SSHFS.bundle in CopyFiles */,
 				D4F124660B5C61C8002BAA40 /* FuseUIProtocol.h in CopyFiles */,
 				D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */,
 				D422F3880B616FA0009EE999 /* FavoritesController.h in CopyFiles */,
@@ -129,7 +129,7 @@
 		D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SSHFS.m; sourceTree = "<group>"; };
 		D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FuseFSProtocol.h; sourceTree = "<group>"; };
 		D4F82A260B5BEAA30061B029 /* SSHFS.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = SSHFS.nib; sourceTree = "<group>"; };
-		D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHFS.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHFS.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F96CA20B5B47CD009553F6 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Mount.nib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* MacFusion.app */,
-				D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */,
+				D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */,
 				D45D9BBA0B756329002E6C08 /* askpass */,
 			);
 			name = Products;
@@ -356,7 +356,7 @@
 			);
 			name = SSHFS;
 			productName = SSHFS;
-			productReference = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */;
+			productReference = D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
