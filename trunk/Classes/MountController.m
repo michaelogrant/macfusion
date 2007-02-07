@@ -232,4 +232,10 @@
 	return fileSystem;
 }
 
+- (void) dealloc {
+	NSLog(@"MountController dealloc");
+	[fsUIController release];
+	[super dealloc];
+}
+
 @end

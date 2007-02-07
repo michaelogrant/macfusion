@@ -29,6 +29,14 @@
 	[[self window] makeKeyAndOrderFront: self];
 	[favoritesArrayController addObserver: self forKeyPath:@"selection.status" options:NSKeyValueObservingOptionNew context:nil];
 	[self adjustUIForSelectedFS];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleWindowClosed:) name:
+				  NSWindowWillCloseNotification object:nil];
+}
+
+- (void) handleWindowClosed:(NSNotification*)note
+{
+	[fsControllers removeObject: [[note object] windowController]];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object 
@@ -76,6 +84,8 @@
 {
 	MountController* mountController = [[MountController alloc] init];
 	[mountController setForAddingFavorite];
+	[fsControllers addObject: mountController];
+	[mountController release];
 }
 
 - (IBAction) removeFavorite:(id)sender
@@ -95,6 +105,7 @@
 	MountController* mountController = [[MountController alloc] init];
 	[mountController setForEditingFavorite: fs];
 	[fsControllers addObject: mountController];
+	[mountController release];
 }
 
 - (void) tableViewSelectionDidChange:(NSNotification *)aNotification
