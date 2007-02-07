@@ -1,1 +1,2 @@
 Monitor the Notifications MacFUSE sends instead of Diskarbitration ones
+Separate general code from SSHFS plugin into an abstract class
