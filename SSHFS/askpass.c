@@ -155,7 +155,7 @@ int main() {
       kCFUserNotificationIconURLKey
     };
     const void* values[] = {
-      CFSTR("sshfs Password"),
+      CFSTR("Enter Password To Connect by SSH"),
       CFSTR(""),
       CFSTR("Save in Keychain"),
       CFSTR("Cancel"),
