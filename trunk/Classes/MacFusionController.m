@@ -51,10 +51,6 @@
 												 selector:@selector(handleUnmountNotification:)
 													 name:FuseFSUnmountedNotification object:nil];
 		[self initializeGrowl];
-		
-		NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericHardDiskIcon)];
-		[myIcon setSize: NSMakeSize(128,128)];
-		[[NSApplication sharedApplication] setApplicationIconImage: myIcon ];
 			
 		[[NSApplication sharedApplication] setDelegate: self];
 	}
@@ -136,8 +132,8 @@
 }
 
 // Checks for favorites that were mounted when MacFusion started. Adds these
-// to the mounted filesystems. Also automounts those favorites that are set to do so
-// This is fired form a timer, because it seems to take a bit for the volumeAppeared callbacks to fire
+// to the mounted filesystems. This is fired form a timer, because
+// it seems to take a bit for the volumeAppeared callbacks to fire
 - (void) checkAndMountFavorites:(NSTimer*)timer
 {
 	NSEnumerator* favoritesEnum = [favorites objectEnumerator];
@@ -162,7 +158,7 @@
 	statusMenuItem = [[NSStatusBar systemStatusBar] statusItemWithLength: 
 		NSSquareStatusItemLength];
 	
-	NSImage* mine = [[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericHardDiskIcon)];
+	NSImage* mine = [NSImage imageNamed: @"menuicon.icns"];
 	[mine setSize: NSMakeSize(16,16)];
 	[statusMenuItem setImage: mine];
 	
@@ -324,6 +320,15 @@
 }
 
 #pragma mark Methods for Controllers
+- (void)quickMountFilesystem:(id <FuseFSProtocol>)fs 
+			  addToFavorites:(BOOL)favorite
+{
+	[self mountFilesystem: fs];
+	if (favorite)
+	{
+		[favorites addObject: fs];
+	}
+}
 
 - (void)addFilesystemToFavorites:(id <FuseFSProtocol>)fs
 {
@@ -371,8 +376,10 @@
 		status = [unmountTask terminationStatus];
 		if (status != 0)
 		{
-			NSString* message = [NSString stringWithFormat:@"Failed to Unmount %@", [fs name]];
-			[[NSAlert alertWithMessageText:message defaultButton:@"OK" alternateButton:@"" otherButton:@"" informativeTextWithFormat:@""] runModal];
+			NSString* description = [NSString stringWithFormat:@"MacFusion Failed to Unmount %@", [fs name]];
+			[GrowlApplicationBridge notifyWithTitle: @"Unmount Failed" description:description 
+								   notificationName:growlFSUnmountFailedNotification 
+										   iconData:nil priority:0 isSticky:NO clickContext:nil];
 		}
 	}
 }
@@ -533,10 +540,10 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 
 - (NSDictionary*) registrationDictionaryForGrowl
 {
-	NSArray* defaultNotifications = [NSArray arrayWithObjects: growlFSMountFailedNotification, 
+	NSArray* defaultNotifications = [NSArray arrayWithObjects: growlFSMountFailedNotification, growlFSUnmountFailedNotification,
 		nil];
 	NSArray* allNotifications = [NSArray arrayWithObjects: growlFSMountFailedNotification,
-		growlFSMountSuccessNotification, nil];
+		growlFSMountSuccessNotification, growlFSUnmountFailedNotification, nil];
 	
 	NSDictionary* growlRegistration = [NSDictionary dictionaryWithObjectsAndKeys: 
 		defaultNotifications, GROWL_NOTIFICATIONS_DEFAULT,
