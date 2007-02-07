@@ -51,6 +51,10 @@
 												 selector:@selector(handleUnmountNotification:)
 													 name:FuseFSUnmountedNotification object:nil];
 		[self initializeGrowl];
+		
+		NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericHardDiskIcon)];
+		[myIcon setSize: NSMakeSize(128,128)];
+		[[NSApplication sharedApplication] setApplicationIconImage: myIcon ];
 			
 		[[NSApplication sharedApplication] setDelegate: self];
 	}
@@ -158,7 +162,7 @@
 	statusMenuItem = [[NSStatusBar systemStatusBar] statusItemWithLength: 
 		NSSquareStatusItemLength];
 	
-	NSImage* mine = [NSImage imageNamed: @"menuicon.icns"];
+	NSImage* mine = [[NSWorkspace sharedWorkspace] iconForFileType: NSFileTypeForHFSTypeCode(kGenericHardDiskIcon)];
 	[mine setSize: NSMakeSize(16,16)];
 	[statusMenuItem setImage: mine];
 	

@@ -282,24 +282,22 @@
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
-								<string>1058C7A0FEA54F0111CA2CBB</string>
-								<string>1058C7A2FEA54F0111CA2CBB</string>
 								<string>D4F1245B0B5C618D002BAA40</string>
-								<string>D409AB3B0B5BE9C300CE77A3</string>
+								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>38</integer>
-									<integer>36</integer>
-									<integer>35</integer>
+									<integer>11</integer>
+									<integer>7</integer>
+									<integer>6</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 253}, {245, 716}}</string>
+							<string>{{0, 0}, {245, 716}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,7 +334,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>askpass.c</string>
+								<string>MacFusionController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,40 +342,39 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>askpass.c</string>
+										<string>MacFusionController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D45AA91A0B798248004CF4F6</string>
+										<string>D45AA9A70B798549004CF4F6</string>
 										<key>history</key>
 										<array>
 											<string>D45D6C4C0B5DF9300057DD68</string>
 											<string>D45D6D4C0B5EB0CE0057DD68</string>
 											<string>D42AECF40B5EBF11008C6F84</string>
 											<string>D42AECFA0B5EBF11008C6F84</string>
-											<string>D42AF4CD0B6099BA008C6F84</string>
 											<string>D42AF6320B610B50008C6F84</string>
 											<string>D45D9ADC0B75604E002E6C08</string>
 											<string>D45D9BA90B7562C5002E6C08</string>
-											<string>D45D9BB10B7562EB002E6C08</string>
 											<string>D45D9CBF0B756A27002E6C08</string>
 											<string>D4A220220B76BA1F00BE8E8E</string>
 											<string>D4A220260B76BA1F00BE8E8E</string>
-											<string>D4108BF90B7825F0001A4BCA</string>
 											<string>D4108BFA0B7825F0001A4BCA</string>
 											<string>D442034F0B79480200E96F7C</string>
-											<string>D44203DA0B794AA300E96F7C</string>
-											<string>D44203DB0B794AA300E96F7C</string>
 											<string>D44203DC0B794AA300E96F7C</string>
-											<string>D442041C0B7969A300E96F7C</string>
-											<string>D44204480B796C9100E96F7C</string>
-											<string>D44204720B796D8B00E96F7C</string>
 											<string>D44204950B796EB600E96F7C</string>
 											<string>D44204960B796EB600E96F7C</string>
-											<string>D442049E0B7971D700E96F7C</string>
 											<string>D442049F0B7971D700E96F7C</string>
-											<string>D45AA9170B798248004CF4F6</string>
-											<string>D45AA9180B798248004CF4F6</string>
+											<string>D45AA94E0B798434004CF4F6</string>
+											<string>D45AA94F0B798434004CF4F6</string>
+											<string>D45AA9510B798434004CF4F6</string>
+											<string>D45AA9520B798434004CF4F6</string>
+											<string>D45AA9550B798434004CF4F6</string>
+											<string>D45AA9560B798434004CF4F6</string>
+											<string>D45AA9A10B798549004CF4F6</string>
+											<string>D45AA9A20B798549004CF4F6</string>
+											<string>D45AA9A30B798549004CF4F6</string>
+											<string>D45AA97D0B7984F8004CF4F6</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -400,15 +397,15 @@
 											<string>D42AED340B5F1B2B008C6F84</string>
 											<string>D42AEF9A0B5FD782008C6F84</string>
 											<string>D42AEF9B0B5FD782008C6F84</string>
-											<string>D42AF4D20B6099BA008C6F84</string>
 											<string>D42AF6100B610998008C6F84</string>
 											<string>D422F73D0B617DBA009EE999</string>
 											<string>D422F8420B61BD21009EE999</string>
 											<string>D45D9ADF0B75604E002E6C08</string>
 											<string>D45D9AE00B75604E002E6C08</string>
 											<string>D45D9BAD0B7562C5002E6C08</string>
-											<string>D45D9BB40B7562EB002E6C08</string>
-											<string>D45AA9190B798248004CF4F6</string>
+											<string>D45AA9A40B798549004CF4F6</string>
+											<string>D45AA9A50B798549004CF4F6</string>
+											<string>D45AA9A60B798549004CF4F6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -466,9 +463,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D45AA91B0B798248004CF4F6</string>
+				<string>D45AA9900B798508004CF4F6</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D45AA91C0B798248004CF4F6</string>
+				<string>D45AA9910B798508004CF4F6</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -587,7 +584,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>192512561.43237099</real>
+	<real>192513353.407765</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -602,10 +599,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D45AA9230B798248004CF4F6</string>
+		<string>D4498CB90B5A3460003B9DFF</string>
+		<string>D45AA9980B798508004CF4F6</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Users/mgorbach/Programming/macfusion_svn/MacFusion.xcodeproj</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
 	<string>251 263 1451 775 0 0 1920 1178 </string>
@@ -629,7 +627,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FavoritesController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -687,7 +685,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D4498CB90B5A3460003B9DFF</string>
-				<string>D44202370B793D3A00E96F7C</string>
+				<string>D45AA99D0B798514004CF4F6</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -729,8 +727,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {322, 345}}</string>
-											<string>{{322, 0}, {637, 345}}</string>
+											<string>{{0, 0}, {320, 345}}</string>
+											<string>{{320, 0}, {639, 345}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -793,14 +791,14 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D45AA91D0B798248004CF4F6</string>
+				<string>D45AA9920B798508004CF4F6</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D45AA91E0B798248004CF4F6</string>
-				<string>D45AA91F0B798248004CF4F6</string>
-				<string>D45AA9200B798248004CF4F6</string>
-				<string>D45AA9210B798248004CF4F6</string>
-				<string>D45AA9220B798248004CF4F6</string>
-				<string>D45AA9230B798248004CF4F6</string>
+				<string>D45AA9930B798508004CF4F6</string>
+				<string>D45AA9940B798508004CF4F6</string>
+				<string>D45AA9950B798508004CF4F6</string>
+				<string>D45AA9960B798508004CF4F6</string>
+				<string>D45AA9970B798508004CF4F6</string>
+				<string>D45AA9980B798508004CF4F6</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debug</string>
@@ -1051,9 +1049,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>D45AA9240B798248004CF4F6</string>
+				<string>D45AA9990B798508004CF4F6</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>D45AA9250B798248004CF4F6</string>
+				<string>D45AA99A0B798508004CF4F6</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
