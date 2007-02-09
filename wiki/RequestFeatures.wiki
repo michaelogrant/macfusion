@@ -1,0 +1,5 @@
+#summary Feature Requests for MacFusion, not including new FS plugins
+#labels Features
+
+  * Sparkle Integration for updating
+  * Interface for Plugin Management
