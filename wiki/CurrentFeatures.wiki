@@ -1,0 +1,10 @@
+#summary Description of what MacFusion can do, as of today.
+#labels Features,Featured
+
+  * Menubar interface for quick mounting filesystems or mount favorites
+  * Storing of saved favorites
+  * Auto-mounting of selected favorites when MacFusion is started
+  * Notification of errors or other messages using Growl
+  * SSH FS
+    * Password Authentication using Google's askpass program, storage of passwords in keychain
+    * Key-based authentication integrates with an agent app, like SSHKeyChain
