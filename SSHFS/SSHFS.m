@@ -66,7 +66,9 @@
 		// the timeout is long so that if needed people have a change to enter password
 		NSDictionary* timerInfoDic = [NSDictionary dictionaryWithObject: self 
 																 forKey: filesystemKeyName];
-		[NSTimer scheduledTimerWithTimeInterval:60.0 target:self
+		
+		float timeout = [[NSUserDefaults standardUserDefaults] floatForKey: mountTimeoutKeyName];
+		[NSTimer scheduledTimerWithTimeInterval:timeout target:self
 									   selector:@selector(handleMountTimeout:)
 									   userInfo:timerInfoDic repeats:NO];
 		[task launch];
