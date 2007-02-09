@@ -24,12 +24,13 @@
 		D45D9BD00B756366002E6C08 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
 		D45D9BD40B75637F002E6C08 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
 		D45D9BEF0B75640B002E6C08 /* askpass in CopyFiles */ = {isa = PBXBuildFile; fileRef = D45D9BBA0B756329002E6C08 /* askpass */; };
+		D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */; };
 		D4C6E2BD0B5A46E100CF3EC7 /* MountController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */; };
 		D4F124660B5C61C8002BAA40 /* FuseUIProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */; };
 		D4F124BF0B5C6D1D002BAA40 /* SSHFSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */; };
 		D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A260B5BEAA30061B029 /* SSHFS.nib */; };
 		D4F82A460B5BEB6D0061B029 /* SSHFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */; };
-		D4F82A670B5BEBA50061B029 /* SSHFS.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */; };
+		D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */; };
 		D4F82A6F0B5BEBEE0061B029 /* SSHFS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */; };
 		D4F96CA30B5B47CD009553F6 /* Mount.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F96CA10B5B47CD009553F6 /* Mount.nib */; };
 /* End PBXBuildFile section */
@@ -58,7 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4F82A670B5BEBA50061B029 /* SSHFS.bundle in CopyFiles */,
+				D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */,
 				D4F124660B5C61C8002BAA40 /* FuseUIProtocol.h in CopyFiles */,
 				D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */,
 				D422F3880B616FA0009EE999 /* FavoritesController.h in CopyFiles */,
@@ -119,6 +120,7 @@
 		D45D9A3D0B755F27002E6C08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		D45D9BBA0B756329002E6C08 /* askpass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = askpass; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountController.h; sourceTree = "<group>"; };
 		D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountController.m; sourceTree = "<group>"; };
 		D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuseUIProtocol.h; sourceTree = "<group>"; };
@@ -129,7 +131,7 @@
 		D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SSHFS.m; sourceTree = "<group>"; };
 		D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FuseFSProtocol.h; sourceTree = "<group>"; };
 		D4F82A260B5BEAA30061B029 /* SSHFS.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = SSHFS.nib; sourceTree = "<group>"; };
-		D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHFS.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHFS.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F96CA20B5B47CD009553F6 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Mount.nib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D44C0C620B61191700C778DC /* Growl.framework in Frameworks */,
+				D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +177,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */,
 				D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */,
 				D45D9A3D0B755F27002E6C08 /* Security.framework */,
 				D44C0C610B61191700C778DC /* Growl.framework */,
@@ -196,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* MacFusion.app */,
-				D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */,
+				D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */,
 				D45D9BBA0B756329002E6C08 /* askpass */,
 			);
 			name = Products;
@@ -356,7 +360,7 @@
 			);
 			name = SSHFS;
 			productName = SSHFS;
-			productReference = D4F82A3B0B5BEB480061B029 /* SSHFS.bundle */;
+			productReference = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -618,7 +622,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "SSHFS-Info.plist";
+				INFOPLIST_FILE = "SSHFS/SSHFS-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -628,7 +632,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = SSHFS;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
