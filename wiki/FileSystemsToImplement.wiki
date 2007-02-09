@@ -1,18 +1,12 @@
 #summary Filesystems to be integrated into MacFusion as Plugins
 #labels Features,Filesystems
 
-= Introduction =
-
 We might as well start listing them.
 When the plugin api becomes stable, others can work on implementing these.
-
-
-= Details =
 
   * FTP-FS (Probably CurlFTPFS) for Read/Write FTP
   * GmailFS for access to gmail drives as mounted folders
   * EncFS/CryptoFS for secure drives ... which one?
-
 
 
 
