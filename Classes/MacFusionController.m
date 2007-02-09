@@ -5,6 +5,18 @@
 //  Created by Michael Gorbach on 1/14/07.
 //  Copyright 2007 Michael Gorbach. All rights reserved.
 //
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//      http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 
 #import "MacFusionController.h"
 #import "MacFusionConstants.h"
@@ -55,7 +67,7 @@
 			NSFileTypeForHFSTypeCode(kGenericRemovableMediaIcon)];
 		[myIcon setSize: NSMakeSize(128,128)];
 		
-			[[NSApplication sharedApplication] setApplicationIconImage: myIcon];
+		[[NSApplication sharedApplication] setApplicationIconImage: myIcon];
 		[self initializeGrowl];
 			
 		[[NSApplication sharedApplication] setDelegate: self];
@@ -164,9 +176,10 @@
 	statusMenuItem = [[NSStatusBar systemStatusBar] statusItemWithLength: 
 		NSSquareStatusItemLength];
 	
-	NSImage* mine = [NSImage imageNamed: @"menuicon.icns"];
-	[mine setSize: NSMakeSize(16,16)];
-	[statusMenuItem setImage: mine];
+	NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: 
+		NSFileTypeForHFSTypeCode(kGenericRemovableMediaIcon)];
+	[myIcon setSize: NSMakeSize(16,16)];
+	[statusMenuItem setImage: myIcon];
 	
 	NSMenu* myMenu = [[NSMenu alloc] initWithTitle:@"main"];
 	[myMenu setDelegate: self];
@@ -414,11 +427,22 @@
 	while(path = [e nextObject])
 	{
 		NSBundle* b = [NSBundle bundleWithPath:path];
-		NSString* fsType = [[b infoDictionary] objectForKey:@"FSType"];
-		[plugins setObject: b forKey: fsType];
-		[b load];
-		NSLog(@"Loaded %@ filesystem from %@", fsType, 
-			  [[b infoDictionary] objectForKey: @"CFBundleIdentifier"]);
+		if ([[b principalClass] conformsToProtocol: @protocol(FuseFSProtocol)])
+		{
+			NSString* fsType = [[b infoDictionary] objectForKey:@"FSType"];
+			[plugins setObject: b forKey: fsType];
+			[b load];
+			NSLog(@"Loaded %@ filesystem from %@", fsType, 
+				  [[b infoDictionary] objectForKey: @"CFBundleIdentifier"]);
+		}
+		else
+		{
+			NSLog(@"Not loading bundle %@", [[b infoDictionary] objectForKey: @"CFBundleIdentifier"]);
+		}
+	}
+	if ([plugins count] == 0)
+	{
+		NSLog(@"Failed to Load Any Plugins!");
 	}
 }
 
@@ -571,18 +595,11 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 	return growlRegistration;
 }
 
-#pragma mark Accessors
-- (NSMutableArray*) favorites
-{
-	return favorites;
-}
-
+#pragma mark Other
 - (NSMutableDictionary*) plugins
 {
 	return plugins;
 }
-
-#pragma mark Other
 
 #pragma mark Cleanup Code
 - (void) applicationWillTerminate:(NSNotification*)note

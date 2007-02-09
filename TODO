@@ -1,2 +1,10 @@
-Monitor the Notifications MacFUSE sends instead of Diskarbitration ones
-Separate general code from SSHFS plugin into an abstract class
+- Monitor the Notifications MacFUSE sends instead of Diskarbitration ones
+- Separate general code from SSHFS plugin into an abstract class
+- Find mem leaks ... some instances of SSHFS don't seem to be being de-alloced
+- Plugins to add
+	- FTPFS
+	- gmail
+	- EncFS
+	- ...
+- UI for enablidng/disabling plugins
+- Sparkle updating of some form
