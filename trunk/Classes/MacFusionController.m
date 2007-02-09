@@ -86,7 +86,7 @@
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	NSArray* emptyFavorites = [[NSMutableDictionary alloc] init];
 	NSDictionary* defaultsDic = [NSDictionary dictionaryWithObjectsAndKeys: emptyFavorites,  favoritesKeyName,
-		3.0, mountTimeoutKeyName, nil];
+		[NSNumber numberWithDouble: 60.0 ], mountTimeoutKeyName, nil];
 	
 	[defaults registerDefaults: defaultsDic];
 }
