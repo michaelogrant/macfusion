@@ -20,7 +20,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <Security/Security.h>
 
-char *SSHFSUserAndServerInKeychain(const char *user, const char *server);
+char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server);
 void SSHFSSavePasswordToKeychain(const char *user, const char *server, const char *password);
 
 char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server)
@@ -44,9 +44,7 @@ char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server)
                                           (void **) &password,
                                           &item
                                           );
- // printf("DEBUG: res: %d\n", (int)result);
   if(result == 0) {
-//   printf("DEBUG: pass: %s\n", password);
     return password;
   }
   
@@ -58,7 +56,7 @@ void SSHFSSavePasswordToKeychain(const char *user, const char *server, const cha
     OSStatus result;
     SecKeychainItemRef item;
 
-    result =  SecKeychainFindInternetPassword(
+    result = SecKeychainFindInternetPassword(
                                           NULL, //default keychain
                                           strlen(server), // servername length
                                           server,
@@ -88,7 +86,7 @@ void SSHFSSavePasswordToKeychain(const char *user, const char *server, const cha
     CFRelease(item);
 
   } else {
-      //add info
+    //add info
     result = SecKeychainAddInternetPassword(
                                           NULL, //default keychain
                                           strlen(server), // servername length
@@ -114,26 +112,29 @@ int main() {
   CFOptionFlags responseFlags;
   int button;
   CFStringRef passwordRef;
-  int savePassword;
+  CFStringRef dialogText;
+  int savePassword = 0;
   CFIndex passwordMaxSize;
   char *password;
-
+  static void* keys;
+  static void* values;
+  
   //look for SSHFS_USER and SSHFS_SERVER in env
-
   const char *sshfs_user, *sshfs_server;
   sshfs_user = getenv(SSHFS_USER);
   sshfs_server = getenv(SSHFS_SERVER);
 
+  int keychainEnable = 1;
+  int freePassword = 0; // 0 = no, 1 = SecKeychainItemFreeContent(), 2 = free()
+
   if(!sshfs_user || !sshfs_server) {
-  printf("To use this, you have to set the SSHFS_USER and SSHFS_SERVER environment variables.\n");
-    exit(1);
+    keychainEnable = 0;
+  } else {
+    password = SSHFSGetPasswordForUserAndServer(sshfs_user, sshfs_server);
   }
 
-/*  printf("DEBUG: getting password for %s@%s\n", sshfs_user, sshfs_server);*/
-
-  int freePassword = 0;
-  password = SSHFSGetPasswordForUserAndServer(sshfs_user, sshfs_server);
-  if(strlen(password) > 0) {
+  if(keychainEnable && strlen(password) > 0) {
+    freePassword = 1; // use SecKeychainItemFreeContent()
     //done
   } else {
     CFBundleRef myBundle = CFBundleGetMainBundle();
@@ -146,21 +147,48 @@ int main() {
                                                                CFSTR("ssh.icns"),
                                                                false);
     CFRelease(myParentURL);
-  
-    const void* keys[] = {
+
+    const void* noKeychainKeys[] = {
       kCFUserNotificationAlertHeaderKey,
+      kCFUserNotificationTextFieldTitlesKey,
+      kCFUserNotificationAlternateButtonTitleKey,
+      kCFUserNotificationIconURLKey
+    };
+
+	dialogText = CFStringCreateWithFormat( kCFAllocatorDefault, NULL, CFSTR("Enter SSH Password for user %s on server %s"), sshfs_user, sshfs_server);
+    const void* noKeychainValues[] = {
+      dialogText,
+      CFSTR("Password"),
+      CFSTR("Cancel"),
+      myIconURL
+    };
+
+    const void* keychainKeys[] = {
+      kCFUserNotificationAlertHeaderKey,
+	  kCFUserNotificationAlertMessageKey,
       kCFUserNotificationTextFieldTitlesKey,
       kCFUserNotificationCheckBoxTitlesKey,
       kCFUserNotificationAlternateButtonTitleKey,
       kCFUserNotificationIconURLKey
     };
-    const void* values[] = {
-      CFSTR("Enter Password To Connect by SSH"),
-      CFSTR(""),
-      CFSTR("Save in Keychain"),
+
+    const void* keychainValues[] = {
+      CFSTR("Password Needed"),
+	  dialogText,
+      CFSTR("Password"),
+      CFSTR("Save Password in Keychain"),
       CFSTR("Cancel"),
       myIconURL
     };
+
+    if(keychainEnable) {
+      keys = keychainKeys;
+      values = keychainValues;
+    } else {
+      keys = noKeychainKeys;
+      values = noKeychainValues;
+    }
+
     dialogTemplate = CFDictionaryCreate(kCFAllocatorDefault,
                                         keys,
                                         values,
@@ -189,11 +217,11 @@ int main() {
     button = responseFlags & 0x3;
     if (button == kCFUserNotificationAlternateResponse)
       return 1;
-   /* savePasswordRef = CFUserNotificationGetResponseValue(passwordDialog,
-                                                     kCFUserNotificationCheckBoxValuesKey,
-                                                     0);*/
 
-    savePassword = (responseFlags & CFUserNotificationCheckBoxChecked(0));
+    if(keychainEnable) {
+      savePassword = (responseFlags & CFUserNotificationCheckBoxChecked(0));
+    }
+
     passwordRef = CFUserNotificationGetResponseValue(passwordDialog,
                                                      kCFUserNotificationTextFieldValuesKey,
                                                      0);
@@ -206,17 +234,22 @@ int main() {
                        passwordMaxSize,
                        kCFStringEncodingUTF8);
     CFRelease(passwordDialog);
-    freePassword = 1;
+    freePassword = 2; // use free()
     
-    if(savePassword) {
+    if(keychainEnable && savePassword) {
       SSHFSSavePasswordToKeychain(sshfs_user, sshfs_server, password);
     }
-
   }
 
   printf("%s", password);
-  if(freePassword) {
-    free(password);
+
+  if(freePassword == 1) {
+      SecKeychainItemFreeContent(NULL, password);
   }
+
+  if(freePassword == 2) {
+      free(password);
+  }
+
   return 0;
 }

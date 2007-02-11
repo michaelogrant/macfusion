@@ -36,15 +36,15 @@
 	self = [super init];
 	if (self != nil) 
 	{
-		[self setPingDiskarb:YES];
-		[self setLogin: NSUserName()];
+		[self setPingDiskarb: YES];
 		[self setStatus: FuseFSStatusUnmounted];
-		[self setAuthenticationType: SSHFSAuthenticationTypePublicKey];
 		[self setName: @""];
-		[self setPath: @""];
-		[self setPort: 22];
-		[self setStatus: FuseFSStatusUnmounted];
 		[self setMountOnStartup: NO];
+		
+		// SSHFS particular
+		[self setAuthenticationType: SSHFSAuthenticationTypePublicKey];
+		[self setPort: 22];
+		[self setLogin: NSUserName()];
 		
 		[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleMountFailedNotification:) 
 													 name:FuseFSMountFailedNotification object:self];
