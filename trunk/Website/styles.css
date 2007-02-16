@@ -1,0 +1,184 @@
+/*
+Copyright (c) 2006, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 0.10.0
+*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
+
+
+/* End of Yahoo! code */
+
+/*
+CSS code below (c) Jan Lehnardt 2007 <jan@php.net>
+Don't use without permission. But feel free to be
+inspired. Cheers. -- Jan
+*/
+a {
+	color: #E60066;
+}
+
+blockquote {
+	font-style:italic;
+	margin-left:1em;
+	margin-right:1em;
+}
+
+blockquote p:before{content:'«';}
+blockquote p:after{content:'»';}
+
+body {
+	font-family:Georgia, "Minion Pro", Serif;
+	color:#121212;
+/*	font-family:"Minion Pro", Serif;*/
+	background-color:#FFFFFF;
+}
+
+h1 {
+	padding-left:.4em;
+	padding-right:.4em;
+
+	margin-left:-.46em;
+	margin-right:-.46em;
+	color:#FEFEFE;
+	font-family:"Lucida Grande", Helvetica, Arial, "Sans Serif";
+	font-size:220%;
+	margin-bottom:1em;
+	font-weight:normal;
+	background:#C8C8FF;
+	letter-spacing:-.11em;
+}
+
+h2 {
+	margin-bottom:1em;
+}
+
+h3 {
+	color:#454545;
+}
+
+img {
+	border: 1px solid #000000;
+
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:-1em;
+}
+
+img.inline {
+	float:right;
+	margin-left:.5em;
+	margin-bottom:.5em;
+}
+
+img.noborder {
+	border: 0px;
+}
+
+li {
+	list-style-type:circle;
+	margin-left:2em;
+}
+
+p {
+	margin-bottom:1.2em;
+}
+
+p.outline {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+pre {
+	width:95%; /*IE 6 wants 95% here, or he screws up proper floating*/
+	overflow:auto;
+	border: 1px solid #AAAAAA;
+	padding:.5em;
+}
+
+#footer {
+	margin-top:1em;
+	margin-bottom:1em;
+	text-align:center;
+	color:#AAAAFF;
+	font-size:.8em;
+}
+
+#footer a {
+	color:#AAAAFF;
+	text-decoration:none;
+}
+
+#footer a:hover {
+	text-decoration:underline;
+	color:#E60066;
+}
+
+#page {
+	background-color:#FEFEFE;
+	width: 36em;
+
+	margin-top:1em;
+	margin-left:auto;
+	margin-right:auto;
+	
+	padding:1em;
+	border-left:1px solid #C8C8FF;
+	border-right:1px solid #C8C8FF;
+}
+
+#sidebar {
+	float:right;
+/*	background-color:#F5FFE6;
+	background-color:#F5FFF2;
+*/
+	border-left:1px solid #C8C8FF;
+	width:8em;
+	padding:.3em;
+	padding-left:.5em;
+	
+	font-size:.8em;
+	font-family:"Lucida Grande", Helvetica, Arial, "Sans Serif";
+}
+
+#sidebar ul li {
+	margin-bottom:1em;
+}
+
+#text {
+	width: 28em;
+	line-height:1.4em;
+	
+}
+
+div.subline, span.subline{
+	padding-left:2em;
+	color:#454545;
+	font-size:.8em;
+	line-height:1.1em;
+	margin-bottom:1em; /*Firefox and Opera want an explicit margin-bottom here*/
+	width:95%;
+
+}
+
+div.imgsubline {
+	margin-left:1em;
+	margin-top:-1em;
+	color:#454545;
+	font-size:.8em;
+	line-height:1.1em;
+	margin-bottom:1em; /*Firefox and Opera want an explicit margin-bottom here*/
+}
+
+span.subline {
+	padding-left:0em;
+}
+
