@@ -23,7 +23,7 @@
 NSString* SSHFSNameError = @"You must specify a valid name for the Filesystem";
 NSString* SSHFSHostError = @"You must specify a valid SSH Host Name";
 NSString* SSHFSLoginError = @"You must specify a valid Login Name";
-NSString* SSHFSPortError = @"Port out of Range (Must be 0 to 65535)";
+NSString* SSHFSPortError = @"Port out of Range (Must be 1 to 65535)";
 
 
 @implementation SSHFSUIController

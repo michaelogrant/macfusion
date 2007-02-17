@@ -11,8 +11,17 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		D422F3880B616FA0009EE999 /* FavoritesController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D422F3860B616FA0009EE999 /* FavoritesController.h */; };
-		D422F3890B616FA0009EE999 /* FavoritesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D422F3870B616FA0009EE999 /* FavoritesController.m */; };
+		D40962100B80E21100EABE40 /* FancyFavoritesController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D409620E0B80E21100EABE40 /* FancyFavoritesController.h */; };
+		D40962110B80E21100EABE40 /* FancyFavoritesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D409620F0B80E21100EABE40 /* FancyFavoritesController.m */; };
+		D40962140B80E2CE00EABE40 /* FancyFavorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40962120B80E2CE00EABE40 /* FancyFavorites.nib */; };
+		D409623D0B80E41900EABE40 /* MacFusionFSCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D409623B0B80E41900EABE40 /* MacFusionFSCell.h */; };
+		D409623E0B80E41900EABE40 /* MacFusionFSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D409623C0B80E41900EABE40 /* MacFusionFSCell.m */; };
+		D40965AF0B80F79600EABE40 /* SSHFSIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D40965AE0B80F79600EABE40 /* SSHFSIcon.icns */; };
+		D40966EA0B812A7500EABE40 /* MacFusionStatusCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40966E80B812A7500EABE40 /* MacFusionStatusCell.h */; };
+		D40966EB0B812A7500EABE40 /* MacFusionStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40966E90B812A7500EABE40 /* MacFusionStatusCell.m */; };
+		D40969C20B8264A800EABE40 /* EditFavorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40969C00B8264A800EABE40 /* EditFavorites.nib */; };
+		D40969C50B82658F00EABE40 /* EditFavoriteController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40969C30B82658F00EABE40 /* EditFavoriteController.h */; };
+		D40969C60B82658F00EABE40 /* EditFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40969C40B82658F00EABE40 /* EditFavoriteController.m */; };
 		D422F7040B617701009EE999 /* Favorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D422F7020B617701009EE999 /* Favorites.nib */; };
 		D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */; };
 		D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
@@ -20,13 +29,27 @@
 		D4498D060B5A371D003B9DFF /* MacFusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */; };
 		D44C0C620B61191700C778DC /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C0C610B61191700C778DC /* Growl.framework */; };
 		D44C0C780B61193D00C778DC /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D44C0C610B61191700C778DC /* Growl.framework */; };
+		D45241F30B83D104007BFF8D /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D45241F10B83D104007BFF8D /* menuIcon.png */; };
+		D45241F40B83D104007BFF8D /* menuselected.png in Resources */ = {isa = PBXBuildFile; fileRef = D45241F20B83D104007BFF8D /* menuselected.png */; };
 		D45D9BCF0B75635D002E6C08 /* askpass.c in Sources */ = {isa = PBXBuildFile; fileRef = D45D99D80B755062002E6C08 /* askpass.c */; };
 		D45D9BD00B756366002E6C08 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
 		D45D9BD40B75637F002E6C08 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
 		D45D9BEF0B75640B002E6C08 /* askpass in CopyFiles */ = {isa = PBXBuildFile; fileRef = D45D9BBA0B756329002E6C08 /* askpass */; };
+		D46EAC710B85321A00FC5CB1 /* MacFusionColored.icns in Resources */ = {isa = PBXBuildFile; fileRef = D46EAC700B85321A00FC5CB1 /* MacFusionColored.icns */; };
 		D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */; };
 		D4A121CC0B7C239800F565DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4A121CB0B7C239800F565DC /* Credits.rtf */; };
+		D4A6BA810B867E7600B51E6D /* RoundedRectangles.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BA800B867E7600B51E6D /* RoundedRectangles.m */; };
+		D4A6BA880B867F0700B51E6D /* RoundedRectangles.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4A6BA870B867F0700B51E6D /* RoundedRectangles.h */; };
+		D4A6BB7D0B8684A300B51E6D /* CTGradient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4A6BB7B0B8684A300B51E6D /* CTGradient.h */; };
+		D4A6BB7E0B8684A300B51E6D /* CTGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BB7C0B8684A300B51E6D /* CTGradient.m */; };
+		D4A6BFEE0B86CFB800B51E6D /* MacFusionTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4A6BFEC0B86CFB800B51E6D /* MacFusionTableView.h */; };
+		D4A6BFEF0B86CFB800B51E6D /* MacFusionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */; };
+		D4A6C2190B8760EC00B51E6D /* MacFusionPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */; };
 		D4C6E2BD0B5A46E100CF3EC7 /* MountController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */; };
+		D4EBB35B0B84037400967958 /* MacFusionActionButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4EBB3590B84037400967958 /* MacFusionActionButton.h */; };
+		D4EBB35C0B84037400967958 /* MacFusionActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EBB35A0B84037400967958 /* MacFusionActionButton.m */; };
+		D4EBB62C0B850FCC00967958 /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EBB62B0B850FCC00967958 /* minus-8.png */; };
+		D4EBB62E0B85101700967958 /* plus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EBB62D0B85101700967958 /* plus-8.png */; };
 		D4F124660B5C61C8002BAA40 /* FuseUIProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */; };
 		D4F124BF0B5C6D1D002BAA40 /* SSHFSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */; };
 		D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A260B5BEAA30061B029 /* SSHFS.nib */; };
@@ -63,7 +86,14 @@
 				D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */,
 				D4F124660B5C61C8002BAA40 /* FuseUIProtocol.h in CopyFiles */,
 				D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */,
-				D422F3880B616FA0009EE999 /* FavoritesController.h in CopyFiles */,
+				D40962100B80E21100EABE40 /* FancyFavoritesController.h in CopyFiles */,
+				D409623D0B80E41900EABE40 /* MacFusionFSCell.h in CopyFiles */,
+				D40966EA0B812A7500EABE40 /* MacFusionStatusCell.h in CopyFiles */,
+				D40969C50B82658F00EABE40 /* EditFavoriteController.h in CopyFiles */,
+				D4EBB35B0B84037400967958 /* MacFusionActionButton.h in CopyFiles */,
+				D4A6BA880B867F0700B51E6D /* RoundedRectangles.h in CopyFiles */,
+				D4A6BB7D0B8684A300B51E6D /* CTGradient.h in CopyFiles */,
+				D4A6BFEE0B86CFB800B51E6D /* MacFusionTableView.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,22 +139,45 @@
 		32CA4F630368D1EE00C91783 /* MacFusion_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusion_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MacFusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacFusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D422F3860B616FA0009EE999 /* FavoritesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesController.h; sourceTree = "<group>"; };
-		D422F3870B616FA0009EE999 /* FavoritesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesController.m; sourceTree = "<group>"; };
+		D409620E0B80E21100EABE40 /* FancyFavoritesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FancyFavoritesController.h; sourceTree = "<group>"; };
+		D409620F0B80E21100EABE40 /* FancyFavoritesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FancyFavoritesController.m; sourceTree = "<group>"; };
+		D40962130B80E2CE00EABE40 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/FancyFavorites.nib; sourceTree = "<group>"; };
+		D409623B0B80E41900EABE40 /* MacFusionFSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionFSCell.h; sourceTree = "<group>"; };
+		D409623C0B80E41900EABE40 /* MacFusionFSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionFSCell.m; sourceTree = "<group>"; };
+		D40965AE0B80F79600EABE40 /* SSHFSIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SSHFSIcon.icns; sourceTree = "<group>"; };
+		D40966E80B812A7500EABE40 /* MacFusionStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionStatusCell.h; sourceTree = "<group>"; };
+		D40966E90B812A7500EABE40 /* MacFusionStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionStatusCell.m; sourceTree = "<group>"; };
+		D40969C10B8264A800EABE40 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/EditFavorites.nib; sourceTree = "<group>"; };
+		D40969C30B82658F00EABE40 /* EditFavoriteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFavoriteController.h; sourceTree = "<group>"; };
+		D40969C40B82658F00EABE40 /* EditFavoriteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFavoriteController.m; sourceTree = "<group>"; };
 		D422F7030B617701009EE999 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Favorites.nib; sourceTree = "<group>"; };
 		D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionConstants.h; sourceTree = "<group>"; };
 		D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionConstants.m; sourceTree = "<group>"; };
 		D4498D040B5A371D003B9DFF /* MacFusionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionController.h; sourceTree = "<group>"; };
 		D4498D050B5A371D003B9DFF /* MacFusionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionController.m; sourceTree = "<group>"; };
 		D44C0C610B61191700C778DC /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		D45241F10B83D104007BFF8D /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuIcon.png; path = Resources/menuIcon.png; sourceTree = "<group>"; };
+		D45241F20B83D104007BFF8D /* menuselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuselected.png; path = Resources/menuselected.png; sourceTree = "<group>"; };
 		D45D99D80B755062002E6C08 /* askpass.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = askpass.c; sourceTree = "<group>"; };
 		D45D9A3D0B755F27002E6C08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		D45D9BBA0B756329002E6C08 /* askpass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = askpass; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		D46EAC700B85321A00FC5CB1 /* MacFusionColored.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusionColored.icns; path = Resources/MacFusionColored.icns; sourceTree = "<group>"; };
 		D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
-		D4A121CB0B7C239800F565DC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		D4A121CB0B7C239800F565DC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
+		D4A6BA800B867E7600B51E6D /* RoundedRectangles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedRectangles.m; sourceTree = "<group>"; };
+		D4A6BA870B867F0700B51E6D /* RoundedRectangles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedRectangles.h; sourceTree = "<group>"; };
+		D4A6BB7B0B8684A300B51E6D /* CTGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CTGradient.h; sourceTree = "<group>"; };
+		D4A6BB7C0B8684A300B51E6D /* CTGradient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CTGradient.m; sourceTree = "<group>"; };
+		D4A6BFEC0B86CFB800B51E6D /* MacFusionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionTableView.h; sourceTree = "<group>"; };
+		D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionTableView.m; sourceTree = "<group>"; };
+		D4A6C2180B8760EC00B51E6D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MacFusionPreferences.nib; sourceTree = "<group>"; };
 		D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountController.h; sourceTree = "<group>"; };
 		D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountController.m; sourceTree = "<group>"; };
+		D4EBB3590B84037400967958 /* MacFusionActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionActionButton.h; sourceTree = "<group>"; };
+		D4EBB35A0B84037400967958 /* MacFusionActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionActionButton.m; sourceTree = "<group>"; };
+		D4EBB62B0B850FCC00967958 /* minus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minus-8.png"; path = "Resources/minus-8.png"; sourceTree = "<group>"; };
+		D4EBB62D0B85101700967958 /* plus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-8.png"; path = "Resources/plus-8.png"; sourceTree = "<group>"; };
 		D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuseUIProtocol.h; sourceTree = "<group>"; };
 		D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHFSUIController.h; sourceTree = "<group>"; };
 		D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHFSUIController.m; sourceTree = "<group>"; };
@@ -170,6 +223,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D40962190B80E3C600EABE40 /* View Classes */,
 				D4498D030B5A3705003B9DFF /* Controllers */,
 				D4498D020B5A36F7003B9DFF /* Models */,
 			);
@@ -236,12 +290,20 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D45241F10B83D104007BFF8D /* menuIcon.png */,
+				D45241F20B83D104007BFF8D /* menuselected.png */,
 				D4F96CA10B5B47CD009553F6 /* Mount.nib */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				D422F7020B617701009EE999 /* Favorites.nib */,
 				D4A121CB0B7C239800F565DC /* Credits.rtf */,
+				D40962120B80E2CE00EABE40 /* FancyFavorites.nib */,
+				D40969C00B8264A800EABE40 /* EditFavorites.nib */,
+				D4EBB62B0B850FCC00967958 /* minus-8.png */,
+				D4EBB62D0B85101700967958 /* plus-8.png */,
+				D46EAC700B85321A00FC5CB1 /* MacFusionColored.icns */,
+				D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -255,6 +317,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D40962190B80E3C600EABE40 /* View Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D4A6BB7B0B8684A300B51E6D /* CTGradient.h */,
+				D4A6BB7C0B8684A300B51E6D /* CTGradient.m */,
+				D409623B0B80E41900EABE40 /* MacFusionFSCell.h */,
+				D409623C0B80E41900EABE40 /* MacFusionFSCell.m */,
+				D40966E80B812A7500EABE40 /* MacFusionStatusCell.h */,
+				D40966E90B812A7500EABE40 /* MacFusionStatusCell.m */,
+				D4EBB3590B84037400967958 /* MacFusionActionButton.h */,
+				D4EBB35A0B84037400967958 /* MacFusionActionButton.m */,
+				D4A6BA800B867E7600B51E6D /* RoundedRectangles.m */,
+				D4A6BA870B867F0700B51E6D /* RoundedRectangles.h */,
+				D4A6BFEC0B86CFB800B51E6D /* MacFusionTableView.h */,
+				D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */,
+			);
+			name = "View Classes";
+			sourceTree = "<group>";
+		};
 		D409AB3B0B5BE9C300CE77A3 /* SSHFS */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +345,7 @@
 				D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */,
 				D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */,
 				D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */,
+				D40965AE0B80F79600EABE40 /* SSHFSIcon.icns */,
 				D4F82A260B5BEAA30061B029 /* SSHFS.nib */,
 			);
 			path = SSHFS;
@@ -279,12 +361,14 @@
 		D4498D030B5A3705003B9DFF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D422F3860B616FA0009EE999 /* FavoritesController.h */,
-				D422F3870B616FA0009EE999 /* FavoritesController.m */,
 				D4498D040B5A371D003B9DFF /* MacFusionController.h */,
 				D4498D050B5A371D003B9DFF /* MacFusionController.m */,
 				D4C6E2BB0B5A46E100CF3EC7 /* MountController.h */,
 				D4C6E2BC0B5A46E100CF3EC7 /* MountController.m */,
+				D409620E0B80E21100EABE40 /* FancyFavoritesController.h */,
+				D409620F0B80E21100EABE40 /* FancyFavoritesController.m */,
+				D40969C30B82658F00EABE40 /* EditFavoriteController.h */,
+				D40969C40B82658F00EABE40 /* EditFavoriteController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -401,6 +485,14 @@
 				D4F96CA30B5B47CD009553F6 /* Mount.nib in Resources */,
 				D422F7040B617701009EE999 /* Favorites.nib in Resources */,
 				D4A121CC0B7C239800F565DC /* Credits.rtf in Resources */,
+				D40962140B80E2CE00EABE40 /* FancyFavorites.nib in Resources */,
+				D40969C20B8264A800EABE40 /* EditFavorites.nib in Resources */,
+				D45241F30B83D104007BFF8D /* menuIcon.png in Resources */,
+				D45241F40B83D104007BFF8D /* menuselected.png in Resources */,
+				D4EBB62C0B850FCC00967958 /* minus-8.png in Resources */,
+				D4EBB62E0B85101700967958 /* plus-8.png in Resources */,
+				D46EAC710B85321A00FC5CB1 /* MacFusionColored.icns in Resources */,
+				D4A6C2190B8760EC00B51E6D /* MacFusionPreferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +502,7 @@
 			files = (
 				D4F82A6F0B5BEBEE0061B029 /* SSHFS-Info.plist in Resources */,
 				D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */,
+				D40965AF0B80F79600EABE40 /* SSHFSIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +517,14 @@
 				D4498D060B5A371D003B9DFF /* MacFusionController.m in Sources */,
 				D4C6E2BD0B5A46E100CF3EC7 /* MountController.m in Sources */,
 				D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */,
-				D422F3890B616FA0009EE999 /* FavoritesController.m in Sources */,
+				D40962110B80E21100EABE40 /* FancyFavoritesController.m in Sources */,
+				D409623E0B80E41900EABE40 /* MacFusionFSCell.m in Sources */,
+				D40966EB0B812A7500EABE40 /* MacFusionStatusCell.m in Sources */,
+				D40969C60B82658F00EABE40 /* EditFavoriteController.m in Sources */,
+				D4EBB35C0B84037400967958 /* MacFusionActionButton.m in Sources */,
+				D4A6BA810B867E7600B51E6D /* RoundedRectangles.m in Sources */,
+				D4A6BB7E0B8684A300B51E6D /* CTGradient.m in Sources */,
+				D4A6BFEF0B86CFB800B51E6D /* MacFusionTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,12 +578,36 @@
 			name = MainMenu.nib;
 			sourceTree = "<group>";
 		};
+		D40962120B80E2CE00EABE40 /* FancyFavorites.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D40962130B80E2CE00EABE40 /* English */,
+			);
+			name = FancyFavorites.nib;
+			sourceTree = "<group>";
+		};
+		D40969C00B8264A800EABE40 /* EditFavorites.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D40969C10B8264A800EABE40 /* English */,
+			);
+			name = EditFavorites.nib;
+			sourceTree = "<group>";
+		};
 		D422F7020B617701009EE999 /* Favorites.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D422F7030B617701009EE999 /* English */,
 			);
 			name = Favorites.nib;
+			sourceTree = "<group>";
+		};
+		D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4A6C2180B8760EC00B51E6D /* English */,
+			);
+			name = MacFusionPreferences.nib;
 			sourceTree = "<group>";
 		};
 		D4F96CA10B5B47CD009553F6 /* Mount.nib */ = {

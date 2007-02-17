@@ -20,7 +20,6 @@
 
 #import "MacFusionController.h"
 #import "MacFusionConstants.h"
-#import "FavoritesController.h"
 
 
 @interface MacFusionController (PrivateAPI)
@@ -63,11 +62,11 @@
 												 selector:@selector(handleUnmountNotification:)
 													 name:FuseFSUnmountedNotification object:nil];
 		
-		NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: 
-			NSFileTypeForHFSTypeCode(kGenericRemovableMediaIcon)];
-		[myIcon setSize: NSMakeSize(128,128)];
+//		NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: 
+//			NSFileTypeForHFSTypeCode(kGenericRemovableMediaIcon)];
+//		[myIcon setSize: NSMakeSize(128,128)];
 		
-		[[NSApplication sharedApplication] setApplicationIconImage: myIcon];
+//		[[NSApplication sharedApplication] setApplicationIconImage: myIcon];
 		[self initializeGrowl];
 			
 		[[NSApplication sharedApplication] setDelegate: self];
@@ -111,7 +110,7 @@
 		NSString* FSClassName = [storedFSDict objectForKey: favoritesFSTypeKeyName];
 		storedFSObject = [storedFSDict objectForKey: favoritesStoredObjectKeyName];
 		Class FSClass = [[plugins objectForKey: FSClassName] principalClass];
-		fs = [[FSClass alloc] initWithStoredObject: storedFSObject];
+		fs = [[FSClass alloc] initWithDictionary: storedFSObject];
 		if (fs != nil)
 		{
 			[favorites addObject: fs];
@@ -141,7 +140,7 @@
 	{
 		NSDictionary* storedFSDict = [NSDictionary dictionaryWithObjectsAndKeys: 
 			[fs fsType], favoritesFSTypeKeyName,
-			[fs storageObjectForDefaults], favoritesStoredObjectKeyName, nil];
+			[fs dictionary], favoritesStoredObjectKeyName, nil];
 		[favoritesForDefaults addObject: storedFSDict];
 	}
 	
@@ -176,11 +175,14 @@
 	statusMenuItem = [[NSStatusBar systemStatusBar] statusItemWithLength: 
 		NSSquareStatusItemLength];
 	
-	NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: 
-		NSFileTypeForHFSTypeCode(kGenericRemovableMediaIcon)];
-	[myIcon setSize: NSMakeSize(16,16)];
-	[statusMenuItem setImage: myIcon];
+	NSImage* menuIcon = [NSImage imageNamed:@"menuIcon.png"];
+	NSImage* menuIconSelected = [NSImage imageNamed:@"menuselected.png"];
 	
+	[statusMenuItem setImage: menuIcon];
+	[statusMenuItem setAlternateImage: menuIconSelected];
+	[statusMenuItem setHighlightMode: YES];
+	[statusMenuItem setTarget: self];
+
 	NSMenu* myMenu = [[NSMenu alloc] initWithTitle:@"main"];
 	[myMenu setDelegate: self];
 
@@ -346,9 +348,10 @@
 
 - (void) showFavorites:(id)sender
 {
-	if (favoritesController == nil)
-		favoritesController = [[FavoritesController alloc] init];
-	[[favoritesController window] makeKeyAndOrderFront: self];
+	if (fancyFavoritesController == nil)
+		fancyFavoritesController = [[FancyFavoritesController alloc] init];
+	[[fancyFavoritesController window] makeKeyAndOrderFront: self];
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 }
 
 #pragma mark Methods for Controllers
@@ -364,10 +367,13 @@
 
 - (void)addFilesystemToFavorites:(id <FuseFSProtocol>)fs
 {
-	NSIndexSet* mySet = [NSIndexSet indexSetWithIndex: [favorites count]];
-	[self willChange: NSKeyValueChangeInsertion valuesAtIndexes:mySet forKey:@"favorites"];
-	[favorites addObject: fs];
-	[self didChange: NSKeyValueChangeInsertion valuesAtIndexes:mySet  forKey:@"favorites"];
+	if (![favorites containsObject: fs])
+	{
+		NSIndexSet* mySet = [NSIndexSet indexSetWithIndex: [favorites count]];
+		[self willChange: NSKeyValueChangeInsertion valuesAtIndexes:mySet forKey:@"favorites"];
+		[favorites addObject: fs];
+		[self didChange: NSKeyValueChangeInsertion valuesAtIndexes:mySet  forKey:@"favorites"];
+	}
 }
 
 - (BOOL)validateFilesystem:(id <FuseFSProtocol>)newfs
@@ -380,15 +386,15 @@
 	{
 		if ([[existingfs name] isEqualTo: [newfs name]] && newfs != existingfs)
 		{
-			*error = @"Name already exists";
+			*error = @"Name already exists in Favorites";
 			return NO;
 		}
 	}
 	while (existingfs = [mountsEnum nextObject])
 	{
-		if ([[existingfs name] isEqualTo: [newfs name]])
+		if ([[existingfs name] isEqualTo: [newfs name]] && newfs != existingfs)
 		{
-			*error = @"Name already exists";
+			*error = @"Name already exists in Mounts";
 			return NO;
 		}
 	}
@@ -492,6 +498,11 @@
         }
     }
     return allBundles;
+}
+
+- (NSMenu*)filesystemTypesMenu
+{
+	return nil;
 }
 
 #pragma mark Diskarbitration Monitoring
@@ -599,6 +610,11 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 - (NSMutableDictionary*) plugins
 {
 	return plugins;
+}
+
+- (NSMutableArray*)favorites
+{
+	return favorites;
 }
 
 #pragma mark Cleanup Code
