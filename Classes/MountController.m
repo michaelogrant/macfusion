@@ -83,8 +83,6 @@
 	[fsUIController release];
 	fileSystem = nil;
 	fsUIController = nil;
-//	[endButton setHidden: YES];
-//	[switchButton setHidden: YES];
 	[[self window] setFrame: initialRect display:YES animate:YES];
 	previousFSType = nil;
 }

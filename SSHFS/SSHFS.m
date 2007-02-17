@@ -261,17 +261,18 @@
 }
 
 #pragma mark Save/Load from Defaults Methods
-- (id)storageObjectForDefaults
+- (id)dictionary
 {
 	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"hostName", @"login",
-		@"mountPath", @"path", @"authenticationType", @"port", @"mountOnStartup", nil];
+		@"mountPath", @"path", @"authenticationType", @"port", @"mountOnStartup", 
+		@"status", @"fsDescription", @"fsLongType", nil];
 	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
 	return d;
 }
 
-- (id)initWithStoredObject:(id)stored
+- (id)initWithDictionary:(id)dic
 {
-	NSDictionary* myDict = (NSDictionary*)stored;
+	NSDictionary* myDict = (NSDictionary*)dic;
 	[self init];
 	[self setName: [myDict objectForKey: @"name"]];
 	[self setHostName: [myDict objectForKey: @"hostName"]];
@@ -369,7 +370,9 @@
 		return @"Mount Failed";
 	if (status == FuseFSStatusUnmounted)
 		return @"Unmounted";
-	return @"Unkown";
+	if (status == FuseFSStatusWaitingToMount)
+		return @"Waiting";
+	return @"Unknown";
 }
 
 # pragma mark Setters
@@ -428,8 +431,17 @@
 	mountOnStartup = yn;
 }
 
+- (NSImage*)icon
+{
+	NSString* iconPath = [[NSBundle bundleForClass: [self class]] pathForResource:@"SSHFSIcon" ofType:@"icns"];
+	NSImage* myIcon = [[[NSImage alloc] initWithContentsOfFile: iconPath] autorelease];
+	[myIcon setScalesWhenResized: YES];
+	return myIcon;
+}
+
 - (void) dealloc 
 {
+	NSLog(@"SSHFS DEALLOC");
 	[task release];
 	[name release];
 	[hostName release];

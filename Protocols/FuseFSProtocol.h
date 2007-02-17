@@ -31,6 +31,7 @@
 - (BOOL)pingDiskarb; // whether to ping disk arbitration`
 - (NSString*)mountPath; // path at which the FS is mountved
 - (BOOL)mountOnStartup;
+- (NSImage*)icon; // icon to represent this filesystem
 
 // setters
 - (void)setName:(NSString*)s;
@@ -47,8 +48,8 @@
 
 // methods to load to/from defaults
 // should return/take an objects that can be stored in plist format
-- (id)storageObjectForDefaults;
-- (id)initWithStoredObject:(id)stored;
+- (id)dictionary;
+- (id)initWithDictionary:(id)dic;
 
 // description methods
 - (NSString *)fsType; // the filesystem type (SSHFS, etc)

@@ -22,12 +22,12 @@
 #import <DiskArbitration/DiskArbitration.h>
 #import "FuseFSProtocol.h"
 #import "../Growl.framework/Headers/GrowlApplicationBridge.h"`
-#import "FavoritesController.h"
 
 
 @class StatusValueTransformer;
 @class FavoritesController;
 @class MountController;
+@class FancyFavoritesController;
 
 
 
@@ -39,6 +39,7 @@
 	NSMutableDictionary* plugins;
 	MountController* mountController;
 	FavoritesController* favoritesController;
+	FancyFavoritesController* fancyFavoritesController;
 	
 	DASessionRef appearSession;
 	DASessionRef disappearSession;
@@ -47,6 +48,7 @@
 - (void)quickMount:(id)sender;
 
 - (NSMutableDictionary*)plugins;
+- (NSMutableArray*)favorites;
 
 - (void)addFilesystemToFavorites:(id <FuseFSProtocol>)fs;
 - (void)mountFilesystem:(id <FuseFSProtocol>)fs;

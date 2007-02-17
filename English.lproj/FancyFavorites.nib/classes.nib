@@ -1,0 +1,27 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                addFavorite = id; 
+                editFavorite = id; 
+                mountFavorite = id; 
+                removeFavorite = id; 
+            }; 
+            CLASS = FancyFavoritesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addButton = MacFusionActionButton; 
+                editButton = NSButton; 
+                favoritesArrayController = NSArrayController; 
+                favoritesTableView = NSTableView; 
+                mountButton = id; 
+                removeButton = id; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MacFusionActionButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = MacFusionTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }
+    ); 
+    IBVersion = 1; 
+}
