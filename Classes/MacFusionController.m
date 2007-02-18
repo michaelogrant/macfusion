@@ -62,11 +62,6 @@
 												 selector:@selector(handleUnmountNotification:)
 													 name:FuseFSUnmountedNotification object:nil];
 		
-//		NSImage* myIcon = [[NSWorkspace sharedWorkspace] iconForFileType: 
-//			NSFileTypeForHFSTypeCode(kGenericRemovableMediaIcon)];
-//		[myIcon setSize: NSMakeSize(128,128)];
-		
-//		[[NSApplication sharedApplication] setApplicationIconImage: myIcon];
 		[self initializeGrowl];
 			
 		[[NSApplication sharedApplication] setDelegate: self];

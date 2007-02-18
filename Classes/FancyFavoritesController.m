@@ -56,7 +56,7 @@
 		customStatusCell];
 	[favoritesTableView setDoubleAction: @selector(editFavorite:)];
 	
-// Table menu removed for now ... it's causing some funky disabling of other keyDown events after it closes!
+//  Table menu removed for now ... it's causing some funky disabling of other keyDown events after it closes!
 //	NSMenu* tableMenu = [[NSMenu new] autorelease];
 //	[tableMenu setDelegate: self];
 //	[favoritesTableView setMenu: tableMenu];

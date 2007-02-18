@@ -22,7 +22,6 @@
 		D40969C20B8264A800EABE40 /* EditFavorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40969C00B8264A800EABE40 /* EditFavorites.nib */; };
 		D40969C50B82658F00EABE40 /* EditFavoriteController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40969C30B82658F00EABE40 /* EditFavoriteController.h */; };
 		D40969C60B82658F00EABE40 /* EditFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40969C40B82658F00EABE40 /* EditFavoriteController.m */; };
-		D422F7040B617701009EE999 /* Favorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D422F7020B617701009EE999 /* Favorites.nib */; };
 		D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */; };
 		D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D42AF6210B610B21008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
@@ -150,7 +149,6 @@
 		D40969C10B8264A800EABE40 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/EditFavorites.nib; sourceTree = "<group>"; };
 		D40969C30B82658F00EABE40 /* EditFavoriteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFavoriteController.h; sourceTree = "<group>"; };
 		D40969C40B82658F00EABE40 /* EditFavoriteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFavoriteController.m; sourceTree = "<group>"; };
-		D422F7030B617701009EE999 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Favorites.nib; sourceTree = "<group>"; };
 		D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionConstants.h; sourceTree = "<group>"; };
 		D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionConstants.m; sourceTree = "<group>"; };
 		D4498D040B5A371D003B9DFF /* MacFusionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionController.h; sourceTree = "<group>"; };
@@ -296,7 +294,6 @@
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				D422F7020B617701009EE999 /* Favorites.nib */,
 				D4A121CB0B7C239800F565DC /* Credits.rtf */,
 				D40962120B80E2CE00EABE40 /* FancyFavorites.nib */,
 				D40969C00B8264A800EABE40 /* EditFavorites.nib */,
@@ -483,7 +480,6 @@
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				D4F96CA30B5B47CD009553F6 /* Mount.nib in Resources */,
-				D422F7040B617701009EE999 /* Favorites.nib in Resources */,
 				D4A121CC0B7C239800F565DC /* Credits.rtf in Resources */,
 				D40962140B80E2CE00EABE40 /* FancyFavorites.nib in Resources */,
 				D40969C20B8264A800EABE40 /* EditFavorites.nib in Resources */,
@@ -592,14 +588,6 @@
 				D40969C10B8264A800EABE40 /* English */,
 			);
 			name = EditFavorites.nib;
-			sourceTree = "<group>";
-		};
-		D422F7020B617701009EE999 /* Favorites.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D422F7030B617701009EE999 /* English */,
-			);
-			name = Favorites.nib;
 			sourceTree = "<group>";
 		};
 		D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */ = {
