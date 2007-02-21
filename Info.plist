@@ -26,5 +26,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key> 
+    <string>http://localhost/~jan/example.xml</string> 
 </dict>
 </plist>
