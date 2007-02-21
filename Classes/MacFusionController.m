@@ -196,7 +196,7 @@
 		[menu removeItem:i];
 	
 	// Top Section
-	[menu addItemWithTitle:@"Quick Mount ..." action:@selector(quickMount:)
+	[menu addItemWithTitle:@"Quick Mount..." action:@selector(quickMount:)
 			   keyEquivalent:@""];
 	[menu addItemWithTitle:@"Favorites"  action:nil
 			   keyEquivalent:@""];
@@ -205,7 +205,7 @@
 	
 	// Favorites submenu
 	NSMenu* favoritesSubMenu = [[NSMenu alloc] initWithTitle:@"Favorites"];
-	[favoritesSubMenu addItemWithTitle:@"Edit ..." action:@selector(showFavorites:) keyEquivalent:@""];
+	[favoritesSubMenu addItemWithTitle:@"Edit..." action:@selector(showFavorites:) keyEquivalent:@""];
 	if ([favorites count] > 0)
 	{
 		[favoritesSubMenu addItem: [NSMenuItem separatorItem]];
@@ -247,7 +247,7 @@
 	
 	[menu addItem: [NSMenuItem separatorItem]];
 	[menu setAutoenablesItems: NO];
-	[menu addItemWithTitle:@"Preferences ..." action:@selector(showPreferences) keyEquivalent:@""];
+	[menu addItemWithTitle:@"Preferences..." action:@selector(showPreferences) keyEquivalent:@""];
 	[menu addItemWithTitle:@"Quit MacFusion" action:@selector(quit) keyEquivalent:@""];
 }
 
