@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DF72E620B8C5AE100D355C5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF72E610B8C5AE100D355C5 /* Sparkle.framework */; };
+		3DF72E790B8C5B0200D355C5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DF72E610B8C5AE100D355C5 /* Sparkle.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -58,6 +60,23 @@
 		D4F96CA30B5B47CD009553F6 /* Mount.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F96CA10B5B47CD009553F6 /* Mount.nib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildStyle section */
+		3DF72E220B8C511300D355C5 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		3DF72E230B8C511300D355C5 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
 /* Begin PBXContainerItemProxy section */
 		D45D9BE90B7563DC002E6C08 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -102,6 +121,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3DF72E790B8C5B0200D355C5 /* Sparkle.framework in CopyFiles */,
 				D44C0C780B61193D00C778DC /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +156,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* MacFusion_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusion_Prefix.pch; sourceTree = "<group>"; };
+		3DF72E610B8C5AE100D355C5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MacFusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacFusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D409620E0B80E21100EABE40 /* FancyFavoritesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FancyFavoritesController.h; sourceTree = "<group>"; };
@@ -196,6 +217,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D44C0C620B61191700C778DC /* Growl.framework in Frameworks */,
 				D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */,
+				3DF72E620B8C5AE100D355C5 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +253,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DF72E610B8C5AE100D355C5 /* Sparkle.framework */,
 				D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */,
 				D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */,
 				D45D9A3D0B755F27002E6C08 /* Security.framework */,
@@ -461,6 +484,12 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacFusion" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				3DF72E220B8C511300D355C5 /* Development */,
+				3DF72E230B8C511300D355C5 /* Deployment */,
+			);
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* MacFusion */;
 			projectDirPath = "";
@@ -616,6 +645,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(SRCROOT)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -640,6 +670,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(SRCROOT)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
