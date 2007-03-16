@@ -25,34 +25,33 @@
 @interface SSHFS (PrivateAPI)
 - (NSTask*)setupTaskForMount;
 - (NSTask*)setupTaskForUnmount;
-- (BOOL)setupMountPoint;
-- (void)removeMountPoint;
 @end 
 
 @implementation SSHFS
 
 #pragma mark Initialization
-- (id) init {
+- (id) init 
+{
 	self = [super init];
 	if (self != nil) 
 	{
-		[self setPingDiskarb: YES];
 		[self setStatus: FuseFSStatusUnmounted];
 		[self setName: @""];
 		[self setMountOnStartup: NO];
-		
-		// SSHFS particular
-		[self setAuthenticationType: SSHFSAuthenticationTypePublicKey];
 		[self setPort: 22];
-		[self setLogin: NSUserName()];
-		
-		[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleMountFailedNotification:) 
-													 name:FuseFSMountFailedNotification object:self];
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUnmountNotification:) 
-													 name:FuseFSUnmountedNotification object:self];
+		[self setAuthenticationType: SSHFSAuthenticationTypePassword];
+		[self setPath:@""];
 	}
 	return self;
 }
+
+- (id)copyWithZone:(NSZone *)zone
+{
+	SSHFS* newCopy = [[SSHFS allocWithZone: zone] initWithDictionary: [self dictionaryForSaving]];
+	[newCopy setStatus: [self status]];
+	return newCopy;
+}
+
 
 # pragma mark Mount/Unmount Methods
 - (void)mount
@@ -119,10 +118,7 @@
 	
 	[arguments addObject: @"-oreconnect"];
 	[arguments addObject: [NSString stringWithFormat:@"-ovolname=%@", name]]; // volume name argument
-
-	
-	if (pingDiskarb)
-		[arguments addObject:@"-oping_diskarb"];
+	[arguments addObject:@"-oping_diskarb"];
 	
 	[t setLaunchPath:@"/usr/local/bin/sshfs"];
 	[t setArguments:arguments];
@@ -218,79 +214,41 @@
 	[self removeMountPoint];
 }
 
-- (void)removeMountPoint
-{
-	BOOL isDir;
-	
-	// clean up after self by removing the mountpoint, if it exists and is empty
-	NSFileManager* fm = [NSFileManager defaultManager]; 
-	if ([fm fileExistsAtPath: [self mountPath] isDirectory:&isDir]) // directory exists
-	{
-		if ([[fm directoryContentsAtPath: [self mountPath]] count] == 0) // and its empty
-			[fm removeFileAtPath: [self mountPath] handler:nil];
-	}
-}
 
-// This sets up the mountpoint in ~
-- (BOOL)setupMountPoint
-{
-	BOOL pathExists, isDir;
-	NSString* mountPath = [self mountPath];
-	
-	NSFileManager* fm = [NSFileManager defaultManager];
-	pathExists = [fm fileExistsAtPath:mountPath isDirectory:&isDir];
-	
-	if (pathExists && isDir == YES) // directory already exists
-	{
-		if ([[fm directoryContentsAtPath:mountPath] count] == 0) // empty directory ... use as mountpoint
-			return YES;
-		else
-			return NO; // directory not empty ... cant mount at this path. fail.
-	}
-	else if (pathExists && isDir == NO)
-	{
-		return NO; // a file exists at that path, we shouldn't delete it. fail.
-	}
-	else if (pathExists == NO)
-	{
-		// nothing exists. Create the mountpoint, with default attributes
-		[fm createDirectoryAtPath:mountPath attributes:nil];
-		return YES;
-	}
-	return NO;
-}
 
 #pragma mark Save/Load from Defaults Methods
-- (id)dictionary
+- (NSDictionary*)dictionaryForSaving
 {
-	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"hostName", @"login",
-		@"mountPath", @"path", @"authenticationType", @"port", @"mountOnStartup", 
-		@"status", @"fsDescription", @"fsLongType", nil];
+	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"hostName", @"login",
+		@"authenticationType", @"port", @"path", nil];
 	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
-	return d;
+	return d;	
 }
 
-- (id)initWithDictionary:(id)dic
+- (NSDictionary*)dictionaryForDisplay
 {
-	NSDictionary* myDict = (NSDictionary*)dic;
-	[self init];
-	[self setName: [myDict objectForKey: @"name"]];
-	[self setHostName: [myDict objectForKey: @"hostName"]];
-	[self setLogin: [myDict objectForKey: @"login"]];
-	[self setPath: [myDict objectForKey:@"path"]];
-	[self setAuthenticationType: [[myDict objectForKey:@"authenticationType"]
+	NSArray* keyNames = [NSArray arrayWithObjects: @"fsDescription", @"fsLongType",
+		@"status", nil];
+	NSMutableDictionary* d = [[self dictionaryWithValuesForKeys: keyNames] 
+		mutableCopy];
+	[d addEntriesFromDictionary: [self dictionaryForSaving]];
+	return [d copy];
+}
+
+- (id)initWithDictionary:(NSDictionary*)dic
+{
+	[self setName: [dic objectForKey:@"name"]];
+	[self setMountOnStartup: [[dic objectForKey: @"mountOnStartup"] boolValue]];
+	[self setHostName: [dic objectForKey: @"hostName"]];
+	[self setLogin: [dic objectForKey: @"login"]];
+	[self setPath: [dic objectForKey:@"path"]];
+	[self setAuthenticationType: [[dic objectForKey:@"authenticationType"]
 		intValue]];
-	[self setMountOnStartup: [[myDict objectForKey:@"mountOnStartup"] boolValue]];
-	[self setPort: [[myDict objectForKey:@"port"] intValue]];
+	[self setPort: [[dic objectForKey:@"port"] intValue]];
 	return self;
 }
 
 #pragma mark Accessors
-
-- (NSString*)name
-{
-	return name;
-}
 
 - (NSString*)fsType
 {
@@ -308,28 +266,14 @@
 		return [NSString stringWithFormat:@"%@%@",
 			[self hostName], [self path]];
 	else
-		return [NSString stringWithFormat:@"%@\@%@%@",
+		return [NSString stringWithFormat:@"%@@%@%@",
 			[self login], [self hostName], [self path]];
 }
 
-- (int)status
-{
-	return status;
-}
-
-- (BOOL)pingDiskarb
-{
-	return pingDiskarb;
-}
 
 - (NSString*)hostName
 {
 	return hostName;
-}
-
-- (BOOL)mountOnStartup
-{
-	return mountOnStartup;
 }
 
 - (NSString*)login
@@ -340,11 +284,6 @@
 - (NSString*)path
 {
 	return path;
-}
-
-- (NSString*)mountPath
-{
-	return [NSString stringWithFormat: @"/Volumes/%@", name];
 }
 
 - (NSString*)errorString
@@ -362,38 +301,7 @@
 	return port;
 }
 
-- (NSString*)longStatus
-{
-	if (status == FuseFSStatusMounted)
-		return @"Mounted";
-	if (status == FuseFSStatusMountFailed)
-		return @"Mount Failed";
-	if (status == FuseFSStatusUnmounted)
-		return @"Unmounted";
-	if (status == FuseFSStatusWaitingToMount)
-		return @"Waiting";
-	return @"Unknown";
-}
-
 # pragma mark Setters
-- (void)setName:(NSString*) s
-{
-	[s copy];
-	[name release];
-	name = s;
-}
-
-- (void)setStatus:(int)s
-{
-	[self willChangeValueForKey:@"longStatus"];
-	status = s;
-	[self didChangeValueForKey: @"longStatus"];
-}
-
-- (void)setPingDiskarb:(BOOL)yn
-{
-	pingDiskarb = yn;
-}
 
 - (void)setHostName:(NSString*)s
 {
@@ -426,24 +334,115 @@
 	port = i;
 }
 
-- (void)setMountOnStartup:(BOOL)yn
-{
-	mountOnStartup = yn;
-}
-
 - (NSImage*)icon
 {
-	NSString* iconPath = [[NSBundle bundleForClass: [self class]] pathForResource:@"SSHFSIcon" ofType:@"icns"];
+	NSString* iconPath = [[NSBundle bundleForClass: [self class]] pathForResource:@"Icon" ofType:@"icns"];
 	NSImage* myIcon = [[[NSImage alloc] initWithContentsOfFile: iconPath] autorelease];
 	[myIcon setScalesWhenResized: YES];
 	return myIcon;
 }
 
+# pragma mark General FuseFS
+# pragma mark Accessors
+- (NSString*)name
+{
+	return name;
+}
+
+- (int)status
+{
+	return status;
+}
+
+- (NSString*)mountPath
+{
+	return [NSString stringWithFormat: @"/Volumes/%@", name];
+}
+
+- (NSString*)longStatus
+{
+	if (status == FuseFSStatusMounted)
+		return @"Mounted";
+	if (status == FuseFSStatusMountFailed)
+		return @"Mount Failed";
+	if (status == FuseFSStatusUnmounted)
+		return @"Unmounted";
+	if (status == FuseFSStatusWaitingToMount)
+		return @"Waiting";
+	return @"Unknown";
+}
+
+- (BOOL)mountOnStartup
+{
+	return mountOnStartup;
+}
+
+# pragma mark Setters
+- (void)setMountOnStartup:(BOOL)yn
+{
+	mountOnStartup = yn;
+}
+
+- (void)setStatus:(int)s
+{
+	[self willChangeValueForKey:@"longStatus"];
+	status = s;
+	[self didChangeValueForKey: @"longStatus"];
+}
+
+- (void)setName:(NSString*)aString
+{
+	[aString copy];
+	[name release];
+	name = aString;
+}
+
+# pragma mark Mountpoint setup
+- (BOOL)setupMountPoint
+{
+	BOOL pathExists, isDir;
+	NSString* mountPath = [self mountPath];
+	
+	NSFileManager* fm = [NSFileManager defaultManager];
+	pathExists = [fm fileExistsAtPath:mountPath isDirectory:&isDir];
+	
+	if (pathExists && isDir == YES) // directory already exists
+	{
+		if ([[fm directoryContentsAtPath:mountPath] count] == 0) // empty directory ... use as mountpoint
+			return YES;
+		else
+			return NO; // directory not empty ... cant mount at this path. fail.
+	}
+	else if (pathExists && isDir == NO)
+	{
+		return NO; // a file exists at that path, we shouldn't delete it. fail.
+	}
+	else if (pathExists == NO)
+	{
+		// nothing exists. Create the mountpoint, with default attributes
+		[fm createDirectoryAtPath:mountPath attributes:nil];
+		return YES;
+	}
+	return NO;
+}
+
+- (void)removeMountPoint
+{
+	BOOL isDir;
+	
+	// clean up after self by removing the mountpoint, if it exists and is empty
+	NSFileManager* fm = [NSFileManager defaultManager]; 
+	if ([fm fileExistsAtPath: [self mountPath] isDirectory:&isDir]) // directory exists
+	{
+		if ([[fm directoryContentsAtPath: [self mountPath]] count] == 0) // and its empty
+			[fm removeFileAtPath: [self mountPath] handler:nil];
+	}
+}
+
 - (void) dealloc 
 {
-	NSLog(@"SSHFS DEALLOC");
-	[task release];
 	[name release];
+	[task release];
 	[hostName release];
 	[path release];
 	[login release];

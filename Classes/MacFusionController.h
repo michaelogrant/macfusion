@@ -22,14 +22,13 @@
 #import <DiskArbitration/DiskArbitration.h>
 #import "FuseFSProtocol.h"
 #import "../Growl.framework/Headers/GrowlApplicationBridge.h"`
+#import "EditController.h"
+#import "PreferencesController.h"
 
 
-@class StatusValueTransformer;
-@class FavoritesController;
-@class MountController;
 @class FancyFavoritesController;
-
-
+@class EditFavoriteController;
+@class PreferencesController;
 
 @interface MacFusionController : NSObject <GrowlApplicationBridgeDelegate>
 {
@@ -37,23 +36,24 @@
 	NSMutableArray* favorites;
 	NSMutableArray* mounts;
 	NSMutableDictionary* plugins;
-	MountController* mountController;
-	FavoritesController* favoritesController;
+	NSMutableArray* sleepMounts;
+
 	FancyFavoritesController* fancyFavoritesController;
+	PreferencesController* preferencesController;
 	
 	DASessionRef appearSession;
 	DASessionRef disappearSession;
 }
-
-- (void)quickMount:(id)sender;
 
 - (NSMutableDictionary*)plugins;
 - (NSMutableArray*)favorites;
 
 - (void)addFilesystemToFavorites:(id <FuseFSProtocol>)fs;
 - (void)mountFilesystem:(id <FuseFSProtocol>)fs;
-- (void)unmountFilesystem:(id <FuseFSProtocol>)fs;
+- (int)unmountFilesystem:(id <FuseFSProtocol>)fs;
+- (NSMenu*)filesystemTypesMenuWithTarget: (id)target;
 
 - (BOOL)validateFilesystem:(id <FuseFSProtocol>)fs error:(NSString**)error;
 
+- (void) setLoginItemEnabled:(BOOL)enabled;
 @end

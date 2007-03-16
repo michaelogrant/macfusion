@@ -21,6 +21,8 @@
 #import "../Protocols/FuseFSProtocol.h"
 #import "../MacFusionConstants.h"
 
+@class FuseFSGeneral;
+
 enum {
 	SSHFSAuthenticationTypePassword=0,
 	SSHFSAuthenticationTypePublicKey=1,
@@ -28,13 +30,15 @@ enum {
 
 @interface SSHFS : NSObject <FuseFSProtocol>
 {
+	// General FuseFS Code
 	NSString* name;
+	BOOL mountOnStartup;
+	int status;
+	
+	// SSHFS Specific
 	NSString* hostName;
 	NSString* login;
 	NSString* path;
-	BOOL pingDiskarb;
-	BOOL mountOnStartup;
-	int status;
 	int authenticationType;
 	int port;
 	NSTask* task;
@@ -46,7 +50,6 @@ enum {
 - (NSString*)hostName;
 - (NSString*)login;
 - (NSString*)path;
-- (NSString*)mountPath;
 - (int)authenticationType;
 - (NSString*)errorString;
 - (int)port;
@@ -57,5 +60,10 @@ enum {
 - (void)setPath:(NSString*)s;
 - (void)setAuthenticationType:(int)i;
 - (void)setPort:(int)i;
+
+// General FuseFS Code
+- (NSString*)longStatus;
+- (BOOL)setupMountPoint;
+- (void)removeMountPoint;
 
 @end

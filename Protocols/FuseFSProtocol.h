@@ -21,22 +21,20 @@
 // This is the primary protocol that all MacFusion filesystem plugins
 // must implement.
 
-@protocol FuseFSProtocol <NSObject>
+@protocol FuseFSProtocol <NSObject, NSCopying>
 
 // accessors for variables common to all filesystems
 
-- (NSString *)name; // the volume name of the mounted FS
-- (int)status; // status of the fileSystem (#defined)
-- (NSString*)longStatus; // readable status
-- (BOOL)pingDiskarb; // whether to ping disk arbitration`
-- (NSString*)mountPath; // path at which the FS is mountved
-- (BOOL)mountOnStartup;
-- (NSImage*)icon; // icon to represent this filesystem
+- (NSString *)name;
+- (int)status;
+- (NSString*)longStatus;			// readable status
+- (NSString*)mountPath;
+- (BOOL)mountOnStartup;				// mount on program startup
+- (NSImage*)icon;					// icon to represent FS type
 
 // setters
 - (void)setName:(NSString*)s;
 - (void)setStatus:(int)s;
-- (void)setPingDiskarb:(BOOL)yn;
 - (void)setMountOnStartup:(BOOL)yn;
 
 // the actual important methods 
@@ -46,10 +44,10 @@
 // you should fill this with parsed output from your task
 - (NSString*)errorString;
 
-// methods to load to/from defaults
-// should return/take an objects that can be stored in plist format
-- (id)dictionary;
-- (id)initWithDictionary:(id)dic;
+- (NSDictionary*)dictionaryForDisplay;				// Dictionary with display info
+- (NSDictionary*)dictionaryForSaving;				// should return dictionary to go to defaults
+- (id)initWithDictionary:(NSDictionary*)dic;		// initialize object using defaults dictionary
+
 
 // description methods
 - (NSString *)fsType; // the filesystem type (SSHFS, etc)
