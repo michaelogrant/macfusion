@@ -29,19 +29,7 @@
 	[editMenu addItemWithTitle: @"Delete" action:@selector(removeFavorite:) keyEquivalent:@"d"];
 	[editButton setMenu: editMenu];
 	[editButton setTarget: self];
-	
-	NSMenu* addMenu = [[[NSMenu alloc] initWithTitle: @""] autorelease];
-	NSEnumerator* pluginEnum = [[mainController plugins] objectEnumerator];
-	NSBundle* b;
-	while(b = [pluginEnum nextObject])
-	{
-		NSMenuItem* item = [[[NSMenuItem alloc] initWithTitle: [[b infoDictionary] objectForKey:@"FSLongType"] 
-													   action:@selector(addFavorite:) keyEquivalent:@""] autorelease];
-		[item setRepresentedObject: [b principalClass]];
-		[addMenu addItem: item];
-		
-	}
-	[addButton setMenu: addMenu];
+	[addButton setMenu: [mainController filesystemTypesMenuWithTarget: self]];
 	
 	// Set up our table
 	NSCell* customNameDescriptionCell = [[[MacFusionFSCell alloc] init] autorelease];
@@ -55,11 +43,6 @@
 	[[favoritesTableView tableColumnWithIdentifier: @"status"] setDataCell: 
 		customStatusCell];
 	[favoritesTableView setDoubleAction: @selector(editFavorite:)];
-	
-//  Table menu removed for now ... it's causing some funky disabling of other keyDown events after it closes!
-//	NSMenu* tableMenu = [[NSMenu new] autorelease];
-//	[tableMenu setDelegate: self];
-//	[favoritesTableView setMenu: tableMenu];
 	
 	// Watch for interface updates
 	[favoritesArrayController addObserver: self forKeyPath:@"selection.status" options:NSKeyValueObservingOptionNew context:nil];
@@ -160,13 +143,14 @@
 		return;
 }
 
-- (IBAction) addFavorite:(id)sender
+- (void) filesystemTypeChosen:(NSMenuItem*)item
 {
-	Class fsClass = [sender representedObject];
+	Class fsClass = [item representedObject];
 	id <FuseFSProtocol> fs = [[fsClass alloc] init];
-	[EditFavoriteController editFavorite: fs 
-								onWindow: [self window]
-							notifyTarget: self];
+	[addButton highlight:YES];
+	[EditController editFilesystem: fs 
+						  onWindow: [self window]
+					  notifyTarget: self];
 }
 
 - (IBAction) editFavorite:(id)sender
@@ -179,27 +163,51 @@
 			[favoritesArrayController selectionIndex]];
 		if ([fs status] == FuseFSStatusMounted)
 			return; // Don't edit a mounted favorite
-		[EditFavoriteController editFavorite: fs 
+		backup = [fs copy];
+		[editButton highlight:YES];
+		[EditController editFilesystem: fs 
 								onWindow: [self window] 
 								notifyTarget: self];
 	}
 }
 
-- (void) editCompleteForFavorite:(id <FuseFSProtocol>)fs
+- (void) editCompleteForFilesystem:(id <FuseFSProtocol>)fs
 					 WithSuccess:(BOOL)success
-{
-	if (success && [[mainController favorites] containsObject: fs])
+{	
+	if ([[mainController favorites] containsObject: fs]) // editing existing favorite
 	{
-		return;
+		if (success)
+		{
+			[backup release];
+			backup = nil;
+			return;
+		}
+		else
+		{
+			[mainController willChangeValueForKey:@"favorites"];
+			[[mainController favorites] replaceObjectAtIndex:[[mainController favorites] indexOfObject: fs] 
+												  withObject:backup];
+			[mainController didChangeValueForKey:@"favorites"];
+			
+			[backup release];
+			backup = nil;
+			return;
+		}
+		
+		[editButton highlight: NO];
 	}
-	else if (success)
+	else // adding new favorite
 	{
-		[mainController addFilesystemToFavorites: fs];
-		[mainController mountFilesystem: fs];
-	}
-	else
-	{
-		return;
+		if (success)
+		{
+			[mainController addFilesystemToFavorites: fs];
+			[mainController mountFilesystem: fs];
+		}
+		else
+		{
+			[fs release];
+		}
+		[addButton highlight:NO];
 	}
 }
 

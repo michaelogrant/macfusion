@@ -4,7 +4,7 @@
         {
             CLASS = MacFusionController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {tv = NSTabView; }; 
+            OUTLETS = {}; 
             SUPERCLASS = NSObject; 
         }, 
         {

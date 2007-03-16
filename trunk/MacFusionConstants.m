@@ -25,6 +25,8 @@ NSString* favoritesStoredObjectKeyName = @"StoredObject";
 NSString* filesystemKeyName = @"Filesystem";
 NSString* mountTimeoutKeyName = @"mountTimeout";
 NSString* mountFaliureReasonKeyName = @"mountFaliureReason";
+NSString* startOnLoginKeyName = @"startOnLogin";
+NSString* unmountOnSleepKeyName = @"unmountOnSleep";
 
 NSString* FuseFSMountFailedNotification = @"FuseFSMountFailed";
 NSString* FuseFSMountedNotification = @"FuseFSMounted";

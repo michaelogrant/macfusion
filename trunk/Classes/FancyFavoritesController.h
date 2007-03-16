@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "MacFusionFSCell.h"
 #import "MacFusionStatusCell.h"
-#import "EditFavoriteController.h"
+#import "EditController.h"
 #import "MacFusionActionButton.h"
 #import "MacFusionConstants.h"
 
@@ -25,11 +25,12 @@
 	IBOutlet NSButton* mountButton;
 	
 	MacFusionController* mainController;
+	
+	id <FuseFSProtocol> backup;
 }
 
 - (IBAction) mountFavorite:(id)sender;
 - (IBAction) editFavorite:(id)sender;
-- (IBAction) addFavorite:(id)sender;
 - (IBAction) removeFavorite:(id)sender;
 
 @end

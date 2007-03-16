@@ -26,6 +26,8 @@ extern NSString* favoritesStoredObjectKeyName;
 extern NSString* filesystemKeyName;
 extern NSString* mountTimeoutKeyName;
 extern NSString* mountFaliureReasonKeyName;
+extern NSString* startOnLoginKeyName;
+extern NSString* unmountOnSleepKeyName;
 
 // notification names
 extern NSString* FuseFSMountFailedNotification;
@@ -48,6 +50,12 @@ enum {
 	FuseFSStatusWaitingToMount,
 	FuseFSStatusMounted,
 	FuseFSStatusMountFailed,
+};
+
+enum {
+	NoChangeOnSleep,
+	UnmountOnSleepRemountOnWake,
+	UnmountOnSleepNoRemount,
 };
 
 // mount return enum
