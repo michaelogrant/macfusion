@@ -163,7 +163,7 @@
 			[favoritesArrayController selectionIndex]];
 		if ([fs status] == FuseFSStatusMounted)
 			return; // Don't edit a mounted favorite
-		backup = [fs copy];
+		backup = [fs copyWithZone:nil];
 		[editButton highlight:YES];
 		[EditController editFilesystem: fs 
 								onWindow: [self window] 
