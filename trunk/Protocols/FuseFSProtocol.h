@@ -21,7 +21,7 @@
 // This is the primary protocol that all MacFusion filesystem plugins
 // must implement.
 
-@protocol FuseFSProtocol <NSObject, NSCopying>
+@protocol FuseFSProtocol < NSObject, NSCopying >
 
 // accessors for variables common to all filesystems
 

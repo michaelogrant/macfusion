@@ -24,6 +24,7 @@
 		D40969C20B8264A800EABE40 /* EditFavorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40969C00B8264A800EABE40 /* EditFavorites.nib */; };
 		D40969C50B82658F00EABE40 /* EditController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40969C30B82658F00EABE40 /* EditController.h */; };
 		D40969C60B82658F00EABE40 /* EditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40969C40B82658F00EABE40 /* EditController.m */; };
+		D40C7C030BADA09F00567D29 /* InformalProtocols.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40C7C010BADA09F00567D29 /* InformalProtocols.h */; };
 		D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */; };
 		D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D42AF6210B610B21008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
@@ -96,6 +97,7 @@
 				D4A6BB7D0B8684A300B51E6D /* CTGradient.h in CopyFiles */,
 				D4A6BFEE0B86CFB800B51E6D /* MacFusionTableView.h in CopyFiles */,
 				D4CDBE800B90C88C00F6BA84 /* PreferencesController.h in CopyFiles */,
+				D40C7C030BADA09F00567D29 /* InformalProtocols.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +156,7 @@
 		D40969C10B8264A800EABE40 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/EditFavorites.nib; sourceTree = "<group>"; };
 		D40969C30B82658F00EABE40 /* EditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditController.h; sourceTree = "<group>"; };
 		D40969C40B82658F00EABE40 /* EditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditController.m; sourceTree = "<group>"; };
+		D40C7C010BADA09F00567D29 /* InformalProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformalProtocols.h; sourceTree = "<group>"; };
 		D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionConstants.h; sourceTree = "<group>"; };
 		D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionConstants.m; sourceTree = "<group>"; };
 		D43D356A0BA8C9E100282A8D /* MacFusion.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusion.icns; path = Resources/MacFusion.icns; sourceTree = "<group>"; };
@@ -396,6 +399,7 @@
 			children = (
 				D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */,
 				D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */,
+				D40C7C010BADA09F00567D29 /* InformalProtocols.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
