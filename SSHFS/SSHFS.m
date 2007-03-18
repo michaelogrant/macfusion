@@ -120,7 +120,7 @@
 	[arguments addObject: [NSString stringWithFormat:@"-ovolname=%@", name]]; // volume name argument
 	[arguments addObject:@"-oping_diskarb"];
 	
-	[t setLaunchPath:@"/usr/local/bin/sshfs"];
+	[t setLaunchPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"sshfs-static" ofType:nil]];
 	[t setArguments:arguments];
 	
 	// set up our environment ... use the app's environment and modify path
