@@ -25,6 +25,7 @@
 		D40969C50B82658F00EABE40 /* EditController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40969C30B82658F00EABE40 /* EditController.h */; };
 		D40969C60B82658F00EABE40 /* EditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40969C40B82658F00EABE40 /* EditController.m */; };
 		D40C7C030BADA09F00567D29 /* InformalProtocols.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40C7C010BADA09F00567D29 /* InformalProtocols.h */; };
+		D40C7C420BADA3D100567D29 /* sshfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D40C7C410BADA3D100567D29 /* sshfs-static */; };
 		D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */; };
 		D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D42AF6210B610B21008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
@@ -157,6 +158,7 @@
 		D40969C30B82658F00EABE40 /* EditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditController.h; sourceTree = "<group>"; };
 		D40969C40B82658F00EABE40 /* EditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditController.m; sourceTree = "<group>"; };
 		D40C7C010BADA09F00567D29 /* InformalProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformalProtocols.h; sourceTree = "<group>"; };
+		D40C7C410BADA3D100567D29 /* sshfs-static */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sshfs-static"; sourceTree = "<group>"; };
 		D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionConstants.h; sourceTree = "<group>"; };
 		D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionConstants.m; sourceTree = "<group>"; };
 		D43D356A0BA8C9E100282A8D /* MacFusion.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusion.icns; path = Resources/MacFusion.icns; sourceTree = "<group>"; };
@@ -297,17 +299,17 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				D43D356A0BA8C9E100282A8D /* MacFusion.icns */,
 				D43D358B0BA8CA8300282A8D /* MacFusion_Menu.png */,
 				D43D358C0BA8CA8300282A8D /* MacFusion_Menu_Over.png */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				D4A121CB0B7C239800F565DC /* Credits.rtf */,
-				D40962120B80E2CE00EABE40 /* FancyFavorites.nib */,
-				D40969C00B8264A800EABE40 /* EditFavorites.nib */,
 				D4EBB62B0B850FCC00967958 /* minus-8.png */,
 				D4EBB62D0B85101700967958 /* plus-8.png */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				D40962120B80E2CE00EABE40 /* FancyFavorites.nib */,
+				D40969C00B8264A800EABE40 /* EditFavorites.nib */,
 				D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */,
 			);
 			name = Resources;
@@ -351,6 +353,7 @@
 				D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */,
 				D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */,
 				D40965AE0B80F79600EABE40 /* Icon.icns */,
+				D40C7C410BADA3D100567D29 /* sshfs-static */,
 				D4F82A260B5BEAA30061B029 /* SSHFS.nib */,
 			);
 			path = SSHFS;
@@ -507,6 +510,7 @@
 				D4F82A6F0B5BEBEE0061B029 /* SSHFS-Info.plist in Resources */,
 				D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */,
 				D40965AF0B80F79600EABE40 /* Icon.icns in Resources */,
+				D40C7C420BADA3D100567D29 /* sshfs-static in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
