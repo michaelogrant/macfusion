@@ -32,6 +32,7 @@
 - (void)writeFavoritesToDefaults;
 - (void)registerDefaults;
 - (void)initializeGrowl;
+- (void)readDefaults;
 @end
 
 @implementation MacFusionController
@@ -44,7 +45,7 @@
 		mounts = [[NSMutableArray alloc] init];
 		[self registerDefaults];
 		[self getAllPlugins];
-		[self getFavoritesFromDefaults];
+		[self readDefaults];
 		[self setUpVolumeMonitoring];
 		
 		[NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(checkAndMountFavorites:)
@@ -80,9 +81,80 @@
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	NSArray* emptyFavorites = [[NSMutableDictionary alloc] init];
 	NSDictionary* defaultsDic = [NSDictionary dictionaryWithObjectsAndKeys: emptyFavorites,  favoritesKeyName,
-		[NSNumber numberWithDouble: 60.0 ], mountTimeoutKeyName, nil];
+		[NSNumber numberWithDouble: 60.0 ], mountTimeoutKeyName, 
+		[NSNumber numberWithBool: NO], startOnLoginKeyName,
+		[NSNumber numberWithBool: NO], unmountOnSleepKeyName,
+		nil];
 	
 	[defaults registerDefaults: defaultsDic];
+}
+
+- (void) readDefaults
+{
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	[self setLoginItemEnabled: [[defaults objectForKey:startOnLoginKeyName] boolValue]];
+	int unmountOnSleepValue = [[defaults objectForKey:unmountOnSleepKeyName] intValue];
+	
+	if (unmountOnSleepValue == UnmountOnSleepNoRemount || 
+		unmountOnSleepValue == UnmountOnSleepRemountOnWake)
+	{
+		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(handleSleepNotification:) 
+																   name:NSWorkspaceWillSleepNotification object:nil];
+	}
+	if (unmountOnSleepValue == UnmountOnSleepRemountOnWake)
+	{
+		[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(handleWakeNotification:) 
+																   name:NSWorkspaceDidWakeNotification object:nil];
+	}
+	
+	[self getFavoritesFromDefaults];
+}
+
+- (void) setLoginItemEnabled:(BOOL)enabled
+{
+	NSString* myCurrentPath = [[NSBundle mainBundle] bundlePath];
+	
+	// set up architecture of getting login items
+	NSUserDefaults* loginDefaults = [[NSUserDefaults alloc] init];
+	NSMutableDictionary* loginDictionary = [[loginDefaults persistentDomainForName: @"loginwindow"] mutableCopy];
+	if (!loginDictionary) 
+		loginDictionary = [[NSMutableDictionary alloc] init];
+	NSMutableArray* startupItems = [[loginDictionary objectForKey:@"AutoLaunchedApplicationDictionary"] mutableCopy];
+	if (!startupItems)
+		startupItems = [[NSMutableDictionary alloc] init];
+	
+	BOOL found = NO;
+	NSDictionary *d, *myEntry;
+	NSEnumerator* e = [startupItems objectEnumerator];
+	while (d = [e nextObject])
+	{
+		if ([[d objectForKey:@"Path"] isEqualTo: myCurrentPath])
+		{
+			found = YES;
+			myEntry = d;
+		}
+	}
+	
+	if (!enabled && found) // delete it
+	{
+		[startupItems removeObject: myEntry];
+	}
+	else if (enabled && !found) // add it
+	{
+		myEntry = [NSDictionary dictionaryWithObjectsAndKeys: myCurrentPath, @"Path",
+			[NSNumber numberWithBool: NO], @"Hide", nil];
+		[startupItems addObject: myEntry];
+	}
+	else if (enabled && found)
+		return;
+	else if (!enabled && !found)
+		return;
+	
+	// actually modify the defaults
+	[loginDictionary setObject: startupItems forKey:@"AutoLaunchedApplicationDictionary"];
+	[loginDefaults removePersistentDomainForName: @"loginwindow"];
+	[loginDefaults setPersistentDomain:loginDictionary forName:@"loginwindow"];
+	[loginDefaults synchronize];
 }
 
 // load filesystem model objects from defaults
@@ -135,7 +207,7 @@
 	{
 		NSDictionary* storedFSDict = [NSDictionary dictionaryWithObjectsAndKeys: 
 			[fs fsType], favoritesFSTypeKeyName,
-			[fs dictionary], favoritesStoredObjectKeyName, nil];
+			[fs dictionaryForSaving], favoritesStoredObjectKeyName, nil];
 		[favoritesForDefaults addObject: storedFSDict];
 	}
 	
@@ -170,8 +242,8 @@
 	statusMenuItem = [[NSStatusBar systemStatusBar] statusItemWithLength: 
 		NSSquareStatusItemLength];
 	
-	NSImage* menuIcon = [NSImage imageNamed:@"menuIcon.png"];
-	NSImage* menuIconSelected = [NSImage imageNamed:@"menuselected.png"];
+	NSImage* menuIcon = [NSImage imageNamed:@"MacFusion_Menu.png"];
+	NSImage* menuIconSelected = [NSImage imageNamed:@"MacFusion_Menu_Over.png"];
 	
 	[statusMenuItem setImage: menuIcon];
 	[statusMenuItem setAlternateImage: menuIconSelected];
@@ -196,12 +268,15 @@
 		[menu removeItem:i];
 	
 	// Top Section
-	[menu addItemWithTitle:@"Quick Mount..." action:@selector(quickMount:)
+	[menu addItemWithTitle:@"Quick Mount" action:nil
+
 			   keyEquivalent:@""];
 	[menu addItemWithTitle:@"Favorites"  action:nil
 			   keyEquivalent:@""];
-	[[menu itemAtIndex: 0] setTarget: self];
-	[[menu itemAtIndex: 1] setTarget: self];
+	
+	// Quickmount submenu
+	[menu setSubmenu: [self filesystemTypesMenuWithTarget: self] forItem: 
+		[menu itemWithTitle:@"Quick Mount"]];
 	
 	// Favorites submenu
 	NSMenu* favoritesSubMenu = [[NSMenu alloc] initWithTitle:@"Favorites"];
@@ -215,7 +290,7 @@
 		while(fs = [favoritesEnum nextObject])
 		{
 			NSString* title = [NSString stringWithFormat: @"%@ (%@)",
-				[fs name], [fs fsLongType]];
+				[fs name], [fs fsType]];
 			NSMenuItem* item = [[NSMenuItem alloc] initWithTitle: title action:@selector(handleFSClicked:) keyEquivalent:@""];
 			[item setRepresentedObject: fs];
 			[favoritesSubMenu addItem: item];
@@ -236,7 +311,7 @@
 			if ([fs status] == FuseFSStatusMounted)
 			{
 				NSString* title = [NSString stringWithFormat: @"%@ (%@)", 
-					[fs name], [fs fsLongType]];
+					[fs name], [fs fsType]];
 				NSMenuItem* item = [[NSMenuItem alloc] initWithTitle: title action:@selector(handleFSClicked:) keyEquivalent:@""];
 				[item setRepresentedObject: fs];
 				[menu addItem: item];
@@ -247,15 +322,16 @@
 	
 	[menu addItem: [NSMenuItem separatorItem]];
 	[menu setAutoenablesItems: NO];
-	[menu addItemWithTitle:@"Preferences..." action:@selector(showPreferences) keyEquivalent:@""];
-	[menu addItemWithTitle:@"Quit MacFusion" action:@selector(quit) keyEquivalent:@""];
+	[menu addItemWithTitle:@"Preferences ..." action:@selector(showPreferences:) keyEquivalent:@""];
+	[menu addItemWithTitle:@"About MacFusion"  action:@selector(showAbout:) keyEquivalent:@""];
+	[menu addItemWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@""];
 }
 
 - (void) handleFSClicked:(NSMenuItem*)sender
 {
 	id <FuseFSProtocol> fs = [sender representedObject];
 	
-	if ([fs status] == FuseFSStatusUnmounted)
+	if ([fs status] == FuseFSStatusUnmounted || [fs status] == FuseFSStatusMountFailed)
 	{
 		[self mountFilesystem: fs];
 	}
@@ -269,8 +345,6 @@
 {
 	[[NSApplication sharedApplication] terminate: self];
 }
-
-
 
 #pragma mark Important Mount/Unmount methods
 - (void) mountFilesystem:(id <FuseFSProtocol>)fs
@@ -320,25 +394,23 @@
 }
 
 #pragma mark Action Methods
-// quick mount a fileSystem
-- (void) quickMount:(id)sender
+
+- (void) filesystemTypeChosen:(NSMenuItem*)item
 {
-	if (mountController == nil)
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+	Class FSClass = [item representedObject];
+	id <FuseFSProtocol> fs = [[FSClass alloc] init];
+	[EditController editFilesystem: fs onWindow:nil notifyTarget:self];
+}
+
+- (void) editCompleteForFilesystem:(id <FuseFSProtocol>)fs WithSuccess: (BOOL) success
+{
+	if (success)
 	{
-		mountController = [[MountController alloc] init];
-		[mountController setForQuickMount];
-	}
-	else if ([[mountController window] isVisible])
-	{
-		[mountController showWindow: self];
-		[[mountController window] makeKeyAndOrderFront: self];
+		[self mountFilesystem: fs];
 	}
 	else
-	{
-		[mountController release];
-		mountController = [[MountController alloc] init];
-		[mountController setForQuickMount];
-	}
+		return;
 }
 
 - (void) showFavorites:(id)sender
@@ -347,6 +419,23 @@
 		fancyFavoritesController = [[FancyFavoritesController alloc] init];
 	[[fancyFavoritesController window] makeKeyAndOrderFront: self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+}
+
+- (void) showPreferences:(id)sender
+{
+	if (preferencesController == nil)
+	{
+		preferencesController = [[PreferencesController alloc] init];
+	}
+	
+	[preferencesController showWindow: self];
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+}
+
+- (void) showAbout:(id)sender
+{
+	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+	[[NSApplication sharedApplication] orderFrontStandardAboutPanel:self];
 }
 
 #pragma mark Methods for Controllers
@@ -396,7 +485,7 @@
 	return YES;
 }
 
-- (void)unmountFilesystem:(id <FuseFSProtocol>)fs
+- (int)unmountFilesystem:(id <FuseFSProtocol>)fs
 {
 	if ([fs status] == FuseFSStatusMounted)
 	{
@@ -414,7 +503,10 @@
 								   notificationName:growlFSUnmountFailedNotification 
 										   iconData:nil priority:0 isSticky:NO clickContext:nil];
 		}
+		return status;
 	}
+	
+	return -1;
 }
 
 #pragma mark Plugin Loading
@@ -495,12 +587,23 @@
     return allBundles;
 }
 
-- (NSMenu*)filesystemTypesMenu
+- (NSMenu*)filesystemTypesMenuWithTarget:(id)target
 {
-	return nil;
+	NSMenu* menu = [[[NSMenu alloc] initWithTitle:@"filesystems"] autorelease];
+	NSEnumerator* pluginEnum = [plugins objectEnumerator];
+	NSBundle* b;
+	while(b = [pluginEnum nextObject])
+	{
+		NSMenuItem* item = [[[NSMenuItem alloc] initWithTitle: [[b infoDictionary] objectForKey:@"FSLongType"] 
+													   action:@selector(filesystemTypeChosen:) keyEquivalent:@""] autorelease];
+		[item setRepresentedObject: [b principalClass]];
+		[item setTarget: target];
+		[menu addItem: item];
+	}
+	return menu;
 }
 
-#pragma mark Diskarbitration Monitoring
+#pragma mark Diskarbitration & Sleep Monitoring
 // disk mounted callback: sets status of found filesystem to mounted
 static void diskMounted(DADiskRef disk, void* mySelf) 
 {
@@ -546,6 +649,46 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 	}
 
 	CFRelease(description);
+}
+
+// triggered when system waits
+// we need to delay 5 sec before processing to wait for network to come online
+- (void) handleWakeNotification:(NSNotification*)note
+{
+	[NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(handleWakeTimer:) userInfo:nil repeats:NO];
+}
+
+// mounts all filesystems that were succesfully unmounted before sleep
+- (void) handleWakeTimer:(NSTimer*)t
+{
+	NSEnumerator* e = [sleepMounts objectEnumerator];
+	id <FuseFSProtocol> fs;
+	while (fs = [e nextObject])
+	{
+		[self mountFilesystem: fs];
+	}
+	[sleepMounts release];
+	sleepMounts = nil;
+}
+
+// unmounts all filesystems before system sleep
+- (void) handleSleepNotification:(NSNotification*)note
+{
+	int result;
+	[sleepMounts release];
+	
+	NSEnumerator* e = [mounts objectEnumerator];
+	id <FuseFSProtocol> fs;
+	sleepMounts = [[NSMutableArray alloc] init];
+	while (fs = [e nextObject]) 
+	{
+		result = [self unmountFilesystem: fs];
+		if (result == 0)
+		{
+			[sleepMounts addObject: fs];
+		}
+			
+	}
 }
 
 // function to take a mount path and see if any filesystems we know are associated
