@@ -39,6 +39,7 @@
 		D45D9BD00B756366002E6C08 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
 		D45D9BD40B75637F002E6C08 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
 		D45D9BEF0B75640B002E6C08 /* askpass in CopyFiles */ = {isa = PBXBuildFile; fileRef = D45D9BBA0B756329002E6C08 /* askpass */; };
+		D474679A0BB09EA100FD68CA /* curlftpfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D47467990BB09EA100FD68CA /* curlftpfs-static */; };
 		D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */; };
 		D4A121CC0B7C239800F565DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4A121CB0B7C239800F565DC /* Credits.rtf */; };
 		D4A6BA810B867E7600B51E6D /* RoundedRectangles.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BA800B867E7600B51E6D /* RoundedRectangles.m */; };
@@ -50,6 +51,9 @@
 		D4A6C2190B8760EC00B51E6D /* MacFusionPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */; };
 		D4CDBE800B90C88C00F6BA84 /* PreferencesController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4CDBE7E0B90C88C00F6BA84 /* PreferencesController.h */; };
 		D4CDBE810B90C88C00F6BA84 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */; };
+		D4E11F130BAECE7F00C99A5F /* FTPFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E11EFC0BAECDF800C99A5F /* FTPFS.m */; };
+		D4E11F150BAECE7F00C99A5F /* FTPFSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E11EFF0BAECE0D00C99A5F /* FTPFSUIController.m */; };
+		D4E11F840BAF083300C99A5F /* FTPFS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E11F830BAF083300C99A5F /* FTPFS-Info.plist */; };
 		D4EBB35B0B84037400967958 /* MacFusionActionButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4EBB3590B84037400967958 /* MacFusionActionButton.h */; };
 		D4EBB35C0B84037400967958 /* MacFusionActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EBB35A0B84037400967958 /* MacFusionActionButton.m */; };
 		D4EBB62C0B850FCC00967958 /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EBB62B0B850FCC00967958 /* minus-8.png */; };
@@ -132,6 +136,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4E11F560BAED27B00C99A5F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +184,7 @@
 		D45D9A3D0B755F27002E6C08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		D45D9BBA0B756329002E6C08 /* askpass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = askpass; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		D47467990BB09EA100FD68CA /* curlftpfs-static */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "curlftpfs-static"; sourceTree = "<group>"; };
 		D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		D4A121CB0B7C239800F565DC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
 		D4A6BA800B867E7600B51E6D /* RoundedRectangles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedRectangles.m; sourceTree = "<group>"; };
@@ -182,6 +196,12 @@
 		D4A6C2180B8760EC00B51E6D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MacFusionPreferences.nib; sourceTree = "<group>"; };
 		D4CDBE7E0B90C88C00F6BA84 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		D4E11EFB0BAECDF800C99A5F /* FTPFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPFS.h; sourceTree = "<group>"; };
+		D4E11EFC0BAECDF800C99A5F /* FTPFS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPFS.m; sourceTree = "<group>"; };
+		D4E11EFE0BAECE0D00C99A5F /* FTPFSUIController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = FTPFSUIController.h; sourceTree = "<group>"; };
+		D4E11EFF0BAECE0D00C99A5F /* FTPFSUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPFSUIController.m; sourceTree = "<group>"; };
+		D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTPFS.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E11F830BAF083300C99A5F /* FTPFS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "FTPFS-Info.plist"; sourceTree = "<group>"; };
 		D4EBB3590B84037400967958 /* MacFusionActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionActionButton.h; sourceTree = "<group>"; };
 		D4EBB35A0B84037400967958 /* MacFusionActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionActionButton.m; sourceTree = "<group>"; };
 		D4EBB62B0B850FCC00967958 /* minus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minus-8.png"; path = "Resources/minus-8.png"; sourceTree = "<group>"; };
@@ -218,6 +238,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4E11F0D0BAECE5900C99A5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4F82A390B5BEB480061B029 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,7 +258,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D40962190B80E3C600EABE40 /* View Classes */,
+				D40962190B80E3C600EABE40 /* Views */,
 				D4498D030B5A3705003B9DFF /* Controllers */,
 				D4498D020B5A36F7003B9DFF /* Models */,
 			);
@@ -264,8 +291,9 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* MacFusion.app */,
 				D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */,
+				D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */,
+				8D1107320486CEB800E47090 /* MacFusion.app */,
 				D45D9BBA0B756329002E6C08 /* askpass */,
 			);
 			name = Products;
@@ -324,7 +352,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D40962190B80E3C600EABE40 /* View Classes */ = {
+		D40962190B80E3C600EABE40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D4A6BB7B0B8684A300B51E6D /* CTGradient.h */,
@@ -340,7 +368,7 @@
 				D4A6BFEC0B86CFB800B51E6D /* MacFusionTableView.h */,
 				D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */,
 			);
-			name = "View Classes";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		D409AB3B0B5BE9C300CE77A3 /* SSHFS */ = {
@@ -381,17 +409,23 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		D46A41600B7D881800D9C5A4 /* General */ = {
+		D4E11EEF0BAECDB500C99A5F /* FTPFS */ = {
 			isa = PBXGroup;
 			children = (
+				D4E11EFB0BAECDF800C99A5F /* FTPFS.h */,
+				D4E11EFC0BAECDF800C99A5F /* FTPFS.m */,
+				D4E11EFE0BAECE0D00C99A5F /* FTPFSUIController.h */,
+				D4E11EFF0BAECE0D00C99A5F /* FTPFSUIController.m */,
+				D4E11F830BAF083300C99A5F /* FTPFS-Info.plist */,
+				D47467990BB09EA100FD68CA /* curlftpfs-static */,
 			);
-			name = General;
+			path = FTPFS;
 			sourceTree = "<group>";
 		};
 		D4F1245B0B5C618D002BAA40 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				D46A41600B7D881800D9C5A4 /* General */,
+				D4E11EEF0BAECDB500C99A5F /* FTPFS */,
 				D409AB3B0B5BE9C300CE77A3 /* SSHFS */,
 			);
 			name = Plugins;
@@ -447,6 +481,24 @@
 			productReference = D45D9BBA0B756329002E6C08 /* askpass */;
 			productType = "com.apple.product-type.tool";
 		};
+		D4E11F0E0BAECE5900C99A5F /* FTPFS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E11F170BAECEA700C99A5F /* Build configuration list for PBXNativeTarget "FTPFS" */;
+			buildPhases = (
+				D4E11F0B0BAECE5900C99A5F /* Resources */,
+				D4E11F560BAED27B00C99A5F /* CopyFiles */,
+				D4E11F0C0BAECE5900C99A5F /* Sources */,
+				D4E11F0D0BAECE5900C99A5F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTPFS;
+			productName = FTPFS;
+			productReference = D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D4F82A3A0B5BEB480061B029 /* SSHFS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4F82A3D0B5BEB480061B029 /* Build configuration list for PBXNativeTarget "SSHFS" */;
@@ -478,6 +530,7 @@
 			projectDirPath = "";
 			targets = (
 				8D1107260486CEB800E47090 /* MacFusion */,
+				D4E11F0E0BAECE5900C99A5F /* FTPFS */,
 				D4F82A3A0B5BEB480061B029 /* SSHFS */,
 				D45D9BB90B756329002E6C08 /* askpass */,
 			);
@@ -500,6 +553,15 @@
 				D43D356B0BA8C9E100282A8D /* MacFusion.icns in Resources */,
 				D43D358D0BA8CA8300282A8D /* MacFusion_Menu.png in Resources */,
 				D43D358E0BA8CA8300282A8D /* MacFusion_Menu_Over.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E11F0B0BAECE5900C99A5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E11F840BAF083300C99A5F /* FTPFS-Info.plist in Resources */,
+				D474679A0BB09EA100FD68CA /* curlftpfs-static in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +603,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D45D9BCF0B75635D002E6C08 /* askpass.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E11F0C0BAECE5900C99A5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E11F130BAECE7F00C99A5F /* FTPFS.m in Sources */,
+				D4E11F150BAECE7F00C99A5F /* FTPFSUIController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +700,11 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
 				PRODUCT_NAME = MacFusion;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -652,6 +728,11 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
 				PRODUCT_NAME = MacFusion;
 				WRAPPER_EXTENSION = app;
 			};
@@ -711,6 +792,66 @@
 				INSTALL_PATH = "$(HOME)/bin";
 				PREBINDING = NO;
 				PRODUCT_NAME = askpass;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		D4E11F180BAECEA700C99A5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "FTPFS/FTPFS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FTPFS;
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		D4E11F190BAECEA700C99A5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "FTPFS/FTPFS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FTPFS;
+				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -801,6 +942,15 @@
 			buildConfigurations = (
 				D45D9BC70B756344002E6C08 /* Debug */,
 				D45D9BC80B756344002E6C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E11F170BAECEA700C99A5F /* Build configuration list for PBXNativeTarget "FTPFS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E11F180BAECEA700C99A5F /* Debug */,
+				D4E11F190BAECEA700C99A5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
