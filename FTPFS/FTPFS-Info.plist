@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>FTPFS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.FTPFS</string>
+	<string>org.mgorbach.MacFusion.FTPFS</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -18,5 +18,15 @@
 	<string>1.0</string>
 	<key>CSResourcesFileMapped</key>
 	<string>yes</string>
+	<key>FSLongType</key>
+	<string>FTP</string>
+	<key>FSType</key>
+	<string>FTPFS</string>
+	<key>NSMainNibFile</key>
+	<string>FTPFS.nib</string>
+	<key>NSPrincipalClass</key>
+	<string>FTPFS</string>
+	<key>UIClassName</key>
+	<string>FTPFSUIController</string>
 </dict>
 </plist>

@@ -13,25 +13,16 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		D40962100B80E21100EABE40 /* FancyFavoritesController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D409620E0B80E21100EABE40 /* FancyFavoritesController.h */; };
 		D40962110B80E21100EABE40 /* FancyFavoritesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D409620F0B80E21100EABE40 /* FancyFavoritesController.m */; };
 		D40962140B80E2CE00EABE40 /* FancyFavorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40962120B80E2CE00EABE40 /* FancyFavorites.nib */; };
-		D409623D0B80E41900EABE40 /* MacFusionFSCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D409623B0B80E41900EABE40 /* MacFusionFSCell.h */; };
 		D409623E0B80E41900EABE40 /* MacFusionFSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D409623C0B80E41900EABE40 /* MacFusionFSCell.m */; };
-		D40965AF0B80F79600EABE40 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D40965AE0B80F79600EABE40 /* Icon.icns */; };
-		D40966EA0B812A7500EABE40 /* MacFusionStatusCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40966E80B812A7500EABE40 /* MacFusionStatusCell.h */; };
 		D40966EB0B812A7500EABE40 /* MacFusionStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D40966E90B812A7500EABE40 /* MacFusionStatusCell.m */; };
 		D40969C20B8264A800EABE40 /* EditFavorites.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40969C00B8264A800EABE40 /* EditFavorites.nib */; };
-		D40969C50B82658F00EABE40 /* EditController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40969C30B82658F00EABE40 /* EditController.h */; };
 		D40969C60B82658F00EABE40 /* EditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40969C40B82658F00EABE40 /* EditController.m */; };
-		D40C7C030BADA09F00567D29 /* InformalProtocols.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40C7C010BADA09F00567D29 /* InformalProtocols.h */; };
 		D40C7C420BADA3D100567D29 /* sshfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D40C7C410BADA3D100567D29 /* sshfs-static */; };
-		D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */; };
 		D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D42AF6210B610B21008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D43D356B0BA8C9E100282A8D /* MacFusion.icns in Resources */ = {isa = PBXBuildFile; fileRef = D43D356A0BA8C9E100282A8D /* MacFusion.icns */; };
-		D43D358D0BA8CA8300282A8D /* MacFusion_Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D43D358B0BA8CA8300282A8D /* MacFusion_Menu.png */; };
-		D43D358E0BA8CA8300282A8D /* MacFusion_Menu_Over.png in Resources */ = {isa = PBXBuildFile; fileRef = D43D358C0BA8CA8300282A8D /* MacFusion_Menu_Over.png */; };
 		D4498D060B5A371D003B9DFF /* MacFusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */; };
 		D44C0C620B61191700C778DC /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C0C610B61191700C778DC /* Growl.framework */; };
 		D44C0C780B61193D00C778DC /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D44C0C610B61191700C778DC /* Growl.framework */; };
@@ -42,24 +33,31 @@
 		D474679A0BB09EA100FD68CA /* curlftpfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D47467990BB09EA100FD68CA /* curlftpfs-static */; };
 		D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */; };
 		D4A121CC0B7C239800F565DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4A121CB0B7C239800F565DC /* Credits.rtf */; };
+		D4A41D730BB6CB6D00D12576 /* SSHFS.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4A41D720BB6CB6D00D12576 /* SSHFS.icns */; };
+		D4A41D870BB6E6EF00D12576 /* FTPFS.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4A41D860BB6E6EF00D12576 /* FTPFS.icns */; };
 		D4A6BA810B867E7600B51E6D /* RoundedRectangles.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BA800B867E7600B51E6D /* RoundedRectangles.m */; };
-		D4A6BA880B867F0700B51E6D /* RoundedRectangles.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4A6BA870B867F0700B51E6D /* RoundedRectangles.h */; };
-		D4A6BB7D0B8684A300B51E6D /* CTGradient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4A6BB7B0B8684A300B51E6D /* CTGradient.h */; };
 		D4A6BB7E0B8684A300B51E6D /* CTGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BB7C0B8684A300B51E6D /* CTGradient.m */; };
-		D4A6BFEE0B86CFB800B51E6D /* MacFusionTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4A6BFEC0B86CFB800B51E6D /* MacFusionTableView.h */; };
 		D4A6BFEF0B86CFB800B51E6D /* MacFusionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */; };
 		D4A6C2190B8760EC00B51E6D /* MacFusionPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */; };
-		D4CDBE800B90C88C00F6BA84 /* PreferencesController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4CDBE7E0B90C88C00F6BA84 /* PreferencesController.h */; };
+		D4AA81CA0BBF7E7700BCE886 /* MacFusionSmoothImageView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4AA81C80BBF7E7700BCE886 /* MacFusionSmoothImageView.h */; };
+		D4AA81CB0BBF7E7700BCE886 /* MacFusionSmoothImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AA81C90BBF7E7700BCE886 /* MacFusionSmoothImageView.m */; };
+		D4B0112E0BBF0283002EABD3 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
+		D4B011730BBF0402002EABD3 /* ftp_askpass.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B010B20BBEF973002EABD3 /* ftp_askpass.m */; };
+		D4B0118E0BBF050A002EABD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
+		D4B011E90BBF0510002EABD3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
+		D4B012090BBF058A002EABD3 /* FTPFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */; };
 		D4CDBE810B90C88C00F6BA84 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */; };
 		D4E11F130BAECE7F00C99A5F /* FTPFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E11EFC0BAECDF800C99A5F /* FTPFS.m */; };
 		D4E11F150BAECE7F00C99A5F /* FTPFSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E11EFF0BAECE0D00C99A5F /* FTPFSUIController.m */; };
 		D4E11F840BAF083300C99A5F /* FTPFS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E11F830BAF083300C99A5F /* FTPFS-Info.plist */; };
-		D4EBB35B0B84037400967958 /* MacFusionActionButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4EBB3590B84037400967958 /* MacFusionActionButton.h */; };
 		D4EBB35C0B84037400967958 /* MacFusionActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EBB35A0B84037400967958 /* MacFusionActionButton.m */; };
 		D4EBB62C0B850FCC00967958 /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EBB62B0B850FCC00967958 /* minus-8.png */; };
 		D4EBB62E0B85101700967958 /* plus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EBB62D0B85101700967958 /* plus-8.png */; };
-		D4F124660B5C61C8002BAA40 /* FuseUIProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */; };
 		D4F124BF0B5C6D1D002BAA40 /* SSHFSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */; };
+		D4F37FC50BB5FC0900620C5F /* MacFusion_Menu_Light.png in Resources */ = {isa = PBXBuildFile; fileRef = D4F37FC30BB5FC0900620C5F /* MacFusion_Menu_Light.png */; };
+		D4F37FC60BB5FC0900620C5F /* MacFusion_Menu_Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = D4F37FC40BB5FC0900620C5F /* MacFusion_Menu_Dark.png */; };
+		D4F37FD90BB5FDF900620C5F /* FTPFS.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F37FD80BB5FDF900620C5F /* FTPFS.nib */; };
+		D4F380360BB6068300620C5F /* MacFusionIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F380340BB6068300620C5F /* MacFusionIconCell.m */; };
 		D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A260B5BEAA30061B029 /* SSHFS.nib */; };
 		D4F82A460B5BEB6D0061B029 /* SSHFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */; };
 		D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */; };
@@ -73,6 +71,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D45D9BB90B756329002E6C08;
 			remoteInfo = askpass;
+		};
+		D4B012070BBF0575002EABD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4E11F0E0BAECE5900C99A5F;
+			remoteInfo = FTPFS;
 		};
 		D4F82A620B5BEBA00061B029 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -90,19 +95,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				D4B012090BBF058A002EABD3 /* FTPFS.plugin in CopyFiles */,
 				D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */,
-				D4F124660B5C61C8002BAA40 /* FuseUIProtocol.h in CopyFiles */,
-				D42AEF810B5FD379008C6F84 /* MacFusionConstants.h in CopyFiles */,
-				D40962100B80E21100EABE40 /* FancyFavoritesController.h in CopyFiles */,
-				D409623D0B80E41900EABE40 /* MacFusionFSCell.h in CopyFiles */,
-				D40966EA0B812A7500EABE40 /* MacFusionStatusCell.h in CopyFiles */,
-				D40969C50B82658F00EABE40 /* EditController.h in CopyFiles */,
-				D4EBB35B0B84037400967958 /* MacFusionActionButton.h in CopyFiles */,
-				D4A6BA880B867F0700B51E6D /* RoundedRectangles.h in CopyFiles */,
-				D4A6BB7D0B8684A300B51E6D /* CTGradient.h in CopyFiles */,
-				D4A6BFEE0B86CFB800B51E6D /* MacFusionTableView.h in CopyFiles */,
-				D4CDBE800B90C88C00F6BA84 /* PreferencesController.h in CopyFiles */,
-				D40C7C030BADA09F00567D29 /* InformalProtocols.h in CopyFiles */,
+				D4AA81CA0BBF7E7700BCE886 /* MacFusionSmoothImageView.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +159,6 @@
 		D40962130B80E2CE00EABE40 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/FancyFavorites.nib; sourceTree = "<group>"; };
 		D409623B0B80E41900EABE40 /* MacFusionFSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionFSCell.h; sourceTree = "<group>"; };
 		D409623C0B80E41900EABE40 /* MacFusionFSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionFSCell.m; sourceTree = "<group>"; };
-		D40965AE0B80F79600EABE40 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		D40966E80B812A7500EABE40 /* MacFusionStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionStatusCell.h; sourceTree = "<group>"; };
 		D40966E90B812A7500EABE40 /* MacFusionStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionStatusCell.m; sourceTree = "<group>"; };
 		D40969C10B8264A800EABE40 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/EditFavorites.nib; sourceTree = "<group>"; };
@@ -175,8 +169,6 @@
 		D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionConstants.h; sourceTree = "<group>"; };
 		D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionConstants.m; sourceTree = "<group>"; };
 		D43D356A0BA8C9E100282A8D /* MacFusion.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusion.icns; path = Resources/MacFusion.icns; sourceTree = "<group>"; };
-		D43D358B0BA8CA8300282A8D /* MacFusion_Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MacFusion_Menu.png; path = Resources/MacFusion_Menu.png; sourceTree = "<group>"; };
-		D43D358C0BA8CA8300282A8D /* MacFusion_Menu_Over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MacFusion_Menu_Over.png; path = Resources/MacFusion_Menu_Over.png; sourceTree = "<group>"; };
 		D4498D040B5A371D003B9DFF /* MacFusionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionController.h; sourceTree = "<group>"; };
 		D4498D050B5A371D003B9DFF /* MacFusionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionController.m; sourceTree = "<group>"; };
 		D44C0C610B61191700C778DC /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
@@ -187,6 +179,8 @@
 		D47467990BB09EA100FD68CA /* curlftpfs-static */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "curlftpfs-static"; sourceTree = "<group>"; };
 		D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		D4A121CB0B7C239800F565DC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
+		D4A41D720BB6CB6D00D12576 /* SSHFS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SSHFS.icns; sourceTree = "<group>"; };
+		D4A41D860BB6E6EF00D12576 /* FTPFS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FTPFS.icns; sourceTree = "<group>"; };
 		D4A6BA800B867E7600B51E6D /* RoundedRectangles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedRectangles.m; sourceTree = "<group>"; };
 		D4A6BA870B867F0700B51E6D /* RoundedRectangles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedRectangles.h; sourceTree = "<group>"; };
 		D4A6BB7B0B8684A300B51E6D /* CTGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CTGradient.h; sourceTree = "<group>"; };
@@ -194,6 +188,10 @@
 		D4A6BFEC0B86CFB800B51E6D /* MacFusionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionTableView.h; sourceTree = "<group>"; };
 		D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionTableView.m; sourceTree = "<group>"; };
 		D4A6C2180B8760EC00B51E6D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MacFusionPreferences.nib; sourceTree = "<group>"; };
+		D4AA81C80BBF7E7700BCE886 /* MacFusionSmoothImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionSmoothImageView.h; sourceTree = "<group>"; };
+		D4AA81C90BBF7E7700BCE886 /* MacFusionSmoothImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionSmoothImageView.m; sourceTree = "<group>"; };
+		D4B010B10BBEF973002EABD3 /* ftp_askpass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftp_askpass.h; sourceTree = "<group>"; };
+		D4B010B20BBEF973002EABD3 /* ftp_askpass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ftp_askpass.m; sourceTree = "<group>"; };
 		D4CDBE7E0B90C88C00F6BA84 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		D4E11EFB0BAECDF800C99A5F /* FTPFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPFS.h; sourceTree = "<group>"; };
@@ -209,6 +207,11 @@
 		D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuseUIProtocol.h; sourceTree = "<group>"; };
 		D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHFSUIController.h; sourceTree = "<group>"; };
 		D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHFSUIController.m; sourceTree = "<group>"; };
+		D4F37FC30BB5FC0900620C5F /* MacFusion_Menu_Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MacFusion_Menu_Light.png; path = Resources/MacFusion_Menu_Light.png; sourceTree = "<group>"; };
+		D4F37FC40BB5FC0900620C5F /* MacFusion_Menu_Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MacFusion_Menu_Dark.png; path = Resources/MacFusion_Menu_Dark.png; sourceTree = "<group>"; };
+		D4F37FD80BB5FDF900620C5F /* FTPFS.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = FTPFS.nib; sourceTree = "<group>"; };
+		D4F380330BB6068300620C5F /* MacFusionIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionIconCell.h; sourceTree = "<group>"; };
+		D4F380340BB6068300620C5F /* MacFusionIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionIconCell.m; sourceTree = "<group>"; };
 		D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "SSHFS-Info.plist"; sourceTree = "<group>"; };
 		D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SSHFS.h; sourceTree = "<group>"; };
 		D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SSHFS.m; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B011E90BBF0510002EABD3 /* CoreFoundation.framework in Frameworks */,
+				D4B0118E0BBF050A002EABD3 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,11 +332,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4F37FC30BB5FC0900620C5F /* MacFusion_Menu_Light.png */,
+				D4F37FC40BB5FC0900620C5F /* MacFusion_Menu_Dark.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				D43D356A0BA8C9E100282A8D /* MacFusion.icns */,
-				D43D358B0BA8CA8300282A8D /* MacFusion_Menu.png */,
-				D43D358C0BA8CA8300282A8D /* MacFusion_Menu_Over.png */,
 				D4A121CB0B7C239800F565DC /* Credits.rtf */,
 				D4EBB62B0B850FCC00967958 /* minus-8.png */,
 				D4EBB62D0B85101700967958 /* plus-8.png */,
@@ -367,6 +372,10 @@
 				D4A6BA870B867F0700B51E6D /* RoundedRectangles.h */,
 				D4A6BFEC0B86CFB800B51E6D /* MacFusionTableView.h */,
 				D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */,
+				D4F380330BB6068300620C5F /* MacFusionIconCell.h */,
+				D4F380340BB6068300620C5F /* MacFusionIconCell.m */,
+				D4AA81C80BBF7E7700BCE886 /* MacFusionSmoothImageView.h */,
+				D4AA81C90BBF7E7700BCE886 /* MacFusionSmoothImageView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -374,15 +383,12 @@
 		D409AB3B0B5BE9C300CE77A3 /* SSHFS */ = {
 			isa = PBXGroup;
 			children = (
-				D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */,
-				D45D99D80B755062002E6C08 /* askpass.c */,
+				D45E30A20BBF38EB0065FBE6 /* Resources */,
 				D4F82A0C0B5BEA2C0061B029 /* SSHFS.h */,
+				D45D99D80B755062002E6C08 /* askpass.c */,
 				D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */,
 				D4F124BD0B5C6D1D002BAA40 /* SSHFSUIController.h */,
 				D4F124BE0B5C6D1D002BAA40 /* SSHFSUIController.m */,
-				D40965AE0B80F79600EABE40 /* Icon.icns */,
-				D40C7C410BADA3D100567D29 /* sshfs-static */,
-				D4F82A260B5BEAA30061B029 /* SSHFS.nib */,
 			);
 			path = SSHFS;
 			sourceTree = "<group>";
@@ -409,15 +415,38 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		D45E30A20BBF38EB0065FBE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */,
+				D4A41D720BB6CB6D00D12576 /* SSHFS.icns */,
+				D4F82A260B5BEAA30061B029 /* SSHFS.nib */,
+				D40C7C410BADA3D100567D29 /* sshfs-static */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D45E30A30BBF38F40065FBE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D47467990BB09EA100FD68CA /* curlftpfs-static */,
+				D4E11F830BAF083300C99A5F /* FTPFS-Info.plist */,
+				D4A41D860BB6E6EF00D12576 /* FTPFS.icns */,
+				D4F37FD80BB5FDF900620C5F /* FTPFS.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		D4E11EEF0BAECDB500C99A5F /* FTPFS */ = {
 			isa = PBXGroup;
 			children = (
+				D45E30A30BBF38F40065FBE6 /* Resources */,
 				D4E11EFB0BAECDF800C99A5F /* FTPFS.h */,
 				D4E11EFC0BAECDF800C99A5F /* FTPFS.m */,
 				D4E11EFE0BAECE0D00C99A5F /* FTPFSUIController.h */,
 				D4E11EFF0BAECE0D00C99A5F /* FTPFSUIController.m */,
-				D4E11F830BAF083300C99A5F /* FTPFS-Info.plist */,
-				D47467990BB09EA100FD68CA /* curlftpfs-static */,
+				D4B010B10BBEF973002EABD3 /* ftp_askpass.h */,
+				D4B010B20BBEF973002EABD3 /* ftp_askpass.m */,
 			);
 			path = FTPFS;
 			sourceTree = "<group>";
@@ -457,6 +486,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D4B012080BBF0575002EABD3 /* PBXTargetDependency */,
 				D4F82A630B5BEBA00061B029 /* PBXTargetDependency */,
 			);
 			name = MacFusion;
@@ -551,8 +581,8 @@
 				D4EBB62E0B85101700967958 /* plus-8.png in Resources */,
 				D4A6C2190B8760EC00B51E6D /* MacFusionPreferences.nib in Resources */,
 				D43D356B0BA8C9E100282A8D /* MacFusion.icns in Resources */,
-				D43D358D0BA8CA8300282A8D /* MacFusion_Menu.png in Resources */,
-				D43D358E0BA8CA8300282A8D /* MacFusion_Menu_Over.png in Resources */,
+				D4F37FC50BB5FC0900620C5F /* MacFusion_Menu_Light.png in Resources */,
+				D4F37FC60BB5FC0900620C5F /* MacFusion_Menu_Dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +592,8 @@
 			files = (
 				D4E11F840BAF083300C99A5F /* FTPFS-Info.plist in Resources */,
 				D474679A0BB09EA100FD68CA /* curlftpfs-static in Resources */,
+				D4F37FD90BB5FDF900620C5F /* FTPFS.nib in Resources */,
+				D4A41D870BB6E6EF00D12576 /* FTPFS.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,8 +603,8 @@
 			files = (
 				D4F82A6F0B5BEBEE0061B029 /* SSHFS-Info.plist in Resources */,
 				D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */,
-				D40965AF0B80F79600EABE40 /* Icon.icns in Resources */,
 				D40C7C420BADA3D100567D29 /* sshfs-static in Resources */,
+				D4A41D730BB6CB6D00D12576 /* SSHFS.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +627,8 @@
 				D4A6BB7E0B8684A300B51E6D /* CTGradient.m in Sources */,
 				D4A6BFEF0B86CFB800B51E6D /* MacFusionTableView.m in Sources */,
 				D4CDBE810B90C88C00F6BA84 /* PreferencesController.m in Sources */,
+				D4F380360BB6068300620C5F /* MacFusionIconCell.m in Sources */,
+				D4AA81CB0BBF7E7700BCE886 /* MacFusionSmoothImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,8 +644,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B011730BBF0402002EABD3 /* ftp_askpass.m in Sources */,
 				D4E11F130BAECE7F00C99A5F /* FTPFS.m in Sources */,
 				D4E11F150BAECE7F00C99A5F /* FTPFSUIController.m in Sources */,
+				D4B0112E0BBF0283002EABD3 /* MacFusionConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +668,11 @@
 			isa = PBXTargetDependency;
 			target = D45D9BB90B756329002E6C08 /* askpass */;
 			targetProxy = D45D9BE90B7563DC002E6C08 /* PBXContainerItemProxy */;
+		};
+		D4B012080BBF0575002EABD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4E11F0E0BAECE5900C99A5F /* FTPFS */;
+			targetProxy = D4B012070BBF0575002EABD3 /* PBXContainerItemProxy */;
 		};
 		D4F82A630B5BEBA00061B029 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
