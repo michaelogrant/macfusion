@@ -41,6 +41,8 @@
 		D4A6C2190B8760EC00B51E6D /* MacFusionPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */; };
 		D4AA81CA0BBF7E7700BCE886 /* MacFusionSmoothImageView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4AA81C80BBF7E7700BCE886 /* MacFusionSmoothImageView.h */; };
 		D4AA81CB0BBF7E7700BCE886 /* MacFusionSmoothImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AA81C90BBF7E7700BCE886 /* MacFusionSmoothImageView.m */; };
+		D4AA833B0BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4AA83390BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns */; };
+		D4AA833C0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4AA833A0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns */; };
 		D4B0112E0BBF0283002EABD3 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D4B011730BBF0402002EABD3 /* ftp_askpass.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B010B20BBEF973002EABD3 /* ftp_askpass.m */; };
 		D4B0118E0BBF050A002EABD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
@@ -122,15 +124,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D45D9BEB0B7563EA002E6C08 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D4E11F560BAED27B00C99A5F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +183,8 @@
 		D4A6C2180B8760EC00B51E6D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MacFusionPreferences.nib; sourceTree = "<group>"; };
 		D4AA81C80BBF7E7700BCE886 /* MacFusionSmoothImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionSmoothImageView.h; sourceTree = "<group>"; };
 		D4AA81C90BBF7E7700BCE886 /* MacFusionSmoothImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionSmoothImageView.m; sourceTree = "<group>"; };
+		D4AA83390BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusion_Dialog_Warning.icns; path = Resources/MacFusion_Dialog_Warning.icns; sourceTree = "<group>"; };
+		D4AA833A0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusion_Dialog_Question.icns; path = Resources/MacFusion_Dialog_Question.icns; sourceTree = "<group>"; };
 		D4B010B10BBEF973002EABD3 /* ftp_askpass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftp_askpass.h; sourceTree = "<group>"; };
 		D4B010B20BBEF973002EABD3 /* ftp_askpass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ftp_askpass.m; sourceTree = "<group>"; };
 		D4CDBE7E0B90C88C00F6BA84 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
@@ -337,6 +332,8 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				D43D356A0BA8C9E100282A8D /* MacFusion.icns */,
+				D4AA83390BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns */,
+				D4AA833A0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns */,
 				D4A121CB0B7C239800F565DC /* Credits.rtf */,
 				D4EBB62B0B850FCC00967958 /* minus-8.png */,
 				D4EBB62D0B85101700967958 /* plus-8.png */,
@@ -537,7 +534,6 @@
 				D4F82A370B5BEB480061B029 /* Resources */,
 				D4F82A380B5BEB480061B029 /* Sources */,
 				D4F82A390B5BEB480061B029 /* Frameworks */,
-				D45D9BEB0B7563EA002E6C08 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -583,6 +579,8 @@
 				D43D356B0BA8C9E100282A8D /* MacFusion.icns in Resources */,
 				D4F37FC50BB5FC0900620C5F /* MacFusion_Menu_Light.png in Resources */,
 				D4F37FC60BB5FC0900620C5F /* MacFusion_Menu_Dark.png in Resources */,
+				D4AA833B0BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns in Resources */,
+				D4AA833C0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,6 +45,7 @@
 	}
 	else // we are not in favorites controller
 	{
+		[[self window] center];
 		[[self window] setTitle: @"Quick Mount"];		
 	}
 	

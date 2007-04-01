@@ -13,7 +13,6 @@
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView*)controlView
 {
 	NSImage* myImage = [self objectValue];
-	NSImageRep *sourceImageRep = [myImage bestRepresentationForDevice:nil];
 	[[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];
 	[myImage setFlipped:YES];
 	[myImage drawInRect:cellFrame fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];

@@ -125,6 +125,7 @@
 	NSAlert* confirmationAlert = [NSAlert alertWithMessageText: message  defaultButton:@"OK" alternateButton:@"Cancel" 
 												   otherButton:@"" informativeTextWithFormat:@""];
 	[confirmationAlert setAlertStyle: NSWarningAlertStyle];
+	[confirmationAlert setIcon: [NSImage imageNamed:@"MacFusion_Dialog_Question"]];
 	[confirmationAlert beginSheetModalForWindow: [self window] modalDelegate:self 
 								 didEndSelector:@selector(removeFavoriteConfirmationAlertDidEnd:returnCode:favorite:) contextInfo:fs];
 }

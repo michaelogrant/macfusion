@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>Icon</string>
+	<string>SSHFS</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.mgorbach.MacFusion.SSHFS</string>
 	<key>CFBundleInfoDictionaryVersion</key>
