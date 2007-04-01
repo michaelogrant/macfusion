@@ -65,14 +65,15 @@ NSString* SSHFSPortError = @"Port out of Range (Must be 1 to 65535)";
 	if ([fileSystem login] == nil || [fileSystem login] == @"")
 	{
 		*error = SSHFSLoginError;
+		return NO;
 	}
-	if ([fileSystem port] <= 0 || [fileSystem port] > 65535)
+	if ([fileSystem port] < 0 || [fileSystem port] > 65535)
 	{
 		*error = SSHFSPortError;
 		return NO;
 	}
-	else
-		return YES;
+	
+	return YES;
 }
 
 - (id <FuseFSProtocol>) fileSystem

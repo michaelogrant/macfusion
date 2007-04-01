@@ -21,6 +21,7 @@
         }, 
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {CLASS = MacFusionActionButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = MacFusionIconCell; LANGUAGE = ObjC; SUPERCLASS = NSImageCell; }, 
         {CLASS = MacFusionTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }
     ); 
     IBVersion = 1; 

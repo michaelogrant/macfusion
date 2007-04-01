@@ -242,8 +242,8 @@
 	statusMenuItem = [[NSStatusBar systemStatusBar] statusItemWithLength: 
 		NSSquareStatusItemLength];
 	
-	NSImage* menuIcon = [NSImage imageNamed:@"MacFusion_Menu.png"];
-	NSImage* menuIconSelected = [NSImage imageNamed:@"MacFusion_Menu_Over.png"];
+	NSImage* menuIcon = [NSImage imageNamed:@"MacFusion_Menu_Dark.png"];
+	NSImage* menuIconSelected = [NSImage imageNamed:@"MacFusion_Menu_Light.png"];
 	
 	[statusMenuItem setImage: menuIcon];
 	[statusMenuItem setAlternateImage: menuIconSelected];

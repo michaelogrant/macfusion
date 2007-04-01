@@ -133,11 +133,7 @@
 	[env setObject: @"NONE" forKey:@"DISPLAY"];
 	[env setObject: login forKey:@"SSHFS_USER"];
 	[env setObject: hostName forKey:@"SSHFS_SERVER"];
-	
-	NSString* newPath = [NSString stringWithFormat: @"%@:%@", [env objectForKey:@"PATH"], 
-		@"/usr/local/sbin:/usr/local/bin"];
-	
-	[env setObject:newPath forKey:@"PATH"];
+
 	[t setEnvironment: env];
 	
 	// set up the output pipe
@@ -283,7 +279,7 @@
 
 - (NSString*)path
 {
-	return path;
+		return path;
 }
 
 - (NSString*)errorString
@@ -319,6 +315,7 @@
 
 - (void)setPath:(NSString*)s
 {
+	if (s==nil) s=@"";
 	[s copy];
 	[path release];
 	path = s;
@@ -336,10 +333,9 @@
 
 - (NSImage*)icon
 {
-	NSString* iconPath = [[NSBundle bundleForClass: [self class]] pathForResource:@"Icon" ofType:@"icns"];
-	NSImage* myIcon = [[[NSImage alloc] initWithContentsOfFile: iconPath] autorelease];
-	[myIcon setScalesWhenResized: YES];
-	return myIcon;
+	return [[[NSImage alloc] initWithContentsOfFile: 
+		[[NSBundle bundleForClass: [self class]] pathForResource:@"SSHFS" ofType:@"icns"]]
+		autorelease];
 }
 
 # pragma mark General FuseFS

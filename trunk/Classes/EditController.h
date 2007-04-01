@@ -19,6 +19,7 @@
 	id <FuseFSProtocol> filesystem;
 	id <FuseUIProtocol> filesystemUIController;
 	id notifyTarget;
+	id imageView;
 }
 
 + (void) editFilesystem:(id <FuseFSProtocol>)fs onWindow:(id)window notifyTarget: (id)target;

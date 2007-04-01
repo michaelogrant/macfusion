@@ -1,0 +1,12 @@
+{
+    IBClasses = (
+        {
+            CLASS = FTPFSUIController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {configurationView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

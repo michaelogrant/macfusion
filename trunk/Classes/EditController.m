@@ -54,6 +54,7 @@
 		[[fsBundle infoDictionary] objectForKey: @"UIClassName"]];
 	filesystemUIController = [[filesystemUIControllerClass alloc] initWithFS: 
 		filesystem];
+	[imageView setImage: [filesystem icon]];
 	
 	// show the view we just loaded
 	NSView* pluginView = [filesystemUIController configurationView];

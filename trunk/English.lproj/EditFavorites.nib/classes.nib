@@ -4,10 +4,11 @@
             ACTIONS = {cancel = id; okay = id; }; 
             CLASS = EditFavoriteController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {filesystem = id; filesystemUIController = id; }; 
+            OUTLETS = {filesystem = id; filesystemUIController = id; imageView = id; }; 
             SUPERCLASS = NSWindowController; 
         }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MacFusionSmoothImageView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
     ); 
     IBVersion = 1; 
 }
