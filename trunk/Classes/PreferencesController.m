@@ -17,7 +17,7 @@
 
 - (void) windowDidLoad
 {
-	
+	[[self window] center];
 }
 
 - (IBAction) loginItemChanged:(id) sender

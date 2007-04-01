@@ -36,4 +36,11 @@
 	[image release];
 	image = newImage;
 }
+
+- (void) dealloc 
+{
+	[image release];
+	[super dealloc];
+}
+
 @end
