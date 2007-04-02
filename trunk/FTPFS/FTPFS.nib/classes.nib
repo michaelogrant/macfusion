@@ -3,7 +3,7 @@
         {
             CLASS = FTPFSUIController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {configurationView = NSView; }; 
+            OUTLETS = {configurationView = NSObjectController; fsController = id; }; 
             SUPERCLASS = NSObject; 
         }, 
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }

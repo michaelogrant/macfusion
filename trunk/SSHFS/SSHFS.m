@@ -253,7 +253,7 @@
 
 - (NSString*)fsLongType
 {
-	return @"Secure Shell";
+	return @"SSH";
 }
 
 - (NSString*)fsDescription

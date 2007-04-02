@@ -73,6 +73,7 @@
 - (IBAction) okay:(id)sender
 {
 	NSString* error;
+	[filesystemUIController commitEdits]; // this is kindof a hack, but we do need the edits to comit ...
 	
 	BOOL pluginValidate = [filesystemUIController validateFilesystem:&error];
 	BOOL mainControllerValidate = [mainController validateFilesystem:filesystem

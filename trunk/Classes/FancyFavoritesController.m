@@ -23,6 +23,7 @@
 
 - (void) windowDidLoad
 {
+	[[self window] center];
 	// Set up the buttons and menus
 	NSMenu* editMenu = [[[NSMenu alloc] initWithTitle: @""] autorelease];
 	[editMenu addItemWithTitle: @"Edit" action:@selector(editFavorite:) keyEquivalent:@"e"];
@@ -217,7 +218,7 @@
 	id <FuseFSProtocol> fs = [[favoritesArrayController arrangedObjects] objectAtIndex: 
 		[favoritesArrayController selectionIndex]];
 	
-	if ([fs status] == FuseFSStatusUnmounted)
+	if ([fs status] == FuseFSStatusUnmounted || [fs status] == FuseFSStatusMountFailed)
 	{
 		[mainController mountFilesystem: fs];
 	}
