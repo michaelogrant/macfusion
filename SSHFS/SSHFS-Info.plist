@@ -19,7 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>FSLongType</key>
-	<string>Secure Shell</string>
+	<string>SSH</string>
 	<key>FSType</key>
 	<string>SSHFS</string>
 	<key>NSMainNibFile</key>

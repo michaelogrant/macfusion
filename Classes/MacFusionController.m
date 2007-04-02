@@ -290,7 +290,7 @@
 		while(fs = [favoritesEnum nextObject])
 		{
 			NSString* title = [NSString stringWithFormat: @"%@ (%@)",
-				[fs name], [fs fsType]];
+				[fs name], [fs fsLongType]];
 			NSMenuItem* item = [[NSMenuItem alloc] initWithTitle: title action:@selector(handleFSClicked:) keyEquivalent:@""];
 			[item setRepresentedObject: fs];
 			[favoritesSubMenu addItem: item];
@@ -311,7 +311,7 @@
 			if ([fs status] == FuseFSStatusMounted)
 			{
 				NSString* title = [NSString stringWithFormat: @"%@ (%@)", 
-					[fs name], [fs fsType]];
+					[fs name], [fs fsLongType]];
 				NSMenuItem* item = [[NSMenuItem alloc] initWithTitle: title action:@selector(handleFSClicked:) keyEquivalent:@""];
 				[item setRepresentedObject: fs];
 				[menu addItem: item];

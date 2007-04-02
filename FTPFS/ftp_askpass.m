@@ -110,22 +110,15 @@ char *FTPFSGetPasswordForUserAndServer(const char *user, const char *server, int
 	
 	password = FTPFSGetPasswordFromKeychain(user, server);
 
+
 	if(strlen(password) > 0)
 	{
 		*release_type = 1;
 		return password;
 	}
 	
-	CFBundleRef myBundle = CFBundleGetMainBundle();
-    CFURLRef myURL = CFBundleCopyExecutableURL(myBundle);
-    CFURLRef myParentURL = CFURLCreateCopyDeletingLastPathComponent(kCFAllocatorDefault,
-                                                                    myURL);
-    CFRelease(myURL);
-    CFURLRef myIconURL = CFURLCreateCopyAppendingPathComponent(kCFAllocatorDefault,
-                                                               myParentURL,
-                                                               CFSTR("FTPFS.icns"),
-                                                               false);
-    CFRelease(myParentURL);
+	CFBundleRef myBundle = CFBundleGetBundleWithIdentifier(CFSTR("org.mgorbach.MacFusion.FTPFS")); // we don't need to release this?
+    CFURLRef myIconURL = CFBundleCopyResourceURL(myBundle,CFSTR("FTPFS"),CFSTR("icns"),NULL);
 	
 	dialogText = CFStringCreateWithFormat( kCFAllocatorDefault, NULL, CFSTR("Enter FTP Password for user %s on server %s"), user, server);
 	
