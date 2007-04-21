@@ -31,6 +31,26 @@
 @end 
 
 @implementation FTPFS
+#pragma mark URL opening Methods
++ (BOOL) canHandleURL:(NSURL*)url
+{
+	return [[url scheme] isEqualTo:@"ftp"];
+}
+
+- (id) initWithURL:(NSURL*)url
+{
+	self = [self init];
+	if (self != nil)
+	{
+		[self setName: [url host]];
+		if ([url user] != nil)
+			[self setLogin: [url user]];
+		if ([url path] != nil)
+			[self setPath: [url path]];
+		[self setHostName: [url host]];
+	}
+	return self;
+}
 
 #pragma mark Initialization
 - (id) init 

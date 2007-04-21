@@ -48,10 +48,13 @@
 - (NSDictionary*)dictionaryForSaving;				// should return dictionary to go to defaults
 - (id)initWithDictionary:(NSDictionary*)dic;		// initialize object using defaults dictionary
 
-
 // description methods
 - (NSString *)fsType; // the filesystem type (SSHFS, etc)
 - (NSString *)fsLongType; // human-readable version of the filesystem type
 - (NSString *)fsDescription; // a string describing this FS
+
+// URL Handling ... so the MacFusion app can handle FTP and SFTP urls
++ (BOOL)canHandleURL:(NSURL*)url;
+- (id)initWithURL:(NSURL*)url;
 
 @end
