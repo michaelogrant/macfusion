@@ -29,6 +29,27 @@
 
 @implementation SSHFS
 
+#pragma mark URL Handling methods
++ (BOOL) canHandleURL:(NSURL*)url
+{
+	return [[url scheme] isEqualTo:@"sftp"];
+}
+
+- (id) initWithURL:(NSURL*)url
+{
+	self = [self init];
+	if (self != nil)
+	{
+		[self setName: [url host]];
+		if ([url user] != nil)
+			[self setLogin: [url user]];
+		if ([url path] != nil)
+			[self setPath: [url path]];
+		[self setHostName: [url host]];
+	}
+	return self;
+}
+
 #pragma mark Initialization
 - (id) init 
 {
@@ -41,6 +62,7 @@
 		[self setPort: 22];
 		[self setAuthenticationType: SSHFSAuthenticationTypePassword];
 		[self setPath:@""];
+		[self setLogin:NSUserName()];
 	}
 	return self;
 }

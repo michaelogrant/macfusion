@@ -33,6 +33,7 @@
 - (void)registerDefaults;
 - (void)initializeGrowl;
 - (void)readDefaults;
+- (void)registerURLHandling;
 @end
 
 @implementation MacFusionController
@@ -63,6 +64,7 @@
 												 selector:@selector(handleUnmountNotification:)
 													 name:FuseFSUnmountedNotification object:nil];
 		
+		[self registerURLHandling];
 		[self initializeGrowl];
 			
 		[[NSApplication sharedApplication] setDelegate: self];
@@ -744,7 +746,7 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 	return growlRegistration;
 }
 
-#pragma mark Other
+#pragma mark Accessors
 - (NSMutableDictionary*) plugins
 {
 	return plugins;
@@ -753,6 +755,33 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 - (NSMutableArray*)favorites
 {
 	return favorites;
+}
+
+#pragma mark URL Handling methods
+- (void)registerURLHandling
+{
+	[[NSAppleEventManager sharedAppleEventManager] setEventHandler:self 
+												andSelector:@selector(handleURL:withReplyEvent:) 
+										forEventClass:kInternetEventClass andEventID:kAEGetURL];
+}
+
+- (void)handleURL:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
+{
+	NSString *urlString = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
+	NSLog(@"MacFusion Handling URL: %@", urlString);
+	NSURL* myURL = [NSURL URLWithString:urlString];
+	NSEnumerator* e = [plugins objectEnumerator];
+	NSBundle* b;
+	while(b = [e nextObject])
+	{
+		Class filesystemClass = [b principalClass];
+		if ([filesystemClass canHandleURL: myURL])
+		{
+			id <FuseFSProtocol> fs = [[filesystemClass alloc] initWithURL: myURL];
+			[self mountFilesystem:fs];
+			[fs release];
+		}
+	}
 }
 
 #pragma mark Cleanup Code
