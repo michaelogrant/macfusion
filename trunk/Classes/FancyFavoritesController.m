@@ -99,6 +99,7 @@
 		else if ([fs status] == FuseFSStatusMountFailed)
 		{
 			[editButton setEnabled: YES];
+			[mountButton setTitle:@"Mount"];
 			[mountButton setEnabled: YES];
 		}
 	}
