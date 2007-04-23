@@ -125,6 +125,7 @@
 	[arguments addObject: @"-oCheckHostIP=no"];
 	[arguments addObject: @"-oStrictHostKeyChecking=no"];
 	[arguments addObject: @"-oNumberOfPasswordPrompts=1"];
+	[arguments addObject: @"-ofollow_symlinks"];
 	[arguments addObject: @"-f"];
 	
 	if (authenticationType == SSHFSAuthenticationTypePassword)
