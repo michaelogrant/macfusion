@@ -178,6 +178,7 @@
 {	
 	if ([[mainController favorites] containsObject: fs]) // editing existing favorite
 	{
+		[editButton highlight: NO];
 		if (success)
 		{
 			[backup release];
@@ -196,7 +197,7 @@
 			return;
 		}
 		
-		[editButton highlight: NO];
+
 	}
 	else // adding new favorite
 	{
