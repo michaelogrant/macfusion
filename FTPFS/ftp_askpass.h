@@ -13,6 +13,6 @@
 
 // Modified from from askpass.c by Jan Lehnardt <jan@php.net>
 
-char* FTPFSGetPasswordFromKeychain(const char *user, const char *server);
+NSString* FTPFSGetPasswordFromKeychain(const char *user, const char *server);
 void  FTPFSSavePasswordToKeychain(const char *user, const char *server, const char *password);
-char* FTPFSGetPasswordForUserAndServer(const char *user, const char *server, int* release_type);
+NSString* FTPFSGetPasswordForUserAndServer(const char *user, const char *server);

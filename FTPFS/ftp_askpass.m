@@ -11,7 +11,7 @@
 
 #pragma mark Password Functions
 
-char *FTPFSGetPasswordFromKeychain(const char *user, const char *server)
+NSString* FTPFSGetPasswordFromKeychain(const char *user, const char *server)
 {
 	OSStatus result;
 	char *password;
@@ -33,10 +33,12 @@ char *FTPFSGetPasswordFromKeychain(const char *user, const char *server)
 											 &item
 											 );
 	if(result == 0) {
-		return password;
+		NSString* passwordString = [NSString stringWithCString:password length:passwordLength];
+		SecKeychainItemFreeContent(NULL, password);
+		return passwordString;
 	}
 	
-	return "";
+	return @"";
 }
 
 void FTPFSSavePasswordToKeychain(const char *user, const char *server, const char *password)
@@ -93,27 +95,23 @@ void FTPFSSavePasswordToKeychain(const char *user, const char *server, const cha
 	}
 }
 
-char *FTPFSGetPasswordForUserAndServer(const char *user, const char *server, int* release_type)
+NSString* FTPFSGetPasswordForUserAndServer(const char *user, const char *server)
 {
 	CFUserNotificationRef passwordDialog;
 	SInt32 error;
 	CFDictionaryRef dialogTemplate;
 	CFOptionFlags responseFlags;
 	int button;
-	CFStringRef passwordRef;
 	CFStringRef dialogText;
 	int savePassword = 0;
-	CFIndex passwordMaxSize;
-	char *password;
+	NSString* password;
 	
-	*release_type = 0;
 	
 	password = FTPFSGetPasswordFromKeychain(user, server);
 
 
-	if(strlen(password) > 0)
+	if([password length] > 0)
 	{
-		*release_type = 1;
 		return password;
 	}
 	
@@ -157,39 +155,31 @@ char *FTPFSGetPasswordForUserAndServer(const char *user, const char *server, int
                                               dialogTemplate);
 	
     if (error)
-		return "";
+		return @"";
 	
     error = CFUserNotificationReceiveResponse(passwordDialog,
                                               0,
                                               &responseFlags);
     if (error)
-		return "";
+		return @"";
 	
     button = responseFlags & 0x3;
     if (button == kCFUserNotificationAlternateResponse)
 	{
 		CFRelease(passwordDialog);
-		return "";
+		return @"";
 	}
 	
 	savePassword = (responseFlags & CFUserNotificationCheckBoxChecked(0));
-	passwordRef = CFUserNotificationGetResponseValue(passwordDialog,
+	password = (NSString*)CFUserNotificationGetResponseValue(passwordDialog,
                                                      kCFUserNotificationTextFieldValuesKey,
                                                      0);
-	
-    passwordMaxSize = CFStringGetMaximumSizeForEncoding(CFStringGetLength(passwordRef),
-                                                        kCFStringEncodingUTF8);
-    password = malloc(passwordMaxSize);
-    CFStringGetCString(passwordRef,
-                       password,
-                       passwordMaxSize,
-                       kCFStringEncodingUTF8);
+	[password retain];
     CFRelease(passwordDialog);
-    *release_type = 2;
 	
     if(savePassword) {
-		FTPFSSavePasswordToKeychain(user, server, password);
+		FTPFSSavePasswordToKeychain(user, server, [password cString]);
     }
 	
-	return password;
+	return [password autorelease];
 }

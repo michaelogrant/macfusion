@@ -78,8 +78,7 @@
 # pragma mark Mount/Unmount Methods
 - (void)mount
 {
-	int release_type;
-	char* password;
+	NSString* password;
 	
 	[self setStatus: FuseFSStatusWaitingToMount];
 	if ([self setupMountPoint] == YES)
@@ -94,9 +93,7 @@
 		if (usingPassword)
 		{
 			// get our password and set up or input pipe
-			password = FTPFSGetPasswordForUserAndServer([[self login] cString],
-														[[self hostName] cString],
-														&release_type);
+			password = FTPFSGetPasswordForUserAndServer([[self login] cString], [[self hostName] cString]);
 			if (inputPipe)
 				[inputPipe release];
 			inputPipe = [[NSPipe alloc] init];
@@ -114,14 +111,8 @@
 		if (usingPassword)
 		{
 			// send the password to the curlftpfs process
-			NSString* writeString = [NSString stringWithFormat: @"%s\n", password];
+			NSString* writeString = [NSString stringWithFormat:@"%@\n", password];
 			[[inputPipe fileHandleForWriting] writeData: [writeString dataUsingEncoding:NSASCIIStringEncoding]];
-			
-			// get rid of the password
-			if (release_type==1)
-				SecKeychainItemFreeContent(NULL, password);
-			else if (release_type==2)
-				free(password);
 		}
 			
 	}
