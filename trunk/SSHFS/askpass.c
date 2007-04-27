@@ -20,10 +20,10 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <Security/Security.h>
 
-char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server);
+char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server, int* length);
 void SSHFSSavePasswordToKeychain(const char *user, const char *server, const char *password);
 
-char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server)
+char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server, int* length)
 {
 	OSStatus result;
 	char *password;
@@ -44,7 +44,9 @@ char *SSHFSGetPasswordForUserAndServer(const char *user, const char *server)
 											 (void **) &password,
 											 &item
 											 );
-	if(result == 0) {
+	if(result == 0) 
+	{
+		*length = passwordLength;
 		return password;
 	}
 	
@@ -116,6 +118,7 @@ int main()
 	CFStringRef dialogText;
 	int savePassword = 0;
 	CFIndex passwordMaxSize;
+	int passwordLength;
 	char *password;
 	static void* keys;
 	static void* values;
@@ -134,7 +137,7 @@ int main()
 	} 
 	else 
 	{
-		password = SSHFSGetPasswordForUserAndServer(sshfs_user, sshfs_server);
+		password = SSHFSGetPasswordForUserAndServer(sshfs_user, sshfs_server, &passwordLength);
 	}
 	
 	if(keychainEnable && strlen(password) > 0) 
@@ -241,13 +244,16 @@ int main()
 		}
 	}
 	
-	printf("%s", password);
 	
 	if(freePassword == 1) {
+		int i;
+		for(i=0;i<passwordLength;i++)
+			printf("%c",password[i]);
 		SecKeychainItemFreeContent(NULL, password);
 	}
 	
 	if(freePassword == 2) {
+		printf("%s", password);
 		free(password);
 	}
 	
