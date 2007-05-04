@@ -63,6 +63,7 @@
 		[self setAuthenticationType: SSHFSAuthenticationTypePassword];
 		[self setPath:@""];
 		[self setLogin:NSUserName()];
+		[self setAdvancedOptions:@""];
 	}
 	return self;
 }
@@ -139,6 +140,16 @@
 		[arguments addObject: @"-oPubkeyAuthentication=yes"];
 	}
 	
+	// add our advanced options, add more error handling here later (what if options are duplicates?)
+	NSArray* extraArguments = [advancedOptions componentsSeparatedByString:@" "];
+	NSEnumerator* e = [extraArguments objectEnumerator];
+	NSString* extraArg;
+	while(extraArg = [e nextObject])
+	{
+		[arguments addObject:extraArg];
+		NSLog(extraArg);
+	}
+	
 	[arguments addObject: @"-oreconnect"];
 	[arguments addObject: [NSString stringWithFormat:@"-ovolname=%@", name]]; // volume name argument
 	[arguments addObject:@"-oping_diskarb"];
@@ -201,7 +212,15 @@
 - (void)handleDataOnPipe:(NSNotification*)note
 {
 	NSData* pipeData = [[note object] availableData];
-	errorString = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
+	if (recentOutput)
+		[recentOutput release];
+	
+	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSLoggingNotification object:self userInfo:
+		[NSDictionary dictionaryWithObjectsAndKeys:recentOutput, @"Message", @"Output", @"MessageType", nil]];
+	
+	[[note object] waitForDataInBackgroundAndNotify];
 }
 
 - (void)handleTaskEnd:(NSNotification*)note
@@ -233,13 +252,11 @@
 	[self removeMountPoint];
 }
 
-
-
 #pragma mark Save/Load from Defaults Methods
 - (NSDictionary*)dictionaryForSaving
 {
 	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"hostName", @"login",
-		@"authenticationType", @"port", @"path", nil];
+		@"authenticationType", @"port", @"path", @"advancedOptions", nil];
 	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
 	return d;	
 }
@@ -256,6 +273,7 @@
 
 - (id)initWithDictionary:(NSDictionary*)dic
 {
+	self = [self init];
 	[self setName: [dic objectForKey:@"name"]];
 	[self setMountOnStartup: [[dic objectForKey: @"mountOnStartup"] boolValue]];
 	[self setHostName: [dic objectForKey: @"hostName"]];
@@ -264,6 +282,7 @@
 	[self setAuthenticationType: [[dic objectForKey:@"authenticationType"]
 		intValue]];
 	[self setPort: [[dic objectForKey:@"port"] intValue]];
+	[self setAdvancedOptions:[dic objectForKey: @"advancedOptions"]];
 	return self;
 }
 
@@ -305,9 +324,9 @@
 		return path;
 }
 
-- (NSString*)errorString
+- (NSString*)recentOutput
 {
-	return errorString;
+	return recentOutput;
 }
 
 - (int)authenticationType
@@ -318,6 +337,11 @@
 - (int)port
 {
 	return port;
+}
+
+- (NSString*)advancedOptions
+{
+	return advancedOptions;
 }
 
 # pragma mark Setters
@@ -352,6 +376,13 @@
 - (void)setPort:(int)i
 {
 	port = i;
+}
+
+- (void)setAdvancedOptions:(NSString*)s
+{
+	[s copy];
+	[advancedOptions release];
+	advancedOptions = s;
 }
 
 - (NSImage*)icon
@@ -465,6 +496,7 @@
 	[hostName release];
 	[path release];
 	[login release];
+	[advancedOptions release];
 	[super dealloc];
 }
 

@@ -43,6 +43,7 @@
 	self = [super init];
 	if (self != nil) 
 	{
+		[MFLoggingController sharedLoggingController]; // start logging
 		mounts = [[NSMutableArray alloc] init];
 		[self registerDefaults];
 		[self getAllPlugins];
@@ -325,6 +326,7 @@
 	[menu addItem: [NSMenuItem separatorItem]];
 	[menu setAutoenablesItems: NO];
 	[menu addItemWithTitle:@"Preferences ..." action:@selector(showPreferences:) keyEquivalent:@""];
+	[menu addItemWithTitle:@"Log ..." action:@selector(showLog:) keyEquivalent:@""];
 	[menu addItemWithTitle:@"About MacFusion"  action:@selector(showAbout:) keyEquivalent:@""];
 	[menu addItemWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@""];
 }
@@ -362,9 +364,9 @@
 	
 	NSString* description;
 	
-	if ([fs errorString])
+	if ([fs recentOutput])
 		description = [NSString stringWithFormat: @"MacFusion Failed to Mount %@: %@", [fs name],
-			[fs errorString]];
+			[fs recentOutput]];
 	else
 	{
 		description = [NSString stringWithFormat: @"MacFusion Failed to Mount %@: %@", [fs name],
@@ -431,6 +433,12 @@
 	}
 	
 	[preferencesController showWindow: self];
+	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
+}
+
+- (void) showLog:(id)sender
+{
+	[[MFLoggingController sharedLoggingController] showWindow:self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 }
 
@@ -652,6 +660,8 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 
 	CFRelease(description);
 }
+
+
 
 // triggered when system waits
 // we need to delay 5 sec before processing to wait for network to come online

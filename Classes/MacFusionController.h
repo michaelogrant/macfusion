@@ -24,11 +24,13 @@
 #import "../Growl.framework/Headers/GrowlApplicationBridge.h"`
 #import "EditController.h"
 #import "PreferencesController.h"
+#import "MFLoggingController.h"
 
 
 @class FancyFavoritesController;
 @class EditFavoriteController;
 @class PreferencesController;
+@class MFLoggingController;
 
 @interface MacFusionController : NSObject <GrowlApplicationBridgeDelegate>
 {

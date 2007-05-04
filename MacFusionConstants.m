@@ -31,6 +31,7 @@ NSString* unmountOnSleepKeyName = @"unmountOnSleep";
 NSString* FuseFSMountFailedNotification = @"FuseFSMountFailed";
 NSString* FuseFSMountedNotification = @"FuseFSMounted";
 NSString* FuseFSUnmountedNotification = @"FuseFSUnmounted";
+NSString* FuseFSLoggingNotification = @"FuseFSLogging";
 
 NSString* growlFSMountFailedNotification = @"Mount Faliure";
 NSString* growlFSMountSuccessNotification = @"Mount Success";

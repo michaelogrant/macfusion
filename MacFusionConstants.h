@@ -33,6 +33,7 @@ extern NSString* unmountOnSleepKeyName;
 extern NSString* FuseFSMountFailedNotification;
 extern NSString* FuseFSMountedNotification;
 extern NSString* FuseFSUnmountedNotification;
+extern NSString* FuseFSLoggingNotification;
 
 // growl notification names
 extern NSString* growlFSMountFailedNotification;

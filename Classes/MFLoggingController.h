@@ -1,8 +1,8 @@
 //
-//  SSHFSUIController.h
+//  MFLoggingController.h
 //  MacFusion
 //
-//  Created by Michael Gorbach on 1/15/07.
+//  Created by Michael Gorbach on 1/14/07.
 //  Copyright 2007 Michael Gorbach. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,15 +18,14 @@
 // limitations under the License.
 
 #import <Cocoa/Cocoa.h>
-#import "../Protocols/FuseUIProtocol.h"
-#import "SSHFS.h"
+#import "MacFusionController.h"
+#import "FuseFSProtocol.h"
+#import "MacFusionConstants.h"
 
-@interface SSHFSUIController : NSObject <FuseUIProtocol>
-{
-	SSHFS* fileSystem;
-	IBOutlet NSView* configurationView;
-	IBOutlet NSTabView* tabView;
-	NSObjectController* fsController;
+@interface MFLoggingController : NSWindowController {
+	NSMutableAttributedString* log;
 }
+
++ (MFLoggingController*)sharedLoggingController;
 
 @end

@@ -36,21 +36,24 @@
 	NSTask* task;
 	NSPipe* outputPipe;
 	NSPipe* inputPipe;
-	NSString* errorString;
+	NSString* recentOutput;
+	NSString* advancedOptions;
 }
 
 // Accessors
 - (NSString*)hostName;
 - (NSString*)login;
 - (NSString*)path;
-- (NSString*)errorString;
+- (NSString*)recentOutput;
+- (NSString*)advancedOptions;
 
-	// Setters
+// Setters
 - (void)setHostName:(NSString*)s;
 - (void)setLogin:(NSString*)s;
 - (void)setPath:(NSString*)s;
+- (void)setAdvancedOptions:(NSString*)s;
 
-	// General FuseFS Code
+// General FuseFS Code
 - (NSString*)longStatus;
 - (BOOL)setupMountPoint;
 - (void)removeMountPoint;

@@ -63,6 +63,7 @@
 		[self setMountOnStartup: NO];
 		[self setPath:@""];
 		[self setLogin:@""];
+		[self setAdvancedOptions:@""];
 	}
 	return self;
 }
@@ -202,7 +203,7 @@
 - (void)handleDataOnPipe:(NSNotification*)note
 {
 	NSData* pipeData = [[note object] availableData];
-	errorString = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
+	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
 }
 
 - (void)handleTaskEnd:(NSNotification*)note
@@ -238,7 +239,7 @@
 - (NSDictionary*)dictionaryForSaving
 {
 	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"hostName", @"login",
-		@"path", nil];
+		@"path", @"advancedOptions", nil];
 	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
 	return d;	
 }
@@ -255,6 +256,7 @@
 
 - (id)initWithDictionary:(NSDictionary*)dic
 {
+	self = [self init];
 	[self setName: [dic objectForKey:@"name"]];
 	[self setMountOnStartup: [[dic objectForKey: @"mountOnStartup"] boolValue]];
 	[self setHostName: [dic objectForKey: @"hostName"]];
@@ -297,9 +299,14 @@
 	return path;
 }
 
-- (NSString*)errorString
+- (NSString*)advancedOptions
 {
-	return errorString;
+	return advancedOptions;
+}
+
+- (NSString*)recentOutput
+{
+	return recentOutput;
 }
 
 # pragma mark Setters
@@ -325,6 +332,14 @@
 	[path release];
 	path = s;
 }
+
+- (void)setAdvancedOptions:(NSString*)s
+{
+	[s copy];
+	[advancedOptions release];
+	advancedOptions = s;
+}
+
 
 - (NSImage*)icon
 {
@@ -439,6 +454,7 @@
 	[hostName release];
 	[path release];
 	[login release];
+	[advancedOptions release];
 	[super dealloc];
 }
 
