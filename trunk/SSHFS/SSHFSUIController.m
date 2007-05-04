@@ -37,6 +37,7 @@ NSString* SSHFSPortError = @"Port out of Range (Must be 1 to 65535)";
 		
 		// get our view from the nib & load it
 		[NSBundle loadNibNamed:@"SSHFS.nib" owner:self];
+		[tabView setTabViewType:5];
 	}
 	
 	return self;

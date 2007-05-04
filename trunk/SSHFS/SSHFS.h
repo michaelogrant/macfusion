@@ -21,7 +21,6 @@
 #import "../Protocols/FuseFSProtocol.h"
 #import "../MacFusionConstants.h"
 
-@class FuseFSGeneral;
 
 enum {
 	SSHFSAuthenticationTypePassword=0,
@@ -43,7 +42,8 @@ enum {
 	int port;
 	NSTask* task;
 	NSPipe* outputPipe;
-	NSString* errorString;
+	NSString* recentOutput;
+	NSString* advancedOptions;
 }
 
 // Accessors
@@ -51,8 +51,9 @@ enum {
 - (NSString*)login;
 - (NSString*)path;
 - (int)authenticationType;
-- (NSString*)errorString;
+- (NSString*)recentOutput;
 - (int)port;
+- (NSString*)advancedOptions;
 
 // Setters
 - (void)setHostName:(NSString*)s;
@@ -60,6 +61,7 @@ enum {
 - (void)setPath:(NSString*)s;
 - (void)setAuthenticationType:(int)i;
 - (void)setPort:(int)i;
+- (void)setAdvancedOptions:(NSString*)s;
 
 // General FuseFS Code
 - (NSString*)longStatus;

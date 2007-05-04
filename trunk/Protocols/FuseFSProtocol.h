@@ -42,7 +42,7 @@
 
 // method to return error when a fileSystem isn't mounting
 // you should fill this with parsed output from your task
-- (NSString*)errorString;
+- (NSString*)recentOutput;
 
 - (NSDictionary*)dictionaryForDisplay;				// Dictionary with display info
 - (NSDictionary*)dictionaryForSaving;				// should return dictionary to go to defaults

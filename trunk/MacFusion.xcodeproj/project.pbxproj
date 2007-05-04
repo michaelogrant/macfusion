@@ -31,6 +31,9 @@
 		D45D9BD40B75637F002E6C08 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
 		D45D9BEF0B75640B002E6C08 /* askpass in CopyFiles */ = {isa = PBXBuildFile; fileRef = D45D9BBA0B756329002E6C08 /* askpass */; };
 		D474679A0BB09EA100FD68CA /* curlftpfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D47467990BB09EA100FD68CA /* curlftpfs-static */; };
+		D48F046C0BEAD4DB0090C3D6 /* MFLoggingController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */; };
+		D48F046D0BEAD4DB0090C3D6 /* MFLoggingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F046B0BEAD4DB0090C3D6 /* MFLoggingController.m */; };
+		D48F05480BEAF2F00090C3D6 /* MacFusionLogging.nib in Resources */ = {isa = PBXBuildFile; fileRef = D48F05460BEAF2F00090C3D6 /* MacFusionLogging.nib */; };
 		D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */; };
 		D4A121CC0B7C239800F565DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4A121CB0B7C239800F565DC /* Credits.rtf */; };
 		D4A41D730BB6CB6D00D12576 /* SSHFS.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4A41D720BB6CB6D00D12576 /* SSHFS.icns */; };
@@ -100,6 +103,7 @@
 				D4B012090BBF058A002EABD3 /* FTPFS.plugin in CopyFiles */,
 				D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */,
 				D4AA81CA0BBF7E7700BCE886 /* MacFusionSmoothImageView.h in CopyFiles */,
+				D48F046C0BEAD4DB0090C3D6 /* MFLoggingController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +174,9 @@
 		D45D9BBA0B756329002E6C08 /* askpass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = askpass; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		D47467990BB09EA100FD68CA /* curlftpfs-static */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "curlftpfs-static"; sourceTree = "<group>"; };
+		D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLoggingController.h; sourceTree = "<group>"; };
+		D48F046B0BEAD4DB0090C3D6 /* MFLoggingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLoggingController.m; sourceTree = "<group>"; };
+		D48F05470BEAF2F00090C3D6 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MacFusionLogging.nib; sourceTree = "<group>"; };
 		D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		D4A121CB0B7C239800F565DC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
 		D4A41D720BB6CB6D00D12576 /* SSHFS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SSHFS.icns; sourceTree = "<group>"; };
@@ -242,13 +249,6 @@
 			files = (
 				D4B011E90BBF0510002EABD3 /* CoreFoundation.framework in Frameworks */,
 				D4B0118E0BBF050A002EABD3 /* Security.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F82A390B5BEB480061B029 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +341,7 @@
 				D40962120B80E2CE00EABE40 /* FancyFavorites.nib */,
 				D40969C00B8264A800EABE40 /* EditFavorites.nib */,
 				D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */,
+				D48F05460BEAF2F00090C3D6 /* MacFusionLogging.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -408,6 +409,8 @@
 				D40969C40B82658F00EABE40 /* EditController.m */,
 				D4CDBE7E0B90C88C00F6BA84 /* PreferencesController.h */,
 				D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */,
+				D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */,
+				D48F046B0BEAD4DB0090C3D6 /* MFLoggingController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -533,7 +536,6 @@
 				D45D9AB80B755FD9002E6C08 /* CopyFiles */,
 				D4F82A370B5BEB480061B029 /* Resources */,
 				D4F82A380B5BEB480061B029 /* Sources */,
-				D4F82A390B5BEB480061B029 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -581,6 +583,7 @@
 				D4F37FC60BB5FC0900620C5F /* MacFusion_Menu_Dark.png in Resources */,
 				D4AA833B0BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns in Resources */,
 				D4AA833C0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns in Resources */,
+				D48F05480BEAF2F00090C3D6 /* MacFusionLogging.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +630,7 @@
 				D4CDBE810B90C88C00F6BA84 /* PreferencesController.m in Sources */,
 				D4F380360BB6068300620C5F /* MacFusionIconCell.m in Sources */,
 				D4AA81CB0BBF7E7700BCE886 /* MacFusionSmoothImageView.m in Sources */,
+				D48F046D0BEAD4DB0090C3D6 /* MFLoggingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +716,14 @@
 			name = EditFavorites.nib;
 			sourceTree = "<group>";
 		};
+		D48F05460BEAF2F00090C3D6 /* MacFusionLogging.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D48F05470BEAF2F00090C3D6 /* English */,
+			);
+			name = MacFusionLogging.nib;
+			sourceTree = "<group>";
+		};
 		D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -739,11 +751,6 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
 				PRODUCT_NAME = MacFusion;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -767,11 +774,6 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
 				PRODUCT_NAME = MacFusion;
 				WRAPPER_EXTENSION = app;
 			};
@@ -913,11 +915,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "SSHFS/SSHFS-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/SSHFS\"";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -947,11 +945,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "SSHFS/SSHFS-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/SSHFS\"";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
