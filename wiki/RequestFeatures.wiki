@@ -3,10 +3,10 @@
 
 = MacFusion feature requests =
 
-* [http://code.google.com/p/macfusion/issues/detail?id=40 interface for management of filesystem plug-ins]
+ * interface for [http://code.google.com/p/macfusion/issues/detail?id=40 management of filesystem plug-ins]
 
 == Other requests for enhancement ==
 
 We encourage all requests for enhancement to be entered into the searchable [http://code.google.com/p/macfusion/issues/list list of issues]. 
 
-[http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary Summary of RFEs]
+[http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary Summary of RFEs]
