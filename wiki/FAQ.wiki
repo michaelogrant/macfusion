@@ -2,7 +2,7 @@
 
 = FAQ =
 
-== How do I enable options that are not revealed in the current version of MacFusion? ==
+== How do I alter or specify options that are not revealed in the current version of MacFusion? ==
 
   *  Advanced and other options may be entered in Terminal, at the command line
     * certain commands/options/debugging environments may require use of a particular shell; do not assume that tcsh or bash are universally appropriate
