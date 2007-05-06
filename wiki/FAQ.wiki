@@ -6,7 +6,7 @@
 
   *  Advanced and other options may be entered in Terminal, at the command line
     * certain commands/options/debugging environments may require use of a particular shell; do not assume that tcsh or bash are universally appropriate
-    * if you're not comfortable with shells and command-line environments, please await the next release of MacFusion :)
+    * if you're not comfortable with shells and command-line environments, please await the [http://code.google.com/p/macfusion/wiki/MacFusionUpdates next release of MacFusion] :)
 
 == How do make sshfs-static more easily available at the command line? ==
 
@@ -18,4 +18,3 @@
 
   * Again, not a MacFusion question; if you're unfamiliar with symlinks then it's advisable to educate yourself regarding use of shells and command lines. That said, there's a GUI (contextual menu item) that you might find useful: 
     * [http://seiryu.home.comcast.net/symboliclinker.html SymbolicLinker].
-
