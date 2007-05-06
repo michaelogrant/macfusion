@@ -1,12 +1,25 @@
-#summary Filesystems to be integrated into MacFusion as Plugins
+#summary filesystem plug-ins
 #labels Features,Filesystems
 
-We might as well start listing them.
-When the plugin api becomes stable, others can work on implementing these.
+= Filesystem plug-ins for MacFusion =
 
-  * FTP-FS (Probably CurlFTPFS) for Read/Write FTP
-  * GmailFS for access to gmail drives as mounted folders
-  * EncFS/CryptoFS for secure drives ... which one?
+== Existing ==
 
+ * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html FTP]
+ * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html SSHFS]
 
+=== Requested or under consideration ===
 
+When the plugin API becomes stable, others can work on implementing these…
+
+ * [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_afp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary AFP] [http://developer.apple.com/documentation/Networking/Conceptual/AFP/ home] | [http://en.wikipedia.org/wiki/Apple_Filing_Protocol Wikipedia article]
+ * [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_cryptofs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary CryptoFS] [http://reboot.animeirc.de/cryptofs/ home]
+ * [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_encfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary EncFS] [http://arg0.net/users/vgough/encfs home] | [http://en.wikipedia.org/wiki/Encfs Wikipedia article]
+ * [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_gmailfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary GmailFS] [http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html home] | [http://en.wikipedia.org/wiki/Gmailfs Wikipedia article]
+ * [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ntfs3g&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary NTFS-3G] [http://www.ntfs-3g.org/ home] | [http://en.wikipedia.org/wiki/Ntfs-3g Wikipedia article]
+ * [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_smb&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary SMB] [http://en.wikipedia.org/wiki/Server_Message_Block Wikipedia article]
+
+==== Not requested in the context of MacFusion ====
+
+ * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en docFS]
+ * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en rssFS]
