@@ -2,6 +2,15 @@
 
 = FAQ =
 
+== If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appears before an [http://code.google.com/p/macfusion/wiki/CHANGELOG update to MacFusion], should I refrain from updating my MacFUSE installation? ==
+
+  *  Unless advised otherwise, please wait for your copy of MacFusion to announce and install recommended updates
+    * Sparkle takes care of these announcements and installations.
+  
+== Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as MacFusion? ==
+
+  *  A good question!
+
 == How do I alter or specify options that are not revealed in the current version of MacFusion? ==
 
   *  Advanced and other options may be entered in Terminal, at the command line
