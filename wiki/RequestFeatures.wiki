@@ -3,11 +3,11 @@
 
 = MacFusion feature requests =
 
- * interface for [http://code.google.com/p/macfusion/issues/detail?id=40 management of filesystem plug-ins]
+  * interface for [http://code.google.com/p/macfusion/issues/detail?id=40 management of filesystem plug-ins]
 
 == Requests for filesystem plug-ins ==
 
-[http://code.google.com/p/macfusion/wiki/FileSystemsToImplement Summary]
+  * [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement summary]
 
 == Other requests for enhancement ==
 
