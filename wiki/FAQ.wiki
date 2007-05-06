@@ -1,0 +1,3 @@
+#summary One-sentence answers to frequently asked questions
+
+= FAQ =
