@@ -11,7 +11,7 @@ If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appear
   
 Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as MacFusion?
 
-  *  A good question!
+  *  
 
 == How do I alter or specify options that are not revealed in the current version of MacFusion? ==
 
@@ -19,7 +19,7 @@ Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as Ma
     * certain commands/options/debugging environments may require use of a particular shell; do not assume that tcsh or bash are universally appropriate
     * if you're not comfortable with shells and command-line environments, please await the [http://code.google.com/p/macfusion/wiki/MacFusionUpdates next release of MacFusion] :)
 
-== How do make sshfs-static more easily available at the command line? ==
+== How can I make sshfs-static more easily available at the command line? ==
 
   * This is not a MacFusion question, but the tendency is to create a symbolic link
     * from `sshfs` at `/usr/local/bin`
