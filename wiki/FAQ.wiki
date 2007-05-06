@@ -7,7 +7,7 @@
 If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appears before an [http://code.google.com/p/macfusion/wiki/CHANGELOG update to MacFusion], should I refrain from updating my MacFUSE installation?
 
   *  Unless advised otherwise, please wait for your copy of MacFusion to announce and install recommended updates
-    * Sparkle takes care of these announcements and installations.
+    * MacFusion uses Sparkle technology to automate these announcements and installations.
   
 Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as MacFusion?
 
