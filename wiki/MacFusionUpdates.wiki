@@ -1,6 +1,6 @@
 #summary Releases, updates, upgrades, betas and Sparkle
 
-= Updates and upgrades to MacFusion and its plug-ins= 
+= Updates and upgrades to MacFusion and its plug-ins =
 
 == MacFusion 1.0 (2007-04-22) ==
 
@@ -8,7 +8,7 @@ Version 1.0 is available from the [http://www.sccs.swarthmore.edu/users/08/mgorb
 
 === MacFusion 1.01 B1 (2007-04-27) ===
 
-Version 1.01 B1 incorporating bug fixes and an improved version of the sshfs-static binary is available from the [http://groups.google.com/group/MacFusion-devel/browse_frm/thread/1cfcf158cbf11e1d MacFusion Google Group discussions area].
+Version 1.01 B1 incorporating bug fixes and an improved version of the sshfs-static binary is available from the [http://groups.google.com/group/MacFusion-devel/browse_frm/thread/1cfcf158cbf11e1d MacFusion-devel Google Group discussions area].
 
 === Updates and upgrades to the MacFusion application ===
 
