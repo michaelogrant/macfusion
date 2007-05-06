@@ -5,8 +5,8 @@
 
 == Existing ==
 
- * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html FTP]
- * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html SSHFS]
+  * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html FTP]
+  * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html SSHFS]
 
 === Requested or under consideration ===
 
@@ -24,5 +24,6 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
 
 ==== Not requested in the context of MacFusion ====
 
- * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en docFS]
- * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en rssFS]
+  * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en docFS]
+  * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en rssFS]
+  * [http://groups.google.com/group/macfuse-devel/browse_thread/thread/44a0733c3034ffb7 Amazon Simple Storage Service (Amazon S3)]
