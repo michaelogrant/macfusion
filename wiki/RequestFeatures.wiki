@@ -5,6 +5,10 @@
 
  * interface for [http://code.google.com/p/macfusion/issues/detail?id=40 management of filesystem plug-ins]
 
+== Requests for filesystem plug-ins ==
+
+[http://code.google.com/p/macfusion/wiki/FileSystemsToImplement Summary]
+
 == Other requests for enhancement ==
 
 We encourage all requests for enhancement to be entered into the searchable [http://code.google.com/p/macfusion/issues/list list of issues]. 
