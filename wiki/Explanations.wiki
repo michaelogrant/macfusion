@@ -2,11 +2,19 @@
 
 = Clarifications =
 
-.
+Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
 
 = Distinctions =
 
-.
+[http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] is a [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement filesystem plug-in]-based GUI for [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html MacFUSE].
+
+Bundled within the SSHFS [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] for MacFusion is an sshfs-static binary.
+
+The sshfs-static binary bundled within the [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] to version 1.0 of [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] differs slightly from the binary that is bundled within version 2.0 of the sshfs.app _demo application_ that is [http://code.google.com/p/macfuse/downloads/list downloadable from the MacFUSE area].
+
+If your current version of MacFusion does not serve your requirements, please consider [http://code.google.com/p/macfusion/wiki/MacFusionUpdates updating]. 
+
+If you encounter any issues that have not previously been noted, please [http://code.google.com/p/macfusion/issues/list?can=2&q=&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary report them]. 
 
 = Explanations =
 
