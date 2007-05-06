@@ -10,12 +10,20 @@ Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionW
 
 Bundled within the SSHFS [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] for MacFusion is an sshfs-static binary.
 
-The sshfs-static binary bundled within the [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] to version 1.0 of [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] differs slightly from the binary that is bundled within version 2.0 of the sshfs.app _demo application_ that is [http://code.google.com/p/macfuse/downloads/list downloadable from the MacFUSE area].
+The sshfs-static binary bundled within the [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] to version 1.0 of [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] differs slightly from the [ MacFUSE version of the SSH file system (sshfs)] that's bundled within version 2.0 of the sshfs.app. 
 
-If your current version of MacFusion does not serve your requirements, please consider [http://code.google.com/p/macfusion/wiki/MacFusionUpdates updating]. 
+sshfs.app appears in the [http://code.google.com/p/macfuse/downloads/list MacFUSE downloads area] but please note: whilst the sshfs-static binary within the bundle is supported, the sshfs.app (application bundle) in its entirety is an *[ UNSUPPORTED]* demo.
 
-If you encounter any issues that have not previously been noted, please [http://code.google.com/p/macfusion/issues/list?can=2&q=&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary report them]. 
+If your current version of MacFusion does not serve your requirements, please consider [http://code.google.com/p/macfusion/wiki/MacFusionUpdates updating].
+
+If you encounter any issues that have not previously been noted, please [http://code.google.com/p/macfusion/issues/list?can=2&q=&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary report them].
+
+Issues that relate to the sshfs-static binary -- not to MacFusion -- can be found/reported in the [http://code.google.com/p/macfuse/issues/list?can=2&q=sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary MacFUSE issues area]. 
+
+(Issues that relate to the sshfs.app demo should *never* be reported.)
 
 = Explanations =
 
-.
+Non-technical users will probably be baffled by those distinctions. 
+
+User-friendly explanations from MacFusion project members will be warmly welcomed!
