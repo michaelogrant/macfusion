@@ -12,7 +12,7 @@ Version 1.01 B1 incorporating bug fixes and an improved version of the sshfs-sta
 
 === Updates and upgrades to the MacFusion application ===
 
-[http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html Version 1.0] uses [http://sparkle.andymatuschak.org/ Sparkle] for instant self-update functionality so when the next beta/release is ready for widespread use, users should receive it automatically.
+[http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html Version 1.0] uses [http://sparkle.andymatuschak.org/ Sparkle] for instant self-update functionality so when the next beta/release is ready for widespread distribution, users should receive it automatically.
 
 ==== Updates and upgrades to filesystem plug-ins for MacFusion ====
 
