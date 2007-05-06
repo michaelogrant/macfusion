@@ -1,2 +1,2 @@
+#summary Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
 #labels Features,Featured
-Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
