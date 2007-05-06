@@ -19,7 +19,7 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
 || GmailFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_gmailfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html Richard Jones] || [http://en.wikipedia.org/wiki/Gmailfs article] || 
 || NTFS-3G || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ntfs3g&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.ntfs-3g.org/ ntfs-3g.org] || [http://en.wikipedia.org/wiki/Ntfs-3g article] || 
 || SMB || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_smb&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || — || [http://en.wikipedia.org/wiki/Server_Message_Block article] ||
-|| ZFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_zfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.opensolaris.org/os/community/zfs/ OpenSolaris.org] [http://www.sun.com/software/solaris/zfs_learning_center.jsp Sun Microsystems] || [http://en.wikipedia.org/wiki/ZFS] ||
+|| ZFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_zfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.opensolaris.org/os/community/zfs/ OpenSolaris.org] | [http://www.sun.com/software/solaris/zfs_learning_center.jsp Sun Microsystems] || [http://en.wikipedia.org/wiki/ZFS article] ||
 
 *Requests* and *enhancements* appear under the umbrella of _issues_.
 
