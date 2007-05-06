@@ -1,3 +1,21 @@
 #summary answers to frequently asked questions
 
 = FAQ =
+
+== How do I enable options that are not revealed in the current version of MacFusion? ==
+
+  *  Advanced and other options may be entered in Terminal, at the command line
+    * certain commands/options/debugging environments may require use of a particular shell; do not assume that tcsh or bash are universally appropriate
+    * if you're not comfortable with shells and command-line environments, please await the next release of MacFusion :)
+
+== How do make sshfs-static more easily available at the command line? ==
+
+  * This is not a MacFusion question, but the tendency is to create a symbolic link
+    * from `sshfs` at `/usr/local/bin`
+    * to the `sshfs-static` binary that's bundled within the plug-in within MacFusion.
+
+== How do I create a symbolic link? ==
+
+  * Again, not a MacFusion question; if you're unfamiliar with symlinks then it's advisable to educate yourself regarding use of shells and command lines. That said, there's a GUI (contextual menu item) that you might find useful: 
+    * [http://seiryu.home.comcast.net/symboliclinker.html SymbolicLinker].
+
