@@ -6,7 +6,7 @@
 
 == MacFusion 1.01 B1 ==
  
-2007-04-22
+2007-04-27
 
   # Bugs with saving of SSH and FTP passwords should be mostly squashed. 
   # `Follow symlinks` is now on by default
@@ -18,8 +18,7 @@
     * should fix issues such as [http://code.google.com/p/macfusion/issues/list?can=1&q=Word%20status:Fixed this one involving Microsoft Word 2004]. 
 
 == MacFusion 1.0 ==
-2007-04-27
+2007-04-22
 
   * 
-
 
