@@ -1,2 +1,4 @@
-#summary Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
+#summary refers to the MacFusion home page at SCSS
 #labels Features,Featured
+
+Features are detailed at Michael's [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page] at Swarthmore College Computer Society.
