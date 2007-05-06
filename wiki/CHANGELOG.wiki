@@ -15,10 +15,9 @@
   # Fixes for minor GUI bugs. 
   # Includes new version of SSHFS binary
     * sshfs-static here is equivalent to the sshfs-static bundled in version 0.2.0 of [http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SSHFS sshfs.app]
-    * should fix issues such as [http://code.google.com/p/macfusion/issues/list?can=1&q=Word%20status:Fixed this one involving Microsoft Word 2004]. 
+    * should fix issues such as [http://code.google.com/p/macfusion/issues/detail?id=5 this one involving Microsoft Word 2004]. 
 
 == MacFusion 1.0 ==
 2007-04-22
 
   * 
-
