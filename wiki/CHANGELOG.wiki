@@ -1,0 +1,25 @@
+#summary changes and feature additions to MacFusion and components bundled therein
+
+= Changes and feature additions to MacFusion and components bundled therein =
+
+*Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
+
+== MacFusion 1.01 B1 ==
+ 
+2007-04-22
+
+  # Bugs with saving of SSH and FTP passwords should be mostly squashed. 
+  # `Follow symlinks` is now on by default
+    * [http://code.google.com/p/macfusion/issues/list if anyone really needs a switch for this, I can add one]
+    * it is unlikely that anyone will need to turn it off. 
+  # Fixes for minor GUI bugs. 
+  # Includes new version of SSHFS binary
+    * sshfs-static here is equivalent to the sshfs-static bundled in version 0.2.0 of [http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SSHFS sshfs.app]
+    * should fix issues such as [http://code.google.com/p/macfusion/issues/list?can=1&q=Word%20status:Fixed this one involving Microsoft Word 2004]. 
+
+== MacFusion 1.0 ==
+2007-04-27
+
+  * 
+
+
