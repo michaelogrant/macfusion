@@ -1,4 +1,4 @@
-#summary Releases, updates, upgrades, betas and Sparkle
+#summary releases, updates, upgrades, betas and Sparkle
 
 = Updates and upgrades to MacFusion and its plug-ins =
 
