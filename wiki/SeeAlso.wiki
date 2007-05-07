@@ -5,5 +5,8 @@
   * Amit Singh's January 2007 MacFUSE announcement: [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html Taming Mac OS X File Systems]
   * Digg results for [http://digg.com/search?s=macfuse MacFUSE] and [http://digg.com/search?s=macfusion MacFusion]
   * FUSE: [http://fuse.sourceforge.net Filesystem in Userspace]
+  * Google Code: [http://code.google.com/p/macfuse/ MacFUSE ]
+  * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage]
+  * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users]
   * Paul Blacksburg's [http://shadowofged.blogspot.com/2007/03/ntfs-3g-for-mac-os-x.html NTFS-3G for Mac OS X]
   * Slahsdot reference to [http://apple.slashdot.org/article.pl?sid=07/01/17/0257207 MacFusion]
