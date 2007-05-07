@@ -10,7 +10,7 @@
     # uninstall MacFUSE (see the [http://code.google.com/p/macfuse/wiki/FAQ FAQ for MacFUSE])
     # install MacFuse 0.2.5 ([http://code.google.com/p/macfuse/downloads/list?can=1&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount expanded list of MacFUSE downloads])
     # restart Mac OS.
-  * To understand the new approaches associated with version 0.3.0 of MacFUSE, please refer to the [http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE Core Binary changelog]
+  * To understand the new approaches associated with version 0.3.0 of MacFUSE, please refer to the [http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE Core Binary changelog].
   * [http://code.google.com/p/macfusion/issues/list Issue reports] are warmly welcomed. 
 
 == I launched MacFusion but can't see it running. Where is it? ==
@@ -81,4 +81,3 @@ Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as Ma
 
   * Again, not a MacFusion question; if you're unfamiliar with symlinks then it's advisable to educate yourself regarding use of shells and command lines. That said, there's a GUI (contextual menu item) that you might find useful: 
     * [http://seiryu.home.comcast.net/symboliclinker.html SymbolicLinker].
-
