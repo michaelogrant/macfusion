@@ -1,7 +1,6 @@
 #summary changes and feature additions to MacFusion and components bundled therein
 
-= Changes and feature additions to 
-MacFusion and components bundled therein =
+= Changes and feature additions to MacFusion and components bundled therein =
 
 *Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
 
