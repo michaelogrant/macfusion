@@ -2,6 +2,20 @@
 
 = FAQ =
 
+== I launched MacFusion but can't see it running. Where is it? ==
+
+  * MacFusion 1.0 is a menu extra without a Dock icon
+    * look for the grey globe+arrows icon in your menu bar
+    * probably to the left of other icons with which you're familiar
+      * menus in general and the menu extra icon are discussed in the [http://code.google.com/p/macfusion/issues/list?can=2&q=label:menus&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary Issues] area.
+
+== MacFusion menu items are greyed out. Why? ==
+
+  * A preferences dialogue, presented when MacFusion 1.0 launches for the first time, may be obscured by other windows
+    * minimise/close windows, or use Expose to show all windows
+    * in this context, command-tab will not reveal MacFusion
+    * [http://code.google.com/p/macfusion/issues/detail?id=10&can=2&q=launch&sort=priority this issue] is being considered in the context of other UI fixes/enhancements.
+
 == Updates to MacFUSE and MacFusion ==
 
 If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appears before an [http://code.google.com/p/macfusion/wiki/CHANGELOG update to MacFusion], should I refrain from updating my MacFUSE installation?
