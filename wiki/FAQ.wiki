@@ -8,12 +8,12 @@
     * testing with other combinations is limited, but underway.
   * If you suspect an incompatibility between MacFUSE 0.3.0 and your MacFusion installation, you might:
     # uninstall MacFUSE (see the [http://code.google.com/p/macfuse/wiki/FAQ FAQ for MacFUSE])
-    # install MacFuse 0.2.5 ([http://code.google.com/p/macfuse/downloads/list?can=1&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount expanded list of MacFUSE downloads])
+    # install MacFUSE 0.2.5 ([http://code.google.com/p/macfuse/downloads/list?can=1&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount expanded list of MacFUSE downloads])
     # restart Mac OS.
   * To understand the new approaches associated with version 0.3.0 of MacFUSE, please refer to the [http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE Core Binary changelog].
   * [http://code.google.com/p/macfusion/issues/list Issue reports] are warmly welcomed. 
 
-== I launched MacFusion but can't see it running. Where is it? ==
+== I launched MacFusion but I can't see it running. Where is it? ==
 
   * MacFusion 1.0 is a menu extra without a Dock icon
     * look for the grey globe+arrows icon in your menu bar
@@ -36,11 +36,8 @@ If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appear
   
 Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as MacFusion?
 
-  *  
-
-== I installed version 0.3.0 of MacFUSE for use with version 1.01 B1 or earlier of MacFusion. Is this OK? ==
-
-
+  *  An intersting question
+    * please await advice on this.
 
 == Why am I not receiving notifications of updates to issues that I have _reported_ ? ==
 
