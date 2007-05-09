@@ -10,7 +10,7 @@ Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionW
 
 Bundled within the SSHFS [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] for MacFusion is an sshfs-static binary.
 
-The sshfs-static binary bundled within the [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] to version 1.0 of [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] may differ slightly from the [http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SSHFS MacFUSE version of the SSH file system (sshfs)] that's bundled within sshfs.app. 
+The sshfs-static binary bundled within the [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] to version 1.0 of [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] may differ slightly from the [http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SSHFS MacFUSE version of the SSH file system (sshfs)] that's bundled within sshfs.app. If this occurs, it's not by design (this project is not forking the work on that binary); rather, it's timing: the approprite binary from the MacFUSE project is bundled within the plug-in for MacFusion as soon as is practical.
 
 sshfs.app may appear in the [http://code.google.com/p/macfuse/downloads/list MacFUSE downloads area] but please note: whilst the sshfs-static binary within the bundle is supported, the sshfs.app (application bundle) in its entirety is an *[http://groups.google.com/group/macfuse-devel/browse_thread/thread/5dbb1af9eb4b3e06?tvc=2&fwc=1# unsuppported] demo*.
 
