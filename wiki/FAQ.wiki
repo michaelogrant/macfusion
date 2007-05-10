@@ -1,4 +1,5 @@
 #summary answers to frequently asked questions
+#labels Featured
 
 = FAQ =
 
@@ -53,7 +54,7 @@ Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as Ma
 
   *  Advanced and other options may be entered in Terminal, at the command line
     * certain commands/options/debugging environments may require use of a particular shell; do not assume that tcsh or bash are universally appropriate
-    * if you're not comfortable with shells and command-line environments, please await the [http://code.google.com/p/macfusion/wiki/MacFusionUpdates next release of MacFusion] :)
+    * if you're not comfortable with shells and command-line environments, please await the [http://code.google.com/p/macfusion/wiki/MacFusionUpdates next release of MacFusion] :)
 
 == How can I make sshfs-static more easily available at the command line? ==
 
