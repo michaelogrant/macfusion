@@ -4,6 +4,10 @@
 
 *Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
 
+== MacFusion 1.1 Beta2 ==
+
+  # Logging implemented.
+
 == MacFusion 1.01 B1 ==
 [http://groups.google.com/group/MacFusion-devel/browse_thread/thread/1cfcf158cbf11e1d#  2007-04-27]
 
