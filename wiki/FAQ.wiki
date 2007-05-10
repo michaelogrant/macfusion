@@ -13,6 +13,13 @@
   * To understand the new approaches associated with version 0.3.0 of MacFUSE, please refer to the [http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE Core Binary changelog].
   * [http://code.google.com/p/macfusion/issues/list Issue reports] are warmly welcomed. 
 
+== Something is failing but I see no explanation. Is there a log? ==
+
+  * Apple menu | System Preferences… | Growl | General | Start Growl
+  * Apple menu | System Preferences… | Growl | General | Start at Login
+  * Growl is your friend
+  * notifications and logging are improved in MacFusion 1.1 Beta2 and beyond.
+
 == I launched MacFusion but I can't see it running. Where is it? ==
 
   * MacFusion 1.0 is a menu extra without a Dock icon
