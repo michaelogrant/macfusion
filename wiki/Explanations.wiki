@@ -23,6 +23,10 @@ The [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion ho
 
 ^=.=^=.=^=.=^=.=^=.=^=.=^
    |
+   |-- NTFS-3G for Mac OS X
+
+^=.=^=.=^=.=^=.=^=.=^=.=^
+   |
    |-- other applications
 
 =========================
