@@ -5,7 +5,7 @@
 
 *Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
 
-== MacFusion 1.1 Beta2 (forthcoming) ==
+== MacFusion 1.1 Beta2 (not public) ==
 
   # Fix for volume mount points that were, in some circumstances, not removed.
   # Logging implemented.
