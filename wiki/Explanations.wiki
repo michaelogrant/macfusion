@@ -6,41 +6,41 @@ The [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion ho
 
 = Distinctions =
 {{{
-===============================
+=================================
 |
 |-- FUSE for Linux
 |
-=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
 |
 |-- MacFUSE kernel module
 |
-=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
    |
    |-- MacFusion
        |-- FTP
        |-- SSHFS
        |-- other plug-ins
 
-=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
    |
    |-- NTFS-3G for Mac OS X
    |-- MacFUSE Tools
 
-=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
    |
    |-- Secure Remote Disk
 
-=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
    |
    |-- other applications
 
-=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
 |
-|-- sshfs for Darwin (Mac OS X)
+|||||| sshfs for Darwin (Mac OS X)
 
-===============================
+==================================
 }}}
-(A fairly broad snapshot, sketched in May 2007; don't expect the representation above to be updated.)
+(That's a fairly broad snapshot, sketched in May 2007; please, don't expect the representation above to be updated.)
 
 MacFUSE and MacFusion are separate but closely related projects. 
 
