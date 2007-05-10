@@ -2,6 +2,16 @@
 
 = FAQ =
 
+== I'm familiar with Google Mail and/or Google Groups but Google Code is new to me. Can you help? ==
+
+  * We have some separate answers to [http://code.google.com/p/macfusion/wiki/GoogleCodeFAQ frequently asked questions about Google Code]
+  * if this is your first time in a Google Code project area, it's *particularly* important to [http://code.google.com/p/macfusion/wiki/GoogleCodeFAQ follow the advice regarding notifications via e-mail] — you'll make your stay here far more pleasant for yourself.
+
+== I'm new here, how does MacFusion differ from MacFUSE? And what about the alternatives? ==
+
+   * In this wiki we have some [http://code.google.com/p/macfusion/wiki/Explanations explanations]
+     * if any explanation is lacking, please do not hesitate to [http://code.google.com/p/macfusion/issues/list?can=2&q=Type:Enhancement&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary request an improvement].
+
 == I installed version 0.3.0 or later of MacFUSE for use with version 1.01 B1 or earlier of MacFusion. Is this OK? ==
 
   * At the time of writing, MacFusion versions 1.0 and 1.01 B1 are tested with version 0.2.5 of MacFUSE
@@ -12,13 +22,6 @@
     # restart Mac OS.
   * To understand the new approaches associated with version 0.3.0 of MacFUSE, please refer to the [http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE Core Binary changelog].
   * [http://code.google.com/p/macfusion/issues/list Issue reports] are warmly welcomed. 
-
-== Something is failing but I see no explanation. Is there a log? ==
-
-  * Apple menu | System Preferences… | Growl | General | Start Growl
-  * Apple menu | System Preferences… | Growl | General | Start at Login
-  * Growl is your friend
-  * notifications and logging are improved in MacFusion 1.1 Beta2 and beyond.
 
 == I launched MacFusion but I can't see it running. Where is it? ==
 
@@ -45,29 +48,6 @@ Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as Ma
 
   *  An intersting question
     * please await advice on this.
-
-== Why am I not receiving notifications of updates to issues that I have _reported_ ? ==
-
-  * This seems to be an issue with the Google Code web site. If you are affected, you may: 
-    # add relevant comments to [http://code.google.com/p/support/issues/detail?id=227 issue *227*]
-    # review your [http://code.google.com/hosting/settings Google Code Settings].
-
-== I reviewed my Google Code Settings, they are correct. Why am I not receiving notifications of updates to issues that I have _reported_ ? ==
-
-  * This seems to fall under the same umbrella. If you are affected, you may: 
-    * add relevant comments to [http://code.google.com/p/support/issues/detail?id=227 issue *227*].
-
-== Why am I not receiving notifications of updates to _other_ people's issue reports that have been starred by me? ==
-
-  * This seems to be a *separate* issue with the Google Code web site. If you are affefcted, you may:
-    # add relevant comments to the [http://code.google.com/p/support/issues/detail?id=228 issue *228*]
-    # change your [http://code.google.com/hosting/settings Google Code Settings].
-
-== Why can't I find my way back to the Google Code Settings tab without visiting these FAQ? ==
-
-  * This seems to be a *separate* issue with the Google Code web site. If you are affected, you may: 
-    * add relevant comments to [http://code.google.com/p/support/issues/detail?id=168#c5 issue *168*]
-      *  We have asked for that issue summary to be renamed `Settings tab is invisible to _group_ members who are not _project_ members`
 
 == How do I alter or specify options that are not revealed in the current version of MacFusion? ==
 
