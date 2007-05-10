@@ -2,15 +2,20 @@
 
 = See also =
 
-  * Amit Singh's January 2007 MacFUSE announcement: [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html Taming Mac OS X File Systems]
-  * Amit's May 2007 [http://www.itconversations.com/shows/detail1804.html discussion of MacFUSE and his book `Mac OS X Internals`]
-  * Ars Technica [http://arstechnica.com/journals/apple.ars/2007/05/09/macfusion-brings-a-gui-interface-to-macfuse article on the MacFusion GUI to MacFUSE]
-  * [http://daringfireball.net/ Daring Fireball]
+  * Amit Singh's MacFUSE announcement: [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html Taming Mac OS X File Systems] (2007-01) — *RECOMMENDED READING*; takes us to the Google Code project site for MacFUSE, a version of which (_not always the most recent_) is *REQUIRED* by MacFusion
+  * Amit's [http://www.itconversations.com/shows/detail1804.html discussion of MacFUSE and his book `Mac OS X Internals`] at IT Conversations (2007-05)
+  * Ars Technica: [http://arstechnica.com/journals/apple.ars/2007/05/09/macfusion-brings-a-gui-interface-to-macfuse article on the MacFusion GUI to MacFUSE] (2007-05-09)
+  * [http://daringfireball.net/linked/2007/may#wed-09-macfusion Daring Fireball] (2007-05-09)
   * Digg results for [http://digg.com/search?s=macfuse MacFUSE] and [http://digg.com/search?s=macfusion MacFusion]
   * FUSE: [http://fuse.sourceforge.net Filesystem in Userspace]
-  * Google Code: [http://code.google.com/p/macfuse/ MacFUSE ]
-  * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage]
-  * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users]
-  * Paul Blacksburg's [http://shadowofged.blogspot.com/2007/03/ntfs-3g-for-mac-os-x.html NTFS-3G for Mac OS X]
+  * Google Code: [http://code.google.com/p/macfuse/ MacFUSE] — *RECOMMENDED*
+  * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage] — *RECOMMENDED*
+  * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users] — *RECOMMENDED*
+  * Paul Marks' [http://shadowofged.blogspot.com/2007/03/ntfs-3g-for-mac-os-x.html NTFS-3G for Mac OS X]
   * [http://quicksilver.blacktree.com/ Quicksilver]
+  * [http://jan.prima.de/SecureRemoteDisk.html Secure Remote Disk]
+  * [http://mac.pqrs.org/sshfs/ sshfs for Darwin (Mac OS X)]
   * Slahsdot reference to [http://apple.slashdot.org/article.pl?sid=07/01/17/0257207 MacFusion]
+
+
+
