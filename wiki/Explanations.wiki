@@ -1,25 +1,37 @@
-#summary clarifications, distinctions, explanations
+#summary clarification, distinctions, explanations
 
-= Clarifications =
+= Clarification =
 
-Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
+For a basic introduction, see the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
 
+= Distinctions =
+{{{
 =========================
+|
 |-- FUSE for Linux
-^=.=^=.=^=.=^=.=^=.=^=.=^
+|^=.=^=.=^=.=^=.=^=.=^=.=^
+|
 |-- MacFUSE kernel module
+|
 ^=.=^=.=^=.=^=.=^=.=^=.=^
+   |
    |-- MacFusion
        |-- FTP
        |-- SSHFS
        |-- other plug-ins
+
 ^=.=^=.=^=.=^=.=^=.=^=.=^
+   |
    |-- other applications
+
 =========================
+}}}
 
-= Distinctions =
+MacFUSE and MacFusion are separate but closely related projects. 
 
-[http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] is a [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement filesystem plug-in]-based GUI for [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html MacFUSE].
+MacFUSE is the foundation upon which MacFusion runs.
+
+[http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] is a [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement filesystem plug-in]-based graphical user interface (GUI) for [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html MacFUSE].
 
 Bundled within the SSHFS [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement plug-in] for MacFusion is an sshfs-static binary.
 
@@ -40,3 +52,6 @@ Issues that relate to the sshfs-static binary -- not to MacFusion -- can be foun
 Non-technical users will probably be baffled by those distinctions. 
 
 User-friendly explanations from MacFusion project members will be warmly welcomed!
+
+
+
