@@ -22,6 +22,7 @@
 		D40C7C420BADA3D100567D29 /* sshfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D40C7C410BADA3D100567D29 /* sshfs-static */; };
 		D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D42AF6210B610B21008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
+		D42F35730BF3A7FE0015B135 /* sshnodelay.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D42F35720BF3A7FE0015B135 /* sshnodelay.so */; };
 		D43D356B0BA8C9E100282A8D /* MacFusion.icns in Resources */ = {isa = PBXBuildFile; fileRef = D43D356A0BA8C9E100282A8D /* MacFusion.icns */; };
 		D4498D060B5A371D003B9DFF /* MacFusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */; };
 		D44C0C620B61191700C778DC /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C0C610B61191700C778DC /* Growl.framework */; };
@@ -125,6 +126,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				D45D9BEF0B75640B002E6C08 /* askpass in CopyFiles */,
+				D42F35730BF3A7FE0015B135 /* sshnodelay.so in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +167,7 @@
 		D40C7C410BADA3D100567D29 /* sshfs-static */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sshfs-static"; sourceTree = "<group>"; };
 		D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionConstants.h; sourceTree = "<group>"; };
 		D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionConstants.m; sourceTree = "<group>"; };
+		D42F35720BF3A7FE0015B135 /* sshnodelay.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = sshnodelay.so; sourceTree = "<group>"; };
 		D43D356A0BA8C9E100282A8D /* MacFusion.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusion.icns; path = Resources/MacFusion.icns; sourceTree = "<group>"; };
 		D4498D040B5A371D003B9DFF /* MacFusionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFusionController.h; sourceTree = "<group>"; };
 		D4498D050B5A371D003B9DFF /* MacFusionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFusionController.m; sourceTree = "<group>"; };
@@ -418,6 +421,7 @@
 		D45E30A20BBF38EB0065FBE6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D42F35720BF3A7FE0015B135 /* sshnodelay.so */,
 				D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */,
 				D4A41D720BB6CB6D00D12576 /* SSHFS.icns */,
 				D4F82A260B5BEAA30061B029 /* SSHFS.nib */,

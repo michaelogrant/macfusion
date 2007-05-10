@@ -24,6 +24,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <Security/Security.h>
 #import "ftp_askpass.h"
+#include <unistd.h>
 
 @interface FTPFS (PrivateAPI)
 - (NSTask*)setupTaskForMount;
@@ -158,6 +159,9 @@
 	[arguments addObject: [NSString stringWithFormat:@"-ovolname=%@", name]]; // volume name argument
 	[arguments addObject:@"-oping_diskarb"];
 	
+	// FIXME: Should this be needed?
+	[arguments addObject: [NSString stringWithFormat:@"-ouid=%d", getuid()]];
+	
 	[t setLaunchPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"curlftpfs-static" ofType:nil]];
 	[t setArguments:arguments];
 	
@@ -203,9 +207,20 @@
 - (void)handleDataOnPipe:(NSNotification*)note
 {
 	NSData* pipeData = [[note object] availableData];
+	
+	if ([pipeData length]==0) // pipe is down. we're done!
+		return;
+	
 	if (recentOutput)
 		[recentOutput release];
+	
 	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSLoggingNotification 
+														object:self 
+													  userInfo: 
+		[NSDictionary dictionaryWithObjectsAndKeys:recentOutput, 
+			@"Message", @"Output", @"MessageType", nil]];
 	
 	[[note object] waitForDataInBackgroundAndNotify];
 }
@@ -218,6 +233,7 @@
 	}
 	if (status == FuseFSStatusWaitingToMount) // task died while waiting to mount: notify of faliure
 	{
+		[self removeMountPoint];
 		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
 														  userInfo: [NSDictionary dictionaryWithObject: (id)FuseFSMountFaliureTaskEnded 
 																								forKey: mountFaliureReasonKeyName]];
@@ -441,6 +457,7 @@
 {
 	BOOL isDir;
 	
+	NSLog(@"Attempting Removal");
 	// clean up after self by removing the mountpoint, if it exists and is empty
 	NSFileManager* fm = [NSFileManager defaultManager]; 
 	if ([fm fileExistsAtPath: [self mountPath] isDirectory:&isDir]) // directory exists
@@ -448,6 +465,8 @@
 		if ([[fm directoryContentsAtPath: [self mountPath]] count] == 0) // and its empty
 			[fm removeFileAtPath: [self mountPath] handler:nil];
 	}
+	
+
 }
 
 - (void) dealloc 
