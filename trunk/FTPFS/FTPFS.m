@@ -457,7 +457,6 @@
 {
 	BOOL isDir;
 	
-	NSLog(@"Attempting Removal");
 	// clean up after self by removing the mountpoint, if it exists and is empty
 	NSFileManager* fm = [NSFileManager defaultManager]; 
 	if ([fm fileExistsAtPath: [self mountPath] isDirectory:&isDir]) // directory exists

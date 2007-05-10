@@ -23,7 +23,10 @@
 
 - (void) windowDidLoad
 {
+	// Window settings
 	[[self window] center];
+//	[[self window] setLevel:NSFloatingWindowLevel];
+	
 	// Set up the buttons and menus
 	NSMenu* editMenu = [[[NSMenu alloc] initWithTitle: @""] autorelease];
 	[editMenu addItemWithTitle: @"Edit" action:@selector(editFavorite:) keyEquivalent:@"e"];
