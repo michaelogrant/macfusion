@@ -3,6 +3,9 @@
 = See also =
 
   * Amit Singh's January 2007 MacFUSE announcement: [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html Taming Mac OS X File Systems]
+  * Amit's May 2007 [http://www.itconversations.com/shows/detail1804.html discussion of MacFUSE and his book `Mac OS X Internals`]
+  * Ars Technica [http://arstechnica.com/journals/apple.ars/2007/05/09/macfusion-brings-a-gui-interface-to-macfuse article on the MacFusion GUI to MacFUSE]
+  * [http://daringfireball.net/ Daring Fireball]
   * Digg results for [http://digg.com/search?s=macfuse MacFUSE] and [http://digg.com/search?s=macfusion MacFusion]
   * FUSE: [http://fuse.sourceforge.net Filesystem in Userspace]
   * Google Code: [http://code.google.com/p/macfuse/ MacFUSE ]
