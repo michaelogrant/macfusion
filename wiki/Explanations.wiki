@@ -4,6 +4,19 @@
 
 Please refer to the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
 
+=========================
+|-- FUSE for Linux
+^=.=^=.=^=.=^=.=^=.=^=.=^
+|-- MacFUSE kernel module
+^=.=^=.=^=.=^=.=^=.=^=.=^
+   |-- MacFusion
+       |-- FTP
+       |-- SSHFS
+       |-- other plug-ins
+^=.=^=.=^=.=^=.=^=.=^=.=^
+   |-- other applications
+=========================
+
 = Distinctions =
 
 [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] is a [http://code.google.com/p/macfusion/wiki/FileSystemsToImplement filesystem plug-in]-based GUI for [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html MacFUSE].
