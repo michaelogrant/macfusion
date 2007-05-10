@@ -5,10 +5,14 @@
 
 *Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
 
+== MacFusion 1.1 … (not public) ==
+
+  # Fix for volume mount points that were, in some circumstances, not removed.
+
 == MacFusion 1.1 Beta2 (not public) ==
 2007-05-10 testing with MacFUSE 0.3.0
 
-  # Fix for volume mount points that were, in some circumstances, not removed.
+  # ~~Fix for volume mount points that were, in some circumstances, not removed~~.
   # Fix for a notification (via Growl) that could be misleading in the case of mount failure.
   # Logging implemented.
   # Recommending verification (closure) of [http://code.google.com/p/macfuse/issues/detail?id=164 MacFUSE issue 164].
