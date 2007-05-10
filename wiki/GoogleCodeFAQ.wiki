@@ -1,0 +1,27 @@
+#summary answers to frequently asked questions about Google Gode project pages
+
+= Frequently asked questions about Google Gode project pages =
+(not to be confused with Google Groups pages and e-mails)
+
+== Why am I not receiving notifications of updates to issues that I have _reported_ ? ==
+
+  * This seems to be an issue with the Google Code web site. If you are affected, you may: 
+    # add relevant comments to [http://code.google.com/p/support/issues/detail?id=227 issue *227*]
+    # review your [http://code.google.com/hosting/settings Google Code Settings].
+
+== I reviewed my Google Code Settings, they are correct. Why am I not receiving notifications of updates to issues that I have _reported_ ? ==
+
+  * This seems to fall under the same umbrella. If you are affected, you may: 
+    * add relevant comments to [http://code.google.com/p/support/issues/detail?id=227 issue *227*].
+
+== Why am I not receiving notifications of updates to _other_ people's issue reports that have been starred by me? ==
+
+  * This may be a *separate* issue with the Google Code web site. If you are affefcted, you may:
+    # add relevant comments to the [http://code.google.com/p/support/issues/detail?id=228 issue *228*]
+    # change your [http://code.google.com/hosting/settings Google Code Settings].
+
+== Why can't I find my way back to the Google Code Settings tab without visiting these FAQ? ==
+
+  * This may be a *separate* issue with the Google Code web site. If you are affected, you may: 
+    * add relevant comments to [http://code.google.com/p/support/issues/detail?id=168#c5 issue *168*]
+      *  We have asked for that issue summary to be renamed `Settings tab is invisible to _group_ members who are not _project_ members`
