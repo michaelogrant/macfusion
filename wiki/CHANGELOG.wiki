@@ -8,6 +8,7 @@
 == MacFusion 1.1 Beta2 (not public) ==
 
   # Fix for volume mount points that were, in some circumstances, not removed.
+  # Fix for a notification (via Growl) that could be misleading in the case of mount failure.
   # Logging implemented.
 
 == MacFusion 1.01 B1 ==
