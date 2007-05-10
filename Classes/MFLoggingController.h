@@ -23,7 +23,7 @@
 #import "MacFusionConstants.h"
 
 @interface MFLoggingController : NSWindowController {
-	NSMutableAttributedString* log;
+	IBOutlet NSTextView* logTextView;
 }
 
 + (MFLoggingController*)sharedLoggingController;

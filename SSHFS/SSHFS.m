@@ -128,6 +128,7 @@
 	[arguments addObject: @"-oNumberOfPasswordPrompts=1"];
 	[arguments addObject: @"-ofollow_symlinks"];
 	[arguments addObject: @"-f"];
+//	[arguments addObject: @"-vv"];
 	
 	if (authenticationType == SSHFSAuthenticationTypePassword)
 	{
@@ -140,14 +141,18 @@
 		[arguments addObject: @"-oPubkeyAuthentication=yes"];
 	}
 	
-	// add our advanced options, add more error handling here later (what if options are duplicates?)
-	NSArray* extraArguments = [advancedOptions componentsSeparatedByString:@" "];
-	NSEnumerator* e = [extraArguments objectEnumerator];
-	NSString* extraArg;
-	while(extraArg = [e nextObject])
+	// add our advanced options, add more error handling here later 
+	// (what if options are duplicates?)
+	if (![advancedOptions isEqualToString:@""])
 	{
-		[arguments addObject:extraArg];
-		NSLog(extraArg);
+		NSArray* extraArguments = [advancedOptions componentsSeparatedByString:@" "];
+		NSEnumerator* e = [extraArguments objectEnumerator];
+		NSString* extraArg;
+		while(extraArg = [e nextObject])
+		{
+			[arguments addObject:extraArg];
+			NSLog(extraArg);
+		}
 	}
 	
 	[arguments addObject: @"-oreconnect"];
@@ -216,11 +221,16 @@
 		[recentOutput release];
 	
 	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
+	NSLog(recentOutput);
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSLoggingNotification object:self userInfo:
-		[NSDictionary dictionaryWithObjectsAndKeys:recentOutput, @"Message", @"Output", @"MessageType", nil]];
+	[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSLoggingNotification 
+										object:self 
+										userInfo: 
+		[NSDictionary dictionaryWithObjectsAndKeys:recentOutput, 
+			@"Message", @"Output", @"MessageType", nil]];
 	
-	[[note object] waitForDataInBackgroundAndNotify];
+	if ([self status] == FuseFSStatusMounted)
+		[[note object] waitForDataInBackgroundAndNotify];
 }
 
 - (void)handleTaskEnd:(NSNotification*)note
@@ -282,7 +292,8 @@
 	[self setAuthenticationType: [[dic objectForKey:@"authenticationType"]
 		intValue]];
 	[self setPort: [[dic objectForKey:@"port"] intValue]];
-	[self setAdvancedOptions:[dic objectForKey: @"advancedOptions"]];
+	if ([dic objectForKey:@"advancedOptions"])
+		[self setAdvancedOptions:[dic objectForKey: @"advancedOptions"]];
 	return self;
 }
 
@@ -321,7 +332,7 @@
 
 - (NSString*)path
 {
-		return path;
+	return path;
 }
 
 - (NSString*)recentOutput
