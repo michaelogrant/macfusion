@@ -12,4 +12,5 @@
   * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage]
   * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users]
   * Paul Blacksburg's [http://shadowofged.blogspot.com/2007/03/ntfs-3g-for-mac-os-x.html NTFS-3G for Mac OS X]
+  * [http://quicksilver.blacktree.com/ Quicksilver]
   * Slahsdot reference to [http://apple.slashdot.org/article.pl?sid=07/01/17/0257207 MacFusion]
