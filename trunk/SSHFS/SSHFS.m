@@ -151,7 +151,6 @@
 		while(extraArg = [e nextObject])
 		{
 			[arguments addObject:extraArg];
-			NSLog(extraArg);
 		}
 	}
 	
@@ -217,11 +216,14 @@
 - (void)handleDataOnPipe:(NSNotification*)note
 {
 	NSData* pipeData = [[note object] availableData];
+	
+	if ([pipeData length]==0) // pipe is down. we're done!
+		return;
+	
 	if (recentOutput)
 		[recentOutput release];
 	
 	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
-	NSLog(recentOutput);
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSLoggingNotification 
 										object:self 
@@ -229,7 +231,6 @@
 		[NSDictionary dictionaryWithObjectsAndKeys:recentOutput, 
 			@"Message", @"Output", @"MessageType", nil]];
 	
-	if ([self status] == FuseFSStatusMounted)
 		[[note object] waitForDataInBackgroundAndNotify];
 }
 
@@ -241,6 +242,7 @@
 	}
 	if (status == FuseFSStatusWaitingToMount) // task died while waiting to mount: notify of faliure
 	{
+		[self removeMountPoint];
 		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
 														  userInfo: [NSDictionary dictionaryWithObject: (id)FuseFSMountFaliureTaskEnded 
 																								forKey: mountFaliureReasonKeyName]];
@@ -391,6 +393,7 @@
 
 - (void)setAdvancedOptions:(NSString*)s
 {
+	if (s==nil) s=@"";
 	[s copy];
 	[advancedOptions release];
 	advancedOptions = s;

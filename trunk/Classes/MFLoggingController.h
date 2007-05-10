@@ -24,6 +24,7 @@
 
 @interface MFLoggingController : NSWindowController {
 	IBOutlet NSTextView* logTextView;
+	NSMutableAttributedString* log;
 }
 
 + (MFLoggingController*)sharedLoggingController;

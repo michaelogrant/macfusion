@@ -60,6 +60,7 @@ static MFLoggingController* sharedLoggingController = nil;
 		[[NSNotificationCenter defaultCenter] addObserver: self
 												 selector:@selector(logMessage:)
 													 name:FuseFSLoggingNotification object:nil];
+		log = [[NSMutableAttributedString alloc] init];
 	}
 	return self;
 }
@@ -67,14 +68,22 @@ static MFLoggingController* sharedLoggingController = nil;
 - (void) windowDidLoad
 {
 	[[self window] center];
+	[[logTextView textStorage] setAttributedString:log];
 }
 
 #pragma mark Logging Functions
 - (void)addToLog:(NSString*)entry withColor:(NSColor*)color
 {
-	NSAttributedString* new = [[NSAttributedString alloc] initWithString: entry];
+	NSDictionary* textAttributes = [NSDictionary dictionaryWithObjectsAndKeys: color, 
+		NSForegroundColorAttributeName, [NSFont systemFontOfSize: 12], NSFontAttributeName, nil];
+
+	NSAttributedString* new = [[NSAttributedString alloc] initWithString: entry
+															  attributes: textAttributes];
 	[new autorelease];
-	[[logTextView textStorage] appendAttributedString:new];
+	[log appendAttributedString:new];
+	
+	// FIXME: this is a freaking hack, but bindings dont seem to work
+	[[logTextView textStorage] setAttributedString:log];
 }
 
 - (void) logMountFailed:(NSNotification*)note
@@ -101,11 +110,11 @@ static MFLoggingController* sharedLoggingController = nil;
 	NSString* message = [[note userInfo] objectForKey:@"Message"];
 	NSString* type = [[note userInfo] objectForKey:@"MessageType"];
 	NSArray* splitMessage = [message componentsSeparatedByString:@"\n"];
-	NSString* joinMessage = [splitMessage componentsJoinedByString:@" ; "];
+	NSString* joinMessage = [splitMessage componentsJoinedByString:@" "];
 	
 	NSString* newEntry = [NSString stringWithFormat:@"%@: %@\n", [fs name], joinMessage];
 	if ([type isEqualToString:@"Output"])
-		[self addToLog: newEntry withColor:[NSColor greenColor]];
+		[self addToLog: newEntry withColor:[NSColor brownColor]];
 	if ([type isEqualToString:@"Normal"])
 		[self addToLog: newEntry withColor:[NSColor blackColor]];
 	if ([type isEqualToString:@"Error"])
@@ -113,6 +122,7 @@ static MFLoggingController* sharedLoggingController = nil;
 }
 
 - (void) dealloc {
+	[log release];
 	[super dealloc];
 }
 
