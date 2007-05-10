@@ -203,7 +203,11 @@
 - (void)handleDataOnPipe:(NSNotification*)note
 {
 	NSData* pipeData = [[note object] availableData];
+	if (recentOutput)
+		[recentOutput release];
 	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
+	
+	[[note object] waitForDataInBackgroundAndNotify];
 }
 
 - (void)handleTaskEnd:(NSNotification*)note
@@ -327,7 +331,8 @@
 
 - (void)setPath:(NSString*)s
 {
-	if(s==nil) s=@"";
+	if(s==nil) 
+		s=@"";
 	[s copy];
 	[path release];
 	path = s;
@@ -455,6 +460,7 @@
 	[path release];
 	[login release];
 	[advancedOptions release];
+	[recentOutput release];
 	[super dealloc];
 }
 

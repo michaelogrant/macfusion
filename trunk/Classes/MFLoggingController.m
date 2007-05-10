@@ -45,22 +45,21 @@ static MFLoggingController* sharedLoggingController = nil;
 - (id) init {
 	self = [super initWithWindowNibName:@"MacFusionLogging"];
 	if (self != nil) {
-		log = [[NSMutableAttributedString alloc] init];
 		[[NSNotificationCenter defaultCenter] addObserver: self 
-												 selector:@selector(logMountFailiure:) 
+												 selector:@selector(logMountFailed:) 
 													 name:FuseFSMountFailedNotification object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver: self
-												 selector:@selector(logMountSuccess:)
+												 selector:@selector(logMount:)
 													 name:FuseFSMountedNotification object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver: self
-												 selector:@selector(logUnmountSuccess:)
+												 selector:@selector(logUnmount:)
 													 name:FuseFSUnmountedNotification object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver: self
 												 selector:@selector(logMessage:)
-													 name:FuseFSUnmountedNotification object:nil];
+													 name:FuseFSLoggingNotification object:nil];
 	}
 	return self;
 }
@@ -75,32 +74,24 @@ static MFLoggingController* sharedLoggingController = nil;
 {
 	NSAttributedString* new = [[NSAttributedString alloc] initWithString: entry];
 	[new autorelease];
-	[self willChangeValueForKey:@"log"];
-	[log appendAttributedString: new];
-	[self didChangeValueForKey:@"log"];
-	NSLog(entry);
+	[[logTextView textStorage] appendAttributedString:new];
 }
 
-- (NSMutableAttributedString*)log
-{
-	return log;
-}
-
-- (void) logMountFaliure:(NSNotification*)note
+- (void) logMountFailed:(NSNotification*)note
 {
 	NSString* newEntry = [NSString stringWithFormat:@"%@: Mount Failed\n", [[note object] name]];
 	[self addToLog: newEntry withColor:[NSColor redColor]];
 }
 
-- (void) logMountSuccess:(NSNotification*)note
+- (void) logMount:(NSNotification*)note
 {
-	NSString* newEntry = [NSString stringWithFormat:@"%@: Mount Succesful\n", [[note object] name]];
+	NSString* newEntry = [NSString stringWithFormat:@"%@: Mount OK\n", [[note object] name]];
 	[self addToLog: newEntry withColor:[NSColor blueColor]];
 }
 
-- (void) logUnmountSuccess:(NSNotification*)note
+- (void) logUnmount:(NSNotification*)note
 {
-	NSString* newEntry = [NSString stringWithFormat:@"%@: Unmount Succesful\n", [[note object] name]];
+	NSString* newEntry = [NSString stringWithFormat:@"%@: Unmount OK\n", [[note object] name]];
 	[self addToLog: newEntry withColor:[NSColor blueColor]];
 }
 
@@ -109,8 +100,10 @@ static MFLoggingController* sharedLoggingController = nil;
 	id <FuseFSProtocol> fs = [note object];
 	NSString* message = [[note userInfo] objectForKey:@"Message"];
 	NSString* type = [[note userInfo] objectForKey:@"MessageType"];
+	NSArray* splitMessage = [message componentsSeparatedByString:@"\n"];
+	NSString* joinMessage = [splitMessage componentsJoinedByString:@" ; "];
 	
-	NSString* newEntry = [NSString stringWithFormat:@"%@: %@\n", [fs name], message];
+	NSString* newEntry = [NSString stringWithFormat:@"%@: %@\n", [fs name], joinMessage];
 	if ([type isEqualToString:@"Output"])
 		[self addToLog: newEntry withColor:[NSColor greenColor]];
 	if ([type isEqualToString:@"Normal"])
@@ -120,7 +113,6 @@ static MFLoggingController* sharedLoggingController = nil;
 }
 
 - (void) dealloc {
-	[log release];
 	[super dealloc];
 }
 
