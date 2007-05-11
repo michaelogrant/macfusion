@@ -1,0 +1,23 @@
+#summary basic verification of your MacFUSE installation
+#labels Featured
+
+== I installed MacFUSE. Which version is installed? ==
+
+  * View your receipt for the installation:
+
+{{{
+Finder | Go menu | 
+
+/Library/Receipts/
+
+then locate and select (single-click) 
+
+     MacFUSE Core.pkg
+
+File menu | Get Info
+}}}
+
+== I installed MacFUSE. Which version is running? ==
+
+  * If you followed the prompt to *Restart* Mac OS after installing MacFUSE, then running version should be the version shown in `Get Info` for its receipt (see above).
+  * If you have ignored a prompt to *Restart*, please Restart now.
