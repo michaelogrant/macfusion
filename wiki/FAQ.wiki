@@ -13,17 +13,6 @@
    * In this wiki we have some [http://code.google.com/p/macfusion/wiki/Explanations explanations]
      * if any explanation is lacking, please do not hesitate to [http://code.google.com/p/macfusion/issues/list?can=2&q=Type:Enhancement&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary request an improvement].
 
-== I installed version 0.3.0 or later of MacFUSE for use with version 1.01 B1 or earlier of MacFusion. Is this OK? ==
-
-  * At the time of writing, MacFusion versions 1.0 and 1.01 B1 are tested with version 0.2.5 of MacFUSE
-    * testing with other combinations is limited, but underway.
-  * If you suspect an incompatibility between MacFUSE 0.3.0 and your MacFusion installation, you might:
-    # uninstall MacFUSE (see the [http://code.google.com/p/macfuse/wiki/FAQ FAQ for MacFUSE])
-    # install MacFUSE 0.2.5 ([http://code.google.com/p/macfuse/downloads/list?can=1&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount expanded list of MacFUSE downloads])
-    # restart Mac OS.
-  * To understand the new approaches associated with version 0.3.0 of MacFUSE, please refer to the [http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE Core Binary changelog].
-  * [http://code.google.com/p/macfusion/issues/list Issue reports] are warmly welcomed. 
-
 == I launched MacFusion but I can't see it running. Where is it? ==
 
   * MacFusion 1.0 is a menu extra without a Dock icon
@@ -33,36 +22,20 @@
 
 == MacFusion menu items are greyed out. Why? ==
 
-  * A preferences dialogue, presented when MacFusion 1.0 launches for the first time, may be obscured by other windows
+  * A preferences dialogue, presented when MacFusion launches for the first time, may be [http://code.google.com/p/macfusion/issues/detail?id=10 obscured by other windows]
     * minimise/close windows, or use Expose to show all windows
     * in this context, command-tab will not reveal MacFusion
-    * [http://code.google.com/p/macfusion/issues/detail?id=10&can=2&q=launch&sort=priority this issue] is being considered in the context of other UI fixes/enhancements.
+    * [his issue is being considered in the context of other [http://code.google.com/p/macfusion/issues/list?can=2&q=label:Usability&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary usability fixes/enhancements].
 
 == Updates to MacFUSE and MacFusion ==
 
 If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appears before an [http://code.google.com/p/macfusion/wiki/CHANGELOG update to MacFusion], should I refrain from updating my MacFUSE installation?
 
   *  Unless advised otherwise, please wait for your copy of MacFusion to announce and install recommended updates
-    * MacFusion uses Sparkle technology to automate these announcements and installations.
+    * MacFusion will use Sparkle technology to automate these announcements and installations.
   
 Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as MacFusion?
 
   *  An intersting question
     * please await advice on this.
 
-== How do I alter or specify options that are not revealed in the current version of MacFusion? ==
-
-  *  Advanced and other options may be entered in Terminal, at the command line
-    * certain commands/options/debugging environments may require use of a particular shell; do not assume that tcsh or bash are universally appropriate
-    * if you're not comfortable with shells and command-line environments, please await the [http://code.google.com/p/macfusion/wiki/MacFusionUpdates next release of MacFusion] :)
-
-== How can I make sshfs-static more easily available at the command line? ==
-
-  * This is not a MacFusion question, but the tendency is to create a symbolic link
-    * from `sshfs` at `/usr/local/bin`
-    * to the `sshfs-static` binary that's bundled within the plug-in within MacFusion.
-
-== How do I create a symbolic link? ==
-
-  * Again, not a MacFusion question; if you're unfamiliar with symlinks then it's advisable to educate yourself regarding use of shells and command lines. That said, there's a GUI (contextual menu item) that you might find useful: 
-    * [http://seiryu.home.comcast.net/symboliclinker.html SymbolicLinker].
