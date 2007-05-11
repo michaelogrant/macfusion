@@ -19,6 +19,10 @@ Answers to frequently asked questions
 
   * [http://code.google.com/p/macfusion/wiki/FAQ here]
 
+Advanced and simple searches of the list of issues
+
+  * [http://code.google.com/p/macfusion/issues/advsearch here]
+
 A quick fix
 
   * yeah
