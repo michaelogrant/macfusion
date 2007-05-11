@@ -1,5 +1,4 @@
 #summary basic verification of your MacFUSE installation
-#labels Featured
 
 == I installed MacFUSE. Which version is installed? ==
 
