@@ -6,7 +6,7 @@
 The greatest defects
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:High%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary high priority] | [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:Critical%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary critical]
 
-The list of defects
+The broader list of defects
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Defect&sort=priority+id&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary prioritised] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Defect&sort=-id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary newest] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Defect&sort=id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary oldest]
 
 The requests for enhancement
@@ -26,4 +26,3 @@ A quick fix
 A break
 
   * take one
-
