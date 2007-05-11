@@ -3,7 +3,7 @@
 = See also =
 
   * Amit Singh's blog post [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html Taming Mac OS X File Systems] (2007-01-11) — *recommended reading* — leads to the Google Code project site for MacFUSE, a version of which (_not always the most recent_) is *REQUIRED* by MacFusion
-  * Amit's [http://www.itconversations.com/shows/detail1804.html discussion of MacFUSE and his book `Mac OS X Internals`] at [I]IT Conversations[/I] (2007-05-01)
+  * Amit's [http://www.itconversations.com/shows/detail1804.html discussion of MacFUSE and his book `Mac OS X Internals`] at _IT Conversations_ (2007-05-01)
   * Ars Technica: [http://arstechnica.com/journals/apple.ars/2007/05/09/macfusion-brings-a-gui-interface-to-macfuse article on the MacFusion MacFusion brings a GUI interface to MacFUSE] (2007-05-09)
   * [http://daringfireball.net/linked/2007/may#wed-09-macfusion Daring Fireball] (2007-05-09)
   * Digg results for [http://digg.com/search?s=macfuse MacFUSE] and [http://digg.com/search?s=macfusion MacFusion]
