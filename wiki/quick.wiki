@@ -12,6 +12,9 @@ The broader list of defects
 The requests for enhancement
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary prioritised] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&sort=-id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary newest] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&sort=id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary oldest]
 
+Things that are neither defects nor enhancements
+  * [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Task%20OR%20type:Other&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary OK]
+
 A retrospective view
   * [http://code.google.com/p/macfusion/issues/list?can=1&q=status:Fixed%20type:Defect&sort=id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary defects that have been fixed] | [http://code.google.com/p/macfusion/issues/list?can=1&q=status:Fixed%20type:Enhancement&sort=-id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary enhancements that have been made]
 
@@ -25,7 +28,12 @@ Advanced and simple searches of the list of issues
 
 A quick fix
 
-  * yeah
+  * begin by searching for, or reporting your issue
+    * help the community to help you — remember to state in your report:
+      # the version of MacFUSE
+      # the version of MacFusion
+      # the version of Mac OS X
+      # other basic information that will help us to understand your situation.
 
 A break
 
