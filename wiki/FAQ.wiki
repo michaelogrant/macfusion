@@ -25,7 +25,7 @@
   * A preferences dialogue, presented when MacFusion launches for the first time, may be [http://code.google.com/p/macfusion/issues/detail?id=10 obscured by other windows]
     * minimise/close windows, or use Expose to show all windows
     * in this context, command-tab will not reveal MacFusion
-    * [his issue is being considered in the context of other [http://code.google.com/p/macfusion/issues/list?can=2&q=label:Usability&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary usability fixes/enhancements].
+    * this issue is being considered in the context of other [http://code.google.com/p/macfusion/issues/list?can=2&q=label:Usability&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary usability fixes/enhancements].
 
 == Updates to MacFUSE and MacFusion ==
 
