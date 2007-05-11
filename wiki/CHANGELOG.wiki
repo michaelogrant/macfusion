@@ -1,21 +1,19 @@
 #summary changes and feature additions to MacFusion and components bundled therein
-#labels Featured
+#labels Featured,Phase-Requirements
 
 = Changes and feature additions to MacFusion and components bundled therein =
 
 *Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
 
-== MacFusion 1.1 … (not public) ==
+== MacFusion 1.1 Beta2 ==
+2007-05-11
 
-  # Fix for volume mount points that were, in some circumstances, not removed.
-
-== MacFusion 1.1 Beta2 (not public) ==
-2007-05-10 testing with MacFUSE 0.3.0
-
-  # ~~Fix for volume mount points that were, in some circumstances, not removed~~.
-  # Fix for a notification (via Growl) that could be misleading in the case of mount failure.
-  # Logging implemented.
-  # Recommending verification (closure) of [http://code.google.com/p/macfuse/issues/detail?id=164 MacFUSE issue 164].
+  # Compatible with [http://code.google.com/p/macfuse/ MacFUSE] 0.3.0.
+  # [http://code.google.com/p/macfusion/issues/detail?id=28 Extra Options (Advanced) field added to Favourites and Quick Connect dialogues for SSHFS].
+  # Fix for most situations in which [http://code.google.com/p/macfusion/issues/detail?id=6 volume mount points are not removed following a connection failure].
+  # Fix for a [http://code.google.com/p/macfusion/issues/detail?id=12& MacFusion notification presented via Growl that could be misleading in situations such as mount failure or user error].
+  # Log menu and window added. Less [http://code.google.com/p/macfusion/issues/detail?id=12 dependence upon Growl]. 
+  # Verification (closure) of [http://code.google.com/p/macfuse/issues/detail?id=164 MacFUSE issue 164] has been recommended.
 
 == MacFusion 1.01 B1 ==
 [http://groups.google.com/group/MacFusion-devel/browse_thread/thread/1cfcf158cbf11e1d#  2007-04-27]
