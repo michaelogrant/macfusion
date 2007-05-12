@@ -12,7 +12,7 @@
   # [http://code.google.com/p/macfusion/issues/detail?id=28 Extra Options (Advanced) field added to Favourites and Quick Connect dialogues for SSHFS].
   # Fix for most situations in which [http://code.google.com/p/macfusion/issues/detail?id=6 volume mount points are not removed following a connection failure].
   # Fix for a [http://code.google.com/p/macfusion/issues/detail?id=12& MacFusion notification presented via Growl that could be misleading in situations such as mount failure or user error].
-  # For compatibility with backup software and other processes that might require root access, [http://code.google.com/p/macfusion/issues/detail?id=16&can=1&q=allow_root `allow_root` is now enabled by default].
+  # For compatibility with [http://code.google.com/p/macfusion/issues/detail?id=16 backup software and other processes that might require root access], `allow_root` is ~~now enabled by default~~ [http://code.google.com/p/macfuse/issues/detail?id=156#c9 under discussion].
   # [http://code.google.com/p/macfusion/issues/detail?id=14  Log menu and window] added to MacFusion. Less [http://code.google.com/p/macfusion/issues/detail?id=35 dependence upon Growl]. 
   # [http://code.google.com/p/macfusion/issues/detail?id=12 SSHFS latency] improved (sshnodelay.so).
   # Verification (closure) of [http://code.google.com/p/macfuse/issues/detail?id=164 MacFUSE issue 164] has been recommended.
