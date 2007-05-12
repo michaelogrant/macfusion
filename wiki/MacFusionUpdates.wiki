@@ -9,7 +9,7 @@
 
 Publicised at the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page]. Reference from that page to release 1.0 (and other *RELEASES*) [http://code.google.com/p/macfusion/issues/detail?id=85 may] overlap with less publicly available *BETAS*. 
 
-As we logically expect two communities of users — (1) those using releases and (2) those using betas between releases — it is *extremely important for all issue reports to state version numbers and other information required for [http://code.google.com/p/macfusion/wiki/quick quick fixes]*.
+As we have two communities of users — (1) those using releases and (2) those using betas between releases — it is *extremely important for all issue reports to state version numbers and other information required for [http://code.google.com/p/macfusion/wiki/quick quick fixes]*.
 
 1.0 [http://code.google.com/p/macfusion/issues/detail?id=62&can=2&q=downloads#makechanges may] be added to the [http://code.google.com/p/macfusion/downloads/list Downloads] area.
 
@@ -32,4 +32,3 @@ Discussion began on [http://code.google.com/p/macfusion/issues/detail?id=40 5th 
 = Persistence of this wiki page =
 
 Subject to closure of the discussions mentioned above, this page may at some point in the future be removed.
-
