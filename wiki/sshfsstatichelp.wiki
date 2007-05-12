@@ -1,18 +1,15 @@
 #summary help, copied from the sshfs-static in MacFusion 1.1 Beta 2
 
 = This page is for technical users only! =
-
 Options/help for future versions of sshfs-static may differ from those presented here. For the most up-to-date help on your sshfs-static, always 
 
 {{{
 /Applications/MacFusion.app/Contents/PlugIns/SSHFS.plugin/Contents/Resources/sshfs-static -h
 }}}
 
-If your MacFusion is at a path other than 
-/Applications 
-then you should modify the command accordingly.
+If your MacFusion is at a path other than `/Applications` then you should modify your command accordingly.
 
-= sshfs-static in MacFusion 1.1 Beta 2 presents the following help ==
+== sshfs-static in MacFusion 1.1 Beta 2 presents the following help ==
 {{{
 usage: sshfs [user@]host:[dir] mountpoint [options]
 
@@ -115,5 +112,5 @@ Available mount options:
 
 Amit Singh [http://code.google.com/p/macfuse/issues/detail?id=178&can=2&q=#c11 explains]:
 
-	blanket denial applies to the root user … Even if you are root, you can't enter a MacFUSE volume unless you mounted it as root. Otherwise, it would make it easier for a user space file system to hang/mislead any root owned system processes that happen to encounter the volume. This behavior has always been like this and is an architectural decision.
+	2. … blanket denial applies to the root user … Even if you are root, you can't enter a MacFUSE volume unless you mounted it as root. Otherwise, it would make it easier for a user space file system to hang/mislead any root owned system processes that happen to encounter the volume. This behavior has always been like this and is an architectural decision.
 
