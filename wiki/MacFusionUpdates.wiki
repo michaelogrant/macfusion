@@ -1,4 +1,5 @@
 #summary releases, updates, upgrades, betas and Sparkle
+#labels Featured
 
 = Updates and upgrades to MacFusion and its plug-ins =
 
@@ -6,13 +7,15 @@
 
 = MacFusion 1.0 (2007-04-22) =
 
-Publicised at the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page]. Reference from that page to deprecated version 1.0 persisted beyond the release of 1.1 Beta 2. 
+Publicised at the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page]. Reference from that page to release 1.0 (and other *RELEASES*) [http://code.google.com/p/macfusion/issues/detail?id=85 may] overlap with less publicly available *BETAS*. 
 
-1.0 [http://code.google.com/p/macfusion/issues/detail?id=62&can=2&q=downloads#makechanges may] be added to the [http://code.google.com/p/macfusion/downloads/list Downloads] area (labelled _Deprecated_ to reduce prominence).
+As we logically expect two communities of users — (1) those using releases and (2) those using betas between releases — it is *extremely important for all issue reports to state version numbers and other information required for [http://code.google.com/p/macfusion/wiki/quick quick fixes]*.
+
+1.0 [http://code.google.com/p/macfusion/issues/detail?id=62&can=2&q=downloads#makechanges may] be added to the [http://code.google.com/p/macfusion/downloads/list Downloads] area.
 
 == MacFusion 1.01 B1 (2007-04-27) ==
 
-Posted less publicly to the [http://groups.google.com/group/MacFusion-devel/browse_frm/thread/1cfcf158cbf11e1d MacFusion-devel Google Group discussions area]. 1.01 Beta 1 [http://code.google.com/p/macfusion/issues/detail?id=62&can=2&q=downloads#makechanges may] be added to the [http://code.google.com/p/macfusion/downloads/list Downloads] area (labelled Deprecated).
+Posted less publicly to the [http://groups.google.com/group/MacFusion-devel/browse_frm/thread/1cfcf158cbf11e1d MacFusion-devel Google Group discussions area]. 1.01 Beta 1 [http://code.google.com/p/macfusion/issues/detail?id=62&can=2&q=downloads#makechanges may] be added to the [http://code.google.com/p/macfusion/downloads/list Downloads] area (labelled _Deprecated_ to reduce prominence).
 
 == MacFusion 1.1 Beta 2 (2007-05-11) ==
 
@@ -29,3 +32,4 @@ Discussion began on [http://code.google.com/p/macfusion/issues/detail?id=40 5th 
 = Persistence of this wiki page =
 
 Subject to closure of the discussions mentioned above, this page may at some point in the future be removed.
+
