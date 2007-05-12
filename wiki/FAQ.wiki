@@ -31,6 +31,10 @@
     * in this context, command-tab will not reveal MacFusion
     * this issue is being considered in the context of other [http://code.google.com/p/macfusion/issues/list?can=2&q=label:Usability&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary usability fixes/enhancements].
 
+== Where can I learn more about permissions in the context of MacFUSE and MacFusion? ==
+
+  * On 9th May 2007 Amit Singh offered [http://groups.google.com/group/macfuse-devel/browse_thread/thread/8ddca0a74765f200 advice to the macfuse-devel Google Group].
+
 == Updates to MacFUSE and MacFusion ==
 
 If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appears before an [http://code.google.com/p/macfusion/wiki/CHANGELOG update to MacFusion], should I refrain from updating my MacFUSE installation?
