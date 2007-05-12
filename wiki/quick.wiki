@@ -8,7 +8,7 @@
   * begin by searching for your issue
     * there may be a solution, or a workaround, or explanations, or a fix in the pipeline
   * if you add a new issue to the list, please help the community to help you — remember to state in your report:
-    # the version of MacFUSE
+    # the [MacFUSEversion version of MacFUSE]
     # the version of MacFusion
     # the version of Mac OS X
     # other basic information that will help us to understand your situation.
