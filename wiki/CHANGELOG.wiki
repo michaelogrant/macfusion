@@ -1,5 +1,5 @@
 #summary changes and feature additions to MacFusion and components bundled therein
-#labels Featured,Phase-Requirements
+#labels Phase-Requirements
 
 = Changes and feature additions to MacFusion and components bundled therein =
 
