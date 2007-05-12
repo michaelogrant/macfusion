@@ -2,18 +2,30 @@
 
 = Updates and upgrades to MacFusion and its plug-ins =
 
-== MacFusion 1.0 (2007-04-22) ==
+[http://code.google.com/p/macfusion/wiki/CHANGELOG Changelog]
 
-Version 1.0 is available from the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
+= MacFusion 1.0 (2007-04-22) =
 
-=== MacFusion 1.01 B1 (2007-04-27) ===
+Publicised at the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page]. Reference from that page to deprecated version 1.0 persisted beyond the release of 1.1 Beta 2. 
 
-Version 1.01 B1 incorporating bug fixes and an improved version of the sshfs-static binary is available from the [http://groups.google.com/group/MacFusion-devel/browse_frm/thread/1cfcf158cbf11e1d MacFusion-devel Google Group discussions area].
+1.0 [http://code.google.com/p/macfusion/issues/detail?id=62&can=2&q=downloads#makechanges may] be added to the [http://code.google.com/p/macfusion/downloads/list Downloads] area (labelled _Deprecated_ to reduce prominence).
 
-=== Updates and upgrades to the MacFusion application ===
+== MacFusion 1.01 B1 (2007-04-27) ==
 
-[http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html Version 1.0] uses [http://sparkle.andymatuschak.org/ Sparkle] for instant self-update functionality so when the next beta/release is ready for widespread distribution, users should receive it automatically.
+Posted less publicly to the [http://groups.google.com/group/MacFusion-devel/browse_frm/thread/1cfcf158cbf11e1d MacFusion-devel Google Group discussions area]. 1.01 Beta 1 [http://code.google.com/p/macfusion/issues/detail?id=62&can=2&q=downloads#makechanges may] be added to the [http://code.google.com/p/macfusion/downloads/list Downloads] area (labelled Deprecated).
 
-==== Updates and upgrades to filesystem plug-ins for MacFusion ====
+== MacFusion 1.1 Beta 2 (2007-05-11) ==
 
-…
+Released publicly within our Downloads area and featured on our [http://code.google.com/p/macfusion/ Project Home page].
+
+== Updates and upgrades to the MacFusion application ==
+
+[http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html Version 1.0] uses [http://sparkle.andymatuschak.org/ Sparkle] for self-update functionality. Discussion of Sparkle-oriented 'appcasts', through which announcements and deliveries will occur, began on [http://code.google.com/p/macfusion/issues/detail?id=74 10th May 2007].
+
+== Updates and upgrades to filesystem plug-ins for MacFusion ==
+
+Discussion began on [http://code.google.com/p/macfusion/issues/detail?id=40 5th May 2007].
+
+= Persistence of this wiki page =
+
+Subject to closure of the discussions mentioned above, this page may at some point in the future be removed.
