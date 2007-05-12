@@ -3,6 +3,18 @@
 
 = I'm looking for … =
 
+A quick fix
+
+  * begin by searching for your issue
+    * there may be a solution, or a workaround, or explanations, or a fix in the pipeline
+  * if you add a new issue to the list, please help the community to help you — remember to state in your report:
+    # the version of MacFUSE
+    # the version of MacFusion
+    # the version of Mac OS X
+    # other basic information that will help us to understand your situation.
+
+We have *two communities of users* — those using the very prominent *RELEASES*, and those using less prominent *BETA* versions of MacFusion — so versions numbers are typically the *first essential consideration* in the troubleshooting process.
+
 The greatest defects
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:High%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary high priority] | [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:Critical%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary critical]
 
@@ -26,16 +38,8 @@ Advanced and simple searches of the list of issues
 
   * [http://code.google.com/p/macfusion/issues/advsearch here]
 
-A quick fix
-
-  * begin by searching for, or reporting your issue
-    * help the community to help you — remember to state in your report:
-      # the version of MacFUSE
-      # the version of MacFusion
-      # the version of Mac OS X
-      # other basic information that will help us to understand your situation
-    * remember that we have *two communities of users* — those using the very prominent *RELEASES*, and those using less prominent *BETA* versions of MacFusion.
-
 A break
 
   * take one
+
+
