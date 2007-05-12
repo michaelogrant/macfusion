@@ -33,7 +33,8 @@ A quick fix
       # the version of MacFUSE
       # the version of MacFusion
       # the version of Mac OS X
-      # other basic information that will help us to understand your situation.
+      # other basic information that will help us to understand your situation
+    * remember that we have *two communities of users* — those using the very prominent *RELEASES*, and those using less prominent *BETA* versions of MacFusion.
 
 A break
 
