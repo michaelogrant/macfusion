@@ -112,5 +112,4 @@ Available mount options:
 
 Amit Singh [http://code.google.com/p/macfuse/issues/detail?id=178&can=2&q=#c11 explains]:
 
-	2. … blanket denial applies to the root user … Even if you are root, you can't enter a MacFUSE volume unless you mounted it as root. Otherwise, it would make it easier for a user space file system to hang/mislead any root owned system processes that happen to encounter the volume. This behavior has always been like this and is an architectural decision.
-
+	2. … blanket denial applies to the root user too. Even if you are root, you can't enter a MacFUSE volume unless you mounted it as root. Otherwise, it would make it easier for a user space file system to hang/mislead any root owned system processes that happen to encounter the volume. This behavior has always been like this and is an architectural decision.
