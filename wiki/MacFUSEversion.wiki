@@ -18,5 +18,5 @@ File menu | Get Info
 
 == I installed MacFUSE. Which version is running? ==
 
-  * If you followed the prompt to *Restart* Mac OS after installing MacFUSE, then running version should be the version shown in `Get Info` for its receipt (see above).
-  * If you have ignored a prompt to *Restart*, please Restart now.
+  * If you followed the prompt to *Restart* Mac OS after installing MacFUSE, then the running version should be the version shown in `Get Info` for its receipt (see above).
+  * If you have overlooked a prompt to *Restart*, please Restart now.
