@@ -1,9 +1,9 @@
 #summary handy links for those of us who are in a hurry
 #labels Featured
 
-= I'm looking for … =
+== I'm looking for … ==
 
-A quick fix
+= A quick fix =
 
   * begin by searching for your issue
     * there may be a solution, or a workaround, or explanations, or a fix in the pipeline
@@ -13,33 +13,32 @@ A quick fix
     # the version of Mac OS X
     # other basic information that will help us to understand your situation.
 
-We have *two communities of users* — those using the very prominent *RELEASES*, and those using less prominent *BETA* versions of MacFusion — so versions numbers are typically the *first essential consideration* in the troubleshooting process.
+Alongside the MacFUSE community we have *two communities of MacFusion users* — those using the very prominent *RELEASES*, and those using less prominent *BETA* versions of MacFusion — so version numbers are typically the *first essential consideration* in the troubleshooting process.
 
-The greatest defects
+== The greatest defects ==
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:High%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary high priority] | [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:Critical%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary critical]
 
-The broader list of defects
+== The broader list of defects ==
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Defect&sort=priority+id&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary prioritised] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Defect&sort=-id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary newest] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Defect&sort=id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary oldest]
 
-The requests for enhancement
+== The requests for enhancement ==
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary prioritised] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&sort=-id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary newest] | [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Enhancement&sort=id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary oldest]
 
-Things that are neither defects nor enhancements
+== Things that are neither defects nor enhancements ==
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=type:Task%20OR%20type:Other&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary OK]
 
-A retrospective view
+== A retrospective view ==
   * [http://code.google.com/p/macfusion/issues/list?can=1&q=status:Fixed%20type:Defect&sort=id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary defects that have been fixed] | [http://code.google.com/p/macfusion/issues/list?can=1&q=status:Fixed%20type:Enhancement&sort=-id+priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary enhancements that have been made]
 
-Answers to frequently asked questions
+== Answers to frequently asked questions ==
 
   * [http://code.google.com/p/macfusion/wiki/FAQ here]
 
-Advanced and simple searches of the list of issues
+== Advanced and simple searches of the list of issues ==
 
   * [http://code.google.com/p/macfusion/issues/advsearch here]
 
-A break
+== A break ==
 
-  * take one
-
+  * take one!
 
