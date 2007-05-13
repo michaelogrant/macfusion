@@ -22,9 +22,9 @@
   * MacFusion 1.0 is a menu extra without a Dock icon
     * look for the grey globe+arrows icon in your menu bar
     * probably to the left of other icons with which you're familiar
-    * the menu extra icon and menus in general are discussed in the [http://code.google.com/p/macfusion/issues/list?can=2&q=label:menus&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary Issues] area.
+    * the [http://code.google.com/p/macfusion/issues/list?can=2&q=label%3Amenus+OR+label%3AMenuExtraIcon&sort=priority&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary menu extra icon and menus in general] are discussed amongst the the issues.
 
-== MacFusion menu items are greyed out. Why? ==
+== MacFusion menu extra menu items are greyed out. Why? ==
 
   * A preferences dialogue, presented when MacFusion launches for the first time, may be [http://code.google.com/p/macfusion/issues/detail?id=10 obscured by other windows]
     * minimise/close windows, or use Expose to show all windows
@@ -46,4 +46,3 @@ Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as Ma
 
   *  An intersting question
     * please await advice on this.
-
