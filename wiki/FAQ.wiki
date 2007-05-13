@@ -18,7 +18,7 @@
   * It's easily discovered. We have a [http://code.google.com/p/macfusion/wiki/MacFUSEversion featured page] on the subject.
 
 == I launched MacFusion but I can't see it running. Where is it? ==
-
+http://blog.nicolargo.com/wp-content/uploads/2007/05/macfusionmenu.png
   * MacFusion 1.0 is a menu extra without a Dock icon
     * look for the grey globe+arrows icon in your menu bar
     * probably to the left of other icons with which you're familiar
