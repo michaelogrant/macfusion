@@ -9,6 +9,7 @@
 #import "MacFusionStatusCell.h"
 #import "CTGradient.h"
 #import "RoundedRectangles.h"
+#import "NSColorAdditions.h"
 
 @interface MacFusionStatusCell (PrivateAPI)
 - (CTGradient*)gradientForStatus:(NSString*)status;
@@ -30,7 +31,7 @@
 	roundedRect.origin.y = cellFrame.origin.y + (cellFrame.size.height - roundedRect.size.height)/2;
 	
 	NSBezierPath* p = [NSBezierPath bezierPathWithRoundedRect: roundedRect cornerRadius: 10.0]; 
-	NSShadow* s = [[NSShadow alloc] init];;
+	NSShadow* s = [[NSShadow alloc] init];
 	[s setShadowColor: [NSColor blackColor]];
 	[s setShadowOffset: NSMakeSize(-1,-1)];
 	[s setShadowBlurRadius: 4];
@@ -53,36 +54,32 @@
 	[status drawInRect: textRect withAttributes: textAttributes];
 }
 
-- (CTGradient*)gradientForStatus:(NSString*)status
+- (CTGradient*)gradientForStatus: (NSString*)status
 {
-	// First Color Always White, Other 2 determined by status
-	NSColor* color1 = [NSColor whiteColor];
-	NSColor* color2;
-	NSColor* color3;
+	NSDictionary* colorDic = [NSDictionary dictionaryWithObjectsAndKeys:
+		[[NSColor windowFrameColor] colorUsingColorSpaceName: NSDeviceRGBColorSpace], @"Unmounted",
+		[NSColor colorWithDeviceHue:  73/360. saturation: 0.77 brightness: 0.67 alpha: 1], @"Mounted",
+		[NSColor colorWithDeviceHue:   5/360. saturation: 0.79 brightness: 1.00 alpha: 1], @"Mount Failed",
+		nil];
+	//Old "Unmounted" blue: [NSColor colorWithDeviceHue: 207/360. saturation: 1.00 brightness: 0.94 alpha: 1]
+
 	
-	if ([status isEqualTo: @"Mounted"])
+	NSColor* statusColor = [colorDic objectForKey: status];
+	if (!statusColor)
 	{
-		color2 = [NSColor colorWithDeviceRed: 144/255. green:172/255. blue:40/255. alpha:1];
-		color3 = [NSColor colorWithDeviceRed:236/255. green:255/255. blue:133/255. alpha:1];
-	}
-	else if ([status isEqualTo: @"Unmounted"])
-	{
-		color2 = [NSColor colorWithDeviceRed: 0 green:133/255. blue:239/255. alpha:1];
-		color3 = [NSColor colorWithDeviceRed:177/255. green:212/255. blue:244/255. alpha:1];
-	}
-	else if ([status isEqualTo: @"Mount Failed"])
-	{
-		color2 = [NSColor colorWithDeviceRed: 1 green:70/255. blue:54/255. alpha:1];
-		color3 = [NSColor colorWithDeviceRed: 1 green:172/255. blue:161/155. alpha:1];
-	}
-	else
-	{
-		color2 = [NSColor colorWithDeviceRed: 232/255. green:168/255. blue:40/255. alpha:1];
-		color3 = [NSColor colorWithDeviceRed: 254/255. green:254/255. blue:141/255. alpha:1];
+		statusColor = [NSColor colorWithDeviceRed: 232/255. green:168/255. blue:40/255. alpha:1];
 	}
 	
-	CTGradient* grad = [CTGradient gradientWithBeginningColor: color1 endingColor:color3];
-	grad = [grad addColorStop: color2 atPosition:0.5];
+	// Dynamically generate gradient - parameters determined by trial-and-error
+	NSColor* startColor = [statusColor hsbTransformWithHueFactor: 1.      hueOffset: 0.
+													   satFactor: 1/4.    satOffset: 0.
+													brightFactor: 1/4. brightOffset: 3/4.];
+	NSColor*   endColor = [statusColor hsbTransformWithHueFactor: 1.	  hueOffset: 0.
+													   satFactor: 5/12.   satOffset: 0.
+													brightFactor: 2/3. brightOffset: 1/3.];
+	
+	CTGradient* grad = [CTGradient gradientWithBeginningColor: startColor endingColor: endColor];
+	grad = [grad addColorStop: statusColor atPosition:0.5];
 	
 	return grad;
 }
