@@ -7,7 +7,8 @@
   * Amit's [http://www.itconversations.com/shows/detail1804.html discussion of MacFUSE and his book `Mac OS X Internals`] at _IT Conversations_ (2007-05-01)
   * Ars Technica: [http://arstechnica.com/journals/apple.ars/2007/05/09/macfusion-brings-a-gui-interface-to-macfuse MacFusion brings a GUI interface to MacFUSE] (2007-05-09)
   * [http://daringfireball.net/linked/2007/may#wed-09-macfusion Daring Fireball] (2007-05-09)
-  * Digg results for [http://digg.com/search?s=macfuse MacFUSE] and [http://digg.com/search?s=macfusion MacFusion]
+  * Digg: [http://digg.com/search?s=macfuse MacFUSE] | [http://digg.com/search?s=macfusion MacFusion]
+  * Diigo: [http://www.diigo.com/tag/fuse?tab=153 FUSE] | [http://www.diigo.com/tag/macfuse?tab=153 MacFUSE] | [http://www.diigo.com/tag/macfusion?tab=153 MacFusion]
   * FUSE: [http://fuse.sourceforge.net Filesystem in Userspace]
   * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage] — *HIGHLIGHT*
   * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users] — *RECOMMENDED*
