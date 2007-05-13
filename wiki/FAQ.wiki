@@ -22,7 +22,7 @@ http://blog.nicolargo.com/wp-content/uploads/2007/05/macfusionmenu.png
   * MacFusion 1.0 is a menu extra without a Dock icon
     * look for the grey globe+arrows icon in your menu bar
     * probably to the left of other icons with which you're familiar
-    * the [http://code.google.com/p/macfusion/issues/list?can=2&q=label%3Amenus+OR+label%3AMenuExtraIcon&sort=priority&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary menu extra icon and menus in general] are discussed amongst the the issues.
+    * the [http://code.google.com/p/macfusion/issues/list?can=2&q=label%3Amenus+OR+label%3AMenuExtraIcon&sort=priority&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary menu extra icon and menus in general] are discussed amongst the other issues.
 
 == MacFusion menu extra menu items are greyed out. Why? ==
 
