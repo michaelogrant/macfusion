@@ -52,6 +52,8 @@
 		D4B0118E0BBF050A002EABD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
 		D4B011E90BBF0510002EABD3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
 		D4B012090BBF058A002EABD3 /* FTPFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */; };
+		D4C9224A0BF6C502006A5858 /* NSColorAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C922480BF6C502006A5858 /* NSColorAdditions.h */; };
+		D4C9224B0BF6C502006A5858 /* NSColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C922490BF6C502006A5858 /* NSColorAdditions.m */; };
 		D4CDBE810B90C88C00F6BA84 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */; };
 		D4E11F130BAECE7F00C99A5F /* FTPFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E11EFC0BAECDF800C99A5F /* FTPFS.m */; };
 		D4E11F150BAECE7F00C99A5F /* FTPFSUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E11EFF0BAECE0D00C99A5F /* FTPFSUIController.m */; };
@@ -105,6 +107,7 @@
 				D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */,
 				D4AA81CA0BBF7E7700BCE886 /* MacFusionSmoothImageView.h in CopyFiles */,
 				D48F046C0BEAD4DB0090C3D6 /* MFLoggingController.h in CopyFiles */,
+				D4C9224A0BF6C502006A5858 /* NSColorAdditions.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +200,8 @@
 		D4AA833A0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MacFusion_Dialog_Question.icns; path = Resources/MacFusion_Dialog_Question.icns; sourceTree = "<group>"; };
 		D4B010B10BBEF973002EABD3 /* ftp_askpass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftp_askpass.h; sourceTree = "<group>"; };
 		D4B010B20BBEF973002EABD3 /* ftp_askpass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ftp_askpass.m; sourceTree = "<group>"; };
+		D4C922480BF6C502006A5858 /* NSColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorAdditions.h; sourceTree = "<group>"; };
+		D4C922490BF6C502006A5858 /* NSColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorAdditions.m; sourceTree = "<group>"; };
 		D4CDBE7E0B90C88C00F6BA84 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		D4E11EFB0BAECDF800C99A5F /* FTPFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPFS.h; sourceTree = "<group>"; };
@@ -323,6 +328,8 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* MacFusion_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				D4C922480BF6C502006A5858 /* NSColorAdditions.h */,
+				D4C922490BF6C502006A5858 /* NSColorAdditions.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -635,6 +642,7 @@
 				D4F380360BB6068300620C5F /* MacFusionIconCell.m in Sources */,
 				D4AA81CB0BBF7E7700BCE886 /* MacFusionSmoothImageView.m in Sources */,
 				D48F046D0BEAD4DB0090C3D6 /* MFLoggingController.m in Sources */,
+				D4C9224B0BF6C502006A5858 /* NSColorAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
