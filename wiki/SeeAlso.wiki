@@ -2,7 +2,7 @@
 
 = See also =
 
-  * /proc (procfs) — processes as files in [http://osxbook.com/book/bonus/chapter11/procfs/ A MacFUSE-Based Process File System for Mac OS X]
+  * /proc (procfs) — processes as files — in [http://osxbook.com/book/bonus/chapter11/procfs/ A MacFUSE-Based Process File System for Mac OS X]
   * Amit Singh's blog post [http://googlemac.blogspot.com/2007/01/taming-mac-os-x-file-systems.html Taming Mac OS X File Systems] (2007-01-11) — *recommended reading* — leads to the Google Code project site for MacFUSE, a version of which (_not always the most recent_) is *REQUIRED* by MacFusion
   * Amit's [http://www.itconversations.com/shows/detail1804.html discussion of MacFUSE and his book `Mac OS X Internals`] at _IT Conversations_ (2007-05-01)
   * Ars Technica: [http://arstechnica.com/journals/apple.ars/2007/05/09/macfusion-brings-a-gui-interface-to-macfuse MacFusion brings a GUI interface to MacFUSE] (2007-05-09)
@@ -11,7 +11,7 @@
   * FUSE: [http://fuse.sourceforge.net Filesystem in Userspace]
   * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage] — *HIGHLIGHT*
   * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users] — *RECOMMENDED*
-  * Paul Marks' [http://shadowofged.blogspot.com/2007/03/ntfs-3g-for-mac-os-x.html NTFS-3G for Mac OS X]
+  * Paul Marks' [http://shadowofged.blogspot.com/search?q=ntfs-3g NTFS-3G for Mac OS X]
   * [http://quicksilver.blacktree.com/ Quicksilver]
   * [http://jan.prima.de/SecureRemoteDisk.html Secure Remote Disk]
   * [http://mac.pqrs.org/sshfs/ sshfs for Darwin (Mac OS X)]
