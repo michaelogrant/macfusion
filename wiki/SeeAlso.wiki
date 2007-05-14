@@ -14,11 +14,13 @@
   * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users] — *RECOMMENDED*
   * [http://blog.nicolargo.com/2007/05/macfuse-devient-plus-facile-a-utiliser.html MacFUSE devient plus facile à utiliser]
   * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] — the glossy site to which other sites tend to refer — *RECOMMENDED*
+  * [http://www.macresearch.org/application_highlight_macfusion MacResearch: Application Highlight: MacFusion]
   * Paul Marks' [http://shadowofged.blogspot.com/search?q=ntfs-3g NTFS-3G for Mac OS X]
   * [http://quicksilver.blacktree.com/ Quicksilver]
   * [http://jan.prima.de/SecureRemoteDisk.html Secure Remote Disk]
   * [http://mac.pqrs.org/sshfs/ sshfs for Darwin (Mac OS X)]
   * Slahsdot: [http://apple.slashdot.org/article.pl?sid=07/01/17/0257207 FUSE Port Brings NTFS Support To OS X] (2007-01-17)
   * SleepWatcher and other software by [http://www.bernhard-baehr.de/ Bernhard Baehr]
+  * [http://www.macresearch.org/xgrid_fuse_brings_xgrid_to_your_finder Xgrid FUSE brings Xgrid to your Finder]
 
 
