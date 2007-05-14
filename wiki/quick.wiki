@@ -13,7 +13,7 @@
     # the version of Mac OS X
     # other basic information that will help us to understand your situation.
 
-Alongside the MacFUSE community we have *two communities of MacFusion users* — those using the very prominent *RELEASES*, and those using less prominent *BETA* versions of MacFusion — so version numbers are typically the *first essential consideration* in the troubleshooting process.
+Alongside the MacFUSE community we have *FOUR or more communities of MacFusion users* — those using the very prominent *RELEASES*, those using less prominent *BETA* versions of MacFusion — and more recently users of our MacFusion as a GUI to MacFUSE from the Fink and macports communities — so version numbers are typically the *first essential consideration* in the troubleshooting process.
 
 == The greatest defects ==
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:High%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary high priority] | [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:Critical%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary critical]
