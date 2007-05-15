@@ -5,9 +5,9 @@
 
 == Existing ==
 
-|| *filesystem* || *plug-in* || *MacFusion* || *Wikipedia* || 
-|| FTP || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || [http://en.wikipedia.org/wiki/File_Transfer_Protocol article] ||
-|| SSHFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || [http://en.wikipedia.org/wiki/SSHFS article] ||
+|| *filesystem* || *plug-in* || *MacFusion* || *home* || *Wikipedia* || 
+|| FTP || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || — || [http://en.wikipedia.org/wiki/File_Transfer_Protocol article] ||
+|| SSHFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || [http://fuse.sourceforge.net/sshfs.html SSH Filesystem] || [http://en.wikipedia.org/wiki/SSHFS article] ||
 
 == Requested or under consideration ==
 
