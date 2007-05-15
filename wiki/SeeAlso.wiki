@@ -21,4 +21,5 @@
   * [http://mac.pqrs.org/sshfs/ sshfs for Darwin (Mac OS X)]
   * Slahsdot: [http://apple.slashdot.org/article.pl?sid=07/01/17/0257207 FUSE Port Brings NTFS Support To OS X] (2007-01-17)
   * SleepWatcher and other software by [http://www.bernhard-baehr.de/ Bernhard Baehr]
+  * [http://www.tuaw.com/2007/05/14/macfusion-a-gui-for-macfuse/ The Unofficial Apple Weblog (TUAW): MacFusion: a GUI for MacFUSE] (2007-05-14)
   * [http://www.macresearch.org/xgrid_fuse_brings_xgrid_to_your_finder Xgrid FUSE brings Xgrid to your Finder] (2007-05-14)
