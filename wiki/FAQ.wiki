@@ -3,11 +3,6 @@
 
 = FAQ =
 
-== I'm familiar with Google Mail and/or Google Groups but Google Code is new to me. Can you help? ==
-
-  * We have some separate answers to [http://code.google.com/p/macfusion/wiki/GoogleCodeFAQ frequently asked questions about Google Code]
-  * if this is your first time in a Google Code project area, it's *particularly* important to [http://code.google.com/p/macfusion/wiki/GoogleCodeFAQ follow the advice regarding notifications via e-mail] — you'll make your stay here far more pleasant for yourself.
-
 == I'm new here, how does MacFusion differ from MacFUSE? And what about the alternatives? ==
 
    * In this wiki we have some [http://code.google.com/p/macfusion/wiki/Explanations explanations]
