@@ -3,19 +3,10 @@
 = Frequently asked questions about Google Gode project pages =
 (not to be confused with Google Groups pages and e-mails)
 
-== Why am I not receiving notifications of updates to issues that I have _reported_ ? ==
+In the early days of the MacFusion Project we noted some issues (or possible issues) with Google Code. To the best of my knowledge these are fixed by Google Code but for reference, they were: 
 
-  * This seems to be an issue with the Google Code web site. If you are affected, you may: 
-    # add relevant comments to [http://code.google.com/p/support/issues/detail?id=227 issue *227*]
-    # review your [http://code.google.com/hosting/settings Google Code Settings].
+  * [http://code.google.com/p/support/issues/detail?id=227 Google Code support issue 168]
+  * [http://code.google.com/p/support/issues/detail?id=227 Google Code support issue 227]
+  * [http://code.google.com/p/support/issues/detail?id=227 Google Code support issue 228].
 
-== I reviewed my Google Code Settings, they are correct. Why am I not receiving notifications of updates to issues that I have _reported_ ? ==
-
-  * This seems to fall under the same umbrella. If you are affected, you may: 
-    * add relevant comments to [http://code.google.com/p/support/issues/detail?id=227 issue *227*].
-
-== Why am I not receiving notifications of updates to _other_ people's issue reports that have been starred by me? ==
-
-  * This may be a *separate* issue with the Google Code web site. If you are affefcted, you may:
-    # add relevant comments to the [http://code.google.com/p/support/issues/detail?id=228 issue *228*]
-    # change your [http://code.google.com/hosting/settings Google Code Settings].
+Our thanks to Google Code support for prioritising and addressing these issues!
