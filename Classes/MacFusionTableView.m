@@ -10,13 +10,27 @@
 
 
 @implementation MacFusionTableView
-/*
+
 - (void)rightMouseDown:(NSEvent*)theEvent
 {
+	
 	[self columnAtPoint: [theEvent locationInWindow]];
 	int r = [self rowAtPoint: [self convertPoint: [theEvent locationInWindow] toView: nil]];
 	[self selectRow: r byExtendingSelection:NO];
-	[super rightMouseDown: theEvent];
+	
+	NSEvent *event = [NSEvent mouseEventWithType:[theEvent type]
+										location:[theEvent locationInWindow]
+								   modifierFlags:[theEvent modifierFlags]
+									   timestamp:[theEvent timestamp]
+									windowNumber:[[theEvent window] windowNumber]
+										 context:[theEvent context]
+									 eventNumber:[theEvent eventNumber]
+									  clickCount:[theEvent clickCount]
+										pressure:[theEvent pressure]];
+	
+	[NSMenu popUpContextMenu:[self menu] withEvent:event forView:self];
+	[self mouseUp:[[NSApplication sharedApplication] currentEvent]];
+	 
 }
-*/
+
 @end
