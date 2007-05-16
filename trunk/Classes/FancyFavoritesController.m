@@ -74,10 +74,14 @@
 	if ([item title] == @"Edit")
 		return [editButton isEnabled];
 	if ([item title] == @"Duplicate")
+	{
 		if ([fs status] == FuseFSStatusUnmounted)
 			return YES;
+		else
+			return NO;
+	}
 	
-	return NO;
+	return YES;
 }
 
 // Method to update the UI ... called when selection or status changed
