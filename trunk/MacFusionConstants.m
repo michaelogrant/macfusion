@@ -40,6 +40,7 @@ NSString* growlFSUnmountFailedNotification = @"Unmount Faliure";
 NSString* FuseFSMountFaliureTimeout = @"Timeout";
 NSString* FuseFSMountFaliureTaskEnded = @"Task Ended";
 NSString* FuseFSMountFaliurePathIssue = @"Mountpoint Setup Failed";
+NSString* FuseFSMountFaliureLibraryIssue = @"libFuse not found";
 
 NSString* FuseFSStatusUnmountedString = @"Unmounted";
 NSString* FuseFSStatusWaitingToMountString = @"Waiting to Mount";

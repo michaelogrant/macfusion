@@ -69,6 +69,7 @@ enum {
 extern NSString* FuseFSMountFaliureTimeout;
 extern NSString* FuseFSMountFaliureTaskEnded;
 extern NSString* FuseFSMountFaliurePathIssue;
+extern NSString* FuseFSMountFaliureLibraryIssue;
 
 extern NSString *ext;
 extern NSString *appSupportSubpath;

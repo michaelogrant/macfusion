@@ -34,6 +34,7 @@
 - (void)initializeGrowl;
 - (void)readDefaults;
 - (void)registerURLHandling;
+- (void)checkForMacFuse;
 @end
 
 @implementation MacFusionController

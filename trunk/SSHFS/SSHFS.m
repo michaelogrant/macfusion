@@ -119,6 +119,16 @@
 	else
 		myPath = @"";
 	
+	// find our library
+	NSString* libfusepath = [self getPathForLibFuse];
+	if (libfusepath == nil)
+	{
+		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
+														  userInfo:[NSDictionary dictionaryWithObject:(id)FuseFSMountFaliureLibraryIssue 
+																							   forKey:mountFaliureReasonKeyName]];
+		return nil;
+	}
+	
 	// set up the other arguments
 	[arguments addObject: [NSString stringWithFormat:@"%@@%@:%@", login, hostName, myPath]]; // login@host:path argument
 	[arguments addObject: [self mountPath]];
@@ -171,6 +181,7 @@
 	[env setObject: @"NONE" forKey:@"DISPLAY"];
 	[env setObject: login forKey:@"SSHFS_USER"];
 	[env setObject: hostName forKey:@"SSHFS_SERVER"];
+	[env setObject:libfusepath forKey:@"DYLD_LIBRARY_PATH"];
 
 	[t setEnvironment: env];
 	
@@ -501,6 +512,26 @@
 		if ([[fm directoryContentsAtPath: [self mountPath]] count] == 0) // and its empty
 			[fm removeFileAtPath: [self mountPath] handler:nil];
 	}
+}
+
+#pragma mark Shared Code
+// Code to take into account the fact that libfuse may not be in /usr/local/lib
+// But may instead be in /opt/local/lib or /sw/lib due to macports or fink
+- (NSString*)getPathForLibFuse
+{
+	NSString* searchPath;
+	NSArray* possiblePaths = [NSArray arrayWithObjects:
+		@"/usr/local/lib", @"/opt/local/lib", @"/sw/lib", nil];
+	NSEnumerator* e = [possiblePaths objectEnumerator];
+	while (searchPath = [e nextObject])
+	{
+		NSString* libraryPath = [searchPath stringByAppendingPathComponent:@"libfuse.0.dylib"];
+		NSLog(libraryPath);
+		if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath])
+			return searchPath; //we've found libfuse!
+	}
+	
+	return nil; // no libfuse ... uh oh
 }
 
 - (void) dealloc 

@@ -56,5 +56,6 @@
 // URL Handling ... so the MacFusion app can handle FTP and SFTP urls
 + (BOOL)canHandleURL:(NSURL*)url;
 - (id)initWithURL:(NSURL*)url;
+- (NSString*)getPathForLibFuse;
 
 @end
