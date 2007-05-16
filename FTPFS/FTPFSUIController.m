@@ -76,11 +76,6 @@ NSString* FTPFSPortError = @"Port out of Range (Must be 1 to 65535)";
 	return configurationView;
 }
 
-- (void) commitEdits
-{
-	[fsController commitEditing];
-}
-
 - (void) dealloc 
 {
 	[fileSystem release];
