@@ -45,6 +45,8 @@
 	{
 		[MFLoggingController sharedLoggingController]; // start logging
 		mounts = [[NSMutableArray alloc] init];
+		
+		[self checkForMacFuse];
 		[self registerDefaults];
 		[self getAllPlugins];
 		[self readDefaults];
@@ -792,6 +794,61 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 			[fs release];
 		}
 	}
+}
+
+#pragma mark Requirements Checking
+// Check if an acceptable version of MacFuse is installed
+- (void) checkForMacFuse
+{
+	NSString* extensionSearchRootPath = @"/Library/Extensions/";
+	NSString* FuseFSBundleID = @"com.google.filesystems.fusefs";
+	NSArray* validVersions = [NSArray arrayWithObjects:@"0.3.0", nil];
+	
+	// Try to find the bundle
+	NSEnumerator* e = [[NSFileManager defaultManager] enumeratorAtPath:extensionSearchRootPath];
+	NSString* path = nil;
+	NSString* version = nil;
+	
+	while (path = [e nextObject])
+	{
+		NSString* bundlePath = [extensionSearchRootPath stringByAppendingString: path];
+		NSBundle* b = [NSBundle bundleWithPath: bundlePath];
+		if (b != nil)
+		{
+			NSString* bundleID = [b bundleIdentifier];
+			if ([bundleID isEqualTo:FuseFSBundleID])
+			{
+				version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
+				break;
+			}
+				
+		}
+	}
+	
+	if (version == nil) // No MacFuse Found
+	{
+		[[NSApplication sharedApplication] activateIgnoringOtherApps:YES]; // take focus
+		NSAlert* a = [NSAlert alertWithMessageText:@"MacFUSE is not Installed. Please install MacFUSE off Google's site to run MacFusion" 
+						defaultButton:@"OK" alternateButton:@"" otherButton:@"" informativeTextWithFormat:@""];		
+		[a runModal];
+		exit(0);
+	}
+	else
+	{
+		if ([validVersions containsObject: version])
+		{
+			// We're all good
+			return;
+		}
+		else
+		{
+			NSString* m = [NSString stringWithFormat:@"Your version of MacFuse: %@ has not been validated with this version of MacFusion", version];
+			[[NSAlert alertWithMessageText:m
+							defaultButton:@"OK" alternateButton:@"" otherButton:@"" informativeTextWithFormat:@""] runModal];		
+			exit(0);
+		}
+	}
+	
 }
 
 #pragma mark Cleanup Code
