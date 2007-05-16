@@ -9,7 +9,7 @@
 
   * Basic [http://code.google.com/p/macfusion/issues/detail?id=69 checks for compatibility between versions of MacFUSE and MacFusion].
   * Context menu for the Favorites view.
-  * curlftpfs and sshfs plug-ins: for users of Fink and MacPorts, [http://code.google.com/p/macfusion/issues/detail?id=90 recognise alternate paths to libfuse].
+  * curlftpfs and sshfs plug-ins: for users of [http://pdb.finkproject.org/pdb/package.php/fuse Fink] and [http://www.macports.org/ MacPorts], [http://code.google.com/p/macfusion/issues/detail?id=90 recognise alternate paths to libfuse].
   * Favorites window, whilst open, remains in foreground without preventing use of other windows. Window can be minimised. Window is [http://code.google.com/p/macfusion/issues/detail?id=122 lost] only when Exposé is active.
   * Fixed an issue with [http://code.google.com/p/macfusion/issues/detail?id=77 selection changing discontinuously].
   * Fixed the OK button to save [http://code.google.com/p/macfusion/issues/detail?id=88 paths] and [http://code.google.com/p/macfusion/issues/detail?id=78 sshfs options].
