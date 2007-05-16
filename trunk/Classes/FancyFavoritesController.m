@@ -219,7 +219,6 @@
 			backup = nil;
 			return;
 		}
-		
 
 	}
 	else // adding new favorite
