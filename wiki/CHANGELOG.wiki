@@ -7,7 +7,7 @@
 
 == forthcoming (abstracted from Subversion log for revision 201) ==
 
-  * Basic [issue checks for compatibility between versions of MacFUSE and MacFusion].
+  * Basic [http://code.google.com/p/macfusion/issues/detail?id=69 checks for compatibility between versions of MacFUSE and MacFusion].
   * Context menu for the Favorites view.
   * curlftpfs and sshfs plug-ins: for users of Fink and MacPorts, [http://code.google.com/p/macfusion/issues/detail?id=90 recognise alternate paths to libfuse].
   * Favorites window, whilst open, remains in foreground without preventing use of other windows. Window can be minimised. Window is [http://code.google.com/p/macfusion/issues/detail?id=122 lost] only when Exposé is active.
