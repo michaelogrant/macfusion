@@ -511,7 +511,7 @@
 			NSString* description = [NSString stringWithFormat:@"MacFusion Failed to Unmount %@", [fs name]];
 			[GrowlApplicationBridge notifyWithTitle: @"Unmount Failed" description:description 
 								   notificationName:growlFSUnmountFailedNotification 
-										   iconData:nil priority:0 isSticky:NO clickContext:nil];
+										   iconData:nil priority:0 isSticky:YES clickContext:nil];
 		}
 		return status;
 	}
