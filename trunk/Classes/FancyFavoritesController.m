@@ -25,7 +25,8 @@
 {
 	// Window settings
 	[[self window] center];
-//	[[self window] setLevel:NSFloatingWindowLevel];
+//	// Do we want to float on top?
+	[[self window] setLevel:NSFloatingWindowLevel];
 	
 	// Set up the buttons and menus
 	NSMenu* editMenu = [[[NSMenu alloc] initWithTitle: @""] autorelease];
@@ -34,6 +35,13 @@
 	[editButton setMenu: editMenu];
 	[editButton setTarget: self];
 	[addButton setMenu: [mainController filesystemTypesMenuWithTarget: self]];
+	
+	NSMenu* favoriteContextMenu = [[[NSMenu alloc] initWithTitle:@""] autorelease];
+	[favoriteContextMenu addItemWithTitle:@"Mount" action:@selector(mountFavorite:) keyEquivalent:@""];
+	[favoriteContextMenu addItemWithTitle:@"Unmount" action:@selector(mountFavorite:) keyEquivalent:@""];
+	[favoriteContextMenu addItemWithTitle:@"Edit" action:@selector(editFavorite:) keyEquivalent:@""];
+	[favoriteContextMenu addItemWithTitle:@"Duplicate" action:@selector(duplicateFavorite:) keyEquivalent:@""];
+	[favoritesTableView setMenu: favoriteContextMenu];
 	
 	// Set up our table
 	NSCell* customNameDescriptionCell = [[[MacFusionFSCell alloc] init] autorelease];
@@ -54,14 +62,22 @@
 	[self updateUI];
 }
 
-// Update the table's right click menu
-- (void) menuNeedsUpdate:(NSMenu*)menu
+// Control the table's right click menu
+- (BOOL) validateMenuItem:(NSMenuItem*)item
 {
-	// Clear Previous Menu
-	NSEnumerator* mEnum = [[menu itemArray] objectEnumerator];
-	NSMenuItem* i;
-	while(i = [mEnum nextObject])
-		[menu removeItem:i];
+	id <FuseFSProtocol> fs = [[favoritesArrayController arrangedObjects] objectAtIndex: 
+		[favoritesArrayController selectionIndex]];
+	if ([item title] == @"Mount")
+		return [mountButton isEnabled] && [[mountButton title] isEqualTo:@"Mount"];
+	if ([item title] == @"Unmount")
+		return [mountButton isEnabled] && [[mountButton title] isEqualTo:@"Unmount"];
+	if ([item title] == @"Edit")
+		return [editButton isEnabled];
+	if ([item title] == @"Duplicate")
+		if ([fs status] == FuseFSStatusUnmounted)
+			return YES;
+	
+	return NO;
 }
 
 // Method to update the UI ... called when selection or status changed
@@ -122,6 +138,7 @@
 	[self updateUI];
 }
 
+#pragma mark Action Methods
 - (IBAction) removeFavorite:(id)sender
 {
 	id <FuseFSProtocol> fs = [[favoritesArrayController arrangedObjects] objectAtIndex: 
@@ -192,10 +209,12 @@
 		else
 		{
 			[mainController willChangeValueForKey:@"favorites"];
+			int oldIndex = [favoritesTableView selectedRow];
 			[[mainController favorites] replaceObjectAtIndex:[[mainController favorites] indexOfObject: fs] 
 												  withObject:backup];
 			[mainController didChangeValueForKey:@"favorites"];
-			
+			// reset the selection to where it was before
+			[favoritesTableView selectRow:oldIndex byExtendingSelection:NO];
 			[backup release];
 			backup = nil;
 			return;
@@ -233,5 +252,38 @@
 	}
 }
 
+- (IBAction) duplicateFavorite:(id)sender
+{	
+	// this method will only be called in favorite is unmounted state ... otherwise duplication is nasty
+	// if a favorite is selected, we duplicate it
+	id <FuseFSProtocol> fs = [[[favoritesArrayController arrangedObjects] objectAtIndex:
+		[favoritesArrayController selectionIndex]] copyWithZone:nil];
+	// but first we need to change the name by adding " copy" to the end
+	NSString *newName = [NSString stringWithFormat: @"%@ copy", [fs name]];
+	[fs setName:newName];	// set with setName: setter method from FuseFSProtocol
+	
+	if (fs)
+	{
+		[mainController addFilesystemToFavorites:fs];
+		int newRow = [[favoritesArrayController arrangedObjects] indexOfObject:fs];
+		[favoritesTableView selectRow:newRow byExtendingSelection:NO];
+	}
+	else
+	{
+		NSString *message = [NSString stringWithFormat:@"Couldn't duplicate this favorite"];
+		NSAlert *errorAlert = [NSAlert alertWithMessageText:message	
+											  defaultButton:@"OK" 
+											alternateButton:@"" 
+												otherButton:@"" 
+								  informativeTextWithFormat:@""];
+		[errorAlert setAlertStyle:NSWarningAlertStyle];
+		[errorAlert setIcon: [NSImage imageNamed:@"MacFusion_Dialog_Warning"]];
+		[errorAlert beginSheetModalForWindow:[self window] 
+							   modalDelegate:self 
+							  didEndSelector:nil 
+								 contextInfo:nil];
+		[fs release];	// release the object
+	}
+}
 
 @end
