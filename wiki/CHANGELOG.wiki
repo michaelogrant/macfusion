@@ -14,7 +14,7 @@
   * Fixed an issue with [http://code.google.com/p/macfusion/issues/detail?id=77 selection changing discontinuously].
   * Fixed the OK button to save [http://code.google.com/p/macfusion/issues/detail?id=88 paths] and [http://code.google.com/p/macfusion/issues/detail?id=78 sshfs options].
   * Improved [http://code.google.com/p/macfusion/issues/detail?id=80 resizing of log window].
-  * New option: duplicate an existing favourite.
+  * New option: [http://code.google.com/p/macfusion/issues/detail?id=89 duplicate an existing favourite].
   * UI improvements. 
 
 == MacFusion 1.1 Beta2 ==
@@ -45,7 +45,6 @@
 2007-04-22
 
   * this release coincided with the launch of the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
-
 
 
 
