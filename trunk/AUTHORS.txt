@@ -1,0 +1,5 @@
+AUTHORS: MacFusion Project
+
+Michael Gorbach (mgorbach@gmail.com) (lead developer)
+Eric Astor (eastor1@swarthmore.edu)
+Oskar Lissheim-Boethius (avocade@gmail.com)
