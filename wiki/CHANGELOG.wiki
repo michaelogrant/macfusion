@@ -15,6 +15,7 @@
   * Fixed the OK button to save [http://code.google.com/p/macfusion/issues/detail?id=88 paths] and [http://code.google.com/p/macfusion/issues/detail?id=78 sshfs options].
   * Improved [http://code.google.com/p/macfusion/issues/detail?id=80 resizing of log window].
   * New option: [http://code.google.com/p/macfusion/issues/detail?id=89 duplicate an existing favourite].
+  * New contributors to code are credited in an `authors` file.
   * UI improvements. 
 
 == MacFusion 1.1 Beta2 ==
