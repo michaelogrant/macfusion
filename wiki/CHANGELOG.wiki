@@ -21,7 +21,7 @@ forthcoming
   * Contributors to code are credited in an `authors` file.
   * Favorites window, whilst open, remains in foreground without preventing use of other windows. Window can be minimised. Window is [http://code.google.com/p/macfusion/issues/detail?id=122 lost] only when Exposé is active.
   * [http://code.google.com/p/macfusion/issues/detail?id=80 Log window pane] resizes.
-  * OK button fixed for saving changes to [http://code.google.com/p/macfusion/issues/detail?id=88 paths] and [http://code.google.com/p/macfusion/issues/detail?id=78 sshfs options].
+  * OK button fixed for saving changes to [http://code.google.com/p/macfusion/issues/detail?id=88 paths], [http://code.google.com/p/macfusion/issues/detail?id=78 sshfs options] and [http://code.google.com/p/macfusion/issues/detail?id=135 other fields in the Edit sheet of the Favourites window].
   * [http://code.google.com/p/macfusion/issues/detail?id=77 Selection changing discontinuously] fixed.
   * UI improvements. 
 
@@ -53,6 +53,7 @@ forthcoming
 2007-04-22, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   * this release coincided with the launch of the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
+
 
 
 
