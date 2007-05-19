@@ -10,6 +10,7 @@
   * Digg: [http://digg.com/search?s=macfuse MacFUSE] | [http://digg.com/search?s=macfusion MacFusion]
   * Diigo: [http://www.diigo.com/tag/fuse?tab=153 FUSE] | [http://www.diigo.com/tag/macfuse?tab=153 MacFUSE] | [http://www.diigo.com/tag/macfusion?tab=153 MacFusion]
   * FUSE: [http://fuse.sourceforge.net Filesystem in Userspace]
+  * [http://gdisk.sourceforge.net/ gDisk]
   * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage] — *HIGHLIGHT*
   * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users] — *RECOMMENDED*
   * MacDevCenter.com — [http://www.macdevcenter.com/pub/a/mac/2007/03/06/macfuse-new-frontiers-in-file-systems.html MacFUSE: New Frontiers in File Systems]
