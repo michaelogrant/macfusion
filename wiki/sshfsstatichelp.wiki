@@ -106,10 +106,19 @@ Available mount options:
 [grahamperrin:~] gjp22% 
 }}}
 
+= General= 
+
+A [http://groups.google.com/group/macfuse-devel/msg/4860230d6967dc3b comment] from Amit Singh:
+
+	…OS X and Linux are quite different platforms, and MacFUSE shares
+	pretty much nothing (except the user-kernel interface definition)
+	with Linux FUSE. So, the semantics of certain things (blocksize,
+	for example) aren't quite the same for both. 
+
 = About the options =
 
 == allow_root ==
 
-Amit Singh [http://code.google.com/p/macfuse/issues/detail?id=178&can=2&q=#c11 explains]:
+Amit  [http://code.google.com/p/macfuse/issues/detail?id=178&can=2&q=#c11 explains]:
 
 	2. … blanket denial applies to the root user too. Even if you are root, you can't enter a MacFUSE volume unless you mounted it as root. Otherwise, it would make it easier for a user space file system to hang/mislead any root owned system processes that happen to encounter the volume. This behavior has always been like this and is an architectural decision.
