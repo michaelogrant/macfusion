@@ -106,7 +106,7 @@ Available mount options:
 [grahamperrin:~] gjp22% 
 }}}
 
-= General= 
+= General =
 
 A [http://groups.google.com/group/macfuse-devel/msg/4860230d6967dc3b comment] from Amit Singh:
 
