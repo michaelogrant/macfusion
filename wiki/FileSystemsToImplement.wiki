@@ -31,5 +31,6 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
 
   * [http://groups.google.com/group/macfuse-devel/browse_thread/thread/44a0733c3034ffb7 Amazon Simple Storage Service (Amazon S3)]
   * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en docFS]
+  * [http://groups.google.com/group/macfuse-devel/browse_frm/thread/6f3c68cf660dbb8f/ iPodDisk]
   * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en rssFS]
   * [http://groups.google.com/group/macfuse-devel/msg/d37d239d2dcbaa73 WikipediaFS]
