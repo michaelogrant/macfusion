@@ -29,7 +29,6 @@
 - (void)setUpVolumeMonitoring;
 - (id <FuseFSProtocol>)findFilesystemForPath:(NSString*)path;
 - (void)getFavoritesFromDefaults;
-- (void)writeFavoritesToDefaults;
 - (void)registerDefaults;
 - (void)initializeGrowl;
 - (void)readDefaults;
@@ -219,6 +218,7 @@
 	
 	[defaults setObject: [NSArray arrayWithArray: favoritesForDefaults]
 				 forKey:favoritesKeyName];
+	[defaults synchronize];
 }
 
 // Checks for favorites that were mounted when MacFusion started. Adds these

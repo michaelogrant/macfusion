@@ -54,6 +54,7 @@
 - (void)mountFilesystem:(id <FuseFSProtocol>)fs;
 - (int)unmountFilesystem:(id <FuseFSProtocol>)fs;
 - (NSMenu*)filesystemTypesMenuWithTarget: (id)target;
+- (void)writeFavoritesToDefaults;
 
 - (BOOL)validateFilesystem:(id <FuseFSProtocol>)fs error:(NSString**)error;
 

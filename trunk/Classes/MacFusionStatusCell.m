@@ -30,7 +30,8 @@
 	roundedRect.origin.x = cellFrame.origin.x + cellFrame.size.width - roundedRect.size.width - imagePadding;
 	roundedRect.origin.y = cellFrame.origin.y + (cellFrame.size.height - roundedRect.size.height)/2;
 	
-	NSBezierPath* p = [NSBezierPath bezierPathWithRoundedRect: roundedRect cornerRadius: 10.0]; 
+	NSBezierPath* p = [NSBezierPath bezierPathWithRoundedRect: roundedRect 
+												 cornerRadius: 10.0]; 
 	NSShadow* s = [[NSShadow alloc] init];
 	[s setShadowColor: [NSColor blackColor]];
 	[s setShadowOffset: NSMakeSize(-1,-1)];

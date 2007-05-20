@@ -208,7 +208,6 @@
 		{
 			[backup release];
 			backup = nil;
-			return;
 		}
 		else
 		{
@@ -217,13 +216,16 @@
 			[[mainController favorites] replaceObjectAtIndex:[[mainController favorites] indexOfObject: fs] 
 												  withObject:backup];
 			[mainController didChangeValueForKey:@"favorites"];
+			
 			// reset the selection to where it was before
 			[favoritesTableView selectRow:oldIndex byExtendingSelection:NO];
 			[backup release];
 			backup = nil;
-			return;
 		}
-
+		
+		NSLog(@"Writing");
+		[mainController writeFavoritesToDefaults];
+		return;
 	}
 	else // adding new favorite
 	{
@@ -231,6 +233,8 @@
 		{
 			[mainController addFilesystemToFavorites: fs];
 			[mainController mountFilesystem: fs];
+			[mainController writeFavoritesToDefaults];
+			return;
 		}
 		else
 		{
