@@ -526,7 +526,6 @@
 	while (searchPath = [e nextObject])
 	{
 		NSString* libraryPath = [searchPath stringByAppendingPathComponent:@"libfuse.0.dylib"];
-		NSLog(libraryPath);
 		if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath])
 			return searchPath; //we've found libfuse!
 	}

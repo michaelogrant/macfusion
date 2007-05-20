@@ -67,6 +67,7 @@ static MFLoggingController* sharedLoggingController = nil;
 
 - (void) windowDidLoad
 {
+	[[self window] setLevel:NSFloatingWindowLevel];
 	[[self window] center];
 	[[logTextView textStorage] setAttributedString:log];
 }
