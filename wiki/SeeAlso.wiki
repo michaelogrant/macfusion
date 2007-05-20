@@ -13,10 +13,10 @@
   * [http://gdisk.sourceforge.net/ gDisk]
   * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage] — *HIGHLIGHT*
   * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users] — *RECOMMENDED*
-  * MacDevCenter.com — [http://www.macdevcenter.com/pub/a/mac/2007/03/06/macfuse-new-frontiers-in-file-systems.html MacFUSE: New Frontiers in File Systems]
   * [http://blog.nicolargo.com/2007/05/macfuse-devient-plus-facile-a-utiliser.html MacFUSE devient plus facile à utiliser]
   * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] — the glossy site to which other sites tend to refer — *RECOMMENDED*
   * [http://www.macresearch.org/application_highlight_macfusion MacResearch: Application Highlight: MacFusion] (2007-05-10)
+  * O'Reilly | MacDevCenter.com — [http://www.macdevcenter.com/pub/a/mac/2007/03/06/macfuse-new-frontiers-in-file-systems.html MacFUSE: New Frontiers in File Systems]
   * Paul Marks' [http://shadowofged.blogspot.com/search?q=ntfs-3g NTFS-3G for Mac OS X]
   * [http://quicksilver.blacktree.com/ Quicksilver]
   * [http://jan.prima.de/SecureRemoteDisk.html Secure Remote Disk]
