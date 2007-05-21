@@ -89,6 +89,7 @@
 		[NSNumber numberWithDouble: 60.0 ], mountTimeoutKeyName, 
 		[NSNumber numberWithBool: NO], startOnLoginKeyName,
 		[NSNumber numberWithBool: NO], unmountOnSleepKeyName,
+		[NSNumber numberWithBool:YES], @"SUCheckAtStartup",
 		nil];
 	
 	[defaults registerDefaults: defaultsDic];
@@ -193,7 +194,9 @@
 		}
 		else
 		{
-			NSLog(@"Failed to load favorite of type %@", FSClassName);
+			[[MFLoggingController sharedLoggingController] 
+				logMessage: [NSString stringWithFormat:@"Failed to load favorite of type %@", FSClass]
+															   ofType:MacFusionLogTypeCore sender:self];
 		}
 	}
 }
