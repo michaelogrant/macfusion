@@ -18,6 +18,7 @@
 // limitations under the License.
 
 #import "MFLoggingController.h"
+#include "stdarg.h"
 
 @interface MFLoggingController(PrivateAPI)
 - (void)addToLogFile:(NSString*)entry;
@@ -150,7 +151,7 @@ static MFLoggingController* sharedLoggingController = nil;
 			color = [NSColor grayColor];
 			break;
 		case MacFusionLogTypeCore:
-			color = [NSColor greenColor];
+			color = [NSColor purpleColor];
 			break;
 	}
 	
@@ -178,6 +179,28 @@ static MFLoggingController* sharedLoggingController = nil;
 - (void) dealloc {
 	[log release];
 	[super dealloc];
+}
+
+void MFLog(NSString* format, ...)
+{
+	MFLoggingController* logger = [MFLoggingController sharedLoggingController];
+	id core = [[NSApplication sharedApplication] delegate];
+	
+	// get a reference to the arguments on the stack that follow
+    // the format paramter
+    va_list argList;
+    va_start (argList, format);
+	
+    // NSString luckily provides us with this handy method which
+    // will do all the work for us, including %@
+    NSString *string;
+    string = [[NSString alloc] initWithFormat: format
+									arguments: argList];
+    va_end  (argList);
+	[logger logMessage:string ofType:MacFusionLogTypeCore sender:core]; 
+	
+    [string release];
+	
 }
 
 

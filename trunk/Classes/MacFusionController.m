@@ -194,9 +194,7 @@
 		}
 		else
 		{
-			[[MFLoggingController sharedLoggingController] 
-				logMessage: [NSString stringWithFormat:@"Failed to load favorite of type %@", FSClass]
-															   ofType:MacFusionLogTypeCore sender:self];
+			MFLog(@"Failed to load favorite of type %@", FSClass);
 		}
 	}
 }
@@ -541,17 +539,17 @@
 			NSString* fsType = [[b infoDictionary] objectForKey:@"FSType"];
 			[plugins setObject: b forKey: fsType];
 			[b load];
-			NSLog(@"Loaded %@ filesystem from %@", fsType, 
+			MFLog(@"Loaded %@ filesystem from %@", fsType, 
 				  [[b infoDictionary] objectForKey: @"CFBundleIdentifier"]);
 		}
 		else
 		{
-			NSLog(@"Not loading bundle %@", [[b infoDictionary] objectForKey: @"CFBundleIdentifier"]);
+			MFLog(@"Not loading bundle %@", [[b infoDictionary] objectForKey: @"CFBundleIdentifier"]);
 		}
 	}
 	if ([plugins count] == 0)
 	{
-		NSLog(@"Failed to Load Any Plugins!");
+		MFLog(@"Failed to Load Any Plugins!");
 	}
 }
 
@@ -784,7 +782,7 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 - (void)handleURL:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
 {
 	NSString *urlString = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
-	NSLog(@"MacFusion Handling URL: %@", urlString);
+	MFLog(@"MacFusion Handling URL: %@", urlString);
 	NSURL* myURL = [NSURL URLWithString:urlString];
 	NSEnumerator* e = [plugins objectEnumerator];
 	NSBundle* b;
