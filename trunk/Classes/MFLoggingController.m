@@ -88,9 +88,15 @@ static MFLoggingController* sharedLoggingController = nil;
 															  attributes: textAttributes];
 	[new autorelease];
 	[log appendAttributedString:new];
+	NSRange userSelection = [logTextView selectedRange];
 	
 	// FIXME: this is a bad hack, but bindings dont seem to work
 	[[logTextView textStorage] setAttributedString:log];
+    
+    if (userSelection.length > 0)
+        [logTextView setSelectedRange:userSelection];
+    else
+        [logTextView scrollRangeToVisible:NSMakeRange([log length] - 1,0)];
 }
 
 - (void)addToLogFile:(NSString*)entry

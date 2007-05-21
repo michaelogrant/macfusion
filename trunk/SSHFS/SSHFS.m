@@ -22,6 +22,7 @@
 #include <stdio.h>
 #import "../MacFusionConstants.h"
 #import "../Classes/MFLoggingController.h"
+#include "signal.h"
 
 @interface SSHFS (PrivateAPI)
 - (NSTask*)setupTaskForMount;
@@ -201,6 +202,9 @@
 	[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleTaskEnd:)
 												 name:NSTaskDidTerminateNotification object: task];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUnmountNotification:)
+												 name:FuseFSUnmountedNotification object:self];
+	
 	[[outputPipe fileHandleForReading] waitForDataInBackgroundAndNotify];
 		
 	[arguments release];
@@ -271,6 +275,9 @@
 
 - (void)handleUnmountNotification:(NSNotification*)note
 {
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:NSFileHandleDataAvailableNotification object:nil];
+	// Really kill the task ... hard!
+	kill([task processIdentifier],SIGKILL);
 	[self removeMountPoint];
 }
 
