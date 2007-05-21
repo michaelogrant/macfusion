@@ -19,6 +19,9 @@
 
 #import "MFLoggingController.h"
 
+@interface MFLoggingController(PrivateAPI)
+- (void)addToLogFile:(NSString*)entry;
+@end
 
 @implementation MFLoggingController
 static MFLoggingController* sharedLoggingController = nil;
@@ -57,10 +60,13 @@ static MFLoggingController* sharedLoggingController = nil;
 												 selector:@selector(logUnmount:)
 													 name:FuseFSUnmountedNotification object:nil];
 		
-//		[[NSNotificationCenter defaultCenter] addObserver: self
-//												 selector:@selector(logMessage:)
-//													 name:FuseFSLoggingNotification object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(handleAppTermination:)
+													 name:NSApplicationWillTerminateNotification object:nil];
+		
 		log = [[NSMutableAttributedString alloc] init];
+		NSString* logEntry = [NSString stringWithFormat:@" ---- MacFusion Started %@\n", [NSDate date]];
+		[self addToLogFile: logEntry];
 	}
 	return self;
 }
@@ -73,7 +79,7 @@ static MFLoggingController* sharedLoggingController = nil;
 }
 
 #pragma mark Logging Functions
-- (void)addToLog:(NSString*)entry withColor:(NSColor*)color
+- (void)addToLogWindow:(NSString*)entry withColor:(NSColor*)color
 {
 	NSDictionary* textAttributes = [NSDictionary dictionaryWithObjectsAndKeys: color, 
 		NSForegroundColorAttributeName, [NSFont systemFontOfSize: 12], NSFontAttributeName, nil];
@@ -85,6 +91,20 @@ static MFLoggingController* sharedLoggingController = nil;
 	
 	// FIXME: this is a bad hack, but bindings dont seem to work
 	[[logTextView textStorage] setAttributedString:log];
+}
+
+- (void)addToLogFile:(NSString*)entry
+{
+	NSFileHandle *writeHandle;
+	NSString* logFile = [NSString stringWithFormat:@"%@/Library/Logs/MacFusion.log", NSHomeDirectory()];
+	
+	if (![[NSFileManager defaultManager] fileExistsAtPath:logFile])
+		[[NSFileManager defaultManager] createFileAtPath:logFile contents:nil attributes:nil];
+	
+	writeHandle = [NSFileHandle fileHandleForWritingAtPath:logFile]; 
+	[writeHandle truncateFileAtOffset:[writeHandle seekToEndOfFile]]; 
+	
+	[writeHandle writeData:[entry dataUsingEncoding:nil]]; //actually write the data
 }
 
 - (void) logMountFailed:(NSNotification*)note
@@ -101,24 +121,6 @@ static MFLoggingController* sharedLoggingController = nil;
 {
 	[self logMessage:@"Unmount OK" ofType:MacFusionLogTypeMountUnmount sender:[note object]];
 }
-
-/*
-- (void) logMessage:(NSNotification*)note
-{
-	id <FuseFSProtocol> fs = [note object];
-	NSString* message = [[note userInfo] objectForKey:@"Message"];
-	NSString* type = [[note userInfo] objectForKey:@"MessageType"];
-	NSArray* splitMessage = [message componentsSeparatedByString:@"\n"];
-	NSString* joinMessage = [splitMessage componentsJoinedByString:@" "];
-	
-	NSString* newEntry = [NSString stringWithFormat:@"%@: %@\n", [fs name], joinMessage];
-	if ([type isEqualToString:@"Output"])
-		[self addToLog: newEntry withColor:[NSColor brownColor]];
-	if ([type isEqualToString:@"Normal"])
-		[self addToLog: newEntry withColor:[NSColor blackColor]];
-	if ([type isEqualToString:@"Error"])
-		[self addToLog: newEntry withColor:[NSColor redColor]];
-}*/
 
 - (void) logMessage:(NSString*)message 
 			 ofType:(int)type 
@@ -157,7 +159,14 @@ static MFLoggingController* sharedLoggingController = nil;
 	
 	NSString* newEntry = [NSString stringWithFormat:@"%@: %@\n", sourceName, joinMessage];
 	
-	[self addToLog:newEntry withColor:color];
+	[self addToLogWindow:newEntry withColor:color];
+	[self addToLogFile:newEntry];
+}
+
+- (void) handleAppTermination:(NSNotification*)note
+{
+	NSString* logEntry = [NSString stringWithFormat:@" ---- MacFusion Terminated %@\n", [NSDate date]];
+	[self addToLogFile: logEntry];
 }
 
 - (void) dealloc {
