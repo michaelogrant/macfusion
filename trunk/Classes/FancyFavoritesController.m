@@ -223,7 +223,6 @@
 			backup = nil;
 		}
 		
-		NSLog(@"Writing");
 		[mainController writeFavoritesToDefaults];
 		return;
 	}

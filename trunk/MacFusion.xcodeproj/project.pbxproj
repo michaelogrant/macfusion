@@ -6,6 +6,24 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		D49D66890C00ED0900891D09 /* MacFusion + Plugins */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D49D66B20C00ED5600891D09 /* Build configuration list for PBXAggregateTarget "MacFusion + Plugins" */;
+			buildPhases = (
+				D49D66A10C00ED1E00891D09 /* CopyFiles */,
+			);
+			comments = "This should be the default configuration ...\nIt will place plugins in the default path";
+			dependencies = (
+				D49D66A00C00ED1500891D09 /* PBXTargetDependency */,
+				D49D668D0C00ED1300891D09 /* PBXTargetDependency */,
+				D49D668B0C00ED1200891D09 /* PBXTargetDependency */,
+			);
+			name = "MacFusion + Plugins";
+			productName = MacFusionTotalBundle;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3DF72E620B8C5AE100D355C5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF72E610B8C5AE100D355C5 /* Sparkle.framework */; };
 		3DF72E790B8C5B0200D355C5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DF72E610B8C5AE100D355C5 /* Sparkle.framework */; };
@@ -21,7 +39,6 @@
 		D40969C60B82658F00EABE40 /* EditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40969C40B82658F00EABE40 /* EditController.m */; };
 		D40C7C420BADA3D100567D29 /* sshfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D40C7C410BADA3D100567D29 /* sshfs-static */; };
 		D42AEF820B5FD379008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
-		D42AF6210B610B21008C6F84 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D42F35730BF3A7FE0015B135 /* sshnodelay.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D42F35720BF3A7FE0015B135 /* sshnodelay.so */; };
 		D43D356B0BA8C9E100282A8D /* MacFusion.icns in Resources */ = {isa = PBXBuildFile; fileRef = D43D356A0BA8C9E100282A8D /* MacFusion.icns */; };
 		D4498D060B5A371D003B9DFF /* MacFusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4498D050B5A371D003B9DFF /* MacFusionController.m */; };
@@ -31,10 +48,16 @@
 		D45D9BD00B756366002E6C08 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
 		D45D9BD40B75637F002E6C08 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
 		D45D9BEF0B75640B002E6C08 /* askpass in CopyFiles */ = {isa = PBXBuildFile; fileRef = D45D9BBA0B756329002E6C08 /* askpass */; };
+		D465A4460C00E2E100F9DF1D /* FuseFSProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F82A1E0B5BEA720061B029 /* FuseFSProtocol.h */; };
+		D465A4470C00E2E100F9DF1D /* FuseUIProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F124640B5C61C8002BAA40 /* FuseUIProtocol.h */; };
+		D465A4500C00E2F100F9DF1D /* MacFusionConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = D42AEF7F0B5FD379008C6F84 /* MacFusionConstants.h */; };
 		D474679A0BB09EA100FD68CA /* curlftpfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D47467990BB09EA100FD68CA /* curlftpfs-static */; };
-		D48F046C0BEAD4DB0090C3D6 /* MFLoggingController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */; };
 		D48F046D0BEAD4DB0090C3D6 /* MFLoggingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F046B0BEAD4DB0090C3D6 /* MFLoggingController.m */; };
 		D48F05480BEAF2F00090C3D6 /* MacFusionLogging.nib in Resources */ = {isa = PBXBuildFile; fileRef = D48F05460BEAF2F00090C3D6 /* MacFusionLogging.nib */; };
+		D49D66AD0C00ED3800891D09 /* SSHFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */; };
+		D49D66AE0C00ED3800891D09 /* FTPFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */; };
+		D49D684C0C01272500891D09 /* MacFusionController.h in Headers */ = {isa = PBXBuildFile; fileRef = D4498D040B5A371D003B9DFF /* MacFusionController.h */; };
+		D49D684D0C01273300891D09 /* MFLoggingController.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */; };
 		D4A1204C0B7C1DDA00F565DC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */; };
 		D4A121CC0B7C239800F565DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D4A121CB0B7C239800F565DC /* Credits.rtf */; };
 		D4A41D730BB6CB6D00D12576 /* SSHFS.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4A41D720BB6CB6D00D12576 /* SSHFS.icns */; };
@@ -43,16 +66,12 @@
 		D4A6BB7E0B8684A300B51E6D /* CTGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BB7C0B8684A300B51E6D /* CTGradient.m */; };
 		D4A6BFEF0B86CFB800B51E6D /* MacFusionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A6BFED0B86CFB800B51E6D /* MacFusionTableView.m */; };
 		D4A6C2190B8760EC00B51E6D /* MacFusionPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4A6C2170B8760EC00B51E6D /* MacFusionPreferences.nib */; };
-		D4AA81CA0BBF7E7700BCE886 /* MacFusionSmoothImageView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4AA81C80BBF7E7700BCE886 /* MacFusionSmoothImageView.h */; };
 		D4AA81CB0BBF7E7700BCE886 /* MacFusionSmoothImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AA81C90BBF7E7700BCE886 /* MacFusionSmoothImageView.m */; };
 		D4AA833B0BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4AA83390BC028FA00BCE886 /* MacFusion_Dialog_Warning.icns */; };
 		D4AA833C0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4AA833A0BC028FA00BCE886 /* MacFusion_Dialog_Question.icns */; };
-		D4B0112E0BBF0283002EABD3 /* MacFusionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D42AEF800B5FD379008C6F84 /* MacFusionConstants.m */; };
 		D4B011730BBF0402002EABD3 /* ftp_askpass.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B010B20BBEF973002EABD3 /* ftp_askpass.m */; };
 		D4B0118E0BBF050A002EABD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9A3D0B755F27002E6C08 /* Security.framework */; };
 		D4B011E90BBF0510002EABD3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D9BD30B75637F002E6C08 /* CoreFoundation.framework */; };
-		D4B012090BBF058A002EABD3 /* FTPFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */; };
-		D4C9224A0BF6C502006A5858 /* NSColorAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C922480BF6C502006A5858 /* NSColorAdditions.h */; };
 		D4C9224B0BF6C502006A5858 /* NSColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C922490BF6C502006A5858 /* NSColorAdditions.m */; };
 		D4CDBE810B90C88C00F6BA84 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE7F0B90C88C00F6BA84 /* PreferencesController.m */; };
 		D4E11F130BAECE7F00C99A5F /* FTPFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E11EFC0BAECDF800C99A5F /* FTPFS.m */; };
@@ -68,7 +87,6 @@
 		D4F380360BB6068300620C5F /* MacFusionIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F380340BB6068300620C5F /* MacFusionIconCell.m */; };
 		D4F82A440B5BEB630061B029 /* SSHFS.nib in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A260B5BEAA30061B029 /* SSHFS.nib */; };
 		D4F82A460B5BEB6D0061B029 /* SSHFS.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F82A0D0B5BEA2C0061B029 /* SSHFS.m */; };
-		D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */; };
 		D4F82A6F0B5BEBEE0061B029 /* SSHFS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4F82A0B0B5BEA2C0061B029 /* SSHFS-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -80,19 +98,40 @@
 			remoteGlobalIDString = D45D9BB90B756329002E6C08;
 			remoteInfo = askpass;
 		};
-		D4B012070BBF0575002EABD3 /* PBXContainerItemProxy */ = {
+		D49D668A0C00ED1200891D09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4E11F0E0BAECE5900C99A5F;
+			remoteGlobalIDString = D4E11F0E0BAECE5900C99A5F /* FTPFS */;
 			remoteInfo = FTPFS;
 		};
-		D4F82A620B5BEBA00061B029 /* PBXContainerItemProxy */ = {
+		D49D668C0C00ED1300891D09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4F82A3A0B5BEB480061B029;
+			remoteGlobalIDString = D4F82A3A0B5BEB480061B029 /* SSHFS */;
 			remoteInfo = SSHFS;
+		};
+		D49D669F0C00ED1500891D09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* MacFusion */;
+			remoteInfo = MacFusion;
+		};
+		D49D66D70C0110CE00891D09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* MacFusion */;
+			remoteInfo = MacFusion;
+		};
+		D49D66D90C0110D100891D09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* MacFusion */;
+			remoteInfo = MacFusion;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -103,11 +142,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4B012090BBF058A002EABD3 /* FTPFS.plugin in CopyFiles */,
-				D4F82A670B5BEBA50061B029 /* SSHFS.plugin in CopyFiles */,
-				D4AA81CA0BBF7E7700BCE886 /* MacFusionSmoothImageView.h in CopyFiles */,
-				D48F046C0BEAD4DB0090C3D6 /* MFLoggingController.h in CopyFiles */,
-				D4C9224A0BF6C502006A5858 /* NSColorAdditions.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +164,17 @@
 			files = (
 				D45D9BEF0B75640B002E6C08 /* askpass in CopyFiles */,
 				D42F35730BF3A7FE0015B135 /* sshnodelay.so in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D66A10C00ED1E00891D09 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = MacFusion.app/Contents/Plugins;
+			dstSubfolderSpec = 16;
+			files = (
+				D49D66AD0C00ED3800891D09 /* SSHFS.plugin in CopyFiles */,
+				D49D66AE0C00ED3800891D09 /* FTPFS.plugin in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +528,21 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D465A4240C00E29700F9DF1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49D684C0C01272500891D09 /* MacFusionController.h in Headers */,
+				D49D684D0C01273300891D09 /* MFLoggingController.h in Headers */,
+				D465A4500C00E2F100F9DF1D /* MacFusionConstants.h in Headers */,
+				D465A4460C00E2E100F9DF1D /* FuseFSProtocol.h in Headers */,
+				D465A4470C00E2E100F9DF1D /* FuseUIProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		8D1107260486CEB800E47090 /* MacFusion */ = {
 			isa = PBXNativeTarget;
@@ -493,12 +553,11 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				D409AAD50B5B501200CE77A3 /* CopyFiles */,
 				D44C0B9D0B610F9000C778DC /* CopyFiles */,
+				D465A4240C00E29700F9DF1D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D4B012080BBF0575002EABD3 /* PBXTargetDependency */,
-				D4F82A630B5BEBA00061B029 /* PBXTargetDependency */,
 			);
 			name = MacFusion;
 			productInstallPath = "$(HOME)/Applications";
@@ -534,6 +593,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D49D66D80C0110CE00891D09 /* PBXTargetDependency */,
 			);
 			name = FTPFS;
 			productName = FTPFS;
@@ -551,6 +611,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D49D66DA0C0110D100891D09 /* PBXTargetDependency */,
 				D45D9BEA0B7563DC002E6C08 /* PBXTargetDependency */,
 			);
 			name = SSHFS;
@@ -572,6 +633,7 @@
 				D4E11F0E0BAECE5900C99A5F /* FTPFS */,
 				D4F82A3A0B5BEB480061B029 /* SSHFS */,
 				D45D9BB90B756329002E6C08 /* askpass */,
+				D49D66890C00ED0900891D09 /* MacFusion + Plugins */,
 			);
 		};
 /* End PBXProject section */
@@ -661,7 +723,6 @@
 				D4B011730BBF0402002EABD3 /* ftp_askpass.m in Sources */,
 				D4E11F130BAECE7F00C99A5F /* FTPFS.m in Sources */,
 				D4E11F150BAECE7F00C99A5F /* FTPFSUIController.m in Sources */,
-				D4B0112E0BBF0283002EABD3 /* MacFusionConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +732,6 @@
 			files = (
 				D4F82A460B5BEB6D0061B029 /* SSHFS.m in Sources */,
 				D4F124BF0B5C6D1D002BAA40 /* SSHFSUIController.m in Sources */,
-				D42AF6210B610B21008C6F84 /* MacFusionConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,15 +743,30 @@
 			target = D45D9BB90B756329002E6C08 /* askpass */;
 			targetProxy = D45D9BE90B7563DC002E6C08 /* PBXContainerItemProxy */;
 		};
-		D4B012080BBF0575002EABD3 /* PBXTargetDependency */ = {
+		D49D668B0C00ED1200891D09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4E11F0E0BAECE5900C99A5F /* FTPFS */;
-			targetProxy = D4B012070BBF0575002EABD3 /* PBXContainerItemProxy */;
+			targetProxy = D49D668A0C00ED1200891D09 /* PBXContainerItemProxy */;
 		};
-		D4F82A630B5BEBA00061B029 /* PBXTargetDependency */ = {
+		D49D668D0C00ED1300891D09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4F82A3A0B5BEB480061B029 /* SSHFS */;
-			targetProxy = D4F82A620B5BEBA00061B029 /* PBXContainerItemProxy */;
+			targetProxy = D49D668C0C00ED1300891D09 /* PBXContainerItemProxy */;
+		};
+		D49D66A00C00ED1500891D09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* MacFusion */;
+			targetProxy = D49D669F0C00ED1500891D09 /* PBXContainerItemProxy */;
+		};
+		D49D66D80C0110CE00891D09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* MacFusion */;
+			targetProxy = D49D66D70C0110CE00891D09 /* PBXContainerItemProxy */;
+		};
+		D49D66DA0C0110D100891D09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* MacFusion */;
+			targetProxy = D49D66D90C0110D100891D09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -763,7 +838,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				KEEP_PRIVATE_EXTERNS = YES;
 				PRODUCT_NAME = MacFusion;
+				STRIP_STYLE = debugging;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -786,7 +863,9 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				KEEP_PRIVATE_EXTERNS = YES;
 				PRODUCT_NAME = MacFusion;
+				STRIP_STYLE = debugging;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -849,9 +928,32 @@
 			};
 			name = Release;
 		};
+		D49D66B30C00ED5600891D09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = MacFusionTotalBundle;
+			};
+			name = Debug;
+		};
+		D49D66B40C00ED5600891D09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = MacFusionTotalBundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		D4E11F180BAECEA700C99A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = $CONFIGURATION_BUILD_DIR/MacFusion.app/Contents/MacOS/MacFusion;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -867,6 +969,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -875,14 +978,16 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = FTPFS;
+				SYMROOT = build;
 				WRAPPER_EXTENSION = plugin;
-				ZERO_LINK = YES;
+				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
 		D4E11F190BAECEA700C99A5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = $CONFIGURATION_BUILD_DIR/MacFusion.app/Contents/MacOS/MacFusion;
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -896,6 +1001,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/FTPFS\"";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -904,6 +1010,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = FTPFS;
+				SYMROOT = build;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
@@ -912,6 +1019,7 @@
 		D4F82A3E0B5BEB480061B029 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = $CONFIGURATION_BUILD_DIR/MacFusion.app/Contents/MacOS/MacFusion;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -937,13 +1045,14 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = SSHFS;
 				WRAPPER_EXTENSION = plugin;
-				ZERO_LINK = YES;
+				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
 		D4F82A3F0B5BEB480061B029 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = $CONFIGURATION_BUILD_DIR/MacFusion.app/Contents/MacOS/MacFusion;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -997,6 +1106,15 @@
 			buildConfigurations = (
 				D45D9BC70B756344002E6C08 /* Debug */,
 				D45D9BC80B756344002E6C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49D66B20C00ED5600891D09 /* Build configuration list for PBXAggregateTarget "MacFusion + Plugins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D66B30C00ED5600891D09 /* Debug */,
+				D49D66B40C00ED5600891D09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

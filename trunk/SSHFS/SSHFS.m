@@ -21,6 +21,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #import "../MacFusionConstants.h"
+#import "../Classes/MFLoggingController.h"
 
 @interface SSHFS (PrivateAPI)
 - (NSTask*)setupTaskForMount;
@@ -236,13 +237,11 @@
 	
 	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSLoggingNotification 
-										object:self 
-										userInfo: 
-		[NSDictionary dictionaryWithObjectsAndKeys:recentOutput, 
-			@"Message", @"Output", @"MessageType", nil]];
+	[[MFLoggingController sharedLoggingController] logMessage:recentOutput 
+													   ofType:MacFusionLogTypeConsoleOutput 
+													   sender:self];
 	
-		[[note object] waitForDataInBackgroundAndNotify];
+	[[note object] waitForDataInBackgroundAndNotify];
 }
 
 - (void)handleTaskEnd:(NSNotification*)note

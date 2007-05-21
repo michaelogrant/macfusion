@@ -21,6 +21,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #import "../MacFusionConstants.h"
+#import "../Classes/MFLoggingController.h"
 #include <CoreFoundation/CoreFoundation.h>
 #include <Security/Security.h>
 #import "ftp_askpass.h"
@@ -232,12 +233,9 @@
 	
 	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSLoggingNotification 
-														object:self 
-													  userInfo: 
-		[NSDictionary dictionaryWithObjectsAndKeys:recentOutput, 
-			@"Message", @"Output", @"MessageType", nil]];
-	
+	[[MFLoggingController sharedLoggingController] logMessage:recentOutput 
+													   ofType:MacFusionLogTypeConsoleOutput 
+													   sender:self];
 	[[note object] waitForDataInBackgroundAndNotify];
 }
 

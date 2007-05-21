@@ -59,6 +59,14 @@ enum {
 	UnmountOnSleepNoRemount,
 };
 
+enum {
+	MacFusionLogTypeCore,
+	MacFusionLogTypeConsoleOutput,
+	MacFusionLogTypeError,
+	MacFusionLogTypeNormal,
+	MacFusionLogTypeMountUnmount,
+};
+
 // mount return enum
 enum {
 	FuseFSMountReturnOK,
