@@ -57,9 +57,9 @@ static MFLoggingController* sharedLoggingController = nil;
 												 selector:@selector(logUnmount:)
 													 name:FuseFSUnmountedNotification object:nil];
 		
-		[[NSNotificationCenter defaultCenter] addObserver: self
-												 selector:@selector(logMessage:)
-													 name:FuseFSLoggingNotification object:nil];
+//		[[NSNotificationCenter defaultCenter] addObserver: self
+//												 selector:@selector(logMessage:)
+//													 name:FuseFSLoggingNotification object:nil];
 		log = [[NSMutableAttributedString alloc] init];
 	}
 	return self;
@@ -83,28 +83,26 @@ static MFLoggingController* sharedLoggingController = nil;
 	[new autorelease];
 	[log appendAttributedString:new];
 	
-	// FIXME: this is a freaking hack, but bindings dont seem to work
+	// FIXME: this is a bad hack, but bindings dont seem to work
 	[[logTextView textStorage] setAttributedString:log];
 }
 
 - (void) logMountFailed:(NSNotification*)note
 {
-	NSString* newEntry = [NSString stringWithFormat:@"%@: Mount Failed\n", [[note object] name]];
-	[self addToLog: newEntry withColor:[NSColor redColor]];
+	[self logMessage:@"Mount Failed" ofType:MacFusionLogTypeError sender:[note object]];
 }
 
 - (void) logMount:(NSNotification*)note
 {
-	NSString* newEntry = [NSString stringWithFormat:@"%@: Mount OK\n", [[note object] name]];
-	[self addToLog: newEntry withColor:[NSColor blueColor]];
+	[self logMessage:@"Mount OK" ofType:MacFusionLogTypeMountUnmount sender:[note object]];
 }
 
 - (void) logUnmount:(NSNotification*)note
 {
-	NSString* newEntry = [NSString stringWithFormat:@"%@: Unmount OK\n", [[note object] name]];
-	[self addToLog: newEntry withColor:[NSColor blueColor]];
+	[self logMessage:@"Unmount OK" ofType:MacFusionLogTypeMountUnmount sender:[note object]];
 }
 
+/*
 - (void) logMessage:(NSNotification*)note
 {
 	id <FuseFSProtocol> fs = [note object];
@@ -120,6 +118,46 @@ static MFLoggingController* sharedLoggingController = nil;
 		[self addToLog: newEntry withColor:[NSColor blackColor]];
 	if ([type isEqualToString:@"Error"])
 		[self addToLog: newEntry withColor:[NSColor redColor]];
+}*/
+
+- (void) logMessage:(NSString*)message 
+			 ofType:(int)type 
+			 sender:(id)sender
+{
+	NSColor* color;
+	
+	// Is there a better way to do this mapping? A Dictionary doesn't seem nice as the keys are integers.
+	switch(type)
+	{
+		case MacFusionLogTypeMountUnmount:
+			color = [NSColor blueColor];
+			break;
+		case MacFusionLogTypeError:
+			color = [NSColor redColor];
+			break;
+		case MacFusionLogTypeNormal:
+			color = [NSColor blackColor];
+			break;
+		case MacFusionLogTypeConsoleOutput:
+			color = [NSColor grayColor];
+			break;
+		case MacFusionLogTypeCore:
+			color = [NSColor greenColor];
+			break;
+	}
+	
+	NSArray* splitMessage = [message componentsSeparatedByString:@"\n"];
+	NSString* joinMessage = [splitMessage componentsJoinedByString:@" "];
+	NSString* sourceName;
+	
+	if ([sender conformsToProtocol:@protocol(FuseFSProtocol)])
+		sourceName = [sender name];
+	else
+		sourceName = @"MacFusion Core";
+	
+	NSString* newEntry = [NSString stringWithFormat:@"%@: %@\n", sourceName, joinMessage];
+	
+	[self addToLog:newEntry withColor:color];
 }
 
 - (void) dealloc {

@@ -28,5 +28,8 @@
 }
 
 + (MFLoggingController*)sharedLoggingController;
+- (void) logMessage:(NSString*)message 
+			 ofType:(int)type 
+			 sender:(id)sender;
 
 @end
