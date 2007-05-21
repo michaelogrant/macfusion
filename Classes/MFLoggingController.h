@@ -33,3 +33,6 @@
 			 sender:(id)sender;
 
 @end
+
+// Logging function for MacFusion's core, to replace NSLog
+void MFLog(NSString* s, ...);

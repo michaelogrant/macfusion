@@ -52,6 +52,6 @@
 	<key>SUCheckAtStartup</key>
 	<false/>
 	<key>SUFeedURL</key>
-	<string>http://localhost/~jan/example.xml</string>
+	<string>http://osx.iusethis.com/appcast/macfuion</string>
 </dict>
 </plist>
