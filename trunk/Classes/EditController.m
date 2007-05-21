@@ -46,7 +46,8 @@
 	else // we are not in favorites controller
 	{
 		[[self window] center];
-		[[self window] setTitle: @"Quick Mount"];		
+		[[self window] setTitle: @"Quick Mount"];	
+		[[self window] setLevel:NSFloatingWindowLevel];
 	}
 	
 	// load the correct classes and instantiate
