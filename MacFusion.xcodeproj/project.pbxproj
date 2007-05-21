@@ -102,35 +102,35 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4E11F0E0BAECE5900C99A5F /* FTPFS */;
+			remoteGlobalIDString = D4E11F0E0BAECE5900C99A5F;
 			remoteInfo = FTPFS;
 		};
 		D49D668C0C00ED1300891D09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4F82A3A0B5BEB480061B029 /* SSHFS */;
+			remoteGlobalIDString = D4F82A3A0B5BEB480061B029;
 			remoteInfo = SSHFS;
 		};
 		D49D669F0C00ED1500891D09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* MacFusion */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = MacFusion;
 		};
 		D49D66D70C0110CE00891D09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* MacFusion */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = MacFusion;
 		};
 		D49D66D90C0110D100891D09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* MacFusion */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = MacFusion;
 		};
 /* End PBXContainerItemProxy section */
@@ -842,7 +842,7 @@
 				PRODUCT_NAME = MacFusion;
 				STRIP_STYLE = debugging;
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = YES;
+				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
