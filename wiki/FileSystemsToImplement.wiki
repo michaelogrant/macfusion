@@ -6,7 +6,7 @@
 == Existing ==
 
 || *filesystem* || *plug-in* || *MacFusion* || *home* || *Wikipedia* || 
-|| FTP || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || — || [http://en.wikipedia.org/wiki/File_Transfer_Protocol article] ||
+|| CurlFtpFS (FTP) || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || [http://curlftpfs.sourceforge.net/ CurlFtpFS - A FTP filesystem based on cURL and FUSE] || [http://en.wikipedia.org/wiki/FTPFS FTPFS] ||
 || SSHFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || [http://fuse.sourceforge.net/sshfs.html SSH Filesystem] || [http://en.wikipedia.org/wiki/SSHFS article] ||
 
 == Requested or under consideration ==
@@ -34,3 +34,4 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
   * [http://groups.google.com/group/macfuse-devel/browse_frm/thread/6f3c68cf660dbb8f/ iPodDisk]
   * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en rssFS]
   * [http://groups.google.com/group/macfuse-devel/msg/d37d239d2dcbaa73 WikipediaFS]
+
