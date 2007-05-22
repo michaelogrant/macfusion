@@ -5,32 +5,36 @@
 
 *Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
 
-== milestone release 1.1 of MacFusion ==
-imminent
+=== deferred ===
+  * Random issues with [http://code.google.com/p/macfusion/issues/detail?id=25#c21 unpredictable third party applications + sleep/wake preferences + change of location whilst awake]: discussion and testing ongoing.
 
-  * [http://code.google.com/p/macfusion/issues/detail?id=25 Sleep/wake issues] to be addressed (tests continuing).
+= MacFusion 1.1 =
+*[http://code.google.com/p/macfusion/downloads/list 2007-05-22]*
 
-== most recent changes to code (abstracted from Subversion log for revision 221) ==
-
-  * Basic code to [http://code.google.com/p/macfusion/issues/detail?id=69 check presence … verify the version number, warning the user if the installed version of MacFUSE does not equal a list of versions that are supported by MacFusion].
-  * Compatible with standard [http://pdb.finkproject.org/pdb/package.php/fuse Fink] and [http://www.macports.org/ MacPorts] installations; MacFusion (curlftpfs and sshfs plug-ins) will recognise [http://code.google.com/p/macfusion/issues/detail?id=90 alternate paths to libfuse].
-  * Contextual menu for the Favorites view.
-  * Contextual menu option: [http://code.google.com/p/macfusion/issues/detail?id=89 duplicate an existing favourite].
-  * Contributors to code are credited in an `authors` file.
-  * Favorites window, whilst open, remains in foreground without preventing use of other windows. Window can be minimised. Window is [http://code.google.com/p/macfusion/issues/detail?id=122 lost] only when Exposé is active.
-  * Headers are packaged in `MacFusion.app` bundle under `headers`. 
-  * Log is written to [http://code.google.com/p/macfusion/issues/detail?id=93 ~/Library/Logs/MacFusion.log] where it is readable by Apple's Console utility.
-  * [http://code.google.com/p/macfusion/issues/detail?id=80 Log window pane] resizes in harmony with window frame.
-  * Logging API improved, using plug-ins to guarantee properly ordered presentation of notifications.
-  * OK button fixed for saving changes to [http://code.google.com/p/macfusion/issues/detail?id=88 paths], [http://code.google.com/p/macfusion/issues/detail?id=78 sshfs options] and [http://code.google.com/p/macfusion/issues/detail?id=135 other fields in the Edit sheet of the Favourites window].
-  * Plug-ins link against MacFusion.app using `-bundle_loader`.
-  * Preferences are [http://code.google.com/p/macfusion/issues/detail?id=38 written to ~/Library/Preferences/org.mgorbach.MacFusion.plist] at time of preference.
-  * [http://code.google.com/p/macfusion/issues/detail?id=77 Selection changing discontinuously] fixed.
-  * Sparkle [http://code.google.com/p/macfusion/issues/detail?id=55 checks for updates to MacFusion application bundle (only)] are preferred by default for first-time users. Preference window at first launch [http://code.google.com/p/macfusion/issues/detail?id=10 should no longer be obscured].  
-  * UI improvements. 
+  # Compatible with standard [http://pdb.finkproject.org/pdb/package.php/fuse Fink] and [http://www.macports.org/ MacPorts] installations; MacFusion (curlftpfs and sshfs plug-ins) will recognise [http://code.google.com/p/macfusion/issues/detail?id=90 alternate paths to libfuse].
+  # Contextual menu for the Favorites view.
+  # Contextual menu option: [http://code.google.com/p/macfusion/issues/detail?id=89 duplicate an existing favourite].
+  # Contributors to code are credited in an `authors` file.
+  # Dependency checking: MacFusion should warn _once_ if it encounters a [http://code.google.com/p/macfusion/issues/detail?id=69 version of MacFUSE that is untested with the running version of MacFusion].
+  # Favorites window floats. Window can be minimised. Window is [http://code.google.com/p/macfusion/issues/detail?id=122 lost] only when Exposé is active.
+  # Headers are packaged in `MacFusion.app` bundle under `headers`. 
+  # Log is written to [http://code.google.com/p/macfusion/issues/detail?id=93 ~/Library/Logs/MacFusion.log] where it is readable by Apple's Console utility.
+  # [http://code.google.com/p/macfusion/issues/detail?id=80 Log window pane] resizes in harmony with window frame.
+  # Log window scrolls automatically if nothing else is selected.
+  # Logging API improved, using plug-ins to guarantee properly ordered presentation of notifications.
+  # Logging from the macfusion core should now go directly to the log window and log file instead of the console.
+  # OK button fixed for saving changes to [http://code.google.com/p/macfusion/issues/detail?id=88 paths], [http://code.google.com/p/macfusion/issues/detail?id=78 sshfs options] and [http://code.google.com/p/macfusion/issues/detail?id=135 other fields in the Edit sheet of the Favourites window].
+  # Plug-ins link against MacFusion.app using `-bundle_loader`.
+  # Preferences are [http://code.google.com/p/macfusion/issues/detail?id=38 written to ~/Library/Preferences/org.mgorbach.MacFusion.plist] at time of preference.
+  # Processes from sshfs are now correctly terminated on unmount (using SIGKILL) if we are using -odebug in the advanced flags.
+  # [http://code.google.com/p/macfusion/issues/detail?id=77 Selection changing discontinuously] fixed.
+  # Quick Mount window floats. 
+  # Sparkle [http://code.google.com/p/macfusion/issues/detail?id=55 checks for updates to MacFusion application bundle (only)] are preferred by default for first-time users. Preference window at first launch [http://code.google.com/p/macfusion/issues/detail?id=10 should no longer be obscured].
+  # Sparkle updating is now enabled and linked to the appcast of macfusion off `www.iusethis.com`.
+  # UI improvements. 
 
 == MacFusion 1.1 Beta2 ==
-*[http://code.google.com/p/macfusion/downloads/list 2007-05-11]*
+[http://code.google.com/p/macfusion/downloads/list 2007-05-11]
 
   # Compatible with [http://code.google.com/p/macfuse/ MacFUSE] 0.3.0.
   # [http://code.google.com/p/macfusion/issues/detail?id=28 Extra Options (Advanced) field added to Favourites and Quick Connect dialogues for SSHFS].
@@ -57,5 +61,3 @@ imminent
 2007-04-22, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   * this release coincided with the launch of the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
-
-
