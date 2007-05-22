@@ -842,12 +842,14 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 			// We're all good
 			return;
 		}
-		else
+		else if([[NSUserDefaults standardUserDefaults] objectForKey:@"VersionWarning"] == nil ) 
+			// Untested MacFUSE version. Warn only once, then set a key so we won't warn again
 		{
-			NSString* m = [NSString stringWithFormat:@"Your version of MacFuse: %@ has not been validated with this version of MacFusion", version];
+			
+			NSString* m = [NSString stringWithFormat:@"Your version of MacFuse: %@ has not been validated with this version of MacFusion. This may cause problems in the operation of MacFusion.", version];
 			[[NSAlert alertWithMessageText:m
 							defaultButton:@"OK" alternateButton:@"" otherButton:@"" informativeTextWithFormat:@""] runModal];		
-			exit(0);
+			[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"VersionWarning"];
 		}
 	}
 	
