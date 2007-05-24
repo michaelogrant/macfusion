@@ -7,13 +7,17 @@
 
   * begin by searching for your issue
     * there may be a solution, or a workaround, or explanations, or a fix in the pipeline
-  * if you add a new issue to the list, please help the community to help you — remember to state in your report:
+  * if you add a new issue to the list, please help the community to help you — take two minutes to state in your report:
     # the [MacFUSEversion version of MacFUSE]
     # the version of MacFusion
     # the version of Mac OS X
-    # other basic information that will help us to understand your situation.
+    # the type of Internet connection at the time of the issue 
+    # the upload and download speeds that you normally associate with that connection
+    # whether the remote server to which your issue relates normally provides steady upload and download speeds (or, are there peaks, troughs and pauses noticeable if you use more traditional FTP/SFTP clients?)
+    # other basic information that will help us to understand your situation
+  * if you have two more issues, please [http://code.google.com/p/macfusion/issues/entry create a separate issue] for each one. In this way, issues become less confusing for the wider audience. 
 
-Alongside the MacFUSE community we have *FOUR or more communities of MacFusion users* — those using the very prominent *RELEASES*, those using less prominent *BETA* versions of MacFusion — and more recently users of our MacFusion as a GUI to MacFUSE from the Fink and macports communities — so version numbers are typically the *first essential consideration* in the troubleshooting process.
+Alongside the MacFUSE community, at any one time we may have *FOUR or more communities of MacFusion users* — those using the very prominent *RELEASES*, those using less prominent *BETA* versions of MacFusion — and users of our MacFusion as a GUI to MacFUSE from the Fink and macports communities. Version numbers are typically the *first essential consideration* in the troubleshooting process.
 
 == The greatest defects ==
   * [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:High%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary high priority] | [http://code.google.com/p/macfusion/issues/list?can=2&q=priority:Critical%20type:Defect&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary critical]
@@ -41,4 +45,3 @@ Alongside the MacFUSE community we have *FOUR or more communities of MacFusion u
 == A break ==
 
   * take one!
-
