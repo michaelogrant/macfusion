@@ -1,5 +1,4 @@
 #summary releases, updates, upgrades, betas and Sparkle
-#labels Featured
 
 = Updates and upgrades to MacFusion and its plug-ins =
 
