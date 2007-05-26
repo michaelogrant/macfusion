@@ -7,7 +7,7 @@
 
 || *filesystem* || *plug-in* || *availability* || *home* || *Wikipedia* || 
 || CurlFtpFS (FTP) || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html included] || [http://curlftpfs.sourceforge.net/ CurlFtpFS - A FTP filesystem based on cURL and FUSE] || [http://en.wikipedia.org/wiki/FTPFS FTPFS] ||
-|| EncFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_encfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://dev.systemred.net/trac/encfs EncFS.plugin] ||  [http://arg0.net/users/vgough/encfs Valient Gough] || [http://en.wikipedia.org/wiki/Encfs article] || 
+|| EncFS || [http://dev.systemred.net/trac/encfs/report issues] || [http://dev.systemred.net/trac/encfs EncFS.plugin] ||  Valient Gough || [http://en.wikipedia.org/wiki/Encfs article] || 
 || SSHFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html included] || [http://fuse.sourceforge.net/sshfs.html SSH Filesystem] || [http://en.wikipedia.org/wiki/SSHFS article] ||
 
 == Requested or under consideration ==
