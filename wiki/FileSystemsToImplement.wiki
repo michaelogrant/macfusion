@@ -1,13 +1,14 @@
-#summary filesystem plug-ins
-#labels Features,Filesystems
+#summary file system plug-ins
+#labels Features,Filesystems,Featured
 
-= Filesystem plug-ins for MacFusion =
+= File system plug-ins to MacFusion =
 
-== Existing ==
+== Available or under development ==
 
-|| *filesystem* || *plug-in* || *MacFusion* || *home* || *Wikipedia* || 
-|| CurlFtpFS (FTP) || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || [http://curlftpfs.sourceforge.net/ CurlFtpFS - A FTP filesystem based on cURL and FUSE] || [http://en.wikipedia.org/wiki/FTPFS FTPFS] ||
-|| SSHFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html features] || [http://fuse.sourceforge.net/sshfs.html SSH Filesystem] || [http://en.wikipedia.org/wiki/SSHFS article] ||
+|| *filesystem* || *plug-in* || *availability* || *home* || *Wikipedia* || 
+|| CurlFtpFS (FTP) || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html included] || [http://curlftpfs.sourceforge.net/ CurlFtpFS - A FTP filesystem based on cURL and FUSE] || [http://en.wikipedia.org/wiki/FTPFS FTPFS] ||
+|| EncFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_encfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://dev.systemred.net/trac/encfs EncFS.plugin] ||  [http://arg0.net/users/vgough/encfs Valient Gough] || [http://en.wikipedia.org/wiki/Encfs article] || 
+|| SSHFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html included] || [http://fuse.sourceforge.net/sshfs.html SSH Filesystem] || [http://en.wikipedia.org/wiki/SSHFS article] ||
 
 == Requested or under consideration ==
 
@@ -15,8 +16,7 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
 
 || *filesystem* || *plug-in* || *home* || *Wikipedia* || 
 || AFP || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_afp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://developer.apple.com/documentation/Networking/Conceptual/AFP/ Apple] || [http://en.wikipedia.org/wiki/Apple_Filing_Protocol article] || 
-|| CryptoFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_cryptofs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://reboot.animeirc.de/cryptofs/ Christoph Hohmann] || — || 
-|| EncFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_encfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://arg0.net/users/vgough/encfs Valient Gough] || [http://en.wikipedia.org/wiki/Encfs article] || 
+|| CryptoFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_cryptofs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://reboot.animeirc.de/cryptofs/ Christoph Hohmann] || [http://en.wikipedia.org/wiki/List_of_cryptographic_file_systems article] || 
 || Ext3cow || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ext3cow&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.ext3cow.com/ Ext3cow] || [http://en.wikipedia.org/wiki/Ext3cow article] || 
 || GmailFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_gmailfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html Richard Jones] || [http://en.wikipedia.org/wiki/Gmailfs article] || 
 || NTFS-3G || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ntfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.ntfs-3g.org/ ntfs-3g.org] || [http://en.wikipedia.org/wiki/Ntfs-3g article] || 
@@ -34,4 +34,3 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
   * [http://groups.google.com/group/macfuse-devel/browse_frm/thread/6f3c68cf660dbb8f/ iPodDisk]
   * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en rssFS]
   * [http://groups.google.com/group/macfuse-devel/msg/d37d239d2dcbaa73 WikipediaFS]
-
