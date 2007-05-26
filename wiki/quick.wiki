@@ -8,6 +8,7 @@
   * begin by searching for your issue
     * there may be a solution, or a workaround, or explanations, or a fix in the pipeline
   * if you add a new issue to the list, please help the community to help you — take two minutes to state in your report:
+    # the plugged-in file system/protocol that you are using
     # the [MacFUSEversion version of MacFUSE]
     # the version of MacFusion
     # the version of Mac OS X
