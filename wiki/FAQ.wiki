@@ -3,28 +3,21 @@
 
 = FAQ =
 
-== I'm new here, how does MacFusion differ from MacFUSE? And what about the alternatives? ==
-
-   * In this wiki we have some [http://code.google.com/p/macfusion/wiki/Explanations explanations]
-     * if any explanation is lacking, please do not hesitate to [http://code.google.com/p/macfusion/issues/list?can=2&q=Type:Enhancement&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary request an improvement].
-
-== I installed MacFUSE. Which version is installed? ==
-
-  * It's easily discovered. We have a [http://code.google.com/p/macfusion/wiki/MacFUSEversion featured page] on the subject.
-
 == I launched MacFusion but I can't see it running. Where is it? ==
 http://blog.nicolargo.com/wp-content/uploads/2007/05/macfusionmenu.png
   * MacFusion 1.0 is a menu extra without a Dock icon
     * look for the grey globe+arrows icon in your menu bar
     * probably to the left of other icons with which you're familiar
     * the [http://code.google.com/p/macfusion/issues/list?can=2&q=label%3Amenus+OR+label%3AMenuExtraIcon&sort=priority&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary menu extra icon and menus in general] are discussed amongst the other issues.
+  * [http://code.google.com/p/macfusion/issues/detail?id=156 Dock and menu extra preferences] may appear in a future release. 
 
-== MacFusion menu extra menu items are greyed out. Why? ==
+== How do I install, disable or remove plug-ins for MacFusion? ==
+  * Finder | select MacFusion | File menu | Get Info | Plug-Ins:
 
-  * A preferences dialogue, presented when MacFusion launches for the first time, may be [http://code.google.com/p/macfusion/issues/detail?id=10 obscured by other windows]
-    * minimise/close windows, or use Expose to show all windows
-    * in this context, command-tab will not reveal MacFusion
-    * this issue is being considered in the context of other [http://code.google.com/p/macfusion/issues/list?can=2&q=label:Usability&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary usability fixes/enhancements].
+== How does MacFusion differ from MacFUSE? Are there complements and alternatives? ==
+
+   * In this wiki we have some [http://code.google.com/p/macfusion/wiki/Explanations explanations].
+   * If any explanation is lacking, please do not hesitate to [http://code.google.com/p/macfusion/issues/list?can=2&q=Type:Enhancement&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary request an improvement].
 
 == Where can I learn more about permissions in the context of MacFUSE and MacFusion? ==
 
@@ -34,10 +27,18 @@ http://blog.nicolargo.com/wp-content/uploads/2007/05/macfusionmenu.png
 
 If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appears before an [http://code.google.com/p/macfusion/wiki/CHANGELOG update to MacFusion], should I refrain from updating my MacFUSE installation?
 
-  *  Unless advised otherwise, please wait for your copy of MacFusion to announce and install recommended updates
-    * MacFusion will use Sparkle technology to automate these announcements and installations.
+  * Unless advised otherwise, please:
+    # set the MacFusion preference to [√] Check for Updates on Startup
+    # wait for MacFusion to announce recommended updates.
+  * MacFusion uses Sparkle technology to automate these announcements and installations.
   
 Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as MacFusion?
 
-  *  An intersting question
-    * please await advice on this.
+  * —
+
+
+
+
+
+
+
