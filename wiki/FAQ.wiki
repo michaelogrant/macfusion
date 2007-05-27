@@ -14,6 +14,10 @@ http://blog.nicolargo.com/wp-content/uploads/2007/05/macfusionmenu.png
 == How do I install, disable or remove plug-ins for MacFusion? ==
   * Finder | select MacFusion | File menu | Get Info | Plug-Ins:
 
+After using Finder to manipulate plug-ins: 
+  # Quit from MacFusion
+  # re-launch MacFusion.
+
 == How does MacFusion differ from MacFUSE? Are there complements and alternatives? ==
 
    * In this wiki we have some [http://code.google.com/p/macfusion/wiki/Explanations explanations].
