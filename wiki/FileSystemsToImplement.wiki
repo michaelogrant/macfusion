@@ -21,6 +21,7 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
 || GmailFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_gmailfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html Richard Jones] || [http://en.wikipedia.org/wiki/Gmailfs article] || 
 || NTFS-3G || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ntfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.ntfs-3g.org/ ntfs-3g.org] || [http://en.wikipedia.org/wiki/Ntfs-3g article] || 
 || procfs || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_procfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://osxbook.com/book/bonus/chapter11/procfs/ MacFUSE work in progress] || [http://en.wikipedia.org/wiki/Procfs article] ||
+|| S3fs (Amazon Simple Storage Service) (Amazon S3) || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_s3&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://aws.amazon.com/s3 Amazon S3] || [http://en.wikipedia.org/wiki/Amazon_S3 article] || 
 || SMB || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_smb&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || — || [http://en.wikipedia.org/wiki/Server_Message_Block article] ||
 || SpotlightFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_spotlight&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SPOTLIGHTFS MacFUSE SpotlightFS] || — ||
 || ZFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_zfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.opensolaris.org/os/community/zfs/ OpenSolaris.org] | [http://www.sun.com/software/solaris/zfs_learning_center.jsp Sun Microsystems] || [http://en.wikipedia.org/wiki/ZFS article] ||
@@ -29,7 +30,6 @@ When the API for plug-ins becomes stable, we will welcome contributions towards 
 
 == Discussed in Mac-oriented contexts other than MacFusion ==
 
-  * [http://groups.google.com/group/macfuse-devel/browse_thread/thread/44a0733c3034ffb7 Amazon Simple Storage Service (Amazon S3)]
   * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en docFS]
   * [http://groups.google.com/group/macfuse-devel/browse_frm/thread/6f3c68cf660dbb8f/ iPodDisk]
   * [http://groups.google.co.uk/group/macfuse-devel/browse_thread/thread/755f2d1e994fb61?hl=en rssFS]
