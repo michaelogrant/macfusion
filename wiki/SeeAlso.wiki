@@ -28,3 +28,4 @@
   * SleepWatcher and other software by [http://www.bernhard-baehr.de/ Bernhard Baehr]
   * [http://www.tuaw.com/2007/05/14/macfusion-a-gui-for-macfuse/ The Unofficial Apple Weblog (TUAW): MacFusion: a GUI for MacFUSE] (2007-05-14)
   * [http://www.macresearch.org/xgrid_fuse_brings_xgrid_to_your_finder Xgrid FUSE brings Xgrid to your Finder] (2007-05-14)
+  * Xgrid FUSE Integration with MacFusion will be easier to implement (not released yet) [http://cmgm.stanford.edu/~cparnot/xgrid-stanford/html/goodies/XgridFUSE-info.html change log for Xgrid FUSE version 0.3.0] (2007-05)
