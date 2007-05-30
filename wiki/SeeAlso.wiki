@@ -14,6 +14,7 @@
   * [http://gdisk.sourceforge.net/ gDisk]
   * Google Group: [http://groups.google.com/group/macfuse-devel MacFUSE development and advanced usage] — *HIGHLIGHT*
   * Google Group: [http://groups.google.com/group/MacFusion-devel MacFusion developers/users] — *RECOMMENDED*
+  * Google searches for [http://www.google.com/search?q=%2BMacFusion+%2BMacFUSE%7CFUSE&num=20&hl=en&safe=active +MacFusion +MacFUSE|FUSE] and [http://www.google.com/search?q=MacFusion&num=20&hl=en&safe=active MacFusion alone]
   * [http://www.mulle-kybernetik.com/software/iTunesFS/ iTunesFS]
   * [http://blog.nicolargo.com/2007/05/macfuse-devient-plus-facile-a-utiliser.html MacFUSE devient plus facile à utiliser]
   * [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion] — the glossy site to which other sites tend to refer — *RECOMMENDED*
