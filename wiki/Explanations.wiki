@@ -7,15 +7,15 @@ The [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion ho
 
 = Distinctions =
 {{{
-=================================
+===========================================
 |
 |-- FUSE for Linux
 |
-^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
 |
 |-- MacFUSE kernel module
 |
-^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
    |
    |-- MacFusion and plug-ins
        |-- CurlFtpFS (FTP)
@@ -24,21 +24,21 @@ The [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion ho
        |-- Xgrid FUSE (not yet implemented)
        |-- other plug-ins
 
-^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
    |
    |-- gDisk
    |-- iTunesFS
-   |-- NTFS-3G for Mac OS X and 
-       MacFUSE Tools
+   |-- NTFS-3G for Mac OS X 
+          and MacFUSE Tools
    |-- Secure Remote Disk
    |-- Xgrid FUSE
    |-- other applications
 
-^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
+=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
 |
 |||||| sshfs for Darwin (Mac OS X)
 
-==================================
+===========================================
 }}}
 (That's a fairly broad snapshot, sketched in May 2007; please, don't expect the representation above to be updated.)
 
