@@ -136,15 +136,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D409AAD50B5B501200CE77A3 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D44C0B9D0B610F9000C778DC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,7 +161,7 @@
 		D49D66A10C00ED1E00891D09 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = MacFusion.app/Contents/Plugins;
+			dstPath = MacFusion.app/Contents/PlugIns;
 			dstSubfolderSpec = 16;
 			files = (
 				D49D66AD0C00ED3800891D09 /* SSHFS.plugin in CopyFiles */,
@@ -551,7 +542,6 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				D409AAD50B5B501200CE77A3 /* CopyFiles */,
 				D44C0B9D0B610F9000C778DC /* CopyFiles */,
 				D465A4240C00E29700F9DF1D /* Headers */,
 			);
