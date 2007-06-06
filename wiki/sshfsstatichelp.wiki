@@ -1,4 +1,5 @@
 #summary help, copied from the sshfs-static in MacFusion 1.1 Beta 2
+#labels Deprecated
 
 = This page is for technical users only! =
 Options/help for future versions of sshfs-static may differ from those presented here. For the most up-to-date help on your sshfs-static, always 
