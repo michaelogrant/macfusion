@@ -10,7 +10,7 @@ If an [http://code.google.com/p/macfuse/wiki/CHANGELOG update to MacFUSE] appear
   * At launch time, MacFusion performs MacFUSE-oriented checks
     * if your *only* use of MacFUSE is for MacFusion, await advice from MacFusion developers before updating or upgrading MacFUSE
     * if MacFusion is not tested with a particular version of MacFUSE, MacFusion may (properly) not launch 
-    * if a security issues arises, exceptional action may be advised.
+    * if a security issue arises, exceptional action may be advised.
 
 Unless advised otherwise, please:
   # set the MacFusion preference to [√] Check for Updates on Startup
@@ -48,7 +48,6 @@ After using Finder to manipulate any plug-in:
 == Where can I learn more about permissions in the context of MacFUSE and MacFusion? ==
 
   * On 9th May 2007 Amit Singh offered [http://groups.google.com/group/macfuse-devel/browse_thread/thread/8ddca0a74765f200 advice to the macfuse-devel Google Group].
-
 
 
 
