@@ -6,6 +6,17 @@
 The [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page] offers a primary introduction.
 
 = Distinctions =
+
+== Apple Mac OS and Finder ==
+
+Questions relating to Mac OS and Finder should be addressed to Apple. Hot topics include:
+
+  * .DS_Store files
+    * [http://docs.info.apple.com/article.html?artnum=301711 Mac OS X 10.4: How to prevent .DS_Store file creation over network connections]
+  * dot underscore files
+    * [http://groups.google.com/group/MacFusion-devel/browse_frm/thread/67b3e3e141cdc162 ._]  
+
+== MacFUSE, MacFusion and other applications ==
 {{{
 ===========================================
 |
@@ -63,3 +74,9 @@ Issues that relate to the sshfs-static binary -- not to MacFusion -- can be foun
 Non-technical users will probably be baffled by those distinctions. 
 
 User-friendly explanations from MacFusion project members will be welcomed!
+
+
+
+
+
+
