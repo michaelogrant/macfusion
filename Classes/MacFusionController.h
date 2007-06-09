@@ -55,7 +55,7 @@
 - (int)unmountFilesystem:(id <FuseFSProtocol>)fs;
 - (NSMenu*)filesystemTypesMenuWithTarget: (id)target;
 - (void)writeFavoritesToDefaults;
-
+- (NSString*)getMacFuseVersion;
 - (BOOL)validateFilesystem:(id <FuseFSProtocol>)fs error:(NSString**)error;
 
 - (void) setLoginItemEnabled:(BOOL)enabled;
