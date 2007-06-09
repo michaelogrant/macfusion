@@ -802,31 +802,8 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 // Check if an acceptable version of MacFuse is installed
 - (void) checkForMacFuse
 {
-	NSString* extensionSearchRootPath = @"/Library/Extensions/";
-	NSString* FuseFSBundleID = @"com.google.filesystems.fusefs";
-	NSArray* validVersions = [NSArray arrayWithObjects:@"0.3.0", nil];
-	
-	// Try to find the bundle
-	NSEnumerator* e = [[NSFileManager defaultManager] enumeratorAtPath:extensionSearchRootPath];
-	NSString* path = nil;
-	NSString* version = nil;
-	
-	while (path = [e nextObject])
-	{
-		NSString* bundlePath = [extensionSearchRootPath stringByAppendingString: path];
-		NSBundle* b = [NSBundle bundleWithPath: bundlePath];
-		if (b != nil)
-		{
-			NSString* bundleID = [b bundleIdentifier];
-			if ([bundleID isEqualTo:FuseFSBundleID])
-			{
-				version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
-				break;
-			}
-				
-		}
-	}
-	
+	NSArray* validVersions = [NSArray arrayWithObjects:@"0.3.0",@"0.4.0",nil];
+	NSString* version = [self getMacFuseVersion];
 	if (version == nil) // No MacFuse Found
 	{
 		[[NSApplication sharedApplication] activateIgnoringOtherApps:YES]; // take focus
@@ -840,6 +817,7 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 		if ([validVersions containsObject: version])
 		{
 			// We're all good
+			MFLog(@"MacFuse version %@ detected OK", version);
 			return;
 		}
 		else if([[NSUserDefaults standardUserDefaults] objectForKey:@"VersionWarning"] == nil ) 
@@ -851,8 +829,53 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 							defaultButton:@"OK" alternateButton:@"" otherButton:@"" informativeTextWithFormat:@""] runModal];		
 			[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"VersionWarning"];
 		}
+		else
+		{
+			MFLog(@"Untested MacFuse version %@ detected, not warning user", version);
+		}
 	}
 	
+}
+
+- (NSString*)getMacFuseVersion
+{
+	NSString* extensionSearchRootPath = @"/Library/Extensions/";
+	NSString* FuseFSBundleID = @"com.google.filesystems.fusefs";
+	NSString* packageReceiptPath = @"/Library/Receipts/MacFUSE Core.pkg";
+	NSString* version = nil;
+	
+	// Look for the package receipt 
+	if ([[NSFileManager defaultManager] fileExistsAtPath:packageReceiptPath])
+	{
+		NSBundle* b = [NSBundle bundleWithPath: packageReceiptPath];
+		if (b)
+		{
+			version = [[b infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+			if (version)
+				return version;
+		}
+	}
+	
+	// Try to find the kext manually
+	NSEnumerator* e = [[NSFileManager defaultManager] enumeratorAtPath:extensionSearchRootPath];
+	NSString* path = nil;
+	
+	while (path = [e nextObject])
+	{
+		NSString* bundlePath = [extensionSearchRootPath stringByAppendingString: path];
+		NSBundle* b = [NSBundle bundleWithPath: bundlePath];
+		if (b != nil)
+		{
+			NSString* bundleID = [b bundleIdentifier];
+			if ([bundleID isEqualTo:FuseFSBundleID])
+			{
+				version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
+				break;
+			}
+			
+		}
+	}
+	return nil;
 }
 
 #pragma mark Cleanup Code
