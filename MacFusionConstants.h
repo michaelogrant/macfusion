@@ -46,6 +46,7 @@ extern NSString* FuseFSStatusWaitingToMountString;
 extern NSString* FuseFSStatusMountedString;
 extern NSString* FuseFSStatusMountFailedSring;
 
+
 enum {
 	FuseFSStatusUnmounted,
 	FuseFSStatusWaitingToMount,

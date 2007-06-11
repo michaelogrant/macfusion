@@ -20,42 +20,19 @@
 #import <Cocoa/Cocoa.h>
 #import "../Protocols/FuseFSProtocol.h"
 #import "../MacFusionConstants.h"
+#import "MFNetworkFS.h"
 
-@interface FTPFS : NSObject <FuseFSProtocol>
+@interface FTPFS : MFNetworkFS
 {
-	// General FuseFS Code
-	NSString* name;
-	BOOL mountOnStartup;
-	int status;
-	
-	// FTPFS Specific
-	NSString* hostName;
-	NSString* login;
-	NSString* path;
 	BOOL usingPassword;
-	NSTask* task;
-	NSPipe* outputPipe;
-	NSPipe* inputPipe;
-	NSString* recentOutput;
 	NSString* advancedOptions;
 }
 
 // Accessors
-- (NSString*)hostName;
-- (NSString*)login;
-- (NSString*)path;
 - (NSString*)recentOutput;
 - (NSString*)advancedOptions;
 
 // Setters
-- (void)setHostName:(NSString*)s;
-- (void)setLogin:(NSString*)s;
-- (void)setPath:(NSString*)s;
 - (void)setAdvancedOptions:(NSString*)s;
-
-// General FuseFS Code
-- (NSString*)longStatus;
-- (BOOL)setupMountPoint;
-- (void)removeMountPoint;
 
 @end

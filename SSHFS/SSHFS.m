@@ -20,14 +20,9 @@
 #import "SSHFS.h"
 #include <stdlib.h>
 #include <stdio.h>
-#import "../MacFusionConstants.h"
-#import "../Classes/MFLoggingController.h"
+#import "MacFusionConstants.h"
+#import "MFLoggingController.h"
 #include "signal.h"
-
-@interface SSHFS (PrivateAPI)
-- (NSTask*)setupTaskForMount;
-- (NSTask*)setupTaskForUnmount;
-@end 
 
 @implementation SSHFS
 
@@ -37,110 +32,82 @@
 	return [[url scheme] isEqualTo:@"sftp"];
 }
 
-- (id) initWithURL:(NSURL*)url
+#pragma mark Birth and Death
+- (id)initWithURL:(NSURL*)url
 {
-	self = [self init];
-	if (self != nil)
-	{
-		[self setName: [url host]];
-		if ([url user] != nil)
-			[self setLogin: [url user]];
-		if ([url path] != nil)
-			[self setPath: [url path]];
-		[self setHostName: [url host]];
-	}
-	return self;
-}
-
-#pragma mark Initialization
-- (id) init 
-{
-	self = [super init];
-	if (self != nil) 
-	{
-		[self setStatus: FuseFSStatusUnmounted];
-		[self setName: @""];
-		[self setMountOnStartup: NO];
+	self = [super initWithURL:url];
+	if ( self != nil ) {
 		[self setPort: 22];
 		[self setAuthenticationType: SSHFSAuthenticationTypePassword];
-		[self setPath:@""];
-		[self setLogin:NSUserName()];
 		[self setAdvancedOptions:@""];
 	}
 	return self;
 }
 
-- (id)copyWithZone:(NSZone *)zone
+- (void) dealloc 
 {
-	SSHFS* newCopy = [[SSHFS allocWithZone: zone] initWithDictionary: [self dictionaryForSaving]];
-	[newCopy setStatus: [self status]];
-	return newCopy;
+	[advancedOptions release];
+	[super dealloc];
 }
 
 
-# pragma mark Mount/Unmount Methods
-- (void)mount
+#pragma mark Accessors
+
+- (int)authenticationType
 {
-	[self setStatus: FuseFSStatusWaitingToMount];
-	if ([self setupMountPoint] == YES)
-	{
-		task = [self setupTaskForMount];
-		
-		// set up a timer so we don't have the process hanging and taking forever
-		// the timeout is long so that if needed people have a change to enter password
-		NSDictionary* timerInfoDic = [NSDictionary dictionaryWithObject: self 
-																 forKey: filesystemKeyName];
-		
-		float timeout = [[NSUserDefaults standardUserDefaults] floatForKey: mountTimeoutKeyName];
-		[NSTimer scheduledTimerWithTimeInterval:timeout target:self
-									   selector:@selector(handleMountTimeout:)
-									   userInfo:timerInfoDic repeats:NO];
-		[task launch];
-	}
-	else
-	{
-		// couldn't create the path ... fail to mount
-		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
-														  userInfo:[NSDictionary dictionaryWithObject:(id)FuseFSMountFaliurePathIssue 
-																							   forKey:mountFaliureReasonKeyName]];
-		[self setStatus: FuseFSStatusMountFailed];
-	}
+	return authenticationType;
 }
 
-// setup the NSTask to launch the ssh client
-// still need to figure out how to do password authentication ...
-- (NSTask*)setupTaskForMount
+- (int)port
 {
-	NSTask* t = [[NSTask alloc] init];
-	NSMutableArray* arguments = [[NSMutableArray alloc] init];
+	return port;
+}
+
+- (NSString*)advancedOptions
+{
+	return (advancedOptions ? advancedOptions : @"");
+}
+
+- (void)setAuthenticationType:(int)i
+{
+	authenticationType = i;
+}
+
+- (void)setPort:(int)i
+{
+	port = i;
+}
+
+- (void)setAdvancedOptions:(NSString*)s
+{
+	[advancedOptions release];
+	advancedOptions = [s copy];
+}
+
+# pragma mark Superclass methods to override
+
+- (NSTask *)filesystemTask
+{
+	NSTask* t = [[[NSTask alloc] init] autorelease];
+	NSMutableArray* arguments = [NSMutableArray array];
 	NSString* myPath;
 	
 	// if no path is specified, give it "" and it will use the user's home
-	if (path != nil)
-		myPath = path;
+	if ( [self path] != nil)
+		myPath = [self path];
 	else
 		myPath = @"";
 	
-	// find our library
-	NSString* libfusepath = [self getPathForLibFuse];
-	if (libfusepath == nil)
-	{
-		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
-														  userInfo:[NSDictionary dictionaryWithObject:(id)FuseFSMountFaliureLibraryIssue 
-																							   forKey:mountFaliureReasonKeyName]];
-		return nil;
-	}
-	
 	// set up the other arguments
-	[arguments addObject: [NSString stringWithFormat:@"%@@%@:%@", login, hostName, myPath]]; // login@host:path argument
+	[arguments addObject: [NSString stringWithFormat:@"%@@%@:%@", [self login], [self hostName], myPath]]; //login@host:path argument
 	[arguments addObject: [self mountPath]];
-	[arguments addObject: [NSString stringWithFormat:@"-p%d", port]];
+	[arguments addObject: [NSString stringWithFormat:@"-p%d", [self port]]];
 	[arguments addObject: @"-oCheckHostIP=no"];
 	[arguments addObject: @"-oStrictHostKeyChecking=no"];
 	[arguments addObject: @"-oNumberOfPasswordPrompts=1"];
 	[arguments addObject: @"-ofollow_symlinks"];
 	[arguments addObject: @"-f"];
-//	[arguments addObject: @"-vv"];
+	//[arguments addObject: @"-vv"];
 	
 	if (authenticationType == SSHFSAuthenticationTypePassword)
 	{
@@ -161,9 +128,13 @@
 		NSEnumerator* e = [extraArguments objectEnumerator];
 		NSString* extraArg;
 		while(extraArg = [e nextObject])
-		{
 			[arguments addObject:extraArg];
-		}
+	}
+	
+	MacFusionController* mainController = [[NSApplication sharedApplication] delegate];
+	if ([[mainController getMacFuseVersion] isEqualToString:@"0.4.0"])
+	{
+		[arguments addObject:[NSString stringWithFormat: @"-ovolicon=%@", [self iconPath]]];
 	}
 	
 	[arguments addObject: @"-oreconnect"];
@@ -174,380 +145,40 @@
 	[t setArguments:arguments];
 	
 	// set up our environment ... use the app's environment and modify path
-	NSMutableDictionary* env = [NSMutableDictionary dictionaryWithDictionary: 
-		[[NSProcessInfo processInfo] environment]];
 	NSBundle* myBundle = [NSBundle bundleForClass: [self class]];
 	NSString* askpassPath = [myBundle pathForResource: @"askpass" ofType:@""];
 	
+	NSMutableDictionary *env = [NSMutableDictionary dictionary];
 	[env setObject: askpassPath forKey:@"SSH_ASKPASS"];
 	[env setObject: @"NONE" forKey:@"DISPLAY"];
 	[env setObject: login forKey:@"SSHFS_USER"];
 	[env setObject: hostName forKey:@"SSHFS_SERVER"];
-	[env setObject:libfusepath forKey:@"DYLD_LIBRARY_PATH"];
-
 	[t setEnvironment: env];
 	
-	// set up the output pipe
-	if (outputPipe) 
-		[outputPipe release];
-	outputPipe = [[NSPipe alloc] init];
-	[t setStandardError: outputPipe];
-	[t setStandardOutput: outputPipe];
-	
-	// register for notification of data comming into the pipe
-	[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleDataOnPipe:) 
-											name:NSFileHandleDataAvailableNotification 
-											   object: [outputPipe fileHandleForReading]];
-	
-	[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleTaskEnd:)
-												 name:NSTaskDidTerminateNotification object: task];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUnmountNotification:)
-												 name:FuseFSUnmountedNotification object:self];
-	
-	[[outputPipe fileHandleForReading] waitForDataInBackgroundAndNotify];
-		
-	[arguments release];
 	return t;
 }
 
-- (void) handleMountTimeout:(NSTimer*)t
-{
-	id <FuseFSProtocol> fs = [[t userInfo] objectForKey: filesystemKeyName];
-	if ([fs status] == FuseFSStatusMounted)
-		return; // FS mounted OK
-	else if ([fs status] == FuseFSStatusMountFailed) // already marked as failed (task probably exited): ignore
-		return;
-	else if ([fs status] == FuseFSStatusWaitingToMount)
-	{
-		// FS mount failed. Notify.
-		[[NSNotificationCenter defaultCenter] postNotificationName: FuseFSMountFailedNotification object:self
-														  userInfo: [NSDictionary dictionaryWithObject: (id)FuseFSMountFaliureTimeout 
-																								forKey:mountFaliureReasonKeyName]];
-															  
-		[fs setStatus: FuseFSStatusMountFailed];
-	}
-}
 
-- (void)handleDataOnPipe:(NSNotification*)note
-{
-	NSData* pipeData = [[note object] availableData];
-	
-	if ([pipeData length]==0) // pipe is down. we're done!
-		return;
-	
-	if (recentOutput)
-		[recentOutput release];
-	
-	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
-	
-	[[MFLoggingController sharedLoggingController] logMessage:recentOutput 
-													   ofType:MacFusionLogTypeConsoleOutput 
-													   sender:self];
-	
-	[[note object] waitForDataInBackgroundAndNotify];
-}
-
-- (void)handleTaskEnd:(NSNotification*)note
-{
-	if (status == FuseFSStatusMountFailed) // task died, but mount had already timed out: ignore
-	{
-		return;
-	}
-	if (status == FuseFSStatusWaitingToMount) // task died while waiting to mount: notify of faliure
-	{
-		[self removeMountPoint];
-		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
-														  userInfo: [NSDictionary dictionaryWithObject: (id)FuseFSMountFaliureTaskEnded 
-																								forKey: mountFaliureReasonKeyName]];
-		[self setStatus: FuseFSStatusMountFailed];
-	}
-}
-
-- (void)handleMountFailedNotification:(NSNotification*)note
-{
-	// failed to mount ... kill task if it's still trying to run
-	if ([task isRunning])
-		[task terminate];
-	
-	[self removeMountPoint];
-}
-
-- (void)handleUnmountNotification:(NSNotification*)note
-{
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:NSFileHandleDataAvailableNotification object:nil];
-	// Really kill the task ... hard!
-	kill([task processIdentifier],SIGKILL);
-	[self removeMountPoint];
-}
-
-#pragma mark Save/Load from Defaults Methods
 - (NSDictionary*)dictionaryForSaving
 {
-	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"hostName", @"login",
-		@"authenticationType", @"port", @"path", @"advancedOptions", nil];
-	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
-	return d;	
+	NSMutableDictionary *base = [NSMutableDictionary dictionaryWithDictionary:[super dictionaryForSaving]];
+	NSArray* keyNames = [NSArray arrayWithObjects:@"authenticationType", @"port", @"advancedOptions", nil];
+	NSDictionary *extra = [self dictionaryWithValuesForKeys:keyNames];
+	[base addEntriesFromDictionary:extra];
+	return [[base copy] autorelease];
 }
 
-- (NSDictionary*)dictionaryForDisplay
-{
-	NSArray* keyNames = [NSArray arrayWithObjects: @"fsDescription", @"fsLongType",
-		@"status", nil];
-	NSMutableDictionary* d = [[self dictionaryWithValuesForKeys: keyNames] 
-		mutableCopy];
-	[d addEntriesFromDictionary: [self dictionaryForSaving]];
-	return [d copy];
-}
+
 
 - (id)initWithDictionary:(NSDictionary*)dic
 {
-	self = [self init];
-	[self setName: [dic objectForKey:@"name"]];
-	[self setMountOnStartup: [[dic objectForKey: @"mountOnStartup"] boolValue]];
-	[self setHostName: [dic objectForKey: @"hostName"]];
-	[self setLogin: [dic objectForKey: @"login"]];
-	[self setPath: [dic objectForKey:@"path"]];
-	[self setAuthenticationType: [[dic objectForKey:@"authenticationType"]
-		intValue]];
+	self = [super initWithDictionary:dic];
+	[self setAuthenticationType: [[dic objectForKey:@"authenticationType"] intValue]];
 	[self setPort: [[dic objectForKey:@"port"] intValue]];
 	if ([dic objectForKey:@"advancedOptions"])
-		[self setAdvancedOptions:[dic objectForKey: @"advancedOptions"]];
+		[self setAdvancedOptions:[dic objectForKey:@"advancedOptions"]];
 	return self;
 }
 
-#pragma mark Accessors
-
-- (NSString*)fsType
-{
-	return @"SSHFS";
-}
-
-- (NSString*)fsLongType
-{
-	return @"SSH";
-}
-
-- (NSString*)fsDescription
-{
-	if ([[self login] isEqualTo: NSUserName()])
-		return [NSString stringWithFormat:@"%@%@",
-			[self hostName], [self path]];
-	else
-		return [NSString stringWithFormat:@"%@@%@%@",
-			[self login], [self hostName], [self path]];
-}
-
-
-- (NSString*)hostName
-{
-	return hostName;
-}
-
-- (NSString*)login
-{
-	return login;
-}
-
-- (NSString*)path
-{
-	return path;
-}
-
-- (NSString*)recentOutput
-{
-	return recentOutput;
-}
-
-- (int)authenticationType
-{
-	return authenticationType;
-}
-
-- (int)port
-{
-	return port;
-}
-
-- (NSString*)advancedOptions
-{
-	return advancedOptions;
-}
-
-# pragma mark Setters
-
-- (void)setHostName:(NSString*)s
-{
-	[s copy];
-	[hostName release];
-	hostName = s;
-}
-
-- (void)setLogin:(NSString*)s
-{
-	[s copy];
-	[login release];
-	login = s;
-}
-
-- (void)setPath:(NSString*)s
-{
-	if (s==nil) s=@"";
-	[s copy];
-	[path release];
-	path = s;
-}
-
-- (void)setAuthenticationType:(int)i
-{
-	authenticationType = i;
-}
-
-- (void)setPort:(int)i
-{
-	port = i;
-}
-
-- (void)setAdvancedOptions:(NSString*)s
-{
-	if (s==nil) s=@"";
-	[s copy];
-	[advancedOptions release];
-	advancedOptions = s;
-}
-
-- (NSImage*)icon
-{
-	return [[[NSImage alloc] initWithContentsOfFile: 
-		[[NSBundle bundleForClass: [self class]] pathForResource:@"SSHFS" ofType:@"icns"]]
-		autorelease];
-}
-
-# pragma mark General FuseFS
-# pragma mark Accessors
-- (NSString*)name
-{
-	return name;
-}
-
-- (int)status
-{
-	return status;
-}
-
-- (NSString*)mountPath
-{
-	return [NSString stringWithFormat: @"/Volumes/%@", name];
-}
-
-- (NSString*)longStatus
-{
-	if (status == FuseFSStatusMounted)
-		return @"Mounted";
-	if (status == FuseFSStatusMountFailed)
-		return @"Mount Failed";
-	if (status == FuseFSStatusUnmounted)
-		return @"Unmounted";
-	if (status == FuseFSStatusWaitingToMount)
-		return @"Waiting";
-	return @"Unknown";
-}
-
-- (BOOL)mountOnStartup
-{
-	return mountOnStartup;
-}
-
-# pragma mark Setters
-- (void)setMountOnStartup:(BOOL)yn
-{
-	mountOnStartup = yn;
-}
-
-- (void)setStatus:(int)s
-{
-	[self willChangeValueForKey:@"longStatus"];
-	status = s;
-	[self didChangeValueForKey: @"longStatus"];
-}
-
-- (void)setName:(NSString*)aString
-{
-	[aString copy];
-	[name release];
-	name = aString;
-}
-
-# pragma mark Mountpoint setup
-- (BOOL)setupMountPoint
-{
-	BOOL pathExists, isDir;
-	NSString* mountPath = [self mountPath];
-	
-	NSFileManager* fm = [NSFileManager defaultManager];
-	pathExists = [fm fileExistsAtPath:mountPath isDirectory:&isDir];
-	
-	if (pathExists && isDir == YES) // directory already exists
-	{
-		if ([[fm directoryContentsAtPath:mountPath] count] == 0) // empty directory ... use as mountpoint
-			return YES;
-		else
-			return NO; // directory not empty ... cant mount at this path. fail.
-	}
-	else if (pathExists && isDir == NO)
-	{
-		return NO; // a file exists at that path, we shouldn't delete it. fail.
-	}
-	else if (pathExists == NO)
-	{
-		// nothing exists. Create the mountpoint, with default attributes
-		[fm createDirectoryAtPath:mountPath attributes:nil];
-		return YES;
-	}
-	return NO;
-}
-
-- (void)removeMountPoint
-{
-	BOOL isDir;
-	
-	// clean up after self by removing the mountpoint, if it exists and is empty
-	NSFileManager* fm = [NSFileManager defaultManager]; 
-	if ([fm fileExistsAtPath: [self mountPath] isDirectory:&isDir]) // directory exists
-	{
-		if ([[fm directoryContentsAtPath: [self mountPath]] count] == 0) // and its empty
-			[fm removeFileAtPath: [self mountPath] handler:nil];
-	}
-}
-
-#pragma mark Shared Code
-// Code to take into account the fact that libfuse may not be in /usr/local/lib
-// But may instead be in /opt/local/lib or /sw/lib due to macports or fink
-- (NSString*)getPathForLibFuse
-{
-	NSString* searchPath;
-	NSArray* possiblePaths = [NSArray arrayWithObjects:
-		@"/usr/local/lib", @"/opt/local/lib", @"/sw/lib", nil];
-	NSEnumerator* e = [possiblePaths objectEnumerator];
-	while (searchPath = [e nextObject])
-	{
-		NSString* libraryPath = [searchPath stringByAppendingPathComponent:@"libfuse.0.dylib"];
-		if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath])
-			return searchPath; //we've found libfuse!
-	}
-	
-	return nil; // no libfuse ... uh oh
-}
-
-- (void) dealloc 
-{
-	[name release];
-	[task release];
-	[hostName release];
-	[path release];
-	[login release];
-	[advancedOptions release];
-	[super dealloc];
-}
 
 @end

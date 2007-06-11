@@ -18,54 +18,28 @@
 // limitations under the License.
 
 #import <Cocoa/Cocoa.h>
-#import "../Protocols/FuseFSProtocol.h"
-#import "../MacFusionConstants.h"
+#import "MacFusionConstants.h"
 
+#import "MFNetworkFS.h"
 
 enum {
 	SSHFSAuthenticationTypePassword=0,
 	SSHFSAuthenticationTypePublicKey=1,
 };
 
-@interface SSHFS : NSObject <FuseFSProtocol>
+@interface SSHFS : MFNetworkFS
 {
-	// General FuseFS Code
-	NSString* name;
-	BOOL mountOnStartup;
-	int status;
-	
-	// SSHFS Specific
-	NSString* hostName;
-	NSString* login;
-	NSString* path;
-	int authenticationType;
-	int port;
-	NSTask* task;
-	NSPipe* outputPipe;
-	NSString* recentOutput;
 	NSString* advancedOptions;
+	int port;
+	int authenticationType;
 }
 
-// Accessors
-- (NSString*)hostName;
-- (NSString*)login;
-- (NSString*)path;
+//Accessors
 - (int)authenticationType;
-- (NSString*)recentOutput;
 - (int)port;
 - (NSString*)advancedOptions;
-
-// Setters
-- (void)setHostName:(NSString*)s;
-- (void)setLogin:(NSString*)s;
-- (void)setPath:(NSString*)s;
+- (void)setAdvancedOptions:(NSString*)s;
 - (void)setAuthenticationType:(int)i;
 - (void)setPort:(int)i;
-- (void)setAdvancedOptions:(NSString*)s;
-
-// General FuseFS Code
-- (NSString*)longStatus;
-- (BOOL)setupMountPoint;
-- (void)removeMountPoint;
 
 @end
