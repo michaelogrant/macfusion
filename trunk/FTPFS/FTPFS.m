@@ -39,32 +39,12 @@
 	return [[url scheme] isEqualTo:@"ftp"];
 }
 
-- (id) initWithURL:(NSURL*)url
-{
-	self = [self init];
-	if (self != nil)
-	{
-		[self setName: [url host]];
-		if ([url user] != nil)
-			[self setLogin: [url user]];
-		if ([url path] != nil)
-			[self setPath: [url path]];
-		[self setHostName: [url host]];
-	}
-	return self;
-}
-
 #pragma mark Initialization
 - (id) init 
 {
 	self = [super init];
 	if (self != nil) 
 	{
-		[self setStatus: FuseFSStatusUnmounted];
-		[self setName: @""];
-		[self setMountOnStartup: NO];
-		[self setPath:@""];
-		[self setLogin:@""];
 		[self setAdvancedOptions:@""];
 	}
 	return self;
@@ -290,12 +270,7 @@
 
 - (id)initWithDictionary:(NSDictionary*)dic
 {
-	self = [self init];
-	[self setName: [dic objectForKey:@"name"]];
-	[self setMountOnStartup: [[dic objectForKey: @"mountOnStartup"] boolValue]];
-	[self setHostName: [dic objectForKey: @"hostName"]];
-	[self setLogin: [dic objectForKey: @"login"]];
-	[self setPath: [dic objectForKey:@"path"]];
+	self = [super initWithDictionary:dic];
 	return self;
 }
 
@@ -317,56 +292,13 @@
 		[self hostName], [self path]];
 }
 
-
-- (NSString*)hostName
-{
-	return hostName;
-}
-
-- (NSString*)login
-{
-	return login;
-}
-
-- (NSString*)path
-{
-	return path;
-}
-
 - (NSString*)advancedOptions
 {
 	return advancedOptions;
 }
 
-- (NSString*)recentOutput
-{
-	return recentOutput;
-}
-
 # pragma mark Setters
 
-- (void)setHostName:(NSString*)s
-{
-	[s copy];
-	[hostName release];
-	hostName = s;
-}
-
-- (void)setLogin:(NSString*)s
-{
-	[s copy];
-	[login release];
-	login = s;
-}
-
-- (void)setPath:(NSString*)s
-{
-	if(s==nil) 
-		s=@"";
-	[s copy];
-	[path release];
-	path = s;
-}
 
 - (void)setAdvancedOptions:(NSString*)s
 {
@@ -375,143 +307,9 @@
 	advancedOptions = s;
 }
 
-
-- (NSImage*)icon
-{
-	return [[[NSImage alloc] initWithContentsOfFile: 
-		[[NSBundle bundleForClass: [self class]] pathForResource:@"FTPFS" ofType:@"icns"]]
-		autorelease];
-}
-
-# pragma mark General FuseFS
-# pragma mark Accessors
-- (NSString*)name
-{
-	return name;
-}
-
-- (int)status
-{
-	return status;
-}
-
-- (NSString*)mountPath
-{
-	return [NSString stringWithFormat: @"/Volumes/%@", name];
-}
-
-- (NSString*)longStatus
-{
-	if (status == FuseFSStatusMounted)
-		return @"Mounted";
-	if (status == FuseFSStatusMountFailed)
-		return @"Mount Failed";
-	if (status == FuseFSStatusUnmounted)
-		return @"Unmounted";
-	if (status == FuseFSStatusWaitingToMount)
-		return @"Waiting";
-	return @"Unknown";
-}
-
-- (BOOL)mountOnStartup
-{
-	return mountOnStartup;
-}
-
-# pragma mark Setters
-- (void)setMountOnStartup:(BOOL)yn
-{
-	mountOnStartup = yn;
-}
-
-- (void)setStatus:(int)s
-{
-	[self willChangeValueForKey:@"longStatus"];
-	status = s;
-	[self didChangeValueForKey: @"longStatus"];
-}
-
-- (void)setName:(NSString*)aString
-{
-	[aString copy];
-	[name release];
-	name = aString;
-}
-
-# pragma mark Mountpoint setup
-- (BOOL)setupMountPoint
-{
-	BOOL pathExists, isDir;
-	NSString* mountPath = [self mountPath];
-	
-	NSFileManager* fm = [NSFileManager defaultManager];
-	pathExists = [fm fileExistsAtPath:mountPath isDirectory:&isDir];
-	
-	if (pathExists && isDir == YES) // directory already exists
-	{
-		if ([[fm directoryContentsAtPath:mountPath] count] == 0) // empty directory ... use as mountpoint
-			return YES;
-		else
-			return NO; // directory not empty ... cant mount at this path. fail.
-	}
-	else if (pathExists && isDir == NO)
-	{
-		return NO; // a file exists at that path, we shouldn't delete it. fail.
-	}
-	else if (pathExists == NO)
-	{
-		// nothing exists. Create the mountpoint, with default attributes
-		[fm createDirectoryAtPath:mountPath attributes:nil];
-		return YES;
-	}
-	return NO;
-}
-
-- (void)removeMountPoint
-{
-	BOOL isDir;
-	
-	// clean up after self by removing the mountpoint, if it exists and is empty
-	NSFileManager* fm = [NSFileManager defaultManager]; 
-	if ([fm fileExistsAtPath: [self mountPath] isDirectory:&isDir]) // directory exists
-	{
-		if ([[fm directoryContentsAtPath: [self mountPath]] count] == 0) // and its empty
-			[fm removeFileAtPath: [self mountPath] handler:nil];
-	}
-	
-
-}
-
-#pragma mark Shared Code
-// Code to take into account the fact that libfuse may not be in /usr/local/lib
-// But may instead be in /opt/local/lib or /sw/lib due to macports or fink
-- (NSString*)getPathForLibFuse
-{
-	NSString* searchPath;
-	NSArray* possiblePaths = [NSArray arrayWithObjects:
-		@"/usr/local/lib", @"/opt/local/lib", @"/sw/lib", nil];
-	NSEnumerator* e = [possiblePaths objectEnumerator];
-	while (searchPath = [e nextObject])
-	{
-		NSString* libraryPath = [searchPath stringByAppendingPathComponent:@"libfuse.0.dylib"];
-		if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath])
-			return searchPath; //we've found libfuse!
-	}
-	
-	return nil; // no libfuse ... uh oh
-}
-
 - (void) dealloc 
 {
-	[name release];
-	[task release];
-	[inputPipe release];
-	[outputPipe release];
-	[hostName release];
-	[path release];
-	[login release];
 	[advancedOptions release];
-	[recentOutput release];
 	[super dealloc];
 }
 

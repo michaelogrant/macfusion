@@ -65,16 +65,20 @@
 // Control the table's right click menu
 - (BOOL) validateMenuItem:(NSMenuItem*)item
 {
-	id <FuseFSProtocol> fs = [[favoritesArrayController arrangedObjects] objectAtIndex: 
-		[favoritesArrayController selectionIndex]];
+	id <FuseFSProtocol> fs = nil;
+	
+	if ([favoritesArrayController selectionIndex] != NSNotFound) {
+		fs = [[favoritesArrayController arrangedObjects] objectAtIndex: 
+			[favoritesArrayController selectionIndex]];
+	}
+	
 	if ([item title] == @"Mount")
 		return [mountButton isEnabled] && [[mountButton title] isEqualTo:@"Mount"];
 	if ([item title] == @"Unmount")
 		return [mountButton isEnabled] && [[mountButton title] isEqualTo:@"Unmount"];
 	if ([item title] == @"Edit")
 		return [editButton isEnabled];
-	if ([item title] == @"Duplicate")
-	{
+	if ([item title] == @"Duplicate") {
 		if ([fs status] == FuseFSStatusUnmounted)
 			return YES;
 		else
@@ -91,7 +95,7 @@
 	if ([favoritesArrayController selectionIndex] == NSNotFound)
 	{
 		[editButton setEnabled: NO];
-		[mountButton setEnabled: YES];
+		[mountButton setEnabled: NO];
 		[removeButton setEnabled: NO];
 	}
 	else
