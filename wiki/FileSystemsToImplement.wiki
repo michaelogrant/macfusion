@@ -1,5 +1,5 @@
 #summary file system plug-ins
-#labels Features,Filesystems,Featured
+#labels Features,Filesystems
 
 = File system plug-ins to MacFusion =
 
