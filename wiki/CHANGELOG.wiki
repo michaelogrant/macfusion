@@ -8,6 +8,19 @@
 === deferred ===
   * Random issues with [http://code.google.com/p/macfusion/issues/detail?id=25#c21 unpredictable third party applications + sleep/wake preferences + change of location whilst awake (in combination with each other)]: discussion and testing ongoing.
 
+== forthcoming ==
+  * API improvements for easier loading and saving of file systems (revision 263 in Subversion, 2007-06-17)
+  * [http://code.google.com/p/macfusion/issues/detail?id=153 compatible with case-sensitive file systems] (revision 253 in Subversion, 2007-06-04)
+  * compatible with MacFUSE 0.4.0 (revision 260 in Subversion, 2007-06-09)
+  * fix for linker warnnings and build problems (revision 232 in Subversion, 2007-05-23 
+  * GUI is improved (revision 261 in Subversion, 2007-06-11)
+  * header files are properly copied into the final product, with their "role" set to public (revision 233 in Subversion, 2007-05-23)
+  * icon support for FTP and SSH (revision 263 in Subversion, 2007-06-17)
+  * minor fixes (revision 263 in Subversion, 2007-06-17)
+  * refactored: SSHFS and FTPFS now inherit from the same class (MFNetworkFS); non-network file system should inherit from MFFilesystem (revision 261 in Subversion, 2007-06-11)
+  * renamed some files and classes with prefix (revision 263 in Subversion, 2007-06-17)
+
+
 = MacFusion 1.1 =
 *[http://code.google.com/p/macfusion/downloads/list 2007-05-22]*
 
