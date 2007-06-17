@@ -45,72 +45,13 @@
 	self = [super init];
 	if (self != nil) 
 	{
-		[self setAdvancedOptions:@""];
+		[self setLogin:nil];
 	}
 	return self;
 }
 
-- (id)copyWithZone:(NSZone *)zone
-{
-	FTPFS* newCopy = [[FTPFS allocWithZone: zone] initWithDictionary: [self dictionaryForSaving]];
-	[newCopy setStatus: [self status]];
-	return newCopy;
-}
-
-
-# pragma mark Mount/Unmount Methods
-- (void)mount
-{
-	NSString* password;
-	
-	[self setStatus: FuseFSStatusWaitingToMount];
-	if ([self setupMountPoint] == YES)
-	{
-		task = [self setupTaskForMount];
-		
-		// set up a timer so we don't have the process hanging and taking forever
-		// the timeout is long so that if needed people have a change to enter password
-		NSDictionary* timerInfoDic = [NSDictionary dictionaryWithObject: self 
-																 forKey: filesystemKeyName];
-		
-		if (usingPassword)
-		{
-			// get our password and set up or input pipe
-			password = FTPFSGetPasswordForUserAndServer([[self login] cString], [[self hostName] cString]);
-			if (inputPipe)
-				[inputPipe release];
-			inputPipe = [[NSPipe alloc] init];
-			[task setStandardInput: inputPipe];
-		}
-		
-		float timeout = [[NSUserDefaults standardUserDefaults] floatForKey: mountTimeoutKeyName];
-		[NSTimer scheduledTimerWithTimeInterval:timeout target:self
-									   selector:@selector(handleMountTimeout:)
-									   userInfo:timerInfoDic repeats:NO];
-		
-
-		[task launch];
-		
-		if (usingPassword)
-		{
-			// send the password to the curlftpfs process
-			NSString* writeString = [NSString stringWithFormat:@"%@\n", password];
-			[[inputPipe fileHandleForWriting] writeData: [writeString dataUsingEncoding:NSASCIIStringEncoding]];
-		}
-			
-	}
-	else
-	{
-		// couldn't create the path ... fail to mount
-		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
-														  userInfo:[NSDictionary dictionaryWithObject:(id)FuseFSMountFaliurePathIssue 
-																							   forKey:mountFaliureReasonKeyName]];
-		[self setStatus: FuseFSStatusMountFailed];
-	}
-}
-
 // setup the NSTask to launch curlftpfs
-- (NSTask*)setupTaskForMount
+- (NSTask *)filesystemTask
 {
 	NSTask* t = [[NSTask alloc] init];
 	NSMutableArray* arguments = [[NSMutableArray alloc] init];
@@ -155,6 +96,12 @@
 	[arguments addObject: [NSString stringWithFormat:@"-ovolname=%@", name]]; // volume name argument
 	[arguments addObject:@"-oping_diskarb"];
 	
+	MacFusionController* mainController = [[NSApplication sharedApplication] delegate];
+	if ([[mainController getMacFuseVersion] isEqualToString:@"0.4.0"])
+	{
+		[arguments addObject:[NSString stringWithFormat: @"-ovolicon=%@", [self iconPath]]];
+	}
+	
 	// FIXME: Should this be needed?
 	[arguments addObject: [NSString stringWithFormat:@"-ouid=%d", getuid()]];
 	
@@ -168,110 +115,9 @@
 	[t setStandardError: outputPipe];
 	[t setStandardOutput: outputPipe];
 	[t setEnvironment:env];
-	
-	// register for notification of data comming into the pipe
-	[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleDataOnPipe:) 
-											name:NSFileHandleDataAvailableNotification 
-											   object: [outputPipe fileHandleForReading]];
-	
-	[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleTaskEnd:)
-												 name:NSTaskDidTerminateNotification object: task];
-	
-	[[outputPipe fileHandleForReading] waitForDataInBackgroundAndNotify];
 		
 	[arguments release];
 	return t;
-}
-
-- (void) handleMountTimeout:(NSTimer*)t
-{
-	id <FuseFSProtocol> fs = [[t userInfo] objectForKey: filesystemKeyName];
-	if ([fs status] == FuseFSStatusMounted)
-		return; // FS mounted OK
-	else if ([fs status] == FuseFSStatusMountFailed) // already marked as failed (task probably exited): ignore
-		return;
-	else if ([fs status] == FuseFSStatusWaitingToMount)
-	{
-		// FS mount failed. Notify.
-		[[NSNotificationCenter defaultCenter] postNotificationName: FuseFSMountFailedNotification object:self
-														  userInfo: [NSDictionary dictionaryWithObject: (id)FuseFSMountFaliureTimeout 
-																								forKey:mountFaliureReasonKeyName]];
-															  
-		[fs setStatus: FuseFSStatusMountFailed];
-	}
-}
-
-- (void)handleDataOnPipe:(NSNotification*)note
-{
-	NSData* pipeData = [[note object] availableData];
-	
-	if ([pipeData length]==0) // pipe is down. we're done!
-		return;
-	
-	if (recentOutput)
-		[recentOutput release];
-	
-	recentOutput = [[NSString alloc] initWithData: pipeData encoding:NSASCIIStringEncoding];
-	
-	[[MFLoggingController sharedLoggingController] logMessage:recentOutput 
-													   ofType:MacFusionLogTypeConsoleOutput 
-													   sender:self];
-	[[note object] waitForDataInBackgroundAndNotify];
-}
-
-- (void)handleTaskEnd:(NSNotification*)note
-{
-	if (status == FuseFSStatusMountFailed) // task died, but mount had already timed out: ignore
-	{
-		return;
-	}
-	if (status == FuseFSStatusWaitingToMount) // task died while waiting to mount: notify of faliure
-	{
-		[self removeMountPoint];
-		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
-														  userInfo: [NSDictionary dictionaryWithObject: (id)FuseFSMountFaliureTaskEnded 
-																								forKey: mountFaliureReasonKeyName]];
-		[self setStatus: FuseFSStatusMountFailed];
-	}
-}
-
-- (void)handleMountFailedNotification:(NSNotification*)note
-{
-	// failed to mount ... kill task if it's still trying to run
-	if ([task isRunning])
-		[task terminate];
-	
-	[self removeMountPoint];
-}
-
-- (void)handleUnmountNotification:(NSNotification*)note
-{
-	[self removeMountPoint];
-}
-
-#pragma mark Save/Load from Defaults Methods
-- (NSDictionary*)dictionaryForSaving
-{
-	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"hostName", @"login",
-		@"path", @"advancedOptions", nil];
-	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
-	return d;	
-}
-
-- (NSDictionary*)dictionaryForDisplay
-{
-	NSArray* keyNames = [NSArray arrayWithObjects: @"fsDescription", @"fsLongType",
-		@"status", nil];
-	NSMutableDictionary* d = [[self dictionaryWithValuesForKeys: keyNames] 
-		mutableCopy];
-	[d addEntriesFromDictionary: [self dictionaryForSaving]];
-	return [d copy];
-}
-
-- (id)initWithDictionary:(NSDictionary*)dic
-{
-	self = [super initWithDictionary:dic];
-	return self;
 }
 
 #pragma mark Accessors
@@ -286,30 +132,10 @@
 	return @"FTP";
 }
 
-- (NSString*)fsDescription
-{
-	return [NSString stringWithFormat:@"%@%@",
-		[self hostName], [self path]];
-}
-
-- (NSString*)advancedOptions
-{
-	return advancedOptions;
-}
-
 # pragma mark Setters
-
-
-- (void)setAdvancedOptions:(NSString*)s
-{
-	[s copy];
-	[advancedOptions release];
-	advancedOptions = s;
-}
 
 - (void) dealloc 
 {
-	[advancedOptions release];
 	[super dealloc];
 }
 

@@ -25,6 +25,7 @@
 		[self setMountOnStartup:NO];
 		[self setStatus:FuseFSStatusUnmounted];
 		[self setIconPath: [[NSBundle bundleForClass:[self class]] pathForImageResource:[self fsType]]];
+		[self setAdvancedOptions:@""];
 	}
 	return self;
 }
@@ -49,6 +50,7 @@
 	[outputPipe release];
 	[inputPipe release];
 	[iconPath release];
+	[advancedOptions release];
 	[super dealloc];
 }
 
@@ -58,18 +60,35 @@
 
 - (NSDictionary*)dictionaryForSaving
 {
-	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"iconPath", nil];
+/*	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"iconPath", 
+		@"advancedOptions", nil];
 	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
-	return d;	
+*/
+	NSMutableDictionary* d = [NSMutableDictionary dictionary];
+	NSArray* keys = [self keysForSaving];
+	NSEnumerator* e = [keys objectEnumerator];
+	NSString* currentKey;
+	
+	while(currentKey = [e nextObject])
+	{
+		if ([self valueForKey:currentKey] != nil)
+		{
+			[d setObject:[self valueForKey:currentKey] forKey:currentKey];
+		}
+		else
+		{
+			// Don't store the value since it's nil
+			// The default will be used on filesyste
+		}
+	}
+	return [[d copy] autorelease];	
 }
 
 - (id)initWithDictionary:(NSDictionary*)dic
 {
 	if (self = [self init])
 	{
-		[self setName: [dic objectForKey:@"name"]];
-		[self setMountOnStartup: [[dic objectForKey: @"mountOnStartup"] boolValue]];
-		[self setIconPath:[dic objectForKey:@"iconPath"]];
+		[self setValuesForKeysWithDictionary:dic];
 	}
 	return self;
 }
@@ -83,6 +102,15 @@
 		mutableCopy];
 	[d addEntriesFromDictionary: [self dictionaryForSaving]];
 	return [d copy];
+}
+
+- (NSArray*)keysForSaving
+{
+	NSMutableArray* storedKeys = [NSMutableArray array];
+	NSArray* keyNames = [NSArray arrayWithObjects:@"name", @"mountOnStartup", @"iconPath", 
+		@"advancedOptions", nil];
+	[storedKeys addObjectsFromArray:keyNames];
+	return [[storedKeys copy] autorelease];	
 }
 
 # pragma mark Getters
@@ -132,6 +160,10 @@
 	return recentOutput;
 }
 
+- (NSString*)advancedOptions
+{
+	return advancedOptions;
+}
 
 //appends FS to the fsLongType
 - (NSString*)fsType
@@ -189,6 +221,17 @@
 		iconPath = aString;
 	}
 }
+
+- (void)setAdvancedOptions:(NSString*)aString
+{
+	if (aString != nil)
+	{
+		[aString retain];
+		[advancedOptions release];
+		advancedOptions = aString;
+	}
+}
+
 
 # pragma mark Misc
 

@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MacFusionController.h"
+#import "MFMainController.h"
 #import "InformalProtocols.h"
 
 @class MacFusionController;

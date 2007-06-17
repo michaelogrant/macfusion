@@ -20,7 +20,7 @@
 #import <Cocoa/Cocoa.h>
 #import "../Protocols/FuseFSProtocol.h"
 #import "../Protocols/FuseUIProtocol.h"
-#import "MacFusionController.h"
+#import "MFMainController.h"
 
 @class MacFusionController;
 

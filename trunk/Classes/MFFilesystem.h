@@ -31,6 +31,7 @@
 	BOOL mountOnStartup;
 	int status;
 	NSString* iconPath;
+	NSString* advancedOptions;
 
 	//ivars used to start separate processes - lots of boilerplate code provided by superclass (see methods below)
 	NSTask* task;
@@ -48,7 +49,7 @@
 //you may first call super, which takes care of the following ivars: name, mountOnStartup, hostName, login, path
 //if no additional settings, you don't need to override this
 //otherwise, add your own values to this list and return the resulting dictionary
-- (NSDictionary*)dictionaryForSaving;
+- (NSArray*)keysForSaving;
 
 //you should first call super, which takes care of the following ivars: name, mountOnStartup, hostName, login, path
 //then setup the other values you are interested in (if none, don't need to override)
@@ -92,9 +93,11 @@
 - (NSString *)fsType;
 - (NSString *)fsLongType;
 
-
 //the libfuse library may get installed at various paths; this method should smart enought to know where it is
 - (NSString*)getPathForLibFuse;
+
+- (void)removeMountPoint;
+- (BOOL)setupMountPoint;
 
 //getters
 - (NSString *)name;
@@ -103,11 +106,13 @@
 - (BOOL)mountOnStartup; //default is NO
 - (NSString*)recentOutput;
 - (NSString*)iconPath;
+- (NSString*)advancedOptions;
 
 // setters
 - (void)setName:(NSString*)s;
 - (void)setStatus:(int)s;
 - (void)setMountOnStartup:(BOOL)yn; //default is NO
 - (void)setIconPath:(NSString*)aString;
+- (void)setAdvancedOptions:(NSString*)aString;
 
 @end

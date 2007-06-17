@@ -1,5 +1,5 @@
 //
-//  MacFusionController.h
+//  MFMainController.h
 //  MacFusion
 //
 //  Created by Michael Gorbach on 1/14/07.
@@ -23,13 +23,13 @@
 #import "FuseFSProtocol.h"
 #import "../Growl.framework/Headers/GrowlApplicationBridge.h"`
 #import "EditController.h"
-#import "PreferencesController.h"
+#import "MFPrefsController.h"
 #import "MFLoggingController.h"
 
 
 @class FancyFavoritesController;
 @class EditFavoriteController;
-@class PreferencesController;
+@class MFPrefsController;
 @class MFLoggingController;
 
 @interface MacFusionController : NSObject <GrowlApplicationBridgeDelegate>
@@ -41,7 +41,7 @@
 	NSMutableArray* sleepMounts;
 
 	FancyFavoritesController* fancyFavoritesController;
-	PreferencesController* preferencesController;
+	MFPrefsController* preferencesController;
 	
 	DASessionRef appearSession;
 	DASessionRef disappearSession;

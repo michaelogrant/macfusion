@@ -6,9 +6,9 @@
 //  Copyright 2007 Michael Gorbach. All rights reserved.
 //
 
-#import "PreferencesController.h"
+#import "MFPrefsController.h"
 
-@implementation PreferencesController
+@implementation MFPrefsController
 - (id) init
 {
 	self = [super initWithWindowNibName:@"MacFusionPreferences"];
