@@ -25,14 +25,6 @@
 @interface FTPFS : MFNetworkFS
 {
 	BOOL usingPassword;
-	NSString* advancedOptions;
 }
-
-// Accessors
-- (NSString*)recentOutput;
-- (NSString*)advancedOptions;
-
-// Setters
-- (void)setAdvancedOptions:(NSString*)s;
 
 @end

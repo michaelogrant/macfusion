@@ -18,7 +18,7 @@
 // limitations under the License.
 
 #import <Cocoa/Cocoa.h>
-#import "MacFusionController.h"
+#import "MFMainController.h"
 #import "FuseFSProtocol.h"
 #import "MacFusionConstants.h"
 

@@ -15,16 +15,19 @@
 	NSString* hostName;
 	NSString* login;
 	NSString* path;
+	int port;
 }
 
 // Setters
 - (void)setHostName:(NSString*)s;
 - (void)setLogin:(NSString*)s;
 - (void)setPath:(NSString*)s;
+- (void)setPort:(int)aPort;
 
 // Getters
 - (NSString*)hostName;
 - (NSString*)login;
 - (NSString*)path;
+- (int)port;
 
 @end

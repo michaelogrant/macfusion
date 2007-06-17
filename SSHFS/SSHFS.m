@@ -33,20 +33,19 @@
 }
 
 #pragma mark Birth and Death
-- (id)initWithURL:(NSURL*)url
+- (id)init
 {
-	self = [super initWithURL:url];
-	if ( self != nil ) {
+	self = [super init];
+	if ( self != nil ) 
+	{
 		[self setPort: 22];
 		[self setAuthenticationType: SSHFSAuthenticationTypePassword];
-		[self setAdvancedOptions:@""];
 	}
 	return self;
 }
 
 - (void) dealloc 
 {
-	[advancedOptions release];
 	[super dealloc];
 }
 
@@ -58,30 +57,9 @@
 	return authenticationType;
 }
 
-- (int)port
-{
-	return port;
-}
-
-- (NSString*)advancedOptions
-{
-	return (advancedOptions ? advancedOptions : @"");
-}
-
 - (void)setAuthenticationType:(int)i
 {
 	authenticationType = i;
-}
-
-- (void)setPort:(int)i
-{
-	port = i;
-}
-
-- (void)setAdvancedOptions:(NSString*)s
-{
-	[advancedOptions release];
-	advancedOptions = [s copy];
 }
 
 # pragma mark Superclass methods to override
@@ -159,6 +137,7 @@
 }
 
 
+/*
 - (NSDictionary*)dictionaryForSaving
 {
 	NSMutableDictionary *base = [NSMutableDictionary dictionaryWithDictionary:[super dictionaryForSaving]];
@@ -167,9 +146,10 @@
 	[base addEntriesFromDictionary:extra];
 	return [[base copy] autorelease];
 }
+*/
 
 
-
+/*
 - (id)initWithDictionary:(NSDictionary*)dic
 {
 	self = [super initWithDictionary:dic];
@@ -178,6 +158,15 @@
 	if ([dic objectForKey:@"advancedOptions"])
 		[self setAdvancedOptions:[dic objectForKey:@"advancedOptions"]];
 	return self;
+}
+*/
+
+- (NSArray*)keysForSaving
+{
+	NSMutableArray* storedKeys = [NSMutableArray arrayWithArray:[super keysForSaving]];
+	NSArray* keyNames = [NSArray arrayWithObjects:@"authenticationType", nil];
+	[storedKeys addObjectsFromArray:keyNames];
+	return [[storedKeys copy] autorelease];
 }
 
 

@@ -1,5 +1,5 @@
 //
-//  MacFusionController.m
+//  MFMainController.m
 //  MacFusion
 //
 //  Created by Michael Gorbach on 1/14/07.
@@ -18,9 +18,9 @@
 // limitations under the License.
 
 
-#import "MacFusionController.h"
+#import "MFMainController.h"
 #import "MacFusionConstants.h"
-
+#import "FancyFavoritesController.h"
 
 @interface MacFusionController (PrivateAPI)
 - (void)setUpStatusItem;
@@ -433,7 +433,7 @@
 {
 	if (preferencesController == nil)
 	{
-		preferencesController = [[PreferencesController alloc] init];
+		preferencesController = [[MFPrefsController alloc] init];
 	}
 	
 	[preferencesController showWindow: self];

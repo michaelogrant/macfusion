@@ -7,11 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MacFusionController.h"
-@class MacFusionController;
+#import "MFMainController.h"
+@class MFMainController;
 
 
-@interface PreferencesController : NSWindowController {
+@interface MFPrefsController : NSWindowController {
 
 }
 

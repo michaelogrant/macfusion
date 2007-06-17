@@ -29,17 +29,11 @@ enum {
 
 @interface SSHFS : MFNetworkFS
 {
-	NSString* advancedOptions;
-	int port;
 	int authenticationType;
 }
 
 //Accessors
 - (int)authenticationType;
-- (int)port;
-- (NSString*)advancedOptions;
-- (void)setAdvancedOptions:(NSString*)s;
 - (void)setAuthenticationType:(int)i;
-- (void)setPort:(int)i;
 
 @end

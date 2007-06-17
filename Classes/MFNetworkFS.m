@@ -10,32 +10,42 @@
 
 
 @implementation MFNetworkFS
-- (id)initWithDictionary:(NSDictionary*)dic
-{
-	self = [super initWithDictionary:dic];
-	[self setHostName: [dic objectForKey: @"hostName"]];
-	[self setLogin: [dic objectForKey: @"login"]];
-	[self setPath: [dic objectForKey:@"path"]];
+- (id) init {
+	self = [super init];
+	if (self != nil) {
+		[self setHostName:@""];
+		[self setPath:@""];
+		[self setLogin:NSUserName()];
+	}
 	return self;
 }
 
-- (NSDictionary*)dictionaryForSaving
+- (id) initWithURL:(NSURL*)url
 {
-	NSMutableDictionary *base = [NSMutableDictionary dictionaryWithDictionary:[super dictionaryForSaving]];
+	self = [self init];
+	if (self !=  nil)
+	{
+		[self setHostName:[url host]];
+		[self setPath:[url path]];
+		[self setLogin:[url user]];
+	}
+	return self;
+}
+
+- (NSArray*)keysForSaving
+{
+	NSMutableArray* storedKeys = [NSMutableArray arrayWithArray:[super keysForSaving]];
 	NSArray* keyNames = [NSArray arrayWithObjects:@"hostName", @"login", @"path", nil];
-	NSDictionary *extra = [self dictionaryWithValuesForKeys:keyNames];
-	[base addEntriesFromDictionary:extra];
-	return [[base copy] autorelease];
+	[storedKeys addObjectsFromArray:keyNames];
+	return [[storedKeys copy] autorelease];
 }
 
 - (NSString*)fsDescription
 {
-	if ([[self login] isEqualTo: NSUserName()])
-		return [NSString stringWithFormat:@"%@%@",
-			[self hostName], [self path]];
-	else
-		return [NSString stringWithFormat:@"%@@%@%@",
-			[self login], [self hostName], [self path]];
+	NSMutableString* description = [NSMutableString stringWithFormat:@"%@@%@", [self login], [self hostName]];
+	if ([self path] != nil && [[self path] length] > 0)
+		[description appendFormat:@":%@", [self path]];
+	return [[description copy] autorelease];
 }
 
 #pragma mark Accessors
@@ -52,6 +62,11 @@
 - (NSString*)path
 {
 	return path;
+}
+
+- (int)port
+{
+	return port;
 }
 
 #pragma mark Setters
@@ -71,10 +86,14 @@
 
 - (void)setPath:(NSString*)s
 {
-	if (s==nil) s=@"";
 	[s retain];
 	[path release];
 	path = s;
+}
+
+- (void)setPort:(int)p
+{
+	port = p;
 }
 
 - (void) dealloc {
