@@ -3,7 +3,7 @@
 //  MacFusion
 //
 //  Created by Michael Gorbach on 6/9/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
+//  Copyright 2007 Michael Gorbach. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

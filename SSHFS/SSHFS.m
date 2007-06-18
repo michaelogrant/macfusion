@@ -136,31 +136,6 @@
 	return t;
 }
 
-
-/*
-- (NSDictionary*)dictionaryForSaving
-{
-	NSMutableDictionary *base = [NSMutableDictionary dictionaryWithDictionary:[super dictionaryForSaving]];
-	NSArray* keyNames = [NSArray arrayWithObjects:@"authenticationType", @"port", @"advancedOptions", nil];
-	NSDictionary *extra = [self dictionaryWithValuesForKeys:keyNames];
-	[base addEntriesFromDictionary:extra];
-	return [[base copy] autorelease];
-}
-*/
-
-
-/*
-- (id)initWithDictionary:(NSDictionary*)dic
-{
-	self = [super initWithDictionary:dic];
-	[self setAuthenticationType: [[dic objectForKey:@"authenticationType"] intValue]];
-	[self setPort: [[dic objectForKey:@"port"] intValue]];
-	if ([dic objectForKey:@"advancedOptions"])
-		[self setAdvancedOptions:[dic objectForKey:@"advancedOptions"]];
-	return self;
-}
-*/
-
 - (NSArray*)keysForSaving
 {
 	NSMutableArray* storedKeys = [NSMutableArray arrayWithArray:[super keysForSaving]];

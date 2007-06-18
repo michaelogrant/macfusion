@@ -46,6 +46,7 @@
 	if (self != nil) 
 	{
 		[self setLogin:nil];
+		[self setPort:21];
 	}
 	return self;
 }
@@ -95,6 +96,17 @@
 	
 	[arguments addObject: [NSString stringWithFormat:@"-ovolname=%@", name]]; // volume name argument
 	[arguments addObject:@"-oping_diskarb"];
+	
+	// add our advanced options, add more error handling here later 
+	// (what if options are duplicates?)
+	if (![advancedOptions isEqualToString:@""])
+	{
+		NSArray* extraArguments = [advancedOptions componentsSeparatedByString:@" "];
+		NSEnumerator* e = [extraArguments objectEnumerator];
+		NSString* extraArg;
+		while(extraArg = [e nextObject])
+			[arguments addObject:extraArg];
+	}
 	
 	MacFusionController* mainController = [[NSApplication sharedApplication] delegate];
 	if ([[mainController getMacFuseVersion] isEqualToString:@"0.4.0"])
