@@ -39,6 +39,7 @@
 	NSMutableArray* mounts;
 	NSMutableDictionary* plugins;
 	NSMutableArray* sleepMounts;
+	NSMutableArray* nonLoadedFavorites;
 
 	FancyFavoritesController* fancyFavoritesController;
 	MFPrefsController* preferencesController;

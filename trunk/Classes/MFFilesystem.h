@@ -7,20 +7,10 @@
 #import "FuseFSProtocol.h"
 
 /*
- As an alternative to implementing the FuseFSProtocol in your own class, you could instead subclass MacFusionFileSystem, which provides already the following functionality:
  
- - keeps track of name, mountOnStartup (default NO), status
- - also keeps track of hostName, login, path, which is useful for filesystem using a server (e.g. FTPFS, SSHFS, XgridFS,...)
- - manages the process that corresponds to the client filesystem
-
- All you have to do is:
- - subclass MacFusionFileSystem
- - add an image file 'XXXX.YYY' as icon, where XXXX is the same name as the class (or override the 'icon' method)
- - override 'fileSystemTask' to return an autoreleased task object where you should define everything (do not worry about the output pipe and about extra environment variable that may be needed and will be added by the superclass)
- - override dictionaryForSaving and initWithDictionary: if you have additional ivars/settings you want to be persistent
- - override any other of the mehtods listed below as you see fit
- 
- TODO: add more instructions on how to link to the executable using bundle_loader build setting
+ MFFilesystem and MFNetworkFS are abstract classes that can be subclassed to create a new plugin.
+ If you FS needs things like host, login, port and path, subclass MFNetworkFS.
+ Otherwise, subclass MFFilesystem.
  
  */
 
@@ -40,50 +30,39 @@
 	NSString* recentOutput;
 }
 
-//PLEASE OVERRIDE
-//the methods below will usually need to be overriden
-
-//designated initializer - be sure to first call [super initWithURL:url] in your code
+//additional initializer - for launching from URL
 - (id)initWithURL:(NSURL*)url;
 
-//you may first call super, which takes care of the following ivars: name, mountOnStartup, hostName, login, path
-//if no additional settings, you don't need to override this
-//otherwise, add your own values to this list and return the resulting dictionary
-- (NSArray*)keysForSaving;
+// The simplest way for these two is to override keysForSaving to return an
+// array of all keys you want saved from your filesystem
+// The default implementation of dictionaryForSaving will packing all non-nil
+// keys into a dictionary.
+// The default impleemntation of initWithDictionary will set all the object's
+// values from dictionary keys/values
 
-//you should first call super, which takes care of the following ivars: name, mountOnStartup, hostName, login, path
-//then setup the other values you are interested in (if none, don't need to override)
+- (NSArray*)keysForSaving;
+- (NSDictionary*)dictionaryForSaving;
 - (id)initWithDictionary:(NSDictionary*)dic;
 
-//you should override one of the 2 methods, or you get an exception
+// you should override one of the 2 methods, or you get an exception
 - (NSTask *)filesystemTask;
 - (void)mount;
 
-
-//MAYBE OVERRIDE
-//the methods below provide default implementations that will usually be enough, but overriding them might be useful in some cases
-
-//usually what you want: login@host:path
+// text string to describe the FS (user-readable)
 - (NSString *)fsDescription;
 
-//the default icon will be looked for in the bundles, based on subclass name, e.g. looking for "SSHFS.xxx" when subclass name = SSHFS
+// will return an image generated from the file at iconPath
 - (NSImage*)icon;
 
-//the default implementation will return a dictionary with fsDescription, fsLongType and status
+// exapnds the saving dictioary to add some things for the cell to do its work
 - (NSDictionary*)dictionaryForDisplay;
 
-//by default returns NO
+// specify if your FS can handle the URL. No my default
 + (BOOL)canHandleURL:(NSURL*)url;
 
-//by default, the mount path will be /Volumes/name, but you can override this
+// by default, the mount path will be /Volumes/name, but you can override this
 - (NSString*)mountPath;
 
-
-
-//DO NOT OVERRIDE
-//you generally should not override any of the methods below
-
-//the superclass implementation simply calls 'initWithURL' with empty string
 - (id)init;
 
 //to comply with NSCopy protocol
@@ -95,7 +74,6 @@
 
 //the libfuse library may get installed at various paths; this method should smart enought to know where it is
 - (NSString*)getPathForLibFuse;
-
 - (void)removeMountPoint;
 - (BOOL)setupMountPoint;
 
