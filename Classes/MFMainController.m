@@ -45,6 +45,7 @@
 	{
 		[MFLoggingController sharedLoggingController]; // start logging
 		mounts = [[NSMutableArray alloc] init];
+		nonLoadedFavorites = [[NSMutableArray alloc] init];
 		
 		[self checkForMacFuse];
 		[self registerDefaults];
@@ -194,7 +195,8 @@
 		}
 		else
 		{
-			MFLog(@"Failed to load favorite of type %@", FSClass);
+			MFLog(@"Failed to load favorite of type %@", FSClassName);
+			[nonLoadedFavorites addObject: storedFSDict];
 		}
 	}
 }
@@ -206,7 +208,7 @@
 - (void) writeFavoritesToDefaults
 {
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-	NSMutableArray* favoritesForDefaults = [[NSMutableArray alloc] init];
+	NSMutableArray* favoritesForDefaults = [NSMutableArray arrayWithArray:nonLoadedFavorites];
 	NSEnumerator* favoritesEnum = [favorites objectEnumerator];
 	id <FuseFSProtocol> fs;
 	while(fs = [favoritesEnum nextObject])
@@ -893,6 +895,7 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 	
 	[favorites release];
 	[mounts release];
+	[nonLoadedFavorites release];
 	
 	[plugins release];
 	[statusMenuItem release];
