@@ -3,7 +3,7 @@
 //  MacFusion
 //
 //  Created by Michael Gorbach on 6/9/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
+//  Copyright 2007 Michael Gorbach. All rights reserved.
 //
 
 #import "MFNetworkFS.h"
@@ -42,7 +42,10 @@
 
 - (NSString*)fsDescription
 {
-	NSMutableString* description = [NSMutableString stringWithFormat:@"%@@%@", [self login], [self hostName]];
+	NSMutableString* description = [NSMutableString stringWithString:@""];
+	if ([self login] != nil && [[self login] length] > 0)
+		[description appendFormat:@"%@@", [self login]];
+	[description appendString:[self hostName]];
 	if ([self path] != nil && [[self path] length] > 0)
 		[description appendFormat:@":%@", [self path]];
 	return [[description copy] autorelease];

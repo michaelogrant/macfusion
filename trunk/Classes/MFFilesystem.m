@@ -3,7 +3,6 @@
 //  MacFusion
 //
 //  Created by Charles Parnot on 6/4/07.
-//  Copyright 2007 __MyCompanyName__. All rights reserved.
 //
 
 #import "MacFusionConstants.h"
@@ -60,10 +59,6 @@
 
 - (NSDictionary*)dictionaryForSaving
 {
-/*	NSArray* keyNames = [NSArray arrayWithObjects: @"name", @"mountOnStartup", @"iconPath", 
-		@"advancedOptions", nil];
-	NSDictionary* d = [self dictionaryWithValuesForKeys: keyNames];
-*/
 	NSMutableDictionary* d = [NSMutableDictionary dictionary];
 	NSArray* keys = [self keysForSaving];
 	NSEnumerator* e = [keys objectEnumerator];
@@ -78,7 +73,6 @@
 		else
 		{
 			// Don't store the value since it's nil
-			// The default will be used on filesyste
 		}
 	}
 	return [[d copy] autorelease];	
