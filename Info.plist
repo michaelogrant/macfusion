@@ -8,12 +8,16 @@
 	<array/>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.1 (revision 268 from Subversion at Google Code)</string>
 	<key>CFBundleIconFile</key>
 	<string>MacFusion</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.mgorbach.MacFusion</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleLongVersionString</key>
+	<string>1.1, copyright 2007 Michael Gorbach</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
@@ -42,9 +46,11 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.1</string>
+	<string>1.1.268</string>
 	<key>LSUIElement</key>
 	<string>1</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright (c) 2007 Michael Gorbach</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
@@ -52,6 +58,6 @@
 	<key>SUCheckAtStartup</key>
 	<false/>
 	<key>SUFeedURL</key>
-	<string>http://osx.iusethis.com/appcast/macfuion</string>
+	<string>http://osx.iusethis.com/appcast/macfusion</string>
 </dict>
 </plist>
