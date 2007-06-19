@@ -9,6 +9,7 @@
   * Random issues with [http://code.google.com/p/macfusion/issues/detail?id=25#c21 unpredictable third party applications + sleep/wake preferences + change of location whilst awake (in combination with each other)]: discussion and testing ongoing.
 
 == forthcoming ==
+  * [http://code.google.com/p/macfusion/issues/detail?id=197 About MacFusion window and Finder | Get Info are more descriptive]; version strings and other changes to info.plist
   * [http://code.google.com/p/macfusion/issues/detail?id=178 advanced options for CurlFtpFS] (FTP)
   * API improvements for easier loading and saving of file systems (revision 263 in Subversion, 2007-06-17)
   * [http://code.google.com/p/macfusion/issues/detail?id=153 compatible with case-sensitive file systems] (revision 253 in Subversion, 2007-06-04)
@@ -22,7 +23,7 @@
   * minor fixes (revision 263 in Subversion, 2007-06-17)
   * refactored: SSHFS and FTPFS now inherit from the same class (MFNetworkFS); non-network file system should inherit from MFFilesystem (revision 261 in Subversion, 2007-06-11)
   * renamed some files and classes with prefix (revision 263 in Subversion, 2007-06-17)
-
+  * [http://code.google.com/p/macfusion/issues/detail?id=198&can=1&q=info.plist URL for software updates corrected]; users of MacFusion release 1.1 will probably need to update manually.
 
 = MacFusion 1.1 =
 *[http://code.google.com/p/macfusion/downloads/list 2007-05-22]*
