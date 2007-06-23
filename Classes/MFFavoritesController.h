@@ -1,5 +1,5 @@
 //
-//  FancyFavoritesController.h
+//  MFFavoritesController.h
 //  MacFusion
 //
 //  Created by Michael Gorbach on 2/12/07.
@@ -16,7 +16,7 @@
 @class MacFusionController;
 @class MacFusionActionButton;
 
-@interface FancyFavoritesController : NSWindowController {
+@interface MFFavoritesController : NSWindowController {
 	IBOutlet NSTableView* favoritesTableView;
 	IBOutlet NSArrayController* favoritesArrayController;
 	IBOutlet MacFusionActionButton* addButton;
