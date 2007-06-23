@@ -27,7 +27,7 @@
 #import "MFLoggingController.h"
 
 
-@class FancyFavoritesController;
+@class MFFavoritesController;
 @class EditFavoriteController;
 @class MFPrefsController;
 @class MFLoggingController;
@@ -41,7 +41,7 @@
 	NSMutableArray* sleepMounts;
 	NSMutableArray* nonLoadedFavorites;
 
-	FancyFavoritesController* fancyFavoritesController;
+	MFFavoritesController* MFFavoritesController;
 	MFPrefsController* preferencesController;
 	
 	DASessionRef appearSession;

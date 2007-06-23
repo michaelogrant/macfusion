@@ -1,18 +1,18 @@
 //
-//  FancyFavoritesController.m
+//  MFFavoritesController.m
 //  MacFusion
 //
 //  Created by Michael Gorbach on 2/12/07.
 //  Copyright 2007 Michael Gorbach. All rights reserved.
 //
 
-#import "FancyFavoritesController.h"
+#import "MFFavoritesController.h"
 
-@interface FancyFavoritesController (PrivateAPI)
+@interface MFFavoritesController (PrivateAPI)
 - (void) updateUI;
 @end
 
-@implementation FancyFavoritesController
+@implementation MFFavoritesController
 - (id) init
 {
 	self = [super init];

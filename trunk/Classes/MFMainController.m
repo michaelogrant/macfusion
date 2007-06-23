@@ -20,7 +20,7 @@
 
 #import "MFMainController.h"
 #import "MacFusionConstants.h"
-#import "FancyFavoritesController.h"
+#import "MFFavoritesController.h"
 
 @interface MacFusionController (PrivateAPI)
 - (void)setUpStatusItem;
@@ -425,9 +425,9 @@
 
 - (void) showFavorites:(id)sender
 {
-	if (fancyFavoritesController == nil)
-		fancyFavoritesController = [[FancyFavoritesController alloc] init];
-	[[fancyFavoritesController window] makeKeyAndOrderFront: self];
+	if (MFFavoritesController == nil)
+		MFFavoritesController = [[MFFavoritesController alloc] init];
+	[[MFFavoritesController window] makeKeyAndOrderFront: self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 }
 
