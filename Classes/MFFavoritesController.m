@@ -179,7 +179,7 @@
 	Class fsClass = [item representedObject];
 	id <FuseFSProtocol> fs = [[fsClass alloc] init];
 	[addButton highlight:YES];
-	[EditController editFilesystem: fs 
+	[MFEditController editFilesystem: fs 
 						  onWindow: [self window]
 					  notifyTarget: self];
 }
@@ -196,7 +196,7 @@
 			return; // Don't edit a mounted favorite
 		backup = [fs copyWithZone:nil];
 		[editButton highlight:YES];
-		[EditController editFilesystem: fs 
+		[MFEditController editFilesystem: fs 
 								onWindow: [self window] 
 								notifyTarget: self];
 	}

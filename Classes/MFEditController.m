@@ -6,12 +6,12 @@
 //  Copyright 2007 Michael Gorbach. All rights reserved.
 //
 
-#import "EditController.h"
+#import "MFEditController.h"
 
-@implementation EditController
+@implementation MFEditController
 + (void) editFilesystem:(id <FuseFSProtocol>)fs onWindow:(id)parent notifyTarget:(id)target
 {
-	EditController* editController = [[EditController alloc] initWithFilesystem: fs
+	MFEditController* editController = [[MFEditController alloc] initWithFilesystem: fs
 																				 notifyTarget: target];
 	if (parent)
 	{
