@@ -841,7 +841,7 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 
 - (NSString*)getMacFuseVersion
 {
-	NSString* extensionSearchRootPath = @"/Library/Extensions/";
+	NSString* extensionSearchRootPath = @"/System/Library/Filesystems/fusefs.kext/Support/";
 	NSString* FuseFSBundleID = @"com.google.filesystems.fusefs";
 	NSString* packageReceiptPath = @"/Library/Receipts/MacFUSE Core.pkg";
 	NSString* version = nil;

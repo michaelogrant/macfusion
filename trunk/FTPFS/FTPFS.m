@@ -94,6 +94,7 @@
 		usingPassword = YES;
 	}
 	
+	[arguments addObject: [NSString stringWithFormat:@"-odisable_epsv"]];
 	[arguments addObject: [NSString stringWithFormat:@"-ovolname=%@", name]]; // volume name argument
 	[arguments addObject:@"-oping_diskarb"];
 	

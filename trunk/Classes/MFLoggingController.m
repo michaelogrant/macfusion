@@ -176,7 +176,8 @@ static MFLoggingController* sharedLoggingController = nil;
 	[self addToLogFile: logEntry];
 }
 
-- (void) dealloc {
+- (void) dealloc 
+{
 	[log release];
 	[super dealloc];
 }
@@ -200,7 +201,6 @@ void MFLog(NSString* format, ...)
 	[logger logMessage:string ofType:MacFusionLogTypeCore sender:core]; 
 	
     [string release];
-	
 }
 
 
