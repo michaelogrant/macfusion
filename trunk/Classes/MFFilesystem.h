@@ -53,6 +53,7 @@
 
 // will return an image generated from the file at iconPath
 - (NSImage*)icon;
+- (NSString*)defaultIconPath;
 
 // exapnds the saving dictioary to add some things for the cell to do its work
 - (NSDictionary*)dictionaryForDisplay;

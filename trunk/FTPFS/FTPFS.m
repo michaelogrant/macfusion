@@ -132,6 +132,56 @@
 	return t;
 }
 
+- (void)mount
+{
+	NSString* password;
+	
+	[self setStatus: FuseFSStatusWaitingToMount];
+	if ([self setupMountPoint] == YES)
+	{
+		task = [self filesystemTask];
+		
+		// set up a timer so we don't have the process hanging and taking forever
+		// the timeout is long so that if needed people have a change to enter password
+		NSDictionary* timerInfoDic = [NSDictionary dictionaryWithObject: self 
+																 forKey: filesystemKeyName];
+		
+		if (usingPassword)
+		{
+			// get our password and set up or input pipe
+			password = FTPFSGetPasswordForUserAndServer([[self login] cString], [[self hostName] cString]);
+			if (inputPipe)
+				[inputPipe release];
+			inputPipe = [[NSPipe alloc] init];
+			[task setStandardInput: inputPipe];
+		}
+		
+		float timeout = [[NSUserDefaults standardUserDefaults] floatForKey: mountTimeoutKeyName];
+		[NSTimer scheduledTimerWithTimeInterval:timeout target:self
+									   selector:@selector(handleMountTimeout:)
+									   userInfo:timerInfoDic repeats:NO];
+		
+		
+		[task launch];
+		
+		if (usingPassword)
+		{
+			// send the password to the curlftpfs process
+			NSString* writeString = [NSString stringWithFormat:@"%@\n", password];
+			[[inputPipe fileHandleForWriting] writeData: [writeString dataUsingEncoding:NSASCIIStringEncoding]];
+		}
+		
+	}
+	else
+	{
+		// couldn't create the path ... fail to mount
+		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
+														  userInfo:[NSDictionary dictionaryWithObject:(id)FuseFSMountFaliurePathIssue 
+																							   forKey:mountFaliureReasonKeyName]];
+		[self setStatus: FuseFSStatusMountFailed];
+	}
+}
+
 #pragma mark Accessors
 
 - (NSString*)fsType

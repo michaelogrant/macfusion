@@ -23,8 +23,9 @@
 		[self setName:@""];
 		[self setMountOnStartup:NO];
 		[self setStatus:FuseFSStatusUnmounted];
-		[self setIconPath: [[NSBundle bundleForClass:[self class]] pathForImageResource:[self fsType]]];
+		[self setIconPath: @""];
 		[self setAdvancedOptions:@""];
+		[self setIconPath: [self defaultIconPath]];
 	}
 	return self;
 }
@@ -66,6 +67,10 @@
 	
 	while(currentKey = [e nextObject])
 	{
+		if ([[self valueForKey:@"iconPath"] isEqualTo: [self defaultIconPath]] &&
+			[currentKey isEqualTo:@"iconPath"])
+			continue; // don't save default icon path
+		
 		if ([self valueForKey:currentKey] != nil)
 		{
 			[d setObject:[self valueForKey:currentKey] forKey:currentKey];
@@ -173,6 +178,11 @@
 		return [self fsType];
 	else
 		return fromTheBundle;
+}
+
+- (NSString*)defaultIconPath
+{
+	return [[NSBundle bundleForClass:[self class]] pathForImageResource:[self fsType]];
 }
 
 - (NSImage*)icon
