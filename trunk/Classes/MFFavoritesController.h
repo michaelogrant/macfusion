@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "MacFusionFSCell.h"
 #import "MacFusionStatusCell.h"
-#import "EditController.h"
+#import "MFEditController.h"
 #import "MacFusionActionButton.h"
 #import "MacFusionConstants.h"
 

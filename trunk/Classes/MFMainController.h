@@ -22,7 +22,7 @@
 #import <DiskArbitration/DiskArbitration.h>
 #import "FuseFSProtocol.h"
 #import "../Growl.framework/Headers/GrowlApplicationBridge.h"`
-#import "EditController.h"
+#import "MFEditController.h"
 #import "MFPrefsController.h"
 #import "MFLoggingController.h"
 
@@ -41,7 +41,7 @@
 	NSMutableArray* sleepMounts;
 	NSMutableArray* nonLoadedFavorites;
 
-	MFFavoritesController* MFFavoritesController;
+	MFFavoritesController* favoritesController;
 	MFPrefsController* preferencesController;
 	
 	DASessionRef appearSession;

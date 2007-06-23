@@ -13,7 +13,7 @@
 @class MacFusionController;
 
 
-@interface EditController : NSWindowController 
+@interface MFEditController : NSWindowController 
 {
 	MacFusionController* mainController;
 	id <FuseFSProtocol> filesystem;

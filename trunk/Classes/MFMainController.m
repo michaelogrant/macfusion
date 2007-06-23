@@ -410,7 +410,7 @@
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 	Class FSClass = [item representedObject];
 	id <FuseFSProtocol> fs = [[FSClass alloc] init];
-	[EditController editFilesystem: fs onWindow:nil notifyTarget:self];
+	[MFEditController editFilesystem: fs onWindow:nil notifyTarget:self];
 }
 
 - (void) editCompleteForFilesystem:(id <FuseFSProtocol>)fs WithSuccess: (BOOL) success
@@ -425,9 +425,9 @@
 
 - (void) showFavorites:(id)sender
 {
-	if (MFFavoritesController == nil)
-		MFFavoritesController = [[MFFavoritesController alloc] init];
-	[[MFFavoritesController window] makeKeyAndOrderFront: self];
+	if (favoritesController == nil)
+		favoritesController = [[MFFavoritesController alloc] init];
+	[[favoritesController window] makeKeyAndOrderFront: self];
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 }
 
