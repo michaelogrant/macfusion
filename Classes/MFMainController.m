@@ -841,7 +841,8 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 
 - (NSString*)getMacFuseVersion
 {
-	NSString* extensionSearchRootPath = @"/System/Library/Filesystems/fusefs.kext/Support/";
+	NSString* extensionSearchRootPath = @"/System/Library/Filesystems/fusefs.fs/Support/";
+	NSString* oldSearchRootPath = @"/System/Library/Extensions/";
 	NSString* FuseFSBundleID = @"com.google.filesystems.fusefs";
 	NSString* packageReceiptPath = @"/Library/Receipts/MacFUSE Core.pkg";
 	NSString* version = nil;
@@ -872,11 +873,34 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 			if ([bundleID isEqualTo:FuseFSBundleID])
 			{
 				version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
+				return version;
 				break;
 			}
 			
 		}
 	}
+
+	e = [[NSFileManager defaultManager] enumeratorAtPath:oldSearchRootPath];
+	path = nil;
+	
+	while (path = [e nextObject])
+	{
+		NSString* bundlePath = [extensionSearchRootPath stringByAppendingString: path];
+		NSBundle* b = [NSBundle bundleWithPath: bundlePath];
+		if (b != nil)
+		{
+			NSString* bundleID = [b bundleIdentifier];
+			if ([bundleID isEqualTo:FuseFSBundleID])
+			{
+				version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
+				return version;
+				break;
+			}
+			
+		}
+	}
+	
+	// we haven't found anything!
 	return nil;
 }
 
