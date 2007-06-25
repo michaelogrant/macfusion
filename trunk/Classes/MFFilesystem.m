@@ -228,12 +228,9 @@
 
 - (void)setAdvancedOptions:(NSString*)aString
 {
-	if (aString != nil)
-	{
-		[aString retain];
-		[advancedOptions release];
-		advancedOptions = aString;
-	}
+	[aString retain];
+	[advancedOptions release];
+	advancedOptions = aString;
 }
 
 
@@ -344,8 +341,11 @@
 	//outputPipe will be released in the dealloc
 	[outputPipe release];
 	outputPipe = [[NSPipe alloc] init];
+	[inputPipe release];
+	inputPipe = [[NSPipe alloc] init];
 	[task setStandardError: outputPipe];
 	[task setStandardOutput: outputPipe];
+	[task setStandardInput: inputPipe];
 	
 	// register for notification of data coming into the pipe
 	[[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(handleDataOnPipe:) name:NSFileHandleDataAvailableNotification object: [outputPipe fileHandleForReading]];

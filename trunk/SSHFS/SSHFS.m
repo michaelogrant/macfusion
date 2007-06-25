@@ -110,7 +110,7 @@
 	}
 	
 	MacFusionController* mainController = [[NSApplication sharedApplication] delegate];
-	if ([[mainController getMacFuseVersion] isEqualToString:@"0.4.0"])
+	if ([mainController macFuseAtLeastVersion:@"0.4.0"])
 	{
 		[arguments addObject:[NSString stringWithFormat: @"-ovolicon=%@", [self iconPath]]];
 	}

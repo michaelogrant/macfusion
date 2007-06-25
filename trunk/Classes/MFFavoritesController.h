@@ -16,7 +16,8 @@
 @class MacFusionController;
 @class MacFusionActionButton;
 
-@interface MFFavoritesController : NSWindowController {
+@interface MFFavoritesController : NSWindowController 
+{
 	IBOutlet NSTableView* favoritesTableView;
 	IBOutlet NSArrayController* favoritesArrayController;
 	IBOutlet MacFusionActionButton* addButton;
