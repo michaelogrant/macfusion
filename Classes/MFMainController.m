@@ -34,6 +34,7 @@
 - (void)readDefaults;
 - (void)registerURLHandling;
 - (void)checkForMacFuse;
+- (NSString*)getMacFuseVersionString;
 @end
 
 @implementation MacFusionController
@@ -805,7 +806,7 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 - (void) checkForMacFuse
 {
 	NSArray* validVersions = [NSArray arrayWithObjects:@"0.3.0",@"0.4.0",nil];
-	NSString* version = [self getMacFuseVersion];
+	NSString* version = [self getMacFuseVersionString];
 	if (version == nil) // No MacFuse Found
 	{
 		[[NSApplication sharedApplication] activateIgnoringOtherApps:YES]; // take focus
@@ -839,10 +840,31 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 	
 }
 
-- (NSString*)getMacFuseVersion
+- (BOOL)macFuseAtLeastVersion:(NSString*)inputVersionString
 {
-	NSString* extensionSearchRootPath = @"/System/Library/Filesystems/fusefs.fs/Support/";
-	NSString* oldSearchRootPath = @"/System/Library/Extensions/";
+	NSString* realVersionString = [self getMacFuseVersionString];
+	if (!realVersionString) 
+		return nil;
+	NSArray* realParts = [realVersionString componentsSeparatedByString:@"."];
+	NSArray* inputParts = [inputVersionString componentsSeparatedByString:@"."];
+	int i;
+	for(i=0;i<[realParts count];i++)
+	{
+		int real = [[realParts objectAtIndex: i] intValue];
+		int input = [[inputParts objectAtIndex: i] intValue];
+		if (real == input)
+			continue;
+		else if (real > input)
+			return YES;
+		else if (real < input)
+			return NO;
+	}
+	
+	return YES;
+}
+
+- (NSString*)getMacFuseVersionString
+{
 	NSString* FuseFSBundleID = @"com.google.filesystems.fusefs";
 	NSString* packageReceiptPath = @"/Library/Receipts/MacFUSE Core.pkg";
 	NSString* version = nil;
@@ -860,43 +882,32 @@ static void diskUnMounted(DADiskRef disk, void* mySelf)
 	}
 	
 	// Try to find the kext manually
-	NSEnumerator* e = [[NSFileManager defaultManager] enumeratorAtPath:extensionSearchRootPath];
-	NSString* path = nil;
+	NSArray* kextPaths = [NSArray arrayWithObjects:@"/System/Library/Filesystems/fusefs.fs/Support/",
+		@"/System/Library/Extensions/", nil];
 	
-	while (path = [e nextObject])
-	{
-		NSString* bundlePath = [extensionSearchRootPath stringByAppendingString: path];
-		NSBundle* b = [NSBundle bundleWithPath: bundlePath];
-		if (b != nil)
-		{
-			NSString* bundleID = [b bundleIdentifier];
-			if ([bundleID isEqualTo:FuseFSBundleID])
-			{
-				version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
-				return version;
-				break;
-			}
-			
-		}
-	}
-
-	e = [[NSFileManager defaultManager] enumeratorAtPath:oldSearchRootPath];
-	path = nil;
+	NSEnumerator* e = [kextPaths objectEnumerator];
+	NSString* rootPath;
 	
-	while (path = [e nextObject])
+	while(rootPath = [e nextObject])
 	{
-		NSString* bundlePath = [extensionSearchRootPath stringByAppendingString: path];
-		NSBundle* b = [NSBundle bundleWithPath: bundlePath];
-		if (b != nil)
+		NSEnumerator* fmEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:rootPath];
+		NSString* fmPath;
+		
+		while (fmPath = [fmEnumerator nextObject])
 		{
-			NSString* bundleID = [b bundleIdentifier];
-			if ([bundleID isEqualTo:FuseFSBundleID])
+			NSString* bundlePath = [rootPath stringByAppendingPathComponent: fmPath];
+			NSBundle* b = [NSBundle bundleWithPath: bundlePath];
+			if (b != nil)
 			{
-				version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
-				return version;
-				break;
+				NSString* bundleID = [b bundleIdentifier];
+				if ([bundleID isEqualTo:FuseFSBundleID])
+				{
+					version = [[b infoDictionary] objectForKey:@"CFBundleVersion"];
+					return version;
+					break;
+				}
+				
 			}
-			
 		}
 	}
 	

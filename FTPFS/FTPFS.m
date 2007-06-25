@@ -110,7 +110,7 @@
 	}
 	
 	MacFusionController* mainController = [[NSApplication sharedApplication] delegate];
-	if ([[mainController getMacFuseVersion] isEqualToString:@"0.4.0"])
+	if ([mainController macFuseAtLeastVersion:@"0.4.0"])
 	{
 		[arguments addObject:[NSString stringWithFormat: @"-ovolicon=%@", [self iconPath]]];
 	}
@@ -120,14 +120,6 @@
 	
 	[t setLaunchPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"curlftpfs-static" ofType:nil]];
 	[t setArguments:arguments];
-	
-	// set up the output pipe
-	if (outputPipe) 
-		[outputPipe release];
-	outputPipe = [[NSPipe alloc] init];
-	[t setStandardError: outputPipe];
-	[t setStandardOutput: outputPipe];
-	[t setEnvironment:env];
 		
 	[arguments release];
 	return t;
@@ -135,51 +127,13 @@
 
 - (void)mount
 {
+	[super mount];
 	NSString* password;
-	
-	[self setStatus: FuseFSStatusWaitingToMount];
-	if ([self setupMountPoint] == YES)
+	if (usingPassword)
 	{
-		task = [self filesystemTask];
-		
-		// set up a timer so we don't have the process hanging and taking forever
-		// the timeout is long so that if needed people have a change to enter password
-		NSDictionary* timerInfoDic = [NSDictionary dictionaryWithObject: self 
-																 forKey: filesystemKeyName];
-		
-		if (usingPassword)
-		{
-			// get our password and set up or input pipe
-			password = FTPFSGetPasswordForUserAndServer([[self login] cString], [[self hostName] cString]);
-			if (inputPipe)
-				[inputPipe release];
-			inputPipe = [[NSPipe alloc] init];
-			[task setStandardInput: inputPipe];
-		}
-		
-		float timeout = [[NSUserDefaults standardUserDefaults] floatForKey: mountTimeoutKeyName];
-		[NSTimer scheduledTimerWithTimeInterval:timeout target:self
-									   selector:@selector(handleMountTimeout:)
-									   userInfo:timerInfoDic repeats:NO];
-		
-		
-		[task launch];
-		
-		if (usingPassword)
-		{
-			// send the password to the curlftpfs process
-			NSString* writeString = [NSString stringWithFormat:@"%@\n", password];
-			[[inputPipe fileHandleForWriting] writeData: [writeString dataUsingEncoding:NSASCIIStringEncoding]];
-		}
-		
-	}
-	else
-	{
-		// couldn't create the path ... fail to mount
-		[[NSNotificationCenter defaultCenter] postNotificationName:FuseFSMountFailedNotification object:self
-														  userInfo:[NSDictionary dictionaryWithObject:(id)FuseFSMountFaliurePathIssue 
-																							   forKey:mountFaliureReasonKeyName]];
-		[self setStatus: FuseFSStatusMountFailed];
+		password = FTPFSGetPasswordForUserAndServer([[self login] cString], [[self hostName] cString]);
+		NSString* writeString = [NSString stringWithFormat:@"%@\n", password];
+		[[inputPipe fileHandleForWriting] writeData: [writeString dataUsingEncoding:NSASCIIStringEncoding]];
 	}
 }
 
