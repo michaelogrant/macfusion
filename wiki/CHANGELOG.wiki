@@ -6,10 +6,26 @@
 *Note*: the _[http://code.google.com/p/macfuse/wiki/CHANGELOG MacFUSE changelog]_ appears in its own project area.
 
 === deferred ===
-  * Random issues with [http://code.google.com/p/macfusion/issues/detail?id=25#c21 unpredictable third party applications + sleep/wake preferences + change of location whilst awake (in combination with each other)]: discussion and testing ongoing.
-
-== forthcoming ==
   * [http://code.google.com/p/macfusion/issues/detail?id=197 About MacFusion window and Finder | Get Info are more descriptive]; version strings and other changes to info.plist
+  * random issues with [http://code.google.com/p/macfusion/issues/detail?id=25#c21 unpredictable third party applications + sleep/wake preferences + change of location whilst awake (in combination with each other)]: discussion and testing ongoing
+  * [http://code.google.com/p/macfusion/issues/detail?id=198&can=1&q=info.plist URL for software updates corrected]; users of MacFusion release 1.1 will probably need to update manually.
+
+== MacFusion MacFusion nightly 20070627 revision 279 ==
+*[http://code.google.com/p/macfusion/downloads/list 2007-06-27]*
+
+  * FTP Extra Options (Advanced) *-o ftpfs_debug=3 -d -v* for a troublesome connection will now result in appropriate debug information in MacFusion logs
+  * improved/renewed [http://code.google.com/p/macfusion/issues/detail?id=213 compatibility for users of MacPorts].
+
+= MacFusion 1.2 Beta 2 =
+*[http://code.google.com/p/macfusion/downloads/list 2007-06-23]*
+
+  * FTP [http://code.google.com/p/macfusion/issues/detail?id=210 authentication behaviour] is restored
+  * icon naming changes
+  * pre-empting [http://code.google.com/p/macfusion/issues/detail?id=152 issues with some FTP servers], curlftpfs will by default use PASV (will not first attempt EPSV).
+
+== MacFusion 1.2 Beta 1 ==
+2007-06-21, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
+
   * [http://code.google.com/p/macfusion/issues/detail?id=178 advanced options for CurlFtpFS] (FTP)
   * API improvements for easier loading and saving of file systems (revision 263 in Subversion, 2007-06-17)
   * [http://code.google.com/p/macfusion/issues/detail?id=153 compatible with case-sensitive file systems] (revision 253 in Subversion, 2007-06-04)
@@ -17,13 +33,13 @@
   * [http://code.google.com/p/macfusion/issues/detail?id=193 favorites for a plug-in that is absent] are preserved but not loaded 
   * fix for linker warnnings and build problems (revision 232 in Subversion, 2007-05-23) 
   * fix to description string generation for network filesystems (revision 267 in Subversion, 2007-06-18)
+  * FTP connection improved thanks to version 0.9.1 of curlftpfs (previously 0.9.0)
   * GUI is improved (revision 261 in Subversion, 2007-06-11)
   * header files are properly copied into the final product, with their "role" set to public (revision 233 in Subversion, 2007-05-23)
   * icon support for FTP and SSH (revision 263 in Subversion, 2007-06-17)
   * minor fixes (revision 263 in Subversion, 2007-06-17)
   * refactored: SSHFS and FTPFS now inherit from the same class (MFNetworkFS); non-network file system should inherit from MFFilesystem (revision 261 in Subversion, 2007-06-11)
   * renamed some files and classes with prefix (revision 263 in Subversion, 2007-06-17)
-  * [http://code.google.com/p/macfusion/issues/detail?id=198&can=1&q=info.plist URL for software updates corrected]; users of MacFusion release 1.1 will probably need to update manually.
 
 = MacFusion 1.1 =
 *[http://code.google.com/p/macfusion/downloads/list 2007-05-22]*
@@ -78,3 +94,7 @@
 2007-04-22, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   * this release coincided with the launch of the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
+
+
+
+
