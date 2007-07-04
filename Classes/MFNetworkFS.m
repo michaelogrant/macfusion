@@ -35,7 +35,7 @@
 - (NSArray*)keysForSaving
 {
 	NSMutableArray* storedKeys = [NSMutableArray arrayWithArray:[super keysForSaving]];
-	NSArray* keyNames = [NSArray arrayWithObjects:@"hostName", @"login", @"path", nil];
+	NSArray* keyNames = [NSArray arrayWithObjects:@"hostName", @"login", @"path", @"port", nil];
 	[storedKeys addObjectsFromArray:keyNames];
 	return [[storedKeys copy] autorelease];
 }
