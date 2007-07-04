@@ -155,8 +155,8 @@ static MFLoggingController* sharedLoggingController = nil;
 			break;
 	}
 	
-	NSArray* splitMessage = [message componentsSeparatedByString:@"\n"];
-	NSString* joinMessage = [splitMessage componentsJoinedByString:@" "];
+//	NSArray* splitMessage = [message componentsSeparatedByString:@"\n"];
+//	NSString* joinMessage = [splitMessage componentsJoinedByString:@" "];
 	NSString* sourceName;
 	
 	if ([sender conformsToProtocol:@protocol(FuseFSProtocol)])
@@ -164,7 +164,12 @@ static MFLoggingController* sharedLoggingController = nil;
 	else
 		sourceName = @"MacFusion Core";
 	
-	NSString* newEntry = [NSString stringWithFormat:@"%@: %@\n", sourceName, joinMessage];
+	NSString* newEntry;
+	if ([message characterAtIndex: [message length]-1] == '\n')
+		newEntry = [NSString stringWithFormat:@"%@: %@", sourceName, message];
+	else
+		newEntry = [NSString stringWithFormat:@"%@: %@\n", sourceName, message];
+	
 	
 	[self addToLogWindow:newEntry withColor:color];
 	[self addToLogFile:newEntry];
