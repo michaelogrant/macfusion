@@ -57,6 +57,8 @@
 		D474679A0BB09EA100FD68CA /* curlftpfs-static in Resources */ = {isa = PBXBuildFile; fileRef = D47467990BB09EA100FD68CA /* curlftpfs-static */; };
 		D48F046D0BEAD4DB0090C3D6 /* MFLoggingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F046B0BEAD4DB0090C3D6 /* MFLoggingController.m */; };
 		D48F05480BEAF2F00090C3D6 /* MacFusionLogging.nib in Resources */ = {isa = PBXBuildFile; fileRef = D48F05460BEAF2F00090C3D6 /* MacFusionLogging.nib */; };
+		D4901FF10C3C2905004220CA /* MFNotificationWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D4901FEF0C3C2905004220CA /* MFNotificationWatcher.h */; };
+		D4901FF20C3C2905004220CA /* MFNotificationWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D4901FF00C3C2905004220CA /* MFNotificationWatcher.m */; };
 		D49D66AD0C00ED3800891D09 /* SSHFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4F82A3B0B5BEB480061B029 /* SSHFS.plugin */; };
 		D49D66AE0C00ED3800891D09 /* FTPFS.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4E11F0F0BAECE5900C99A5F /* FTPFS.plugin */; };
 		D49D684D0C01273300891D09 /* MFLoggingController.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -226,6 +228,8 @@
 		D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLoggingController.h; sourceTree = "<group>"; };
 		D48F046B0BEAD4DB0090C3D6 /* MFLoggingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLoggingController.m; sourceTree = "<group>"; };
 		D48F05470BEAF2F00090C3D6 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MacFusionLogging.nib; sourceTree = "<group>"; };
+		D4901FEF0C3C2905004220CA /* MFNotificationWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFNotificationWatcher.h; sourceTree = "<group>"; };
+		D4901FF00C3C2905004220CA /* MFNotificationWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFNotificationWatcher.m; sourceTree = "<group>"; };
 		D4A1204B0B7C1DDA00F565DC /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		D4A121CB0B7C239800F565DC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
 		D4A41D720BB6CB6D00D12576 /* SSHFS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SSHFS.icns; sourceTree = "<group>"; };
@@ -470,6 +474,8 @@
 				D40969C40B82658F00EABE40 /* MFEditController.m */,
 				D48F046A0BEAD4DB0090C3D6 /* MFLoggingController.h */,
 				D48F046B0BEAD4DB0090C3D6 /* MFLoggingController.m */,
+				D4901FEF0C3C2905004220CA /* MFNotificationWatcher.h */,
+				D4901FF00C3C2905004220CA /* MFNotificationWatcher.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 				D4B791360C1B355400DDDD4B /* MFNetworkFS.h in Headers */,
 				D45AEED90C24993E002AB9D8 /* MFPrefsController.h in Headers */,
 				D45AEEE10C2499A9002AB9D8 /* MFMainController.h in Headers */,
+				D4901FF10C3C2905004220CA /* MFNotificationWatcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +721,7 @@
 				D4B791370C1B355400DDDD4B /* MFNetworkFS.m in Sources */,
 				D45AEEDA0C24993E002AB9D8 /* MFPrefsController.m in Sources */,
 				D45AEEE20C2499A9002AB9D8 /* MFMainController.m in Sources */,
+				D4901FF20C3C2905004220CA /* MFNotificationWatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
