@@ -127,7 +127,13 @@
 
 - (NSString*)iconPath
 {
-	return iconPath;
+	if ([[NSFileManager defaultManager] fileExistsAtPath:iconPath])
+		return iconPath;
+	else // icon path invalid
+	{
+		[self setIconPath: [self defaultIconPath]];
+		return iconPath;
+	}
 }
 
 
@@ -187,7 +193,15 @@
 
 - (NSImage*)icon
 {
-	return [[[NSImage alloc] initWithContentsOfFile:iconPath] autorelease];
+	NSImage* icon = [[[NSImage alloc] initWithContentsOfFile:iconPath] autorelease];
+	if (icon)
+		return icon;
+	else // bad icon path
+	{
+		[self setIconPath: [self defaultIconPath]];
+		icon = [[[NSImage alloc] initWithContentsOfFile:iconPath] autorelease];
+		return icon;
+	}
 }
 
 - (NSString*)fsDescription
