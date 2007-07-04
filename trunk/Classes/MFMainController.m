@@ -21,6 +21,7 @@
 #import "MFMainController.h"
 #import "MacFusionConstants.h"
 #import "MFFavoritesController.h"
+#import "MFNotificationWatcher.h"
 
 @interface MacFusionController (PrivateAPI)
 - (void)setUpStatusItem;
@@ -71,6 +72,7 @@
 		
 		[self registerURLHandling];
 		[self initializeGrowl];
+		[MFNotificationWatcher sharedNotificationWatcher];
 			
 		[[NSApplication sharedApplication] setDelegate: self];
 	}
