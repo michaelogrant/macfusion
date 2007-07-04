@@ -10,8 +10,15 @@
   * random issues with [http://code.google.com/p/macfusion/issues/detail?id=25#c21 unpredictable third party applications + sleep/wake preferences + change of location whilst awake (in combination with each other)]: discussion and testing ongoing
   * [http://code.google.com/p/macfusion/issues/detail?id=198&can=1&q=info.plist URL for software updates corrected]; users of MacFusion release 1.1 will probably need to update manually.
 
-== MacFusion MacFusion nightly 20070627 revision 279 ==
-*[http://code.google.com/p/macfusion/downloads/list 2007-06-27]*
+== MacFusion nightly 20070704 revision 284 ==
+*[http://code.google.com/p/macfusion/downloads/list 2007-07-04]*
+
+  * [http://code.google.com/p/macfusion/issues/detail?id=218 custom port number for SSH favourite] is saved when MacFusion quits
+  * fixes for [http://code.google.com/p/macfusion/issues/detail?id=211 failed to access volume icon file (2)] error
+  * [http://code.google.com/p/macfusion/issues/detail?id=221 MacFusion log line spacing and line endings] are improved
+
+== MacFusion nightly 20070627 revision 279 ==
+2007-06-27, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   * FTP Extra Options (Advanced) *-o ftpfs_debug=3 -d -v* for a troublesome connection will now result in appropriate debug information in MacFusion logs
   * improved/renewed [http://code.google.com/p/macfusion/issues/detail?id=213 compatibility for users of MacPorts].
