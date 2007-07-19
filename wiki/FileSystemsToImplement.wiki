@@ -9,6 +9,7 @@
 || CurlFtpFS (FTP) || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_ftp&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html included] || [http://curlftpfs.sourceforge.net/ CurlFtpFS - A FTP filesystem based on cURL and FUSE] || [http://en.wikipedia.org/wiki/FTPFS FTPFS] ||
 || EncFS || [http://dev.systemred.net/trac/encfs/report issues] || [http://dev.systemred.net/trac/encfs EncFS.plugin] ||  [http://www.systemred.net SystemRed.Net] original code by [http://arg0.net/wiki/ Valient Gough] || [http://en.wikipedia.org/wiki/Encfs article] || 
 || SSHFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_sshfs&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/features.html included] || [http://fuse.sourceforge.net/sshfs.html SSH Filesystem] || [http://en.wikipedia.org/wiki/SSHFS article] ||
+|| XgridFS || [http://code.google.com/p/macfusion/issues/list?can=2&q=label:fs_xgrid&sort=priority&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary issues] || [http://groups.google.com/group/MacFusion-devel/browse_thread/thread/22603a57e7eebfae/ development] || [http://www.apple.com/macosx/features/xgrid/ Xgrid] || [http://en.wikipedia.org/wiki/Xgrid article] ||
 
 == Requested or under consideration ==
 
