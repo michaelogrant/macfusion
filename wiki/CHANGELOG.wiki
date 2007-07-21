@@ -10,8 +10,6 @@
   * random issues with [http://code.google.com/p/macfusion/issues/detail?id=25#c21 unpredictable third party applications + sleep/wake preferences + change of location whilst awake (in combination with each other)]: discussion and testing ongoing
   * [http://code.google.com/p/macfusion/issues/detail?id=198&can=1&q=info.plist URL for software updates corrected]; users of MacFusion release 1.1 will probably need to update manually
 
-== forthcoming ==
-
 = MacFusion 1.2 Beta 3 =
 *[http://code.google.com/p/macfusion/downloads/list 2007-07-16]*
 
