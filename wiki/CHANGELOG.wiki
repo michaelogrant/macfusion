@@ -12,10 +12,13 @@
 
 == forthcoming ==
 
+= MacFusion 1.2 Beta 3 =
+*[http://code.google.com/p/macfusion/downloads/list 2007-07-16]*
+
   * notifications from MacFUSE are watched and logged by MacFusion (revision 286 in Subversion, 2007-07-04)
 
 == MacFusion nightly 20070704 revision 284 ==
-*[http://code.google.com/p/macfusion/downloads/list 2007-07-04]*
+2007-07-04, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   # [http://code.google.com/p/macfusion/issues/detail?id=218 Custom port number for SSH favourite] is saved when MacFusion quits.
   # Fixes for [http://code.google.com/p/macfusion/issues/detail?id=211 failed to access volume icon file (2)] error.
@@ -27,8 +30,8 @@
   # FTP Extra Options (Advanced) *-o ftpfs_debug=3 -d -v* for a troublesome connection will now result in appropriate debug information in MacFusion logs.
   # Improved/renewed [http://code.google.com/p/macfusion/issues/detail?id=213 compatibility for users of MacPorts].
 
-= MacFusion 1.2 Beta 2 =
-*[http://code.google.com/p/macfusion/downloads/list 2007-06-23]*
+== MacFusion 1.2 Beta 2 ==
+2007-06-23, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   # FTP [http://code.google.com/p/macfusion/issues/detail?id=210 authentication behaviour] is restored.
   # Icon naming changes.
