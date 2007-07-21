@@ -53,7 +53,7 @@
   # Refactored: SSHFS and FTPFS now inherit from the same class (MFNetworkFS); non-network file system should inherit from MFFilesystem (revision 261 in Subversion, 2007-06-11).
   # Renamed some files and classes with prefix (revision 263 in Subversion, 2007-06-17).
 
-= MacFusion 1.1 — requires deprecated MacFUSE Core 0.3.0 (not compatible with MacFUSE Core 0.4.0) =
+= MacFusion 1.1 — requires MacFUSE Core 0.3.0 (not compatible with MacFUSE Core 0.4.0) =
 *[http://code.google.com/p/macfusion/downloads/list 2007-05-22]*
 
   # Compatible with standard [http://pdb.finkproject.org/pdb/package.php/fuse Fink] and [http://www.macports.org/ MacPorts] installations; MacFusion (curlftpfs and sshfs plug-ins) will recognise [http://code.google.com/p/macfusion/issues/detail?id=90 alternate paths to libfuse].
@@ -78,7 +78,7 @@
   # Sparkle updating is now enabled and linked to the appcast of macfusion off `www.iusethis.com`.
   # UI improvements. 
 
-== MacFusion 1.1 Beta2 — required deprecated MacFUSE Core 0.3.0 (not compatible with MacFUSE Core 0.4.0) ==
+== MacFusion 1.1 Beta2 — required MacFUSE Core 0.3.0 (not compatible with MacFUSE Core 0.4.0) ==
 2007-05-11, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   # Compatible with [http://code.google.com/p/macfuse/ MacFUSE] 0.3.0.
@@ -102,11 +102,10 @@
     * sshfs-static here is equivalent to the sshfs-static bundled in version 0.2.0 of [http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SSHFS sshfs.app]
     * should fix issues such as [http://code.google.com/p/macfusion/issues/detail?id=5 this one involving Microsoft Word 2004]. 
 
-== MacFusion 1.0 — required deprecated MacFUSE Core 0.2.5 (not compatible with MacFUSE Core 0.3.0 and beyond) ==
+== MacFusion 1.0 — required MacFUSE Core 0.2.5 (not compatible with MacFUSE Core 0.3.0 and beyond) ==
 2007-04-22, [http://code.google.com/p/macfusion/downloads/list?can=4&q=&colspec=Filename+Summary+Uploaded+Size+DownloadCount deprecated]
 
   * this release coincided with the launch of the [http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/ MacFusion home page].
-
 
 
 
