@@ -25,6 +25,7 @@ Questions relating to Mac OS and Finder should be addressed to Apple. Hot topics
 =^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
 |
 |-- MacFUSE kernel module
+|-- SSHFS binary for MacFUSE
 |
 =^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=.=^=
    |
@@ -74,7 +75,6 @@ Issues that relate to the sshfs-static binary -- not to MacFusion -- can be foun
 Non-technical users will probably be baffled by those distinctions. 
 
 User-friendly explanations from MacFusion project members will be welcomed!
-
 
 
 
