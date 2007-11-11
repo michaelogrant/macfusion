@@ -23,7 +23,7 @@ Will MacFusion's Sparkle configuration announce updates to MacFUSE as well as Ma
 
 == I launched MacFusion but I can't see it running. Where is it? ==
 http://blog.nicolargo.com/wp-content/uploads/2007/05/macfusionmenu.png
-  * MacFusion 1.0 is a menu extra without a Dock icon
+  * MacFusion 1 is a menu extra without a Dock icon
     * look for the grey globe+arrows icon in your menu bar
     * probably to the left of other icons with which you're familiar
     * the [http://code.google.com/p/macfusion/issues/list?can=2&q=label%3Amenus+OR+label%3AMenuExtraIcon&sort=priority&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary menu extra icon and menus in general] are discussed amongst the other issues.
@@ -31,10 +31,14 @@ http://blog.nicolargo.com/wp-content/uploads/2007/05/macfusionmenu.png
 
 == How do I install, disable or remove plug-ins for MacFusion? ==
 Recommended:
-  * follow the [http://dev.systemred.net/trac/encfs/wiki/Install EncFS.plugin example]. 
+  * file at path `/Library/Application Support/MacFusion/plugins/`
 
-Alternatively:
-  * Finder | select MacFusion | File menu | Get Info | Plug-Ins: …
+Alternatively, in the home directory:
+  * file at path `~/Library/Application Support/MacFusion/plugins/`
+
+Functional but not recommended, within the MacFusion application bundle:
+  * Finder | select MacFusion | File menu | Get Info | Plug-Ins: … 
+    * plug-ins added in this way may not be respected during udpates/upgrades to MacFusion
 
 After using Finder to manipulate any plug-in: 
   # Quit from MacFusion
@@ -48,8 +52,6 @@ After using Finder to manipulate any plug-in:
 == Where can I learn more about permissions in the context of MacFUSE and MacFusion? ==
 
   * On 9th May 2007 Amit Singh offered [http://groups.google.com/group/macfuse-devel/browse_thread/thread/8ddca0a74765f200 advice to the macfuse-devel Google Group].
-
-
 
 
 
