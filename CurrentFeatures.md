@@ -1,0 +1,1 @@
+Features are detailed at Michael's [MacFusion home page](http://www.sccs.swarthmore.edu/users/08/mgorbach/MacFusionWeb/) at Swarthmore College Computer Society.
